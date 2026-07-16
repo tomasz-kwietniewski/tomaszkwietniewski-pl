@@ -17,6 +17,11 @@ Stara strona WCIĄŻ DZIAŁA na WordPressie i będzie działać do podmiany DNS 
 - Pages CMS podpięty i PRZETESTOWANY end-to-end (panel: app.pagescms.org, konto GitHub Tomasza).
 - Brief treści i architektury: `docs/wyciag-tresci.md` (architektura stron, sekcja Projekty,
   mapowanie kategorii, ton, czego nie umieszczać - CZYTAJ PRZED projektowaniem podstron).
+- Pierwszy NOWY wpis (nie z migracji) dodany bezpośrednio do repo (2026-07-16):
+  `content/wpisy/2026-07-16-pstryk-czy-jednak-taryfa-strefowa-kiedy-co-sie-oplaca.md`
+  (slug: pstryk-czy-taryfa-strefowa, kategoria "Technologie i dom", body HTML jak wpisy z WP,
+  media w `media/2026/07/`: hero JPG + 2 wykresy PNG z altami). Źródło i analiza:
+  repo `C:\Users\L857K\claude\zuzycie-pradu` (blog/pstryk-czy-g12w-final.md + analyze/).
 - Czeka na: projekt graficzny z Claude Design (Tomasz zrobi handoff do tego folderu).
 
 ## Struktura
