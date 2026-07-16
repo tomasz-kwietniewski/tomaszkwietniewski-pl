@@ -22,6 +22,9 @@ Zastępuje WordPressa. Stan: treść zmigrowana, projekt graficzny w przygotowan
    każdy zapis automatycznie zaktualizuje stronę.
 
 Uwagi:
+- Przy nowym wpisie NAJPIERW uzupełnij tytuł i slug, dopiero potem kliknij Save -
+  nazwa pliku powstaje przy pierwszym zapisie (na bazie sluga) i później się sama
+  nie zmieni. Pole z nazwą pliku widać przy tworzeniu wpisu - można ją tam poprawić.
 - Przy nowych wpisach używaj NOWYCH kategorii (górna część listy). Stare nazwy kategorii
   są na liście tylko po to, żeby dało się edytować zmigrowane wpisy.
 - Stare wpisy mają treść w HTML z WordPressa (bloki Gutenberga). Edytor Pages CMS może

@@ -8,7 +8,7 @@ content:
     type: collection
     path: content/wpisy
     filename:
-      template: "{year}-{month}-{day}-{primary}.md"
+      template: "{year}-{month}-{day}-{fields.slug}.md"
       field: create
     view:
       fields: [title, date, kategorie]
@@ -77,7 +77,7 @@ content:
     type: collection
     path: content/strony
     filename:
-      template: "{primary}.md"
+      template: "{fields.slug}.md"
       field: create
     view:
       fields: [title, slug]
