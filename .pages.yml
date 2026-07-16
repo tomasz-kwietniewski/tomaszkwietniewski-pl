@@ -7,9 +7,7 @@ content:
     label: Wpisy
     type: collection
     path: content/wpisy
-    filename:
-      template: "{year}-{month}-{day}-{fields.title}.md"
-      field: create
+    filename: "{year}-{month}-{day}-{fields.title}.md"
     view:
       fields: [title, date, kategorie]
       default:
@@ -76,9 +74,7 @@ content:
     label: Podstrony
     type: collection
     path: content/strony
-    filename:
-      template: "{fields.title}.md"
-      field: create
+    filename: "{fields.title}.md"
     view:
       fields: [title, slug]
     fields:

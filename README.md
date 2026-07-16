@@ -23,9 +23,9 @@ Zastępuje WordPressa. Stan: treść zmigrowana, projekt graficzny w przygotowan
 
 Uwagi:
 - Przy nowym wpisie wystarczy wpisać TYTUŁ - nazwa pliku (i z niej adres URL) generuje
-  się z tytułu automatycznie: małe litery, bez polskich znaków, spacje jako myślniki.
-  Warunek: tytuł wpisz PRZED pierwszym kliknięciem Save (nazwa pliku powstaje przy
-  pierwszym zapisie i później sama się nie zmienia; widać ją przy tworzeniu wpisu).
+  się z tytułu automatycznie przy zapisie: małe litery, bez polskich znaków, spacje
+  jako myślniki. Późniejsza zmiana tytułu NIE zmienia już nazwy pliku (i słusznie -
+  adres opublikowanego wpisu nie powinien się zmieniać).
 - Pole "Slug" zostaw zwykle puste. Reguła dla builda strony: adres wpisu = frontmatter
   slug, a gdy pusty - nazwa pliku bez daty i rozszerzenia.
 - Przy nowych wpisach używaj NOWYCH kategorii (górna część listy). Stare nazwy kategorii
