@@ -6,7 +6,7 @@ modified: "2023-12-13T23:03:39"
 url_stara: "https://tomaszkwietniewski.pl/radio-naukowe-polecane-odcinki/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Polecane kanały YT"]
-excerpt: "Radio Naukowe to podcast Karoliny Głowackiej. Świetne rozmowy z naukowcami z przeróżnych dziedzin. Polecam poniższe odcinki: Magia dawnej wsi – jacy byli, w co wierzyli i czego się bali nasi przodkowie? [E152] Unia Lubelska – jak dwa państwa i narody w jeden lud zniosła i spoiła? [E153] Wodór – czy to tania, ekologiczna i bezpieczna&#8230;"
+excerpt: "Radio Naukowe to podcast Karoliny Głowackiej. Świetne rozmowy z naukowcami z przeróżnych dziedzin. Polecam poniższe odcinki: Magia dawnej wsi – jacy byli, w co wierzyli i czego się bali nasi przodkowie? [E152] Unia Lubelska – jak dwa państwa i narody w jeden lud zniosła i spoiła? [E153] Wodór – czy to tania, ekologiczna i bezpieczna…"
 ---
 
 

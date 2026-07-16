@@ -6,7 +6,7 @@ modified: "2022-10-10T15:09:24"
 url_stara: "https://tomaszkwietniewski.pl/jakiej-armii-potrzebuje-polska/"
 typ: "wpis"
 kategorie: ["Geopolityka"]
-excerpt: "Krzysztof Wojczal w formie:-) Obszerna analiza odpowiadająca na pytania: Do jakiej przyszłości się szykujemy? Do czego będzie nam potrzebna armia? Nurt wydarzeń historycznych kieruje nas w dobrym kierunku i musimy zbudować solidny, autonomiczny okręt zanim wypłyniemy na pełne morze. Jeśli podołamy temu zadaniu, pozostanie tylko postawić żagle, a świat może stanąć przed nami otworem. Wersja&#8230;"
+excerpt: "Krzysztof Wojczal w formie:-) Obszerna analiza odpowiadająca na pytania: Do jakiej przyszłości się szykujemy? Do czego będzie nam potrzebna armia? Nurt wydarzeń historycznych kieruje nas w dobrym kierunku i musimy zbudować solidny, autonomiczny okręt zanim wypłyniemy na pełne morze. Jeśli podołamy temu zadaniu, pozostanie tylko postawić żagle, a świat może stanąć przed nami otworem. Wersja…"
 ---
 
 

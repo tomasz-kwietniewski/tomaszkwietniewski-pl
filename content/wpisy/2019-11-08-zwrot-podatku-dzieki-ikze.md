@@ -6,7 +6,7 @@ modified: "2023-11-15T14:21:27"
 url_stara: "https://tomaszkwietniewski.pl/zwrot-podatku-dzieki-ikze/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Zanim wyjaśnię o co chodzi z tą kasą, napiszę dla kogo jest ten mail. Dla każdego kto planuje przejść kiedyś na emeryturę. Zaliczasz się do tego grona?;-) Niby pytanie retoryczne, ale czy aby na pewno będziesz mógł* przejść na emeryturę w wieku np. 60, 65 czy 70 lat, o którym myślisz?&nbsp; Piszę do Ciebie, bo&#8230;"
+excerpt: "Zanim wyjaśnię o co chodzi z tą kasą, napiszę dla kogo jest ten mail. Dla każdego kto planuje przejść kiedyś na emeryturę. Zaliczasz się do tego grona?;-) Niby pytanie retoryczne, ale czy aby na pewno będziesz mógł* przejść na emeryturę w wieku np. 60, 65 czy 70 lat, o którym myślisz?  Piszę do Ciebie, bo…"
 ---
 
 

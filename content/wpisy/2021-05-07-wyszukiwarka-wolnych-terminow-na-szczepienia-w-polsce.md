@@ -6,7 +6,7 @@ modified: "2021-05-12T08:56:18"
 url_stara: "https://tomaszkwietniewski.pl/wyszukiwarka-wolnych-terminow-na-szczepienia-w-polsce/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Nowe technologie", "Tipy ułatwiające życie"]
-excerpt: "Pomoc przy wyszukiwaniu wolnych terminów na szczepienia przeciw COVID-19 w Polsce. Masz babcię/dziadka/matkę/ojca/wujka/ciocię która termin szczepienia ma ustalony na czerwiec? Albo jest wpisana/y &#8222;w zeszycie&#8221; w lokalnej przychodni? Wybierz województwo na mapie poniżej aby przejść do listy terminów z danego województwa. https://szczepienia.github.io"
+excerpt: "Pomoc przy wyszukiwaniu wolnych terminów na szczepienia przeciw COVID-19 w Polsce. Masz babcię/dziadka/matkę/ojca/wujka/ciocię która termin szczepienia ma ustalony na czerwiec? Albo jest wpisana/y „w zeszycie” w lokalnej przychodni? Wybierz województwo na mapie poniżej aby przejść do listy terminów z danego województwa. https://szczepienia.github.io"
 ---
 
 

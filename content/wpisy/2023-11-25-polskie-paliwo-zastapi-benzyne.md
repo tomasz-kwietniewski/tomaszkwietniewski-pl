@@ -6,7 +6,7 @@ modified: "2023-11-28T16:16:41"
 url_stara: "https://tomaszkwietniewski.pl/polskie-paliwo-zastapi-benzyne/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Ekologia"]
-excerpt: "Nowy odcinek programu This is IT, w którym dr Maciej Kawecki i prof. Małgorzata Hawrot-Paw porozmawiają o produkcji biopaliwa z alg. Czy znajdziemy zastępstwo dla standardowego paliwa? Czy Polska stanie się pionierem w produkcji nowoczesnego paliwa? Spis treści: 00:00 &#8211; Glony zamiast ropy. Przełom motoryzacji 00:53 &#8211; Produkcja paliwa z alg na Zachodniopomorskim Uniwersytecie Technologicznym&#8230;"
+excerpt: "Nowy odcinek programu This is IT, w którym dr Maciej Kawecki i prof. Małgorzata Hawrot-Paw porozmawiają o produkcji biopaliwa z alg. Czy znajdziemy zastępstwo dla standardowego paliwa? Czy Polska stanie się pionierem w produkcji nowoczesnego paliwa? Spis treści: 00:00 – Glony zamiast ropy. Przełom motoryzacji 00:53 – Produkcja paliwa z alg na Zachodniopomorskim Uniwersytecie Technologicznym…"
 ---
 
 

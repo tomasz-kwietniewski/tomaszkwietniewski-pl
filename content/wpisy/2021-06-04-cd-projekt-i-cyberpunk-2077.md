@@ -1,12 +1,12 @@
 ---
-title: "CD Projekt i Cyberpunk 2077 &#8211; jak inwestować w gemdev?"
+title: "CD Projekt i Cyberpunk 2077 – jak inwestować w gemdev?"
 slug: "cd-projekt-i-cyberpunk-2077"
 date: "2021-06-04T22:31:00"
 modified: "2021-06-16T09:13:09"
 url_stara: "https://tomaszkwietniewski.pl/cd-projekt-i-cyberpunk-2077/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Inwestowanie", "Nowe technologie"]
-excerpt: "Żałuję, że nie zgłębiłem tematu wcześniej;-) Mam parę akcji CD Projekt, ale nie wiedziałem kiedy to należy spieniężyć. Polecam tych kilka podcastów na ten temat oraz pięcioodcinkowy reportaż ze Spidersweb Plus. Na zdjęciu powyżej mój &#8222;biały kruk&#8221;, czyli premierowy egzemplarz pudełkowej wersji gry na PlayStation 4:-) Seria &#8222;CD Projekt. Niekoloryzowane.&#8221; Polecam."
+excerpt: "Żałuję, że nie zgłębiłem tematu wcześniej;-) Mam parę akcji CD Projekt, ale nie wiedziałem kiedy to należy spieniężyć. Polecam tych kilka podcastów na ten temat oraz pięcioodcinkowy reportaż ze Spidersweb Plus. Na zdjęciu powyżej mój „biały kruk”, czyli premierowy egzemplarz pudełkowej wersji gry na PlayStation 4:-) Seria „CD Projekt. Niekoloryzowane.” Polecam."
 ---
 
 

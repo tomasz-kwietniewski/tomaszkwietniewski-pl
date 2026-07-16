@@ -6,7 +6,7 @@ modified: "2025-05-29T15:17:59"
 url_stara: "https://tomaszkwietniewski.pl/ai-od-zera-jak-zaczac-nie-tracac-czasu-i-nerwow/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Nowe technologie", "Tipy ułatwiające życie"]
-excerpt: "ChatGPT w moment stworzył mi taki artykuł na ten temat: Sztuczna inteligencja, zwłaszcza w postaci modeli językowych takich jak ChatGPT, to jedno z najbardziej przełomowych narzędzi ostatnich lat. Ale czy faktycznie może nam pomóc w nauce, pracy i codziennym życiu? Jak zacząć korzystać z AI, nie zrażając się przy pierwszej próbie? W tym artykule znajdziesz&#8230;"
+excerpt: "ChatGPT w moment stworzył mi taki artykuł na ten temat: Sztuczna inteligencja, zwłaszcza w postaci modeli językowych takich jak ChatGPT, to jedno z najbardziej przełomowych narzędzi ostatnich lat. Ale czy faktycznie może nam pomóc w nauce, pracy i codziennym życiu? Jak zacząć korzystać z AI, nie zrażając się przy pierwszej próbie? W tym artykule znajdziesz…"
 ---
 
 

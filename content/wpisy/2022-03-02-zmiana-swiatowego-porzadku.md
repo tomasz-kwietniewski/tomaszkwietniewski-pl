@@ -6,7 +6,7 @@ modified: "2022-03-07T16:42:16"
 url_stara: "https://tomaszkwietniewski.pl/zmiana-swiatowego-porzadku/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Geopolityka", "Inwestowanie"]
-excerpt: "Warto obejrzeć film, w którym Ray Dalio wyjaśnia w uproszczony sposób cykl życia imperiów. Dziś w latach 20-tych XXI w. żyjemy w czasie potencjonalnego przesilenia geopolitycznego. To pierwszy raz za naszego życia, ale przez ostatnie 500 lat było już kilka takich momentów. Jak przebiegała zmiana na pozycji hegemona w przeszłości? W jakie fazie jesteśmy dziś?&#8230;"
+excerpt: "Warto obejrzeć film, w którym Ray Dalio wyjaśnia w uproszczony sposób cykl życia imperiów. Dziś w latach 20-tych XXI w. żyjemy w czasie potencjonalnego przesilenia geopolitycznego. To pierwszy raz za naszego życia, ale przez ostatnie 500 lat było już kilka takich momentów. Jak przebiegała zmiana na pozycji hegemona w przeszłości? W jakie fazie jesteśmy dziś?…"
 ---
 
 

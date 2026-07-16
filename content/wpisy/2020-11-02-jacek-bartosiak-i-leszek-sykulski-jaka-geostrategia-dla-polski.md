@@ -1,5 +1,5 @@
 ---
-title: "Jacek Bartosiak i Leszek Sykulski &#8211; Jaka geostrategia dla Polski?"
+title: "Jacek Bartosiak i Leszek Sykulski – Jaka geostrategia dla Polski?"
 slug: "jacek-bartosiak-i-leszek-sykulski-jaka-geostrategia-dla-polski"
 date: "2020-11-02T16:46:34"
 modified: "2021-05-05T15:39:08"

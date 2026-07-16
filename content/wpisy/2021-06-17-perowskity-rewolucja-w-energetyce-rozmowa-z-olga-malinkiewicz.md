@@ -1,5 +1,5 @@
 ---
-title: "Perowskity, rewolucja w energetyce &#8211; rozmowa z Olgą Malinkiewicz"
+title: "Perowskity, rewolucja w energetyce – rozmowa z Olgą Malinkiewicz"
 slug: "perowskity-rewolucja-w-energetyce-rozmowa-z-olga-malinkiewicz"
 date: "2021-06-17T15:02:50"
 modified: "2021-07-15T12:38:21"

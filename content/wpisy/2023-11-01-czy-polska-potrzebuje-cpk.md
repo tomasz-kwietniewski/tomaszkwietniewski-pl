@@ -6,7 +6,7 @@ modified: "2024-02-08T18:22:28"
 url_stara: "https://tomaszkwietniewski.pl/czy-polska-potrzebuje-cpk/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Geopolityka"]
-excerpt: "Do niedawna sam się zastanawiałem czy projekt CPK jest dobry, potrzebny, czy powinien powstać. Rozmowy z ekspertami rozwiewają wątpliwości. Polecam:-) https://www.petycjeonline.com/apel_o_kontynuacj_budowy_cpk Czym jest CPK? Czy ten projekt ma sens i co daje Polsce? Czy można rozłożyć ruch na lotniska regionalne? Czy Polska powinna rozbudować inne lotniska? Czy koncepcja CPK powinna zostać zrewidowana ze względu na&#8230;"
+excerpt: "Do niedawna sam się zastanawiałem czy projekt CPK jest dobry, potrzebny, czy powinien powstać. Rozmowy z ekspertami rozwiewają wątpliwości. Polecam:-) https://www.petycjeonline.com/apel_o_kontynuacj_budowy_cpk Czym jest CPK? Czy ten projekt ma sens i co daje Polsce? Czy można rozłożyć ruch na lotniska regionalne? Czy Polska powinna rozbudować inne lotniska? Czy koncepcja CPK powinna zostać zrewidowana ze względu na…"
 ---
 
 

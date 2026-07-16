@@ -6,7 +6,7 @@ modified: "2023-12-09T10:16:21"
 url_stara: "https://tomaszkwietniewski.pl/migracja-z-evernote-do-onenote/"
 typ: "wpis"
 kategorie: ["Nowe technologie", "Tipy ułatwiające życie"]
-excerpt: "Korzystałem z Evernote od 22 maja 2012 r., czyli ponad dekadę. Używałem tej aplikacji głównie do archiwizowania ciekawych artykułów, które przeczytałem w Internecie. Najważniejszym elementem były dla mnie “nożyczki sieciowe”, czyli Evernote Web Clipper. Przeważnie działały dobrze i pozwalały mi skopiować i zachować interesujące mnie treści. Przez te ponad 10 lat nazbierałem 193 notatniki z&#8230;"
+excerpt: "Korzystałem z Evernote od 22 maja 2012 r., czyli ponad dekadę. Używałem tej aplikacji głównie do archiwizowania ciekawych artykułów, które przeczytałem w Internecie. Najważniejszym elementem były dla mnie “nożyczki sieciowe”, czyli Evernote Web Clipper. Przeważnie działały dobrze i pozwalały mi skopiować i zachować interesujące mnie treści. Przez te ponad 10 lat nazbierałem 193 notatniki z…"
 ---
 
 

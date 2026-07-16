@@ -6,7 +6,7 @@ modified: "2021-06-15T09:23:35"
 url_stara: "https://tomaszkwietniewski.pl/uwierzytelnianie-dwuskladnikowe/"
 typ: "wpis"
 kategorie: ["Cyberbezpieczeństwo", "Nowe technologie"]
-excerpt: "Uwierzytelnianie dwuskładnikowe (ewentualnie weryfikacja dwuetapowa), to prosty mechanizm mocno zwiększający bezpieczeństwo przeróżnych Twoich kont. Włącz go wszędzie gdzie znajdują się Twoje dane. Przy pierwszym logowaniu na danych urządzeniu będzie trzeba dodać urządzenie do zaufanych i potem już nie będzie różnicy w korzystaniu (w porównaniu z sytuacją bez tego zabezpieczenia). To jak SMS weryfikacyjny z banku&#8230;."
+excerpt: "Uwierzytelnianie dwuskładnikowe (ewentualnie weryfikacja dwuetapowa), to prosty mechanizm mocno zwiększający bezpieczeństwo przeróżnych Twoich kont. Włącz go wszędzie gdzie znajdują się Twoje dane. Przy pierwszym logowaniu na danych urządzeniu będzie trzeba dodać urządzenie do zaufanych i potem już nie będzie różnicy w korzystaniu (w porównaniu z sytuacją bez tego zabezpieczenia). To jak SMS weryfikacyjny z banku…."
 ---
 
 

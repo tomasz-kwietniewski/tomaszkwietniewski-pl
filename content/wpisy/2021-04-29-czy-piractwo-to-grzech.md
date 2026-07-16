@@ -6,7 +6,7 @@ modified: "2021-04-30T10:59:24"
 url_stara: "https://tomaszkwietniewski.pl/czy-piractwo-to-grzech/"
 typ: "wpis"
 kategorie: ["Filmy i seriale"]
-excerpt: "Zgodnie z polskim prawem można pobierać treści z internetu na własny użytek (dozwolony użytek osobisty &#8211; art. 23 ustawy o prawie autorskim, więcej tutaj i tutaj). Zabronione natomiast jest ich rozpowszechnianie bez zgody twórcy. Odpada więc korzystanie z sieci p2p, torrent. Jest to ujęcie dosyć liberalne w skali krajów rozwiniętych. Prawo autorskie osobiste jest niezbywalne&#8230;"
+excerpt: "Zgodnie z polskim prawem można pobierać treści z internetu na własny użytek (dozwolony użytek osobisty – art. 23 ustawy o prawie autorskim, więcej tutaj i tutaj). Zabronione natomiast jest ich rozpowszechnianie bez zgody twórcy. Odpada więc korzystanie z sieci p2p, torrent. Jest to ujęcie dosyć liberalne w skali krajów rozwiniętych. Prawo autorskie osobiste jest niezbywalne…"
 ---
 
 

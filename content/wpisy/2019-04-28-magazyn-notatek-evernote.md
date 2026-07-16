@@ -6,7 +6,7 @@ modified: "2021-10-15T10:56:37"
 url_stara: "https://tomaszkwietniewski.pl/magazyn-notatek-evernote/"
 typ: "wpis"
 kategorie: ["Nowe technologie", "Tipy ułatwiające życie"]
-excerpt: "Kiedyś jak przeczytałem sobie jakiś artykuł i chciałem go zachować, to kopiowałem go do Worda i zapisywałem plik:-) Foldery tematyczne z takimi notatkami rozrastały się. I trafiłem prawie 10 lat temu na Evernote, który dobrze działa na różnych sprzętach, ma wtyczki do różnych przeglądarek. Opcja wycinania artykułów i ich archiwizowania jest super (gorzej działa na&#8230;"
+excerpt: "Kiedyś jak przeczytałem sobie jakiś artykuł i chciałem go zachować, to kopiowałem go do Worda i zapisywałem plik:-) Foldery tematyczne z takimi notatkami rozrastały się. I trafiłem prawie 10 lat temu na Evernote, który dobrze działa na różnych sprzętach, ma wtyczki do różnych przeglądarek. Opcja wycinania artykułów i ich archiwizowania jest super (gorzej działa na…"
 ---
 
 

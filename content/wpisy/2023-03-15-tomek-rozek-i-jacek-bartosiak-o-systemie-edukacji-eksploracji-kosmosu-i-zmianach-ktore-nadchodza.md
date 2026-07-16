@@ -6,7 +6,7 @@ modified: "2023-03-15T16:36:57"
 url_stara: "https://tomaszkwietniewski.pl/tomek-rozek-i-jacek-bartosiak-o-systemie-edukacji-eksploracji-kosmosu-i-zmianach-ktore-nadchodza/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Geopolityka", "Nowe technologie"]
-excerpt: "Bardzo ciekawa i pełna treści rozmowa: 0:00 &#8211; Wstęp 01:46 &#8211; Co aktualnie zajmuje Tomka Rożka? 04:25 &#8211; Czy czeka nas rewolucja w edukacji dzieci? 13:25 &#8211; Co jest celem edukacji? 18:58 &#8211; Wpływ sztucznej inteligencji na edukację dzieci 26:12 &#8211; Zagrożenia związane ze sztuczną inteligencją 30:30 &#8211; Chiński program kosmiczny 36:36 &#8211; Europejska agencja&#8230;"
+excerpt: "Bardzo ciekawa i pełna treści rozmowa: 0:00 – Wstęp 01:46 – Co aktualnie zajmuje Tomka Rożka? 04:25 – Czy czeka nas rewolucja w edukacji dzieci? 13:25 – Co jest celem edukacji? 18:58 – Wpływ sztucznej inteligencji na edukację dzieci 26:12 – Zagrożenia związane ze sztuczną inteligencją 30:30 – Chiński program kosmiczny 36:36 – Europejska agencja…"
 ---
 
 

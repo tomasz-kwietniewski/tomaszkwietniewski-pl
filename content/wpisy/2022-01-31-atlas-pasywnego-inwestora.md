@@ -6,7 +6,7 @@ modified: "2022-04-04T16:16:36"
 url_stara: "https://tomaszkwietniewski.pl/atlas-pasywnego-inwestora/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Rusza świetna inicjatywa edukacyjna w formie bezpłatnego mailingu i potem płatnego właściwego szkolenia &#8211; Atlas Pasywnego Inwestora. Najlepsi blogerzy/edukatorzy ze sfery finansów połączyli siły! Michał Szafrański (Finansowy Ninja, jakoszczdzacpieniadze.pl), Jacek Lempart (SystemTrader.pl), Artur Wiśniewski (Pasywna Rewolucja, Stockbroker.pl) i Maciej Aniserowicz (devstyle.pl, slowbiz.pl). Kurs da podstawy i wyposaży w wiedzę i narzędzia do zbudowania własnego długoterminowego&nbsp;portfela&#8230;"
+excerpt: "Rusza świetna inicjatywa edukacyjna w formie bezpłatnego mailingu i potem płatnego właściwego szkolenia – Atlas Pasywnego Inwestora. Najlepsi blogerzy/edukatorzy ze sfery finansów połączyli siły! Michał Szafrański (Finansowy Ninja, jakoszczdzacpieniadze.pl), Jacek Lempart (SystemTrader.pl), Artur Wiśniewski (Pasywna Rewolucja, Stockbroker.pl) i Maciej Aniserowicz (devstyle.pl, slowbiz.pl). Kurs da podstawy i wyposaży w wiedzę i narzędzia do zbudowania własnego długoterminowego portfela…"
 ---
 
 

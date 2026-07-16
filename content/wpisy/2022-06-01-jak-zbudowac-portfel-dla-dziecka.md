@@ -6,7 +6,7 @@ modified: "2022-06-06T14:42:11"
 url_stara: "https://tomaszkwietniewski.pl/jak-zbudowac-portfel-dla-dziecka/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Jacek Lempart przygotował ciekawą prezentację o długoterminowym regularnym inwestowaniu 500+ dla dziecka. Pokazuje potęgę procentu składanego i działania czasu. Warto obejrzeć:-) Wnioski Prosty plan + dyscyplina + długi horyzont inwestycyjny = sukces Kwota jaką będziemy potrzebować w przyszłości jest zwykle o wiele większa niż się nam dziś wydaje (inflacja!) Im dłużej inwestujemy, tym bardziej widać&#8230;"
+excerpt: "Jacek Lempart przygotował ciekawą prezentację o długoterminowym regularnym inwestowaniu 500+ dla dziecka. Pokazuje potęgę procentu składanego i działania czasu. Warto obejrzeć:-) Wnioski Prosty plan + dyscyplina + długi horyzont inwestycyjny = sukces Kwota jaką będziemy potrzebować w przyszłości jest zwykle o wiele większa niż się nam dziś wydaje (inflacja!) Im dłużej inwestujemy, tym bardziej widać…"
 ---
 
 

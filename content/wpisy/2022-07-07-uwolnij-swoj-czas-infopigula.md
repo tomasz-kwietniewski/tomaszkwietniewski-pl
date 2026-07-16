@@ -6,7 +6,7 @@ modified: "2022-07-07T08:58:35"
 url_stara: "https://tomaszkwietniewski.pl/uwolnij-swoj-czas-infopigula/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Tipy ułatwiające życie"]
-excerpt: "Powstało idealne narzędzie dla osób ceniących swój czas:-) Mi to bardzo pasuje. Nie muszę już skrolować serwisów newsowych, aby wyłuskać ciekawe wiadomości. Przeważnie kończy się to również &#8222;utknięciem&#8221; na czymś mniej istotnym, co pochłania czas. Teraz dostaję codziennie Infopigułę (40 newsów) i po 10-15 minutach jestem na bieżąco i mogę zająć się czymś innym;-) Albo&#8230;"
+excerpt: "Powstało idealne narzędzie dla osób ceniących swój czas:-) Mi to bardzo pasuje. Nie muszę już skrolować serwisów newsowych, aby wyłuskać ciekawe wiadomości. Przeważnie kończy się to również „utknięciem” na czymś mniej istotnym, co pochłania czas. Teraz dostaję codziennie Infopigułę (40 newsów) i po 10-15 minutach jestem na bieżąco i mogę zająć się czymś innym;-) Albo…"
 ---
 
 

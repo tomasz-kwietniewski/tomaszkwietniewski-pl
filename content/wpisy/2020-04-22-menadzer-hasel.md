@@ -6,7 +6,7 @@ modified: "2021-05-12T08:57:47"
 url_stara: "https://tomaszkwietniewski.pl/menadzer-hasel/"
 typ: "wpis"
 kategorie: ["Cyberbezpieczeństwo", "Nowe technologie"]
-excerpt: "Męczy Cię wymyślanie i pamiętanie kolejnych haseł do kolejnych zakładanych kont? Czujesz, że nie do końca dobre jest konstruowanie hasła ze swoją datą urodzenia, imieniem i dopiskiem np. &#8222;allegro&#8221;? To jest dobra intuicja, bo to jest niebezpieczne, to jest zła praktyka i poza tym jest inna możliwość. Wprowadź sobie system dwóch dobrych długich haseł ze&#8230;"
+excerpt: "Męczy Cię wymyślanie i pamiętanie kolejnych haseł do kolejnych zakładanych kont? Czujesz, że nie do końca dobre jest konstruowanie hasła ze swoją datą urodzenia, imieniem i dopiskiem np. „allegro”? To jest dobra intuicja, bo to jest niebezpieczne, to jest zła praktyka i poza tym jest inna możliwość. Wprowadź sobie system dwóch dobrych długich haseł ze…"
 ---
 
 

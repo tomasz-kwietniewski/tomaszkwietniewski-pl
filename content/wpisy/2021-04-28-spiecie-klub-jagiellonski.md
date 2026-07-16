@@ -1,12 +1,12 @@
 ---
-title: "Spięcie &#8211; Klub Jagielloński"
+title: "Spięcie – Klub Jagielloński"
 slug: "spiecie-klub-jagiellonski"
 date: "2021-04-28T23:01:07"
 modified: "2021-05-05T15:15:17"
 url_stara: "https://tomaszkwietniewski.pl/spiecie-klub-jagiellonski/"
 typ: "wpis"
 kategorie: ["Ciekawostki"]
-excerpt: "https://klubjagiellonski.pl/spiecie/ Niełatwo przychodzi nam w&nbsp;Polsce rozmawianie. Rozmawianie o&nbsp;Polsce – jeszcze trudniej. Nie&nbsp;jest to&nbsp;problem nowy, choć w&nbsp;ostatnich latach jeszcze się zaostrzył. Klub Jagielloński, Magazyn Kontakt, Krytyka Polityczna, Kultura Liberalna i&nbsp;Nowa Konfederacja podejmują to&nbsp;wyzwanie. Co kilka tygodni wybieramy nowy temat do&nbsp;dyskusji, a&nbsp;pięć powstałych w&nbsp;jej ramach tekstów jest publikowane na&nbsp;naszych portalach. Przykładowe tematy: Transformacja energetyczna Polski Energetyka atomowa&#8230;"
+excerpt: "https://klubjagiellonski.pl/spiecie/ Niełatwo przychodzi nam w Polsce rozmawianie. Rozmawianie o Polsce – jeszcze trudniej. Nie jest to problem nowy, choć w ostatnich latach jeszcze się zaostrzył. Klub Jagielloński, Magazyn Kontakt, Krytyka Polityczna, Kultura Liberalna i Nowa Konfederacja podejmują to wyzwanie. Co kilka tygodni wybieramy nowy temat do dyskusji, a pięć powstałych w jej ramach tekstów jest publikowane na naszych portalach. Przykładowe tematy: Transformacja energetyczna Polski Energetyka atomowa…"
 ---
 
 

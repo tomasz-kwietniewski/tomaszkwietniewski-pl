@@ -6,7 +6,7 @@ modified: "2021-08-13T12:03:17"
 url_stara: "https://tomaszkwietniewski.pl/nowe-technologie-pozyskiwania-wody-pitnej/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Ekologia", "Nowe technologie"]
-excerpt: "Ocieplenie&nbsp;klimatu, wzrost liczby ludności, zmiany demograficzne, urbanizacja oraz słabe zarządzanie zasobami powodują rosnący niedobór wody. Według Światowej Organizacji zdrowia do 2025 r. połowa światowej populacji będzie mieszkać na obszarach dotkniętych niedostatkiem wody.&nbsp;Czy kiedykolwiek zastanawiałeś&nbsp;się,&nbsp;ile dni&nbsp;człowiek&nbsp;może&nbsp;przeżyć&nbsp;bez wody pitnej? W zależności od stanu zdrowia, wieku, płci oraz innych indywidualnych predyspozycji, czas ten wynosi od 4 do 7&#8230;"
+excerpt: "Ocieplenie klimatu, wzrost liczby ludności, zmiany demograficzne, urbanizacja oraz słabe zarządzanie zasobami powodują rosnący niedobór wody. Według Światowej Organizacji zdrowia do 2025 r. połowa światowej populacji będzie mieszkać na obszarach dotkniętych niedostatkiem wody. Czy kiedykolwiek zastanawiałeś się, ile dni człowiek może przeżyć bez wody pitnej? W zależności od stanu zdrowia, wieku, płci oraz innych indywidualnych predyspozycji, czas ten wynosi od 4 do 7…"
 ---
 
 

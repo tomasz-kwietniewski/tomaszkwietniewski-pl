@@ -1,12 +1,12 @@
 ---
-title: "🤷‍♂️ Inflacja? Emerytura? &#8230;a komu to potrzebne?"
+title: "🤷‍♂️ Inflacja? Emerytura? …a komu to potrzebne?"
 slug: "inflacja-emerytura-a-komu-to-potrzebne"
 date: "2021-04-10T07:48:16"
 modified: "2023-11-15T14:26:28"
 url_stara: "https://tomaszkwietniewski.pl/inflacja-emerytura-a-komu-to-potrzebne/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Tym razem nie pod koniec roku, ale już teraz piszę, bo nazbierałem dużo przemyśleń i ciekawych materiałów (m.in. dzięki Klanowi Finansowych Ninja Michała Szafrańskiego), które nie powinny czekać:-) To są naprawdę pomocne rzeczy. Mam nadzieję, że znajdziesz coś dla siebie. Ważna tu jest perspektywa jaką przyjmuję, czyli: Polaka zarabiającego w PLN i wydającego w PLN&#8230;"
+excerpt: "Tym razem nie pod koniec roku, ale już teraz piszę, bo nazbierałem dużo przemyśleń i ciekawych materiałów (m.in. dzięki Klanowi Finansowych Ninja Michała Szafrańskiego), które nie powinny czekać:-) To są naprawdę pomocne rzeczy. Mam nadzieję, że znajdziesz coś dla siebie. Ważna tu jest perspektywa jaką przyjmuję, czyli: Polaka zarabiającego w PLN i wydającego w PLN…"
 ---
 
 

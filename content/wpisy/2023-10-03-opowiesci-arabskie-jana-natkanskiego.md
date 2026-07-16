@@ -6,7 +6,7 @@ modified: "2023-11-22T12:10:05"
 url_stara: "https://tomaszkwietniewski.pl/opowiesci-arabskie-jana-natkanskiego/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Geopolityka"]
-excerpt: "Polecam cykl rozmów Agaty Kasprolewicz z Janem Natkańskim w Raporcie o stanie świata. Skąd wzięli się Arabowie? Kim byli przed&nbsp;narodzinami islamu? Kim się stali po&nbsp;nadejściu proroka Mahometa? Dlaczego dopiero po&nbsp;przyjęciu religii monoteistycznej rozpoczął się okres wielkich arabskich podbojów?&nbsp;Kto rysował współczesne granice krajów arabskich? Co łączy współczesnych Arabów, a&nbsp;co ich dzieli? Czy&nbsp;w&nbsp;ogóle istnieje arabska tożsamość? Jan&#8230;"
+excerpt: "Polecam cykl rozmów Agaty Kasprolewicz z Janem Natkańskim w Raporcie o stanie świata. Skąd wzięli się Arabowie? Kim byli przed narodzinami islamu? Kim się stali po nadejściu proroka Mahometa? Dlaczego dopiero po przyjęciu religii monoteistycznej rozpoczął się okres wielkich arabskich podbojów? Kto rysował współczesne granice krajów arabskich? Co łączy współczesnych Arabów, a co ich dzieli? Czy w ogóle istnieje arabska tożsamość? Jan…"
 ---
 
 

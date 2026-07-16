@@ -6,7 +6,7 @@ modified: "2021-11-04T11:12:01"
 url_stara: "https://tomaszkwietniewski.pl/zdjecia-google-google-photos-przestaja-byc-darmowe-od-1-czerwca-2021/"
 typ: "wpis"
 kategorie: ["Nowe technologie", "Tipy ułatwiające życie"]
-excerpt: "Niedługo Google wyłączy możliwość bezpłatnego przechowywania nieskończonej liczby zdjęć i filmów w aplikacji Google Photos (Zdjęcia Google). To się nazywa dzisiaj &#8222;wysoka jakość&#8221; i backup/kopia zapasowa są bezpłatne. To była bezkonkurencyjna oferta na rynku, ale kiedyś pewnie musiała się skończyć:-( Od czerwca każde zdjęcie i filmik będzie &#8222;zjadało&#8221; przestrzeń na koncie Google (darmowo jest 15&#8230;"
+excerpt: "Niedługo Google wyłączy możliwość bezpłatnego przechowywania nieskończonej liczby zdjęć i filmów w aplikacji Google Photos (Zdjęcia Google). To się nazywa dzisiaj „wysoka jakość” i backup/kopia zapasowa są bezpłatne. To była bezkonkurencyjna oferta na rynku, ale kiedyś pewnie musiała się skończyć:-( Od czerwca każde zdjęcie i filmik będzie „zjadało” przestrzeń na koncie Google (darmowo jest 15…"
 ---
 
 

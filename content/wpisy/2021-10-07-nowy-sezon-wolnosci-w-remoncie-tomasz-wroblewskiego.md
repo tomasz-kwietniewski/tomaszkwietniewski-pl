@@ -6,7 +6,7 @@ modified: "2021-10-25T08:15:27"
 url_stara: "https://tomaszkwietniewski.pl/nowy-sezon-wolnosci-w-remoncie-tomasz-wroblewskiego/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Ekologia", "Geopolityka"]
-excerpt: "Red. Tomasz Wróblewski wrócił na YouTube ze swoim cyklem &#8222;Wolność w remoncie&#8221;, w którym przedstawia aktualne trendy i wydarzenia w polskiej i światowej gospodarce, polityce czy stosunkach międzynarodowych. Jest to wszystko okraszone wieloma odwołaniami do historii, filozofii, sztuki, kultury. Bardzo serdecznie polecam."
+excerpt: "Red. Tomasz Wróblewski wrócił na YouTube ze swoim cyklem „Wolność w remoncie”, w którym przedstawia aktualne trendy i wydarzenia w polskiej i światowej gospodarce, polityce czy stosunkach międzynarodowych. Jest to wszystko okraszone wieloma odwołaniami do historii, filozofii, sztuki, kultury. Bardzo serdecznie polecam."
 ---
 
 

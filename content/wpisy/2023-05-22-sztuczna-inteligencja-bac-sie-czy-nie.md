@@ -1,5 +1,5 @@
 ---
-title: "Sztuczna inteligencja &#8211; bać się czy nie?"
+title: "Sztuczna inteligencja – bać się czy nie?"
 slug: "sztuczna-inteligencja-bac-sie-czy-nie"
 date: "2023-05-22T21:08:00"
 modified: "2023-06-01T11:17:36"

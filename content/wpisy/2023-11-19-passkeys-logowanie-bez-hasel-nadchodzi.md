@@ -1,12 +1,12 @@
 ---
-title: "Passkeys &#8211; logowanie bez haseł nadchodzi"
+title: "Passkeys – logowanie bez haseł nadchodzi"
 slug: "passkeys-logowanie-bez-hasel-nadchodzi"
 date: "2023-11-19T12:19:38"
 modified: "2023-11-21T12:25:58"
 url_stara: "https://tomaszkwietniewski.pl/passkeys-logowanie-bez-hasel-nadchodzi/"
 typ: "wpis"
 kategorie: ["Nowe technologie", "Tipy ułatwiające życie"]
-excerpt: "Mateusz Chrobok: Zwróciliście może uwagę, że ostatnio logując się do swojego konta w usługach Google zapytano Was, czy chcecie nie korzystać z haseł? Jak to nie korzystać z haseł? Przecież konto bez hasła nie jest bezpieczne! Być może po dekadach spędzonych na wymyślaniu coraz to bardziej skomplikowanych sekretów, wpisywaniu ich i zmienianiu co jakiś czas,&#8230;"
+excerpt: "Mateusz Chrobok: Zwróciliście może uwagę, że ostatnio logując się do swojego konta w usługach Google zapytano Was, czy chcecie nie korzystać z haseł? Jak to nie korzystać z haseł? Przecież konto bez hasła nie jest bezpieczne! Być może po dekadach spędzonych na wymyślaniu coraz to bardziej skomplikowanych sekretów, wpisywaniu ich i zmienianiu co jakiś czas,…"
 ---
 
 

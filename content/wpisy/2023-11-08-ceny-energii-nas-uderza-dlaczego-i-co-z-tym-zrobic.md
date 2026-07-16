@@ -6,7 +6,7 @@ modified: "2023-11-21T12:18:15"
 url_stara: "https://tomaszkwietniewski.pl/ceny-energii-nas-uderza-dlaczego-i-co-z-tym-zrobic/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Ekologia"]
-excerpt: "Jak działa europejski system opłat za emisję CO2? Skąd się wziął? Po co? Od kiedy nas obowiązuje? Jakub Wiech: Kaczyński ma swoją &#8222;piątkę&#8221;, Mentzen ma swoją &#8222;piątkę&#8221;, nawet zwierzęta mają swoją &#8222;piątkę&#8221;. Więc ja też mam swoją &#8222;piątkę&#8221;. Oto pięć postulatów dla energetyki, które powinny wziąć na sztandary wszystkie polskie partie."
+excerpt: "Jak działa europejski system opłat za emisję CO2? Skąd się wziął? Po co? Od kiedy nas obowiązuje? Jakub Wiech: Kaczyński ma swoją „piątkę”, Mentzen ma swoją „piątkę”, nawet zwierzęta mają swoją „piątkę”. Więc ja też mam swoją „piątkę”. Oto pięć postulatów dla energetyki, które powinny wziąć na sztandary wszystkie polskie partie."
 ---
 
 

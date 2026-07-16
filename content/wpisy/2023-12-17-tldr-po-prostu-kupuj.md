@@ -6,7 +6,7 @@ modified: "2023-12-20T18:53:49"
 url_stara: "https://tomaszkwietniewski.pl/tldr-po-prostu-kupuj/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Zachęcam do przeczytania książki Nicka Maggiulli &#8222;Po Prostu Kupuj&#8221; (adaptacja do polskich realiów Michał Szafrański). Napisana jest bardzo przystępnie i szybko się ją pochłania:-) Osobom zapisanym na mój newsletter udostępniam obszerną notatkę z esencją tej książki. Możesz się zapisać TUTAJ. Na zachętę wklejam podsumowanie z końca książki (choć na pewno warto przeczytać całość i pogłębić&#8230;"
+excerpt: "Zachęcam do przeczytania książki Nicka Maggiulli „Po Prostu Kupuj” (adaptacja do polskich realiów Michał Szafrański). Napisana jest bardzo przystępnie i szybko się ją pochłania:-) Osobom zapisanym na mój newsletter udostępniam obszerną notatkę z esencją tej książki. Możesz się zapisać TUTAJ. Na zachętę wklejam podsumowanie z końca książki (choć na pewno warto przeczytać całość i pogłębić…"
 ---
 
 

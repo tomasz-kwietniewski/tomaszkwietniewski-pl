@@ -12,6 +12,7 @@ Wynik (w katalogu export/):
 Adresy obrazków w treściach są przepisywane na względne (media/...),
 oryginalne adresy zostają w raw/.
 """
+import html
 import json
 import re
 import sys
@@ -77,7 +78,7 @@ def rewrite_uploads(html):
 
 
 def save_item(item, out_dir, kind, cat_names):
-    title = item["title"]["rendered"]
+    title = html.unescape(item["title"]["rendered"])
     slug = item["slug"]
     date = item["date"][:10]
     html = item["content"]["rendered"]
@@ -91,7 +92,8 @@ def save_item(item, out_dir, kind, cat_names):
     if kind == "wpis":
         cats = [cat_names.get(c, str(c)) for c in item.get("categories", [])]
         lines.append("kategorie: [" + ", ".join(yaml_escape(c) for c in cats) + "]")
-        excerpt = re.sub(r"<[^>]+>", "", item.get("excerpt", {}).get("rendered", "")).strip()
+        excerpt = html.unescape(
+            re.sub(r"<[^>]+>", "", item.get("excerpt", {}).get("rendered", "")).strip())
         if excerpt:
             lines.append(f"excerpt: {yaml_escape(excerpt)}")
     lines.append("---")

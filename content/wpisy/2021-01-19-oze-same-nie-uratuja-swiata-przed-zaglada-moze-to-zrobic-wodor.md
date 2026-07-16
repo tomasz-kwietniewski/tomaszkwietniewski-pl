@@ -6,7 +6,7 @@ modified: "2021-08-13T12:11:27"
 url_stara: "https://tomaszkwietniewski.pl/oze-same-nie-uratuja-swiata-przed-zaglada-moze-to-zrobic-wodor/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Ekologia"]
-excerpt: "Skutki zmian klimatycznych zauważają już nawet najbardziej oporni ludzie. Ale wciąż niewielu jest takich, którzy gotowi są zrezygnować ze swojego stylu życia, niezbędnych do życia (hmm…) udogodnień oraz zabawek. Czy uda nam się znaleźć technologię napędzania tych wszystkich rzeczy, która pozwoli nam być i mieć? A może taka technologia już istnieje? Coraz więcej naukowców mówi:&#8230;"
+excerpt: "Skutki zmian klimatycznych zauważają już nawet najbardziej oporni ludzie. Ale wciąż niewielu jest takich, którzy gotowi są zrezygnować ze swojego stylu życia, niezbędnych do życia (hmm…) udogodnień oraz zabawek. Czy uda nam się znaleźć technologię napędzania tych wszystkich rzeczy, która pozwoli nam być i mieć? A może taka technologia już istnieje? Coraz więcej naukowców mówi:…"
 ---
 
 

@@ -6,7 +6,7 @@ modified: "2023-05-04T09:54:45"
 url_stara: "https://tomaszkwietniewski.pl/marek-budzisz-czy-polska-i-zachod-mysli-strategicznie-o-wojnie-na-ukrainie-jak-zakonczyc-ta-wojne/"
 typ: "wpis"
 kategorie: ["Geopolityka", "Polecane kanały YT"]
-excerpt: "Godzinka, ale zdecydowanie warto. Jest spór, są emocje ale też wzajemny szacunek i argumenty. Nie mogę nie przyznać, że to co mówi Marek Budzisz jest logiczne i jego argumenty są mocniejsze. Ogólnie nie myślimy o tym jak zakończyć tę wojnę (Ukraińcy chcą odbić tereny sprzed 2014 r. co jest mega nierealistyczne, a długa wojna oznacza&#8230;"
+excerpt: "Godzinka, ale zdecydowanie warto. Jest spór, są emocje ale też wzajemny szacunek i argumenty. Nie mogę nie przyznać, że to co mówi Marek Budzisz jest logiczne i jego argumenty są mocniejsze. Ogólnie nie myślimy o tym jak zakończyć tę wojnę (Ukraińcy chcą odbić tereny sprzed 2014 r. co jest mega nierealistyczne, a długa wojna oznacza…"
 ---
 
 

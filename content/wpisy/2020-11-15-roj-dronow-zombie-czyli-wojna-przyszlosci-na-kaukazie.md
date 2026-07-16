@@ -6,7 +6,7 @@ modified: "2021-08-13T12:12:50"
 url_stara: "https://tomaszkwietniewski.pl/roj-dronow-zombie-czyli-wojna-przyszlosci-na-kaukazie/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Nowe technologie"]
-excerpt: "Niedawno zakończona wojna w Górskim Karabachu mocno różniła się od konfliktów do których przyzwyczaił nas XXI wiek. Nie ciągnęła się latami jak wojna w Afganistanie, Jemenie czy na Ukrainie. Od pierwszych wystrzałów w nowej odsłonie tego 30 letniego sporu do podpisania zawieszenia broni minęło ledwie 6 tygodni. To był prawdziwy blitzkrieg, dzięki któremu uniknięto dużej&#8230;"
+excerpt: "Niedawno zakończona wojna w Górskim Karabachu mocno różniła się od konfliktów do których przyzwyczaił nas XXI wiek. Nie ciągnęła się latami jak wojna w Afganistanie, Jemenie czy na Ukrainie. Od pierwszych wystrzałów w nowej odsłonie tego 30 letniego sporu do podpisania zawieszenia broni minęło ledwie 6 tygodni. To był prawdziwy blitzkrieg, dzięki któremu uniknięto dużej…"
 ---
 
 

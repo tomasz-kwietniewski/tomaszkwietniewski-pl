@@ -6,7 +6,7 @@ modified: "2022-10-10T14:56:18"
 url_stara: "https://tomaszkwietniewski.pl/kongo-tam-gdzie-bogactwo-stalo-sie-przeklenstwem/"
 typ: "wpis"
 kategorie: ["Ciekawostki"]
-excerpt: "Wiele lat temu trafiłem na film dokumentalny pt. Duch króla Leopolda*. Do dziś jest on dla mnie źródłem ciekawostek. Historia Konga jest bardzo ciekawa choć tragiczna. Systemowy wyzysk na wielką skalę przy pozyskiwaniu kauczuku i kości słoniowej, miliony ofiar za czasów króla Belgii Leopolda II, upadły kraj, dyktatura Sese Seko Mobutu, kilkadziesiąt lat krwawych wojen&#8230;"
+excerpt: "Wiele lat temu trafiłem na film dokumentalny pt. Duch króla Leopolda*. Do dziś jest on dla mnie źródłem ciekawostek. Historia Konga jest bardzo ciekawa choć tragiczna. Systemowy wyzysk na wielką skalę przy pozyskiwaniu kauczuku i kości słoniowej, miliony ofiar za czasów króla Belgii Leopolda II, upadły kraj, dyktatura Sese Seko Mobutu, kilkadziesiąt lat krwawych wojen…"
 ---
 
 

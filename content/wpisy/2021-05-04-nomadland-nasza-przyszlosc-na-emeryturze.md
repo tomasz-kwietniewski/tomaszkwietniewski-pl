@@ -1,12 +1,12 @@
 ---
-title: "Nomadland &#8211; nasza przyszłość na emeryturze"
+title: "Nomadland – nasza przyszłość na emeryturze"
 slug: "nomadland-nasza-przyszlosc-na-emeryturze"
 date: "2021-05-04T10:02:22"
 modified: "2023-11-15T14:27:23"
 url_stara: "https://tomaszkwietniewski.pl/nomadland-nasza-przyszlosc-na-emeryturze/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Oscary 2021 rozdane. Zapewne niebawem wielu z nas obejrzy w kinach czy w domu Nomadland (2020) (https://www.filmweb.pl/film/Nomadland-2020-837168). Wydaje się, że to zupełnie inna rzeczywistość od naszej, ale czy faktycznie? W Stanach Zjednoczonych system zabezpieczenia społecznego jest mocno oparty na indywidualnej zaradności. Dzięki temu podatki/składki/koszty pracy są niższe niż w Europie. Z drugiej strony oznacza to,&#8230;"
+excerpt: "Oscary 2021 rozdane. Zapewne niebawem wielu z nas obejrzy w kinach czy w domu Nomadland (2020) (https://www.filmweb.pl/film/Nomadland-2020-837168). Wydaje się, że to zupełnie inna rzeczywistość od naszej, ale czy faktycznie? W Stanach Zjednoczonych system zabezpieczenia społecznego jest mocno oparty na indywidualnej zaradności. Dzięki temu podatki/składki/koszty pracy są niższe niż w Europie. Z drugiej strony oznacza to,…"
 ---
 
 

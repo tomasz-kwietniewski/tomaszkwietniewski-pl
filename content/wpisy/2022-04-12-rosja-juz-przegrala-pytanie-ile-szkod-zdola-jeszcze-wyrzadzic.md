@@ -6,7 +6,7 @@ modified: "2022-05-31T12:12:49"
 url_stara: "https://tomaszkwietniewski.pl/rosja-juz-przegrala-pytanie-ile-szkod-zdola-jeszcze-wyrzadzic/"
 typ: "wpis"
 kategorie: ["Geopolityka"]
-excerpt: "Zdecydowanie polecam artykuł-analizę Krzysztofa Wojczala na temat wojny rosyjsko-ukraińskiej w szerszym kontekście. Opublikowana 12 kwietnia 2022 r. na jego blogu. Pojawiła się również wersja w formie videobloga: Tutaj polecam pierwsze 15 minut. Jarosław Wolski tłumaczy jakie znaczenie ma, że bierzemy udział w wojnie na Ukrainie angażując sprzęt i pieniądze, ale nie ludzi i co to&#8230;"
+excerpt: "Zdecydowanie polecam artykuł-analizę Krzysztofa Wojczala na temat wojny rosyjsko-ukraińskiej w szerszym kontekście. Opublikowana 12 kwietnia 2022 r. na jego blogu. Pojawiła się również wersja w formie videobloga: Tutaj polecam pierwsze 15 minut. Jarosław Wolski tłumaczy jakie znaczenie ma, że bierzemy udział w wojnie na Ukrainie angażując sprzęt i pieniądze, ale nie ludzi i co to…"
 ---
 
 

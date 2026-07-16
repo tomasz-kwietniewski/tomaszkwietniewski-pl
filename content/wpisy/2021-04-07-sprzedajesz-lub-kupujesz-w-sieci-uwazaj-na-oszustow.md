@@ -6,7 +6,7 @@ modified: "2021-05-05T15:36:26"
 url_stara: "https://tomaszkwietniewski.pl/sprzedajesz-lub-kupujesz-w-sieci-uwazaj-na-oszustow/"
 typ: "wpis"
 kategorie: ["Cyberbezpieczeństwo"]
-excerpt: "Sprzedajesz w sieci? Uważaj. Oszuści wykorzystują serwisy ogłoszeniowe, np. OLX. Wysyłają linki w wiadomościach SMS lub na komunikatorach WhatsApp/Messenger, które prowadzą do fałszywych stron internetowych – imitujących strony portali ogłoszeniowych. &nbsp; Na tych stronach zachęcają do podania danych karty płatniczej lub do logowania do bankowości internetowej. Przekonują, że jest to sposób na odebranie płatności od&#8230;"
+excerpt: "Sprzedajesz w sieci? Uważaj. Oszuści wykorzystują serwisy ogłoszeniowe, np. OLX. Wysyłają linki w wiadomościach SMS lub na komunikatorach WhatsApp/Messenger, które prowadzą do fałszywych stron internetowych – imitujących strony portali ogłoszeniowych.   Na tych stronach zachęcają do podania danych karty płatniczej lub do logowania do bankowości internetowej. Przekonują, że jest to sposób na odebranie płatności od…"
 ---
 
 

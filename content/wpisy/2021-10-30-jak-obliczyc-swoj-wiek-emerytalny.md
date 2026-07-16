@@ -6,7 +6,7 @@ modified: "2023-11-15T14:28:25"
 url_stara: "https://tomaszkwietniewski.pl/jak-obliczyc-swoj-wiek-emerytalny/"
 typ: "wpis"
 kategorie: ["Prywatna emerytura"]
-excerpt: "Co to znaczy? Przecież wiek emerytalny w Polsce to 60 lat dla kobiet i 65 lat dla mężczyzn. Ale czy rzeczywiście? To przekonanie opiera się na wierze w repartycyjny XIX-wieczny system emerytalny, gdzie bieżące emerytury nielicznych emerytów są opłacane przez składki licznych pracujących. To działało dobrze do kiedy był wysoki przyrost naturalny i było dużo&#8230;"
+excerpt: "Co to znaczy? Przecież wiek emerytalny w Polsce to 60 lat dla kobiet i 65 lat dla mężczyzn. Ale czy rzeczywiście? To przekonanie opiera się na wierze w repartycyjny XIX-wieczny system emerytalny, gdzie bieżące emerytury nielicznych emerytów są opłacane przez składki licznych pracujących. To działało dobrze do kiedy był wysoki przyrost naturalny i było dużo…"
 ---
 
 

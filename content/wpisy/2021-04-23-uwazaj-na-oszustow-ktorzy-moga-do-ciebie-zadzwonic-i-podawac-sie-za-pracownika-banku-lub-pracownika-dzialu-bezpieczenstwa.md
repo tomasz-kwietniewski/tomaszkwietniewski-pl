@@ -1,12 +1,12 @@
 ---
-title: "Nie daj się okraść &#8211; telefon od fałszywego pracownika banku"
+title: "Nie daj się okraść – telefon od fałszywego pracownika banku"
 slug: "uwazaj-na-oszustow-ktorzy-moga-do-ciebie-zadzwonic-i-podawac-sie-za-pracownika-banku-lub-pracownika-dzialu-bezpieczenstwa"
 date: "2021-04-23T09:34:55"
 modified: "2021-06-04T10:56:25"
 url_stara: "https://tomaszkwietniewski.pl/uwazaj-na-oszustow-ktorzy-moga-do-ciebie-zadzwonic-i-podawac-sie-za-pracownika-banku-lub-pracownika-dzialu-bezpieczenstwa/"
 typ: "wpis"
 kategorie: ["Cyberbezpieczeństwo"]
-excerpt: "Oszuści mówią, że z Twojego rachunku został wykonany podejrzany przelew lub transakcja kartowa. Wszystkie szczegóły są zmyślone: przestępcy podają fikcyjną kwotę operacji finansowej i nieistniejące dane odbiorcy. Rozmowy mogą trwać długo, przestępcy przełączają rozmowę do innych „konsultantów”, żeby stworzyć pozory prawdziwego kontaktu z bankiem. Oszuści przekonują, że Twoje pieniądze są w niebezpieczeństwie i musisz zainstalować&#8230;"
+excerpt: "Oszuści mówią, że z Twojego rachunku został wykonany podejrzany przelew lub transakcja kartowa. Wszystkie szczegóły są zmyślone: przestępcy podają fikcyjną kwotę operacji finansowej i nieistniejące dane odbiorcy. Rozmowy mogą trwać długo, przestępcy przełączają rozmowę do innych „konsultantów”, żeby stworzyć pozory prawdziwego kontaktu z bankiem. Oszuści przekonują, że Twoje pieniądze są w niebezpieczeństwie i musisz zainstalować…"
 ---
 
 

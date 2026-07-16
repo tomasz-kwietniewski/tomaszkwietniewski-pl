@@ -1,12 +1,12 @@
 ---
-title: "Spokojnie o wojnie &#8211; Jarosław Wolski"
+title: "Spokojnie o wojnie – Jarosław Wolski"
 slug: "spokojnie-o-wojnie-jaroslaw-wolski"
 date: "2022-11-14T21:51:01"
 modified: "2022-11-15T10:52:06"
 url_stara: "https://tomaszkwietniewski.pl/spokojnie-o-wojnie-jaroslaw-wolski/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Cyberbezpieczeństwo", "Geopolityka", "Polecane kanały YT"]
-excerpt: "Polecam świeżą książkę Jarosława Wolskiego w kontekście wojny w Ukrainie. Pisana latem 2022 + dodatkowy rozdział w PDF z października 2022 (wnioski dla Polski). http://wolski.alt.pl/ Czy Rosja zaatakuje Polskę? Czy Polska jest gotowa do obrony? Czy można przygotować się na rosyjską inwazję? Czy NATO pomoże Polsce? Kto jest najbardziej zagrożony w razie wojny? Jeszcze kilka&#8230;"
+excerpt: "Polecam świeżą książkę Jarosława Wolskiego w kontekście wojny w Ukrainie. Pisana latem 2022 + dodatkowy rozdział w PDF z października 2022 (wnioski dla Polski). http://wolski.alt.pl/ Czy Rosja zaatakuje Polskę? Czy Polska jest gotowa do obrony? Czy można przygotować się na rosyjską inwazję? Czy NATO pomoże Polsce? Kto jest najbardziej zagrożony w razie wojny? Jeszcze kilka…"
 ---
 
 

@@ -6,7 +6,7 @@ modified: "2022-02-16T11:04:19"
 url_stara: "https://tomaszkwietniewski.pl/tomasz-rozek-o-bolaczkach-polskiej-edukacji/"
 typ: "wpis"
 kategorie: ["Ciekawostki"]
-excerpt: "Polecam wywiad z dr Tomaszem Rożkiem, który ukazał się na Onet.pl. W nim m.in.: &#8222;Nauce nie można ufać tak, jak ufa się drugiej osobie. Ścisła nauka nie opiera się o wiarę i zaufanie, tylko o dowody. A te są albo ich nie ma&#8221; Dr Rożek wskazuje na wyraźne różnice między naukowcami i influencerami. Ci drudzy&#8230;"
+excerpt: "Polecam wywiad z dr Tomaszem Rożkiem, który ukazał się na Onet.pl. W nim m.in.: „Nauce nie można ufać tak, jak ufa się drugiej osobie. Ścisła nauka nie opiera się o wiarę i zaufanie, tylko o dowody. A te są albo ich nie ma” Dr Rożek wskazuje na wyraźne różnice między naukowcami i influencerami. Ci drudzy…"
 ---
 
 

@@ -6,7 +6,7 @@ modified: "2021-05-05T15:34:03"
 url_stara: "https://tomaszkwietniewski.pl/oszusci-moga-wyludzac-dane-twoich-kart-platniczych/"
 typ: "wpis"
 kategorie: ["Cyberbezpieczeństwo"]
-excerpt: "Korzystasz z portali aukcyjnych lub ogłoszeniowych? Przestępcy mogą to wykorzystać aby wykraść dane Twoich kart płatniczych. Dlatego uważaj na linki podsyłanew wiadomościach SMS, komunikatorach WhatsApp/Messenger i inne, które zachęcają do podania danych Twojej karty płatniczej.Dane karty tj. jej numer , kod CVV2 oraz data ważności są szczególnie wrażliwe. Jeśli je podasz, przestępcy będą mogli dodać&#8230;"
+excerpt: "Korzystasz z portali aukcyjnych lub ogłoszeniowych? Przestępcy mogą to wykorzystać aby wykraść dane Twoich kart płatniczych. Dlatego uważaj na linki podsyłanew wiadomościach SMS, komunikatorach WhatsApp/Messenger i inne, które zachęcają do podania danych Twojej karty płatniczej.Dane karty tj. jej numer , kod CVV2 oraz data ważności są szczególnie wrażliwe. Jeśli je podasz, przestępcy będą mogli dodać…"
 ---
 
 

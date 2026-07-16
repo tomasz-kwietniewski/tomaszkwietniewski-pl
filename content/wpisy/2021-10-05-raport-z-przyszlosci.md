@@ -6,7 +6,7 @@ modified: "2021-11-25T14:54:26"
 url_stara: "https://tomaszkwietniewski.pl/raport-z-przyszlosci/"
 typ: "wpis"
 kategorie: ["Ciekawostki", "Ekologia", "Nowe technologie"]
-excerpt: "Polecam świetną nową serię w &#8222;Raporcie o stanie świata&#8221;, która nazywa się &#8222;Raport z przyszłości&#8221;. Tematy odcinków: żywność (odc 1 i 2) macierzyństwo (odc 3 i 4) praca (odc 5 i 6) kryptowaluty (odc 7) sport (odc 8)"
+excerpt: "Polecam świetną nową serię w „Raporcie o stanie świata”, która nazywa się „Raport z przyszłości”. Tematy odcinków: żywność (odc 1 i 2) macierzyństwo (odc 3 i 4) praca (odc 5 i 6) kryptowaluty (odc 7) sport (odc 8)"
 ---
 
 

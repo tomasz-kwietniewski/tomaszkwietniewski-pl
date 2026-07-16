@@ -6,7 +6,7 @@ modified: "2023-11-15T14:24:27"
 url_stara: "https://tomaszkwietniewski.pl/czy-chcesz-kiedys-przejsc-na-emeryture/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Wracam jak bumerang;-) z tematem długoterminowego oszczędzania na własną emeryturę. Mimo, że często to dla nas temat odległy, to jednak warto uwzględnić go w swoim budżecie. Rzeczywistość jest taka, że w Polsce jest bardzo zła sytuacja demograficzna i w zasadzie nie da się już tego poprawić (nic nie wskazuje na to, że może to się&#8230;"
+excerpt: "Wracam jak bumerang;-) z tematem długoterminowego oszczędzania na własną emeryturę. Mimo, że często to dla nas temat odległy, to jednak warto uwzględnić go w swoim budżecie. Rzeczywistość jest taka, że w Polsce jest bardzo zła sytuacja demograficzna i w zasadzie nie da się już tego poprawić (nic nie wskazuje na to, że może to się…"
 ---
 
 

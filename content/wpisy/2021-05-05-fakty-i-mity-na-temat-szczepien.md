@@ -6,7 +6,7 @@ modified: "2021-09-22T14:17:00"
 url_stara: "https://tomaszkwietniewski.pl/fakty-i-mity-na-temat-szczepien/"
 typ: "wpis"
 kategorie: ["Ciekawostki"]
-excerpt: "W momencie kiedy rozpoczęły się szczepienia, pojawiły się również tysiące pytań i&nbsp;wątpliwości. Od&nbsp;radości i&nbsp;nadziei na&nbsp;rychły koniec pandemii, po&nbsp;nieufność i&nbsp;strach. Pojawiła się dezinformacja i&nbsp;teorie spiskowe. Na łamach „Medyka Białostockiego” chcemy rzetelnie wyjaśnić wszystkie wątpliwości. W&nbsp;roli eksperta prof. Joanna Zajkowska, podlaski wojewódzki konsultant do&nbsp;spraw epidemiologii, a&nbsp;jednocześnie zastępca kierownika Kliniki Chorób Zakaźnych i&nbsp;Neuroinfekcji, czyli jednej z&nbsp;klinik covidowych w&nbsp;Uniwersyteckim&#8230;"
+excerpt: "W momencie kiedy rozpoczęły się szczepienia, pojawiły się również tysiące pytań i wątpliwości. Od radości i nadziei na rychły koniec pandemii, po nieufność i strach. Pojawiła się dezinformacja i teorie spiskowe. Na łamach „Medyka Białostockiego” chcemy rzetelnie wyjaśnić wszystkie wątpliwości. W roli eksperta prof. Joanna Zajkowska, podlaski wojewódzki konsultant do spraw epidemiologii, a jednocześnie zastępca kierownika Kliniki Chorób Zakaźnych i Neuroinfekcji, czyli jednej z klinik covidowych w Uniwersyteckim…"
 ---
 
 

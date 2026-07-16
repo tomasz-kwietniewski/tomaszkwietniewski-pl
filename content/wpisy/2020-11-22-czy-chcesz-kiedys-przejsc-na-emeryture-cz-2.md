@@ -6,7 +6,7 @@ modified: "2023-11-15T14:25:21"
 url_stara: "https://tomaszkwietniewski.pl/czy-chcesz-kiedys-przejsc-na-emeryture-cz-2/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Spieszę z uzupełnieniem, ponieważ wreszcie pojawiała się na polskim rynku oferta w ramach IKZE i IKE, którą mogę Wam polecić, która jest łatwa w obsłudze, sensownie zdywersyfikowana, dosyć tania i dosyć przejrzysta. Póki Finax nie ma produktów emerytalnych (ze zwolnieniem podatkowym IKZE/IKE), to na dziś najlepszym rozwiązaniem są tanie fundusze inwestycyjne inPZU*. Technicznie rzecz biorąc&#8230;"
+excerpt: "Spieszę z uzupełnieniem, ponieważ wreszcie pojawiała się na polskim rynku oferta w ramach IKZE i IKE, którą mogę Wam polecić, która jest łatwa w obsłudze, sensownie zdywersyfikowana, dosyć tania i dosyć przejrzysta. Póki Finax nie ma produktów emerytalnych (ze zwolnieniem podatkowym IKZE/IKE), to na dziś najlepszym rozwiązaniem są tanie fundusze inwestycyjne inPZU*. Technicznie rzecz biorąc…"
 ---
 
 

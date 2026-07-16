@@ -1,5 +1,5 @@
 ---
-title: "Porady zwiększające bezpieczeństwo &#8211; Kacper Szurek"
+title: "Porady zwiększające bezpieczeństwo – Kacper Szurek"
 slug: "porady-zwiekszajace-bezpieczenstwo-kacper-szurek"
 date: "2022-01-25T15:47:19"
 modified: "2022-01-26T15:48:07"

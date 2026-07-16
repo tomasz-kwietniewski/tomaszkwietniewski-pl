@@ -6,7 +6,7 @@ modified: "2024-12-02T16:01:58"
 url_stara: "https://tomaszkwietniewski.pl/znowu-to-samo/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Dawno nie pisałem, ale dużymi krokami zbliża się koniec roku, więc chciałem przypomnieć, że warto wykorzystać limity na inwestowanie bez podatku. Jeśli ich nie wykorzystasz, przepadną. Ja wypełniałbym je w tej kolejności: 👉 IKE 23 472 zł 👉 IKZE 9 388,80 zł lub przy 14 083,20 zł przy działalności 👉 OIPE 23 472 zł (na&#8230;"
+excerpt: "Dawno nie pisałem, ale dużymi krokami zbliża się koniec roku, więc chciałem przypomnieć, że warto wykorzystać limity na inwestowanie bez podatku. Jeśli ich nie wykorzystasz, przepadną. Ja wypełniałbym je w tej kolejności: 👉 IKE 23 472 zł 👉 IKZE 9 388,80 zł lub przy 14 083,20 zł przy działalności 👉 OIPE 23 472 zł (na…"
 ---
 
 

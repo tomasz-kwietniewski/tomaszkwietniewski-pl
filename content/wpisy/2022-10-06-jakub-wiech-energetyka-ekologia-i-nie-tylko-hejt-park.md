@@ -1,5 +1,5 @@
 ---
-title: "Jakub Wiech &#8211; energetyka, ekologia i nie tylko HEJT PARK"
+title: "Jakub Wiech – energetyka, ekologia i nie tylko HEJT PARK"
 slug: "jakub-wiech-energetyka-ekologia-i-nie-tylko-hejt-park"
 date: "2022-10-06T22:48:57"
 modified: "2022-10-14T11:49:30"

@@ -6,7 +6,7 @@ modified: "2023-11-15T14:30:22"
 url_stara: "https://tomaszkwietniewski.pl/przezyc-za-1472-zl-miesiecznie/"
 typ: "wpis"
 kategorie: ["Prywatna emerytura"]
-excerpt: "Czy wyobrażasz sobie dzisiaj życie za 1472 zł miesięcznie? Tyle mniej więcej wynosi minimum socjalne w Polsce (IPiSS minimum socjalne Q2 2022). To kwota, która powinna pozwolić na życie na minimalnym poziomie. Trochę mało co? A co jeśli Ci powiem, że przy “dobrych wiatrach” tyle będzie wynosiła Twoja państwowa emerytura za 20-30 lat? (materiały ZUS;&#8230;"
+excerpt: "Czy wyobrażasz sobie dzisiaj życie za 1472 zł miesięcznie? Tyle mniej więcej wynosi minimum socjalne w Polsce (IPiSS minimum socjalne Q2 2022). To kwota, która powinna pozwolić na życie na minimalnym poziomie. Trochę mało co? A co jeśli Ci powiem, że przy “dobrych wiatrach” tyle będzie wynosiła Twoja państwowa emerytura za 20-30 lat? (materiały ZUS;…"
 ---
 
 

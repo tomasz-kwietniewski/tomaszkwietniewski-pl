@@ -6,7 +6,7 @@ modified: "2023-12-05T11:54:47"
 url_stara: "https://tomaszkwietniewski.pl/skazani-na-inwestowanie/"
 typ: "wpis"
 kategorie: ["Inwestowanie", "Prywatna emerytura"]
-excerpt: "Lata 2022 i 2023 dobrze nam wszystkim uświadomiły jak dotkliwa dla oszczędności może być inflacja. Trzymanie pieniędzy na koncie to gwarantowana strata. Czy musimy się na to godzić? ﻿﻿﻿﻿﻿﻿W krótkim terminie&nbsp;myślę, że najlepszą opcją, zamiast konta oszczędnościowego czy lokaty, są&nbsp;obligacje indeksowane inflacją. Jeśli odkładasz większą kwotę np. na remont, samochód, wkład własny i nie jesteś&#8230;"
+excerpt: "Lata 2022 i 2023 dobrze nam wszystkim uświadomiły jak dotkliwa dla oszczędności może być inflacja. Trzymanie pieniędzy na koncie to gwarantowana strata. Czy musimy się na to godzić? ﻿﻿﻿﻿﻿﻿W krótkim terminie myślę, że najlepszą opcją, zamiast konta oszczędnościowego czy lokaty, są obligacje indeksowane inflacją. Jeśli odkładasz większą kwotę np. na remont, samochód, wkład własny i nie jesteś…"
 ---
 
 

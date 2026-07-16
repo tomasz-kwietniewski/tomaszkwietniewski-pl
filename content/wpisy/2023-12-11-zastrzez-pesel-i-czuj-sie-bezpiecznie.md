@@ -6,7 +6,7 @@ modified: "2023-12-11T23:12:29"
 url_stara: "https://tomaszkwietniewski.pl/zastrzez-pesel-i-czuj-sie-bezpiecznie/"
 typ: "wpis"
 kategorie: ["Cyberbezpieczeństwo"]
-excerpt: "Pojawiła się bardzo ważna darmowa usługa zw. z administracją publiczną dostępna online &#8211; zastrzeganie numeru PESEL. Po co to robić? Bardzo utrudni to kradzież naszej tożsamości. Od teraz jest możliwość, a od czerwca 2024 r. różne instytucje/podmioty będą miały obowiązek, sprawdzać w toku czynności czy dany numer PESEL jest zastrzeżony. Dzięki temu zabezpieczeniu złodziej nie&#8230;"
+excerpt: "Pojawiła się bardzo ważna darmowa usługa zw. z administracją publiczną dostępna online – zastrzeganie numeru PESEL. Po co to robić? Bardzo utrudni to kradzież naszej tożsamości. Od teraz jest możliwość, a od czerwca 2024 r. różne instytucje/podmioty będą miały obowiązek, sprawdzać w toku czynności czy dany numer PESEL jest zastrzeżony. Dzięki temu zabezpieczeniu złodziej nie…"
 ---
 
 
