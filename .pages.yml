@@ -1,0 +1,113 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: wpisy
+    label: Wpisy
+    type: collection
+    path: content/wpisy
+    filename:
+      template: "{year}-{month}-{day}-{primary}.md"
+      field: create
+    view:
+      fields: [title, date, kategorie]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+        required: true
+      - name: slug
+        label: Slug (końcówka adresu URL)
+        description: Małe litery, bez polskich znaków, słowa łączone dywizem, np. moj-nowy-wpis
+        type: string
+      - name: date
+        label: Data publikacji
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ss"
+      - name: modified
+        label: Data modyfikacji
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ss"
+      - name: kategorie
+        label: Kategorie
+        type: select
+        options:
+          multiple: true
+          values:
+            # Nowe kategorie (używaj tych przy nowych wpisach)
+            - Finanse i emerytura
+            - Technologie i dom
+            - Polecam
+            - Tipy ułatwiające życie
+            - Ciekawostki / świat
+            # Stare kategorie z WordPressa (zostawione, żeby dało się edytować stare wpisy)
+            - Ciekawostki
+            - Cyberbezpieczeństwo
+            - Ekologia
+            - Filmy i seriale
+            - Geopolityka
+            - Inwestowanie
+            - Nowe technologie
+            - Polecane kanały YT
+            - Prywatna emerytura
+      - name: excerpt
+        label: Zajawka (krótki opis na listach wpisów)
+        type: text
+      - name: url_stara
+        label: Stary adres (WordPress) - nie zmieniać
+        type: string
+      - name: typ
+        label: Typ - nie zmieniać
+        type: string
+        default: wpis
+      - name: body
+        label: Treść
+        type: rich-text
+
+  - name: strony
+    label: Podstrony
+    type: collection
+    path: content/strony
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      fields: [title, slug]
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+        required: true
+      - name: slug
+        label: Slug (końcówka adresu URL)
+        type: string
+      - name: date
+        label: Data utworzenia
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ss"
+      - name: modified
+        label: Data modyfikacji
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ss"
+      - name: url_stara
+        label: Stary adres (WordPress) - nie zmieniać
+        type: string
+      - name: typ
+        label: Typ - nie zmieniać
+        type: string
+        default: strona
+      - name: body
+        label: Treść
+        type: rich-text
