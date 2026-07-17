@@ -106,7 +106,7 @@ Strona live na GitHub Pages: repo publiczne (docs/ wycięte z historii), workflo
 `.github/workflows/deploy-pages.yml` (trigger: push do main), domena przez passthrough
 `CNAME.gotowy` -> `CNAME`, DNS apex na rekordy A GitHuba (panel SEOHost). Rollback,
 szczegóły DNS i pułapka certyfikatu HTTPS: pamięć projektu + `WDROZENIE.md`.
-Po go-live: zgłoszenie sitemap w Search Console (sprawdź, czy już zrobione).
+Sitemap zgłoszony w Search Console (2026-07-17). Robots.txt też na niego wskazuje.
 
 ## Konwencje (obowiązują w całym projekcie)
 
