@@ -419,6 +419,8 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 }
 .projekty-github span { font-size: 14.5px; color: var(--tekst-2); }
 .projekty-github a { font-weight: 600; font-size: 14.5px; white-space: nowrap; }
+.projekty-kredyt { margin: 18px 0 0; font-size: 12px; line-height: 1.5; color: var(--wyciszony); }
+.projekty-kredyt a { color: var(--tekst-2); text-decoration: underline; }
 
 /* ---------- O mnie ---------- */
 .omnie-intro { padding-block: 72px 56px; display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; }
