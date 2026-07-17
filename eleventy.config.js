@@ -6,6 +6,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   // Miniatury YouTube pobrane w trakcie builda (lib/miniatury.js).
   eleventyConfig.addPassthroughCopy({ "_yt-cache": "media/yt" });
+  // Domena własna dla GitHub Pages - plik CNAME w katalogu opublikowanej strony.
+  eleventyConfig.addPassthroughCopy({ "CNAME.gotowy": "CNAME" });
 
   eleventyConfig.addFilter("dataPL", (d) =>
     new Intl.DateTimeFormat("pl-PL", { day: "numeric", month: "long", year: "numeric" }).format(new Date(d))

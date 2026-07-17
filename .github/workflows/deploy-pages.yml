@@ -1,13 +1,11 @@
 name: Deploy na GitHub Pages
 
-# Uwaga: dopóki repo jest prywatne, zostaje sam wyzwalacz ręczny (workflow_dispatch),
-# żeby każdy zapis z Pages CMS nie odpalał deployu, który i tak by nie opublikował
-# (Pages na darmowym planie wymaga repo publicznego). Po upublicznieniu repo
-# odkomentuj blok `push:` poniżej, żeby publikacja działała automatycznie po każdym pushu.
+# Publikacja automatyczna po każdym pushu do main (w tym po zapisie z Pages CMS)
+# oraz ręcznie z zakładki Actions (workflow_dispatch).
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
-  # push:
-  #   branches: [main]
 
 permissions:
   contents: read
