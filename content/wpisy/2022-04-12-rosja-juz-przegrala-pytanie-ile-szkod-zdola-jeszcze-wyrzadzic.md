@@ -1,6 +1,7 @@
 ---
 title: "Rosja już przegrała – pytanie ile szkód zdoła jeszcze wyrządzić?"
 slug: "rosja-juz-przegrala-pytanie-ile-szkod-zdola-jeszcze-wyrzadzic"
+miniatura: "/media/2022/04/2022-04-12_Krzysztof-Wojczal.png"
 date: "2022-04-12T10:57:56"
 modified: "2022-05-31T12:12:49"
 url_stara: "https://tomaszkwietniewski.pl/rosja-juz-przegrala-pytanie-ile-szkod-zdola-jeszcze-wyrzadzic/"

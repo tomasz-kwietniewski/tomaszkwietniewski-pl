@@ -1,6 +1,7 @@
 ---
 title: "Czy chcesz kiedyś przejść na emeryturę?"
 slug: "czy-chcesz-kiedys-przejsc-na-emeryture"
+miniatura: "/media/2021/04/dmitry-vechorko-GfTJ0ElQ-3U-unsplash-scaled.jpg"
 date: "2020-10-18T07:49:33"
 modified: "2023-11-15T14:24:27"
 url_stara: "https://tomaszkwietniewski.pl/czy-chcesz-kiedys-przejsc-na-emeryture/"

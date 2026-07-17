@@ -1,6 +1,7 @@
 ---
 title: "Jakub Wiech – energetyka, ekologia i nie tylko HEJT PARK"
 slug: "jakub-wiech-energetyka-ekologia-i-nie-tylko-hejt-park"
+miniatura: "/media/2022/10/2022-10-06_Jakub-Wiech-Hejt-Park.png"
 date: "2022-10-06T22:48:57"
 modified: "2022-10-14T11:49:30"
 url_stara: "https://tomaszkwietniewski.pl/jakub-wiech-energetyka-ekologia-i-nie-tylko-hejt-park/"

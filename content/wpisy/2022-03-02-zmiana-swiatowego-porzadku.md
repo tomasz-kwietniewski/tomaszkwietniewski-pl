@@ -1,6 +1,7 @@
 ---
 title: "Zmiana światowego porządku"
 slug: "zmiana-swiatowego-porzadku"
+miniatura: "/media/2022/03/2022-03-02_Changing-world-order-by-Ray-Dalio.png"
 date: "2022-03-02T07:43:08"
 modified: "2022-03-07T16:42:16"
 url_stara: "https://tomaszkwietniewski.pl/zmiana-swiatowego-porzadku/"

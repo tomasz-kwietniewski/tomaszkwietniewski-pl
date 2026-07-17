@@ -245,9 +245,17 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .ostatnie__data { font-size: 13px; color: var(--wyciszony); white-space: nowrap; }
 .ostatnie__strzalka { width: 40px; height: 40px; border-radius: 50%; background: var(--akcent-tlo); display: grid; place-items: center; }
 
-.kim-jestem { display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; padding-block: 0 56px; }
-.kim-jestem__portret { width: 120px; height: 120px; border-radius: 28px; object-fit: cover; box-shadow: 0 14px 32px rgba(19, 26, 38, .14); }
-.kim-jestem p { font-size: 18px; line-height: 1.6; margin: 0 0 12px; max-width: 780px; text-wrap: pretty; }
+.sekcja__wiecej { display: flex; justify-content: center; margin-top: 30px; }
+
+/* Karta "Kim jestem" - wyróżniona, żeby nie wyglądała jak kolejny wpis */
+.kim-jestem {
+  display: grid; grid-template-columns: auto 1fr; gap: 44px; align-items: center;
+  background: var(--akcent-tlo); border-radius: 24px;
+  padding: clamp(28px, 4vw, 44px) clamp(24px, 4vw, 48px);
+  margin-block: 8px 64px;
+}
+.kim-jestem__portret { width: 140px; height: 140px; border-radius: 28px; object-fit: cover; box-shadow: 0 14px 32px rgba(19, 26, 38, .18); }
+.kim-jestem p { font-size: 18px; line-height: 1.6; margin: 0 0 14px; max-width: 720px; text-wrap: pretty; color: var(--tekst); }
 .kim-jestem__linki { display: flex; gap: 22px; flex-wrap: wrap; }
 .kim-jestem__linki a { font-weight: 600; font-size: 15px; }
 

@@ -1,6 +1,7 @@
 ---
 title: "Władimir Putin i “sukcesy” jego korporacji Russkij Mir"
 slug: "wladimir-putin-i-sukcesy-jego-korporacji-russkij-mir"
+miniatura: "/media/2022/04/2022-04-12_Po-prostu-wschod.png"
 date: "2022-04-11T14:28:38"
 modified: "2022-04-12T14:29:38"
 url_stara: "https://tomaszkwietniewski.pl/wladimir-putin-i-sukcesy-jego-korporacji-russkij-mir/"

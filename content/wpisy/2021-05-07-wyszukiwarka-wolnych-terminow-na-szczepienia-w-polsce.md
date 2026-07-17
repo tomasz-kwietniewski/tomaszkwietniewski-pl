@@ -1,6 +1,7 @@
 ---
 title: "Wyszukiwarka wolnych terminów na szczepienia w Polsce"
 slug: "wyszukiwarka-wolnych-terminow-na-szczepienia-w-polsce"
+miniatura: "/media/2021/05/wyszukiwarka_szczepien.png"
 date: "2021-05-07T06:39:41"
 modified: "2021-05-12T08:56:18"
 url_stara: "https://tomaszkwietniewski.pl/wyszukiwarka-wolnych-terminow-na-szczepienia-w-polsce/"

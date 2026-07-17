@@ -1,6 +1,7 @@
 ---
 title: "Jak zbudować portfel dla dziecka?"
 slug: "jak-zbudowac-portfel-dla-dziecka"
+miniatura: "/media/2022/06/2022-06-01_Portfel-500-plus-Jacek-Lempart.png"
 date: "2022-06-01T15:57:31"
 modified: "2022-06-06T14:42:11"
 url_stara: "https://tomaszkwietniewski.pl/jak-zbudowac-portfel-dla-dziecka/"

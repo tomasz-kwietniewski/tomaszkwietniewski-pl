@@ -1,6 +1,7 @@
 ---
 title: "Spięcie – Klub Jagielloński"
 slug: "spiecie-klub-jagiellonski"
+miniatura: "/media/2021/04/spiecie-logo-male.jpg"
 date: "2021-04-28T23:01:07"
 modified: "2021-05-05T15:15:17"
 url_stara: "https://tomaszkwietniewski.pl/spiecie-klub-jagiellonski/"

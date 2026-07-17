@@ -59,6 +59,10 @@ content:
       - name: excerpt
         label: Zajawka (krótki opis na listach wpisów)
         type: text
+      - name: miniatura
+        label: Miniatura (obrazek na listach wpisów)
+        description: Obrazek pokazywany na stronie głównej i liście bloga. Jeśli puste, użyty zostanie pierwszy obrazek z treści lub miniatura z YouTube.
+        type: image
       - name: url_stara
         label: Stary adres (WordPress) - nie zmieniać
         type: string

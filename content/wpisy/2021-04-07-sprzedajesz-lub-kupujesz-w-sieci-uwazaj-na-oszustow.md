@@ -1,6 +1,7 @@
 ---
 title: "Sprzedajesz lub kupujesz w sieci, uważaj na oszustów!"
 slug: "sprzedajesz-lub-kupujesz-w-sieci-uwazaj-na-oszustow"
+miniatura: "/media/2021/04/bermix-studio-F7DAQIDSk98-unsplash-1.jpg"
 date: "2021-04-07T09:33:08"
 modified: "2021-05-05T15:36:26"
 url_stara: "https://tomaszkwietniewski.pl/sprzedajesz-lub-kupujesz-w-sieci-uwazaj-na-oszustow/"

@@ -1,6 +1,7 @@
 ---
 title: "CD Projekt i Cyberpunk 2077 – jak inwestować w gemdev?"
 slug: "cd-projekt-i-cyberpunk-2077"
+miniatura: "/media/2021/06/Cyberpunk2077_poziom.jpg"
 date: "2021-06-04T22:31:00"
 modified: "2021-06-16T09:13:09"
 url_stara: "https://tomaszkwietniewski.pl/cd-projekt-i-cyberpunk-2077/"

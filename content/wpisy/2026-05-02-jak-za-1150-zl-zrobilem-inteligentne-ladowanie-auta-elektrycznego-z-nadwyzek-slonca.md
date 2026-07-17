@@ -1,6 +1,7 @@
 ---
 title: "Jak za 1150 zł zrobiłem inteligentne ładowanie auta elektrycznego z nadwyżek słońca"
 slug: "jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca"
+miniatura: "/media/2026/05/2026-05-04_ladowanie_EV.png"
 date: "2026-05-02T09:15:13"
 modified: "2026-06-08T21:37:07"
 url_stara: "https://tomaszkwietniewski.pl/jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca/"

@@ -1,6 +1,7 @@
 ---
 title: "Pstryk czy jednak taryfa strefowa? Kiedy co się opłaca?"
 slug: "pstryk-czy-taryfa-strefowa"
+miniatura: "/media/2026/07/pstryk-vs-pge-taryfa-strefowa.jpg"
 date: "2026-07-16T23:00:00"
 modified: "2026-07-18T12:00:00"
 typ: "wpis"

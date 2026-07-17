@@ -1,6 +1,7 @@
 ---
 title: "Czy piractwo to grzech?"
 slug: "czy-piractwo-to-grzech"
+miniatura: "/media/2021/04/sergey-semin-Oa7QSM3Stpc-unsplash-scaled.jpg"
 date: "2021-04-29T19:13:39"
 modified: "2021-04-30T10:59:24"
 url_stara: "https://tomaszkwietniewski.pl/czy-piractwo-to-grzech/"

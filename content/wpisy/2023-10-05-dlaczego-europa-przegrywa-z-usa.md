@@ -1,6 +1,7 @@
 ---
 title: "Dlaczego Europa przegrywa z USA?"
 slug: "dlaczego-europa-przegrywa-z-usa"
+miniatura: "/media/2023/11/2023-10-05_Dlaczego_Europa_przegrywa_z_USA_Wroblewski.png"
 date: "2023-10-05T19:32:00"
 modified: "2023-11-21T12:33:52"
 url_stara: "https://tomaszkwietniewski.pl/dlaczego-europa-przegrywa-z-usa/"

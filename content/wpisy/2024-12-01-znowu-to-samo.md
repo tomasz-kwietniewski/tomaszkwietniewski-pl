@@ -1,6 +1,7 @@
 ---
 title: "Znowu to samo"
 slug: "znowu-to-samo"
+miniatura: "/media/2024/12/2024-12-01_IKE_IKZE_OIPE_EDO.png"
 date: "2024-12-01T15:48:28"
 modified: "2024-12-02T16:01:58"
 url_stara: "https://tomaszkwietniewski.pl/znowu-to-samo/"

@@ -1,6 +1,7 @@
 ---
 title: "Wywiad ze Stefanem Ingvesem, prezesem banku centralnego Szwecji (Riksbanku)"
 slug: "wywiad-ze-stefanem-ingvesem-prezesem-banku-centralnego-szwecji-riksbanku"
+miniatura: "/media/2021/04/ekrona.png"
 date: "2021-04-15T22:45:38"
 modified: "2021-08-13T12:10:17"
 url_stara: "https://tomaszkwietniewski.pl/wywiad-ze-stefanem-ingvesem-prezesem-banku-centralnego-szwecji-riksbanku/"

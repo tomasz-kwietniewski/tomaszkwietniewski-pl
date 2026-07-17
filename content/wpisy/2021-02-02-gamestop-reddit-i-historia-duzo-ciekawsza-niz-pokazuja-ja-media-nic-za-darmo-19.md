@@ -1,6 +1,7 @@
 ---
 title: "GameStop, Reddit i historia dużo ciekawsza niż pokazują ją media / Nic za darmo #19"
 slug: "gamestop-reddit-i-historia-duzo-ciekawsza-niz-pokazuja-ja-media-nic-za-darmo-19"
+miniatura: "/media/2021/06/GameStop.png"
 date: "2021-02-02T08:16:44"
 modified: "2021-06-04T22:21:34"
 url_stara: "https://tomaszkwietniewski.pl/gamestop-reddit-i-historia-duzo-ciekawsza-niz-pokazuja-ja-media-nic-za-darmo-19/"

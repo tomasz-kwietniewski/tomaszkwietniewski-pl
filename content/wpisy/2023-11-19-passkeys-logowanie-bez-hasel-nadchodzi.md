@@ -1,6 +1,7 @@
 ---
 title: "Passkeys – logowanie bez haseł nadchodzi"
 slug: "passkeys-logowanie-bez-hasel-nadchodzi"
+miniatura: "/media/2023/11/2023-11-19_Passkeys_Chrobok.png"
 date: "2023-11-19T12:19:38"
 modified: "2023-11-21T12:25:58"
 url_stara: "https://tomaszkwietniewski.pl/passkeys-logowanie-bez-hasel-nadchodzi/"

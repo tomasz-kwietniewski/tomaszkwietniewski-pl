@@ -1,6 +1,7 @@
 ---
 title: "Czy chcesz kiedyś przejść na emeryturę? cz. 2"
 slug: "czy-chcesz-kiedys-przejsc-na-emeryture-cz-2"
+miniatura: "/media/2021/04/mark-timberlake-n8Bepoi9YRc-unsplash.jpg"
 date: "2020-11-22T07:40:51"
 modified: "2023-11-15T14:25:21"
 url_stara: "https://tomaszkwietniewski.pl/czy-chcesz-kiedys-przejsc-na-emeryture-cz-2/"

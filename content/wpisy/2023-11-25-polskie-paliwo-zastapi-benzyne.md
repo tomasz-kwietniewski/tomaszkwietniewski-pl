@@ -1,6 +1,7 @@
 ---
 title: "Polskie paliwo zastąpi benzynę"
 slug: "polskie-paliwo-zastapi-benzyne"
+miniatura: "/media/2023/11/2023-11-25_Algi.png"
 date: "2023-11-25T16:13:29"
 modified: "2023-11-28T16:16:41"
 url_stara: "https://tomaszkwietniewski.pl/polskie-paliwo-zastapi-benzyne/"

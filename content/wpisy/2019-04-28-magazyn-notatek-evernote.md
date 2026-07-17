@@ -1,6 +1,7 @@
 ---
 title: "Magazyn notatek Evernote"
 slug: "magazyn-notatek-evernote"
+miniatura: "/media/2021/04/Evernote.png"
 date: "2019-04-28T11:24:25"
 modified: "2021-10-15T10:56:37"
 url_stara: "https://tomaszkwietniewski.pl/magazyn-notatek-evernote/"

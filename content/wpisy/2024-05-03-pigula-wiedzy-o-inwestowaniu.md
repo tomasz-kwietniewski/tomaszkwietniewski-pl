@@ -1,6 +1,7 @@
 ---
 title: "Piguła wiedzy o inwestowaniu"
 slug: "pigula-wiedzy-o-inwestowaniu"
+miniatura: "/media/2024/05/2024-05-03_Pankracy-podstawy-inwestowania.png"
 date: "2024-05-03T22:11:00"
 modified: "2024-05-16T11:15:24"
 url_stara: "https://tomaszkwietniewski.pl/pigula-wiedzy-o-inwestowaniu/"

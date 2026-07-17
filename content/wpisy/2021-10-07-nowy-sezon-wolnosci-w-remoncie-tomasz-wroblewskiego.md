@@ -1,6 +1,7 @@
 ---
 title: "Nowy sezon Wolności w remoncie Tomasza Wróblewskiego!"
 slug: "nowy-sezon-wolnosci-w-remoncie-tomasz-wroblewskiego"
+miniatura: "/media/2021/10/2021-10-14_wolnosc_w_remoncie_wielkie_niemcy.png"
 date: "2021-10-07T10:11:21"
 modified: "2021-10-25T08:15:27"
 url_stara: "https://tomaszkwietniewski.pl/nowy-sezon-wolnosci-w-remoncie-tomasz-wroblewskiego/"

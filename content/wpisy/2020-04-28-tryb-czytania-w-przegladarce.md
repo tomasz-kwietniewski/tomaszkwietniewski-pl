@@ -1,6 +1,7 @@
 ---
 title: "Tryb czytania w przeglądarce"
 slug: "tryb-czytania-w-przegladarce"
+miniatura: "/media/2021/04/Zrzut-ekranu-2021-04-28-110957.png"
 date: "2020-04-28T11:00:37"
 modified: "2021-05-12T08:59:16"
 url_stara: "https://tomaszkwietniewski.pl/tryb-czytania-w-przegladarce/"

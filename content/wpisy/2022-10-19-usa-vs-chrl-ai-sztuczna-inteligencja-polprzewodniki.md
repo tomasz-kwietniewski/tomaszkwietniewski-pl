@@ -1,6 +1,7 @@
 ---
 title: "USA vs ChRL (AI sztuczna inteligencja, półprzewodniki)"
 slug: "usa-vs-chrl-ai-sztuczna-inteligencja-polprzewodniki"
+miniatura: "/media/2022/10/Depositphotos_163528616_XL-scaled.jpg"
 date: "2022-10-19T20:06:00"
 modified: "2023-06-02T13:53:43"
 url_stara: "https://tomaszkwietniewski.pl/usa-vs-chrl-ai-sztuczna-inteligencja-polprzewodniki/"

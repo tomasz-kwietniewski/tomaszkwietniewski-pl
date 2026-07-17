@@ -1,6 +1,7 @@
 ---
 title: "Atlas Pasywnego Inwestora"
 slug: "atlas-pasywnego-inwestora"
+miniatura: "/media/2022/01/2022-01-31_Atlas-Pasywnego-Inwestora.png"
 date: "2022-01-31T09:22:53"
 modified: "2022-04-04T16:16:36"
 url_stara: "https://tomaszkwietniewski.pl/atlas-pasywnego-inwestora/"

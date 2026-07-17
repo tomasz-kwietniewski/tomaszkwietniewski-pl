@@ -49,7 +49,7 @@ permalink: /
   <section class="kontener sekcja">
     <div class="sekcja__naglowek">
       <h2>Ostatnie wpisy</h2>
-      <a href="/blog/" class="sekcja__link">Zobacz wszystkie</a>
+      <span class="sekcja__nota">Świeżo z bloga</span>
     </div>
     {% for wpis in wpisy | take(4) %}
     <a href="{{ wpis.permalink }}" class="ostatnie__wiersz">
@@ -65,16 +65,24 @@ permalink: /
       </span>
     </a>
     {% endfor %}
+    <div class="sekcja__wiecej">
+      <a href="/blog/" class="przycisk przycisk--kontur">
+        Zobacz wszystkie {{ wpisy.length }} wpisów
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="vertical-align:-2px;margin-left:4px"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
   </section>
 
-  <section class="kontener kim-jestem">
-    <img src="/assets/img/portret.jpg" alt="{{ site.autor }}" class="kim-jestem__portret">
-    <div>
-      <div class="etykieta" style="margin-bottom:10px">Kim jestem</div>
-      <p>Lubię zgłębiać, jak coś działa i dlaczego, a potem dzielić się tym, czego się nauczyłem. Na co dzień chronię prawa autorskie w internecie, po godzinach buduję własne projekty i piszę tego bloga.</p>
-      <div class="kim-jestem__linki">
-        <a href="/o-mnie/">Poznaj mnie bliżej</a>
-        <a href="/projekty/">Zobacz moje projekty</a>
+  <section class="kontener">
+    <div class="kim-jestem">
+      <img src="/assets/img/portret.jpg" alt="{{ site.autor }}" class="kim-jestem__portret">
+      <div>
+        <div class="etykieta" style="margin-bottom:10px">Kim jestem</div>
+        <p>Lubię zgłębiać, jak coś działa i dlaczego, a potem dzielić się tym, czego się nauczyłem. Na co dzień chronię prawa autorskie w internecie, po godzinach buduję własne projekty i piszę tego bloga.</p>
+        <div class="kim-jestem__linki">
+          <a href="/o-mnie/">Poznaj mnie bliżej</a>
+          <a href="/projekty/">Zobacz moje projekty</a>
+        </div>
       </div>
     </div>
   </section>

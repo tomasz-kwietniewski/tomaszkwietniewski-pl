@@ -1,6 +1,7 @@
 ---
 title: "5 RAD: Jak zabezpieczyć e-maila przed hackerami?"
 slug: "5-rad-jak-zabezpieczyc-e-maila-przed-hackerami"
+miniatura: "/media/2021/06/2021-06-23_bezpieczenstwo_emaila_Niebezpiecznik.png"
 date: "2021-06-23T13:16:49"
 modified: "2021-07-15T12:39:16"
 url_stara: "https://tomaszkwietniewski.pl/5-rad-jak-zabezpieczyc-e-maila-przed-hackerami/"

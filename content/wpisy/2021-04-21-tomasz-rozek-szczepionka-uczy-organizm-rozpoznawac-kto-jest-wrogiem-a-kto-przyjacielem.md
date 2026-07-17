@@ -1,6 +1,7 @@
 ---
 title: "Tomasz Rożek: Szczepionka uczy organizm rozpoznawać, kto jest wrogiem, a kto przyjacielem"
 slug: "tomasz-rozek-szczepionka-uczy-organizm-rozpoznawac-kto-jest-wrogiem-a-kto-przyjacielem"
+miniatura: "/media/2021/04/2021-04-21_Tomasz_Rozek_o_szczepionkach.png"
 date: "2021-04-21T09:00:01"
 modified: "2021-05-05T15:24:34"
 url_stara: "https://tomaszkwietniewski.pl/tomasz-rozek-szczepionka-uczy-organizm-rozpoznawac-kto-jest-wrogiem-a-kto-przyjacielem/"

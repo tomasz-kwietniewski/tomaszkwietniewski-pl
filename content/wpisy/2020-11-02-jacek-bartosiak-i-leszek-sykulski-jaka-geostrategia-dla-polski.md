@@ -1,6 +1,7 @@
 ---
 title: "Jacek Bartosiak i Leszek Sykulski – Jaka geostrategia dla Polski?"
 slug: "jacek-bartosiak-i-leszek-sykulski-jaka-geostrategia-dla-polski"
+miniatura: "/media/2020/11/2020-11-02_Sykulski_Bartosiak.png"
 date: "2020-11-02T16:46:34"
 modified: "2021-05-05T15:39:08"
 url_stara: "https://tomaszkwietniewski.pl/jacek-bartosiak-i-leszek-sykulski-jaka-geostrategia-dla-polski/"

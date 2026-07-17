@@ -1,6 +1,7 @@
 ---
 title: "Czy Rosja zareaguje siłą na Fińskie dążenia do NATO?"
 slug: "czy-rosja-zareaguje-sila-na-finskie-dazenia-do-nato"
+miniatura: "/media/2022/06/2022-06-20_Krzysztof_Wojczal_2.png"
 date: "2022-06-20T10:55:47"
 modified: "2022-06-29T10:56:43"
 url_stara: "https://tomaszkwietniewski.pl/czy-rosja-zareaguje-sila-na-finskie-dazenia-do-nato/"

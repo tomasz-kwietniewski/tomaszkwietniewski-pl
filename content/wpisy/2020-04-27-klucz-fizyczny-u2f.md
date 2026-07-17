@@ -1,6 +1,7 @@
 ---
 title: "Klucz fizyczny U2F"
 slug: "klucz-fizyczny-u2f"
+miniatura: "/media/2021/04/yubico.jpg"
 date: "2020-04-27T14:37:07"
 modified: "2021-05-12T08:57:42"
 url_stara: "https://tomaszkwietniewski.pl/klucz-fizyczny-u2f/"

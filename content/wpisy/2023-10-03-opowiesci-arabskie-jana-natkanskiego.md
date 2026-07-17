@@ -1,6 +1,7 @@
 ---
 title: "Opowieści arabskie Jana Natkańskiego"
 slug: "opowiesci-arabskie-jana-natkanskiego"
+miniatura: "/media/2023/11/2023-10-03_Opowiesci_arabskie_Jana_Natkanskiego.png"
 date: "2023-10-03T12:05:00"
 modified: "2023-11-22T12:10:05"
 url_stara: "https://tomaszkwietniewski.pl/opowiesci-arabskie-jana-natkanskiego/"

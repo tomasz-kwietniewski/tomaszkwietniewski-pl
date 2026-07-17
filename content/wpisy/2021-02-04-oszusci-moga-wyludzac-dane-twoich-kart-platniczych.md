@@ -1,6 +1,7 @@
 ---
 title: "Oszuści mogą wyłudzać dane Twoich kart płatniczych"
 slug: "oszusci-moga-wyludzac-dane-twoich-kart-platniczych"
+miniatura: "/media/2021/02/rupixen-com-Q59HmzK38eQ-unsplash-scaled.jpg"
 date: "2021-02-04T09:30:42"
 modified: "2021-05-05T15:34:03"
 url_stara: "https://tomaszkwietniewski.pl/oszusci-moga-wyludzac-dane-twoich-kart-platniczych/"

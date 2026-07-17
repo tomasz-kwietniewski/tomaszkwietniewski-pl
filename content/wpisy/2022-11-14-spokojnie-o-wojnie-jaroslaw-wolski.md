@@ -1,6 +1,7 @@
 ---
 title: "Spokojnie o wojnie – Jarosław Wolski"
 slug: "spokojnie-o-wojnie-jaroslaw-wolski"
+miniatura: "/media/2022/11/2022-11-15_Spokojnie-o-wojnie.png"
 date: "2022-11-14T21:51:01"
 modified: "2022-11-15T10:52:06"
 url_stara: "https://tomaszkwietniewski.pl/spokojnie-o-wojnie-jaroslaw-wolski/"

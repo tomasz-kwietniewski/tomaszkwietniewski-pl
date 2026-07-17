@@ -1,6 +1,7 @@
 ---
 title: "Bakteriofagi zamiast ANTYBIOTYKÓW? Nasza broń przeciw superbakteriom!"
 slug: "bakteriofagi-zamiast-antybiotykow-nasza-bron-przeciw-superbakteriom"
+miniatura: "/media/2021/07/2021-06-27_bakteriofagi.png"
 date: "2021-06-27T12:36:03"
 modified: "2021-07-15T12:36:22"
 url_stara: "https://tomaszkwietniewski.pl/bakteriofagi-zamiast-antybiotykow-nasza-bron-przeciw-superbakteriom/"

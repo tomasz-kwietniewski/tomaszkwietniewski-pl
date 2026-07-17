@@ -1,6 +1,7 @@
 ---
 title: "🤷‍♂️ Inflacja? Emerytura? …a komu to potrzebne?"
 slug: "inflacja-emerytura-a-komu-to-potrzebne"
+miniatura: "/media/2021/04/jp-valery-mQTTDA_kY_8-unsplash-scaled.jpg"
 date: "2021-04-10T07:48:16"
 modified: "2023-11-15T14:26:28"
 url_stara: "https://tomaszkwietniewski.pl/inflacja-emerytura-a-komu-to-potrzebne/"

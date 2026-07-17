@@ -1,6 +1,7 @@
 ---
 title: "Jak radzić sobie z chaosem informacyjnym i skąd czerpać informacje o wojnie na Ukrainie"
 slug: "jak-radzic-sobie-z-chaosem-informacyjnym-i-skad-czerpac-informacje-o-wojnie-na-ukrainie"
+miniatura: "/media/2022/02/2022-02-27_dzial-zagraniczny-logo.png"
 date: "2022-02-27T16:05:52"
 modified: "2022-02-28T16:08:25"
 url_stara: "https://tomaszkwietniewski.pl/jak-radzic-sobie-z-chaosem-informacyjnym-i-skad-czerpac-informacje-o-wojnie-na-ukrainie/"

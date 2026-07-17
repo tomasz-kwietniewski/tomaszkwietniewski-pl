@@ -1,6 +1,7 @@
 ---
 title: "Długi Marsz – nazwa chińskich rakiet idealnie pokazuje, dokąd zmierzają Chiny. Oto jak kształtuje się kosmiczny nowy ład"
 slug: "dlugi-marsz-nazwa-chinskich-rakiet-idealnie-pokazuje-dokad-zmierzaja-chiny-oto-jak-ksztaltuje-sie-kosmiczny-nowy-lad"
+miniatura: "/media/2021/06/nasa-jlV2k_Fx0fc-unsplash.jpg"
 date: "2021-06-02T13:26:12"
 modified: "2021-08-13T11:57:30"
 url_stara: "https://tomaszkwietniewski.pl/dlugi-marsz-nazwa-chinskich-rakiet-idealnie-pokazuje-dokad-zmierzaja-chiny-oto-jak-ksztaltuje-sie-kosmiczny-nowy-lad/"

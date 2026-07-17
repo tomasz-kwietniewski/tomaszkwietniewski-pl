@@ -1,6 +1,7 @@
 ---
 title: "Złoty wiek Polski"
 slug: "zloty-wiek-polski"
+miniatura: "/media/2023/11/2023-11-16_zloty_wiek_Polski_prof_Piatkowski.png"
 date: "2023-11-16T12:01:07"
 modified: "2023-11-21T12:05:26"
 url_stara: "https://tomaszkwietniewski.pl/zloty-wiek-polski/"

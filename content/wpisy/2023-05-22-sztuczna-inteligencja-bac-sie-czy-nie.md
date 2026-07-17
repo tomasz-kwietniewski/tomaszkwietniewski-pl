@@ -1,6 +1,7 @@
 ---
 title: "Sztuczna inteligencja – bać się czy nie?"
 slug: "sztuczna-inteligencja-bac-sie-czy-nie"
+miniatura: "/media/2023/06/andrzej_dragan_aleksandra_przegalinska.png"
 date: "2023-05-22T21:08:00"
 modified: "2023-06-01T11:17:36"
 url_stara: "https://tomaszkwietniewski.pl/sztuczna-inteligencja-bac-sie-czy-nie/"

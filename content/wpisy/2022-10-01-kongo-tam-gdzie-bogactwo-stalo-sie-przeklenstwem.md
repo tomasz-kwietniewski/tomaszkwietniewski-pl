@@ -1,6 +1,7 @@
 ---
 title: "Kongo, tam gdzie bogactwo stało się przekleństwem"
 slug: "kongo-tam-gdzie-bogactwo-stalo-sie-przeklenstwem"
+miniatura: "/media/2022/10/Depositphotos_51812177_L.jpg"
 date: "2022-10-01T07:07:22"
 modified: "2022-10-10T14:56:18"
 url_stara: "https://tomaszkwietniewski.pl/kongo-tam-gdzie-bogactwo-stalo-sie-przeklenstwem/"

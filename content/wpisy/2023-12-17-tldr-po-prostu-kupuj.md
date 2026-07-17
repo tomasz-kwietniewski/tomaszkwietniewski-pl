@@ -1,6 +1,7 @@
 ---
 title: "#TL;DR Po Prostu Kupuj"
 slug: "tldr-po-prostu-kupuj"
+miniatura: "/media/2023/12/Po_Prostu_Kupuj_okladka.jpg"
 date: "2023-12-17T21:40:38"
 modified: "2023-12-20T18:53:49"
 url_stara: "https://tomaszkwietniewski.pl/tldr-po-prostu-kupuj/"

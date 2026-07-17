@@ -1,6 +1,7 @@
 ---
 title: "Boom na geopolitykę – czy internetowych ekspertów należy brać na poważnie?"
 slug: "boom-na-geopolityke-czy-internetowych-ekspertow-nalezy-brac-na-powaznie"
+miniatura: "/media/2023/03/Depositphotos_551741294_XL-scaled.jpg"
 date: "2023-02-23T21:51:16"
 modified: "2023-03-15T16:52:02"
 url_stara: "https://tomaszkwietniewski.pl/boom-na-geopolityke-czy-internetowych-ekspertow-nalezy-brac-na-powaznie/"

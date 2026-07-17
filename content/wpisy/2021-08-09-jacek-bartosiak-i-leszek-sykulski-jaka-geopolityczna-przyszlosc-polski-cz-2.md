@@ -1,6 +1,7 @@
 ---
 title: "Jacek Bartosiak i Leszek Sykulski – Jaka geopolityczna przyszłość Polski? cz. 2"
 slug: "jacek-bartosiak-i-leszek-sykulski-jaka-geopolityczna-przyszlosc-polski-cz-2"
+miniatura: "/media/2021/08/2021-08-09_Bartosiak_Sykulski_cz2.png"
 date: "2021-08-09T11:18:58"
 modified: "2021-08-13T11:19:33"
 url_stara: "https://tomaszkwietniewski.pl/jacek-bartosiak-i-leszek-sykulski-jaka-geopolityczna-przyszlosc-polski-cz-2/"

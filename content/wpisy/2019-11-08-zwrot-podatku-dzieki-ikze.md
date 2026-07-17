@@ -1,6 +1,7 @@
 ---
 title: "Nie czytając tego, znowu stracisz ponad 4 tys. zł!"
 slug: "zwrot-podatku-dzieki-ikze"
+miniatura: "/media/2021/04/josh-appel-NeTPASr-bmQ-unsplash.jpg"
 date: "2019-11-08T06:54:00"
 modified: "2023-11-15T14:21:27"
 url_stara: "https://tomaszkwietniewski.pl/zwrot-podatku-dzieki-ikze/"

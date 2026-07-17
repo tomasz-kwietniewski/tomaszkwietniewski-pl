@@ -1,6 +1,7 @@
 ---
 title: "Gdzie legalnie mogę obejrzeć film/serial?"
 slug: "gdzie-legalnie-moge-obejrzec-film-serial"
+miniatura: "/media/2021/04/upflix-logo-upflix2.png"
 date: "2021-03-23T09:07:00"
 modified: "2021-05-10T12:32:10"
 url_stara: "https://tomaszkwietniewski.pl/gdzie-legalnie-moge-obejrzec-film-serial/"

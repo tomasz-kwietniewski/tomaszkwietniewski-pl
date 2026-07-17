@@ -1,6 +1,7 @@
 ---
 title: "Tomek Rożek i Jacek Bartosiak o systemie edukacji, eksploracji kosmosu i zmianach, które nadchodzą"
 slug: "tomek-rozek-i-jacek-bartosiak-o-systemie-edukacji-eksploracji-kosmosu-i-zmianach-ktore-nadchodza"
+miniatura: "/media/2023/03/2023-03-15_mapy-mentalne-Tomasz-Rozek.png"
 date: "2023-03-15T16:35:53"
 modified: "2023-03-15T16:36:57"
 url_stara: "https://tomaszkwietniewski.pl/tomek-rozek-i-jacek-bartosiak-o-systemie-edukacji-eksploracji-kosmosu-i-zmianach-ktore-nadchodza/"

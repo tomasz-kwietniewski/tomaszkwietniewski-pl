@@ -1,6 +1,7 @@
 ---
 title: "Nomadland – nasza przyszłość na emeryturze"
 slug: "nomadland-nasza-przyszlosc-na-emeryturze"
+miniatura: "/media/2021/05/Nomadland-gdzie-obejrzec-film-Chloe-Zhao-nominowany-do-Oscara-2021-z-Frances-McDormand_article.jpg"
 date: "2021-05-04T10:02:22"
 modified: "2023-11-15T14:27:23"
 url_stara: "https://tomaszkwietniewski.pl/nomadland-nasza-przyszlosc-na-emeryturze/"

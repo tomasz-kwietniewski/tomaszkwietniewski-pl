@@ -1,6 +1,7 @@
 ---
 title: "Radio Naukowe polecane odcinki"
 slug: "radio-naukowe-polecane-odcinki"
+miniatura: "/media/2023/12/2023-12-13_Radio-Naukowe.png"
 date: "2023-12-13T23:03:39"
 modified: "2023-12-13T23:03:39"
 url_stara: "https://tomaszkwietniewski.pl/radio-naukowe-polecane-odcinki/"

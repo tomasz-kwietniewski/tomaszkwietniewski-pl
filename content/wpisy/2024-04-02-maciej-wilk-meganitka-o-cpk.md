@@ -1,6 +1,7 @@
 ---
 title: "Maciej Wilk meganitka o CPK"
 slug: "maciej-wilk-meganitka-o-cpk"
+miniatura: "/media/2024/04/Depositphotos_124846874_XL-scaled.jpg"
 date: "2024-04-02T19:55:00"
 modified: "2024-04-03T08:28:02"
 url_stara: "https://tomaszkwietniewski.pl/maciej-wilk-meganitka-o-cpk/"

@@ -1,6 +1,7 @@
 ---
 title: "Jak więcej oszczędzać? 7 tricków od Tomka Jaroszka"
 slug: "jak-wiecej-oszczedzac-7-trickow-od-tomka-jaroszka"
+miniatura: "/media/2021/06/2021-06-08_7_trickow_finansowych_Tomek_Jaroszek.png"
 date: "2021-06-08T09:33:34"
 modified: "2021-06-10T09:34:18"
 url_stara: "https://tomaszkwietniewski.pl/jak-wiecej-oszczedzac-7-trickow-od-tomka-jaroszka/"

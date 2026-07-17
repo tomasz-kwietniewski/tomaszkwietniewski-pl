@@ -1,6 +1,7 @@
 ---
 title: "Perowskity, rewolucja w energetyce – rozmowa z Olgą Malinkiewicz"
 slug: "perowskity-rewolucja-w-energetyce-rozmowa-z-olga-malinkiewicz"
+miniatura: "/media/2021/06/2021-06-16_perowskity.png"
 date: "2021-06-17T15:02:50"
 modified: "2021-07-15T12:38:21"
 url_stara: "https://tomaszkwietniewski.pl/perowskity-rewolucja-w-energetyce-rozmowa-z-olga-malinkiewicz/"

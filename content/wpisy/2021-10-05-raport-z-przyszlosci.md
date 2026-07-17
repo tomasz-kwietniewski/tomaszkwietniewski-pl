@@ -1,6 +1,7 @@
 ---
 title: "Raport z przyszłości"
 slug: "raport-z-przyszlosci"
+miniatura: "/media/2021/10/2021-10-05_raport_z_przyszlosci_e01.png"
 date: "2021-10-05T22:47:13"
 modified: "2021-11-25T14:54:26"
 url_stara: "https://tomaszkwietniewski.pl/raport-z-przyszlosci/"

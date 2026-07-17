@@ -1,6 +1,7 @@
 ---
 title: "Nie daj się okraść – telefon od fałszywego pracownika banku"
 slug: "uwazaj-na-oszustow-ktorzy-moga-do-ciebie-zadzwonic-i-podawac-sie-za-pracownika-banku-lub-pracownika-dzialu-bezpieczenstwa"
+miniatura: "/media/2021/04/lumensoft-technologies-WaGMKmJ2F0Y-unsplash-scaled.jpg"
 date: "2021-04-23T09:34:55"
 modified: "2021-06-04T10:56:25"
 url_stara: "https://tomaszkwietniewski.pl/uwazaj-na-oszustow-ktorzy-moga-do-ciebie-zadzwonic-i-podawac-sie-za-pracownika-banku-lub-pracownika-dzialu-bezpieczenstwa/"

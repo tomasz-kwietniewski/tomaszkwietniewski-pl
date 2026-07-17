@@ -1,6 +1,7 @@
 ---
 title: "To Azja jest priorytetem Stanów Zjednoczonych. Europa musi być gotowa obronić się sama"
 slug: "to-azja-jest-priorytetem-stanow-zjednoczonych-europa-musi-byc-gotowa-obronic-sie-sama"
+miniatura: "/media/2021/04/biden.jpg"
 date: "2021-04-09T23:03:15"
 modified: "2021-05-12T08:54:11"
 url_stara: "https://tomaszkwietniewski.pl/to-azja-jest-priorytetem-stanow-zjednoczonych-europa-musi-byc-gotowa-obronic-sie-sama/"

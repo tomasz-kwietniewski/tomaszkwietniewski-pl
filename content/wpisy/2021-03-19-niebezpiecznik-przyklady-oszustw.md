@@ -1,6 +1,7 @@
 ---
 title: "Niebezpiecznik przykłady oszustw"
 slug: "niebezpiecznik-przyklady-oszustw"
+miniatura: "/media/2021/04/nbzp-logo-transparent2.png"
 date: "2021-03-19T14:24:00"
 modified: "2021-05-05T21:43:21"
 url_stara: "https://tomaszkwietniewski.pl/niebezpiecznik-przyklady-oszustw/"

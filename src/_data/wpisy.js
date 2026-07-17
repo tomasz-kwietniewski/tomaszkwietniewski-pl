@@ -38,7 +38,9 @@ export default function () {
       excerpt,
       metaDescription: excerpt ? skroc(excerpt, 160) : skroc(tekstZHtml(bodyHtml), 160),
       bodyHtml,
-      miniatura: wyznaczMiniature(bodyHtml, kategorieNowe),
+      // Miniatura: 1) jawne pole z frontmatter (featured image z WP / ustawione w CMS),
+      // 2) fallback (pierwszy obrazek z treści -> miniatura YouTube -> placeholder).
+      miniatura: normalizujMiniature(fm.miniatura) || wyznaczMiniature(bodyHtml, kategorieNowe),
       czasCzytania: czasCzytania(bodyHtml),
       disclaimer: kategorieNowe.includes("Finanse i emerytura"),
     });
@@ -52,4 +54,12 @@ function skroc(tekst, max) {
   if (tekst.length <= max) return tekst;
   const ciety = tekst.slice(0, max);
   return ciety.slice(0, Math.max(ciety.lastIndexOf(" "), 0)) + "...";
+}
+
+// Normalizuje wartość pola miniatura z frontmatter do adresu absolutnego.
+function normalizujMiniature(wartosc) {
+  const v = String(wartosc || "").trim();
+  if (!v) return null;
+  if (/^https?:\/\//.test(v) || v.startsWith("/")) return v;
+  return "/" + v.replace(/^\.?\//, "");
 }

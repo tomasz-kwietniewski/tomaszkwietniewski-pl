@@ -1,6 +1,7 @@
 ---
 title: "Zdjęcia Google / Google Photos przestają być darmowe od 1 czerwca 2021"
 slug: "zdjecia-google-google-photos-przestaja-byc-darmowe-od-1-czerwca-2021"
+miniatura: "/media/2021/04/1024px-Google_Photos_icon_2020.svg_.png"
 date: "2021-03-27T10:17:11"
 modified: "2021-11-04T11:12:01"
 url_stara: "https://tomaszkwietniewski.pl/zdjecia-google-google-photos-przestaja-byc-darmowe-od-1-czerwca-2021/"

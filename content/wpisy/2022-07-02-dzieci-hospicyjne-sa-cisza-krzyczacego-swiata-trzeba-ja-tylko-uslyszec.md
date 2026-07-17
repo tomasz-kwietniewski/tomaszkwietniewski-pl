@@ -1,6 +1,7 @@
 ---
 title: "Dzieci hospicyjne są ciszą krzyczącego świata – trzeba ją tylko usłyszeć"
 slug: "dzieci-hospicyjne-sa-cisza-krzyczacego-swiata-trzeba-ja-tylko-uslyszec"
+miniatura: "/media/2022/07/2022-07-02_hospicjum-Pomorze.png"
 date: "2022-07-02T08:00:22"
 modified: "2022-07-19T11:01:06"
 url_stara: "https://tomaszkwietniewski.pl/dzieci-hospicyjne-sa-cisza-krzyczacego-swiata-trzeba-ja-tylko-uslyszec/"

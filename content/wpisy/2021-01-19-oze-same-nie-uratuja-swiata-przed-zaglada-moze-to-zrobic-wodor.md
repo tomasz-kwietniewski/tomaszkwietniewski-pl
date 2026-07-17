@@ -1,6 +1,7 @@
 ---
 title: "OZE same nie uratują świata przed zagładą? Może to zrobić… wodór"
 slug: "oze-same-nie-uratuja-swiata-przed-zaglada-moze-to-zrobic-wodor"
+miniatura: "/media/2021/04/shutterstock_765921088-e1551426865573.jpg"
 date: "2021-01-19T22:30:34"
 modified: "2021-08-13T12:11:27"
 url_stara: "https://tomaszkwietniewski.pl/oze-same-nie-uratuja-swiata-przed-zaglada-moze-to-zrobic-wodor/"

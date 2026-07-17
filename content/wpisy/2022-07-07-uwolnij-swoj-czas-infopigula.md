@@ -1,6 +1,7 @@
 ---
 title: "Uwolnij swój czas. Infopiguła"
 slug: "uwolnij-swoj-czas-infopigula"
+miniatura: "/media/2022/07/2022-07-07_Infopigula.png"
 date: "2022-07-07T08:56:16"
 modified: "2022-07-07T08:58:35"
 url_stara: "https://tomaszkwietniewski.pl/uwolnij-swoj-czas-infopigula/"

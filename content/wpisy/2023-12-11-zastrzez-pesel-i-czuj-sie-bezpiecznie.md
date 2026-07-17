@@ -1,6 +1,7 @@
 ---
 title: "Zastrzeż PESEL i czuj się bezpiecznie"
 slug: "zastrzez-pesel-i-czuj-sie-bezpiecznie"
+miniatura: "/media/2023/12/Screenshot-2023-12-11-at-22.09.00.png"
 date: "2023-12-11T20:36:00"
 modified: "2023-12-11T23:12:29"
 url_stara: "https://tomaszkwietniewski.pl/zastrzez-pesel-i-czuj-sie-bezpiecznie/"

@@ -1,6 +1,7 @@
 ---
 title: "Wojna energetyczna: czy Polska jest bezpieczna? – Piotr Maciążek [wywiad]"
 slug: "wojna-energetyczna-czy-polska-jest-bezpieczna-piotr-macia%cc%a8z%cc%87ek-wywiad"
+miniatura: "/media/2022/04/2022-03-12_energetyka.png"
 date: "2022-03-12T14:42:14"
 modified: "2022-04-12T14:42:37"
 url_stara: "https://tomaszkwietniewski.pl/wojna-energetyczna-czy-polska-jest-bezpieczna-piotr-macia%cc%a8z%cc%87ek-wywiad/"

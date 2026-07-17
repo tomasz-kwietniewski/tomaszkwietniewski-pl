@@ -1,6 +1,7 @@
 ---
 title: "Chiny w przededniu kryzysu. Nie uderzą na Tajwan [ANALIZA]"
 slug: "chiny-w-przededniu-kryzysu-nie-uderza-na-tajwan-analiza"
+miniatura: "/media/2022/08/2022-08-04_Chiny-w-przededniu-kryzysu.png"
 date: "2022-08-04T20:57:36"
 modified: "2022-08-24T13:14:50"
 url_stara: "https://tomaszkwietniewski.pl/chiny-w-przededniu-kryzysu-nie-uderza-na-tajwan-analiza/"

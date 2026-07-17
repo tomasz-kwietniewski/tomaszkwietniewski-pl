@@ -1,6 +1,7 @@
 ---
 title: "Rozmowa o AI Kuby Klawitera z Mateuszem Chrobokiem"
 slug: "rozmowa-o-ai-kuby-klawitera-z-mateuszem-chrobokiem"
+miniatura: "/media/2023/05/2023-04-09_Ludzie_vs_maszyny_Kuba_Klawiter_Mateusz_Chrobok.png"
 date: "2023-04-10T09:55:00"
 modified: "2023-05-04T09:58:10"
 url_stara: "https://tomaszkwietniewski.pl/rozmowa-o-ai-kuby-klawitera-z-mateuszem-chrobokiem/"

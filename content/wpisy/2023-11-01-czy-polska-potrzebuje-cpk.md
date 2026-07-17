@@ -1,6 +1,7 @@
 ---
 title: "Czy Polska potrzebuje CPK?"
 slug: "czy-polska-potrzebuje-cpk"
+miniatura: "/media/2023/11/2023-12-01_CPK_Good_Times_Bad_Times.png"
 date: "2023-11-01T12:05:42"
 modified: "2024-02-08T18:22:28"
 url_stara: "https://tomaszkwietniewski.pl/czy-polska-potrzebuje-cpk/"

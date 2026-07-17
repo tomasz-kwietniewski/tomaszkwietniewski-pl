@@ -1,6 +1,7 @@
 ---
 title: "Menadżer haseł"
 slug: "menadzer-hasel"
+miniatura: "/media/2021/04/fly-d-mT7lXZPjk7U-unsplash.jpg"
 date: "2020-04-22T21:10:17"
 modified: "2021-05-12T08:57:47"
 url_stara: "https://tomaszkwietniewski.pl/menadzer-hasel/"

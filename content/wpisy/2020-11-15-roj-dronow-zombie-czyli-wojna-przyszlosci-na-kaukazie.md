@@ -1,6 +1,7 @@
 ---
 title: "Rój dronów zombie, czyli wojna przyszłości na Kaukazie"
 slug: "roj-dronow-zombie-czyli-wojna-przyszlosci-na-kaukazie"
+miniatura: "/media/2020/11/dron.jpeg"
 date: "2020-11-15T22:21:32"
 modified: "2021-08-13T12:12:50"
 url_stara: "https://tomaszkwietniewski.pl/roj-dronow-zombie-czyli-wojna-przyszlosci-na-kaukazie/"

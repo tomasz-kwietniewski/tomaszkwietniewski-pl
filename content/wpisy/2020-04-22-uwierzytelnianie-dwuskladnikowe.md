@@ -1,6 +1,7 @@
 ---
 title: "Uwierzytelnianie dwuskładnikowe"
 slug: "uwierzytelnianie-dwuskladnikowe"
+miniatura: "/media/2021/04/shutterstock_641960737.jpg"
 date: "2020-04-22T21:07:08"
 modified: "2021-06-15T09:23:35"
 url_stara: "https://tomaszkwietniewski.pl/uwierzytelnianie-dwuskladnikowe/"

@@ -1,6 +1,7 @@
 ---
 title: "Jak łatwo i przyjemnie ogarnąć uczenie się w szkole?"
 slug: "jak-latwo-i-przyjemnie-ogarnac-uczenie-sie-w-szkole"
+miniatura: "/media/2021/09/2021-09-02_wlam_sie_do_mozgu.png"
 date: "2021-09-02T15:45:24"
 modified: "2021-09-16T15:45:40"
 url_stara: "https://tomaszkwietniewski.pl/jak-latwo-i-przyjemnie-ogarnac-uczenie-sie-w-szkole/"

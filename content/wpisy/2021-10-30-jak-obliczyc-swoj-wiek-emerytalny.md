@@ -1,6 +1,7 @@
 ---
 title: "Jak obliczyć swój wiek emerytalny?"
 slug: "jak-obliczyc-swoj-wiek-emerytalny"
+miniatura: "/media/2021/11/dominik-lange-VUOiQW4OeLI-unsplash.jpg"
 date: "2021-10-30T10:35:50"
 modified: "2023-11-15T14:28:25"
 url_stara: "https://tomaszkwietniewski.pl/jak-obliczyc-swoj-wiek-emerytalny/"

@@ -1,6 +1,7 @@
 ---
 title: "Ceny energii nas uderzą. Dlaczego i co z tym zrobić?"
 slug: "ceny-energii-nas-uderza-dlaczego-i-co-z-tym-zrobic"
+miniatura: "/media/2023/11/2023-11-08_Ceny_energii_nas_uderza_Wiech.png"
 date: "2023-11-08T12:13:42"
 modified: "2023-11-21T12:18:15"
 url_stara: "https://tomaszkwietniewski.pl/ceny-energii-nas-uderza-dlaczego-i-co-z-tym-zrobic/"

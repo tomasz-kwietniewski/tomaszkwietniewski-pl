@@ -1,6 +1,7 @@
 ---
 title: "Migracja z Evernote do OneNote"
 slug: "migracja-z-evernote-do-onenote"
+miniatura: "/media/2023/12/2023-12-08_Migracja-z-Evernote-do-OneNote.jpg"
 date: "2023-12-08T19:34:00"
 modified: "2023-12-09T10:16:21"
 url_stara: "https://tomaszkwietniewski.pl/migracja-z-evernote-do-onenote/"

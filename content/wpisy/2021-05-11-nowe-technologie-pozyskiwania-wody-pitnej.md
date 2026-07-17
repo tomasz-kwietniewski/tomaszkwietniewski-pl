@@ -1,6 +1,7 @@
 ---
 title: "Nowe technologie pozyskiwania wody pitnej"
 slug: "nowe-technologie-pozyskiwania-wody-pitnej"
+miniatura: "/media/2021/05/mrjn-photography-YpZ2cj4s0oo-unsplash-scaled.jpg"
 date: "2021-05-11T07:17:50"
 modified: "2021-08-13T12:03:17"
 url_stara: "https://tomaszkwietniewski.pl/nowe-technologie-pozyskiwania-wody-pitnej/"

@@ -1,6 +1,7 @@
 ---
 title: "Przeżyć za 1472 zł miesięcznie"
 slug: "przezyc-za-1472-zl-miesiecznie"
+miniatura: "/media/2022/10/Depositphotos_15682973_XL-scaled.jpg"
 date: "2022-10-15T23:02:37"
 modified: "2023-11-15T14:30:22"
 url_stara: "https://tomaszkwietniewski.pl/przezyc-za-1472-zl-miesiecznie/"

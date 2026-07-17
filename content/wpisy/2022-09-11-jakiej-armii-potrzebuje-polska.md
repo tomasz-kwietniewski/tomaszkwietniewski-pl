@@ -1,6 +1,7 @@
 ---
 title: "Jakiej armii potrzebuje Polska?"
 slug: "jakiej-armii-potrzebuje-polska"
+miniatura: "/media/2022/10/Depositphotos_234679610_L.jpg"
 date: "2022-09-11T21:08:36"
 modified: "2022-10-10T15:09:24"
 url_stara: "https://tomaszkwietniewski.pl/jakiej-armii-potrzebuje-polska/"

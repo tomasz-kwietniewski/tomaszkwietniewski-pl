@@ -1,6 +1,7 @@
 ---
 title: "Hologramy zrobią rewolucję w naszym życiu. A Polacy będą na czele tej zadymy"
 slug: "hologramy-zrobia-rewolucje-w-naszym-zyciu-a-polacy-beda-na-czele-tej-zadymy"
+miniatura: "/media/2021/05/AdobeStock_255418686.jpg"
 date: "2020-02-11T08:45:35"
 modified: "2021-08-13T12:14:39"
 url_stara: "https://tomaszkwietniewski.pl/hologramy-zrobia-rewolucje-w-naszym-zyciu-a-polacy-beda-na-czele-tej-zadymy/"

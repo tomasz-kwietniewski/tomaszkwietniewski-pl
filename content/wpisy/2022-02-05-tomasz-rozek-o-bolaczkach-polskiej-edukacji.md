@@ -1,6 +1,7 @@
 ---
 title: "Tomasz Rożek o bolączkach polskiej edukacji"
 slug: "tomasz-rozek-o-bolaczkach-polskiej-edukacji"
+miniatura: "/media/2022/02/dr-tomasz-rozek.webp"
 date: "2022-02-05T11:03:08"
 modified: "2022-02-16T11:04:19"
 url_stara: "https://tomaszkwietniewski.pl/tomasz-rozek-o-bolaczkach-polskiej-edukacji/"

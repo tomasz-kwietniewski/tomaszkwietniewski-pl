@@ -1,6 +1,7 @@
 ---
 title: "Po co nam Marynarka Wojenna?"
 slug: "po-co-nam-marynarka-wojenna"
+miniatura: "/media/2022/05/2022-05-09_fregata-Miecznik.jpg"
 date: "2022-05-09T11:45:36"
 modified: "2022-05-09T11:45:37"
 url_stara: "https://tomaszkwietniewski.pl/po-co-nam-marynarka-wojenna/"

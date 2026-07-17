@@ -1,6 +1,7 @@
 ---
 title: "AI od zera. Jak zacząć, nie tracąc czasu i nerwów?"
 slug: "ai-od-zera-jak-zaczac-nie-tracac-czasu-i-nerwow"
+miniatura: "/media/2025/05/2025-05-28_AI-od-zera.png"
 date: "2025-05-28T20:41:00"
 modified: "2025-05-29T15:17:59"
 url_stara: "https://tomaszkwietniewski.pl/ai-od-zera-jak-zaczac-nie-tracac-czasu-i-nerwow/"

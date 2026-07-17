@@ -1,6 +1,7 @@
 ---
 title: "Droga inteligentnego inwestora do 1 mln zł"
 slug: "droga-inteligentnego-inwestora-do-1-mln-zl"
+miniatura: "/media/2022/02/2022-02-02_The-Swedish-Investor.png"
 date: "2022-02-02T11:10:21"
 modified: "2022-02-16T11:10:58"
 url_stara: "https://tomaszkwietniewski.pl/droga-inteligentnego-inwestora-do-1-mln-zl/"

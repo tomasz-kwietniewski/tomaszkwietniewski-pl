@@ -1,6 +1,7 @@
 ---
 title: "Ujgurzy: Ciche ludobójstwo?"
 slug: "ujgurzy-ciche-ludobojstwo"
+miniatura: "/media/2021/02/Ujgurzy_ciche_ludobojstwo.png"
 date: "2021-02-20T22:38:14"
 modified: "2021-05-05T15:17:45"
 url_stara: "https://tomaszkwietniewski.pl/ujgurzy-ciche-ludobojstwo/"

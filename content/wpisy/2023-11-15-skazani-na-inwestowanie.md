@@ -1,6 +1,7 @@
 ---
 title: "Skazani na inwestowanie"
 slug: "skazani-na-inwestowanie"
+miniatura: "/media/2023/11/2023-11-14_Skazani-na-inwestowanie.jpeg"
 date: "2023-11-15T20:30:00"
 modified: "2023-12-05T11:54:47"
 url_stara: "https://tomaszkwietniewski.pl/skazani-na-inwestowanie/"

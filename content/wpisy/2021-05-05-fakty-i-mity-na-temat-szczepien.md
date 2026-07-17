@@ -1,6 +1,7 @@
 ---
 title: "Fakty i mity na temat szczepień"
 slug: "fakty-i-mity-na-temat-szczepien"
+miniatura: "/media/2021/05/Covid19_vaccine.jpg"
 date: "2021-05-05T20:30:53"
 modified: "2021-09-22T14:17:00"
 url_stara: "https://tomaszkwietniewski.pl/fakty-i-mity-na-temat-szczepien/"

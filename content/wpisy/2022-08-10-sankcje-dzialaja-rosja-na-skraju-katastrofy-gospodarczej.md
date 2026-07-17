@@ -1,6 +1,7 @@
 ---
 title: "Sankcje działają. Rosja na skraju katastrofy gospodarczej"
 slug: "sankcje-dzialaja-rosja-na-skraju-katastrofy-gospodarczej"
+miniatura: "/media/2022/08/Depositphotos_153746504_XL-scaled.jpg"
 date: "2022-08-10T21:13:02"
 modified: "2023-02-21T13:48:09"
 url_stara: "https://tomaszkwietniewski.pl/sankcje-dzialaja-rosja-na-skraju-katastrofy-gospodarczej/"

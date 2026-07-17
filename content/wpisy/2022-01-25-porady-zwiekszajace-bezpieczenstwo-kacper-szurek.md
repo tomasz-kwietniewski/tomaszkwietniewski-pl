@@ -1,6 +1,7 @@
 ---
 title: "Porady zwiększające bezpieczeństwo – Kacper Szurek"
 slug: "porady-zwiekszajace-bezpieczenstwo-kacper-szurek"
+miniatura: "/media/2022/01/2022-01-26_Kacper-Szurek-porady-zwiekszajace-bezpieczenstwo.png"
 date: "2022-01-25T15:47:19"
 modified: "2022-01-26T15:48:07"
 url_stara: "https://tomaszkwietniewski.pl/porady-zwiekszajace-bezpieczenstwo-kacper-szurek/"

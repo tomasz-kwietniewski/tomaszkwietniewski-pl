@@ -1,6 +1,7 @@
 ---
 title: "Marek Budzisz: Czy Polska i Zachód myśli strategicznie o wojnie na Ukrainie? Jak zakończyć tą wojnę?"
 slug: "marek-budzisz-czy-polska-i-zachod-mysli-strategicznie-o-wojnie-na-ukrainie-jak-zakonczyc-ta-wojne"
+miniatura: "/media/2023/05/2023-03-21_Marek_Budzisz_Uklad_otwarty.png"
 date: "2023-03-22T21:50:00"
 modified: "2023-05-04T09:54:45"
 url_stara: "https://tomaszkwietniewski.pl/marek-budzisz-czy-polska-i-zachod-mysli-strategicznie-o-wojnie-na-ukrainie-jak-zakonczyc-ta-wojne/"
