@@ -1,7 +1,8 @@
 # tomaszkwietniewski.pl - nowa strona
 
-Repozytorium treści i kodu nowej wersji strony tomaszkwietniewski.pl. Zastępuje WordPressa.
-Statyczny generator **Eleventy 3** + treść w markdown/HTML, hosting docelowo GitHub Pages.
+Repozytorium treści i kodu strony https://tomaszkwietniewski.pl (zastąpiła WordPressa,
+na żywo od 2026-07-17). Statyczny generator **Eleventy 3** + treść w markdown/HTML,
+hosting GitHub Pages z automatycznym deployem.
 
 ## Uruchomienie lokalne
 
@@ -12,7 +13,8 @@ npm run build    # produkcyjny build do _site/ + indeks wyszukiwarki Pagefind
 npm run verify   # build + asercje poprawności (tools/verify_build.mjs)
 ```
 
-Publikacja: patrz `WDROZENIE.md`.
+Deploy: każdy push do `main` uruchamia GitHub Actions (build + publikacja na GitHub Pages).
+Szczegóły wdrożenia, DNS i rollback: `WDROZENIE.md`.
 
 ## Struktura
 
@@ -33,8 +35,8 @@ Publikacja: patrz `WDROZENIE.md`.
 1. Wejdź na https://app.pagescms.org i zaloguj się kontem GitHub.
 2. Wybierz repozytorium `tomaszkwietniewski-pl`.
 3. W menu masz kolekcje **Wpisy** i **Podstrony**: edycja, dodawanie, wgrywanie obrazków.
-4. Zapis w panelu robi commit do tego repo. Gdy będzie podpięty deploy (GitHub Actions),
-   każdy zapis automatycznie zaktualizuje stronę.
+4. Zapis w panelu robi commit do tego repo, a GitHub Actions automatycznie publikuje
+   stronę - zmiany są na żywo po ok. 1-2 minutach.
 
 Uwagi:
 - Przy nowym wpisie wystarczy wpisać TYTUŁ - nazwa pliku (i z niej adres URL) generuje
@@ -55,13 +57,6 @@ Uwagi:
 - Zachowujemy slugi i daty publikacji ze starego WordPressa (SEO + porządek w archiwum).
 - Przy treściach inwestycyjnych obowiązkowy disclaimer "to nie jest porada inwestycyjna".
 - Interpunkcja: zwykły dywiz, bez długich myślników.
-
-## Do zrobienia (kolejność)
-
-Build gotowy. Pozostała publikacja - pełna instrukcja w `WDROZENIE.md`:
-
-1. Usunąć `docs/` z repo i historii gita (prywatne notatki) przed upublicznieniem.
-2. Świeży eksport ze starego WP (`tools/export_wp.py`) + `npm run verify`.
-3. Włączyć Pages (Source: GitHub Actions), odkomentować `push:` w workflow.
-4. Domena: passthrough `CNAME.gotowy` + rekordy A/AAAA GitHuba w DNS (apex).
-5. Przełączenie repo na publiczne (wymóg GitHub Pages na darmowym planie).
+- Strona nie używa cookies ani analityki (i nie ma banera zgody) - nie osadzać
+  w treściach iframe'ów zapisujących cookies (np. playery Spotify); linki wystarczą.
+  Filmy YouTube build sam przepisuje na wersję youtube-nocookie.
