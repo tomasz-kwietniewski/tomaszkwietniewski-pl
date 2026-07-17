@@ -15,7 +15,10 @@ export default {
   buycoffee: "https://buycoffee.to/tomaszkwietniewski",
   github: "https://github.com/tomasz-kwietniewski",
   rok: new Date().getFullYear(),
+  // Wpis to goła domena (tekst = adres) albo obiekt { nazwa, url } gdy adres
+  // jest długi/mało czytelny (np. subdomena Substacka) - patrz index.njk.
   blogroll: [
+    { nazwa: "52Notatki", url: "https://52notatki.substack.com/" },
     "atlasetf.pl",
     "atlaspasywnegoinwestora.pl",
     "inwestomat.eu",

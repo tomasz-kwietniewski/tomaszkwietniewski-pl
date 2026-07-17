@@ -96,7 +96,7 @@ permalink: /
     <div class="karta-blogroll">
       <h3>Polecane strony o finansach</h3>
       <div class="karta-blogroll__linki">
-        {% for adres in site.blogroll %}<a href="https://{{ adres }}" rel="noopener">{{ adres }}</a>{% endfor %}
+        {% for wpis in site.blogroll %}{% if wpis.url %}<a href="{{ wpis.url }}" rel="noopener">{{ wpis.nazwa }}</a>{% else %}<a href="https://{{ wpis }}" rel="noopener">{{ wpis }}</a>{% endif %}{% endfor %}
       </div>
     </div>
   </section>
