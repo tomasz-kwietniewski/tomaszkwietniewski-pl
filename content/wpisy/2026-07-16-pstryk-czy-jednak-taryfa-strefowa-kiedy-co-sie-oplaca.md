@@ -43,84 +43,84 @@ excerpt: "Pstryk ma świetną aplikację i uczciwie oddaje klientom giełdowe ce
 <tr>
 <td>sie 2025</td>
 <td>55</td>
-<td>41</td>
+<td>33</td>
 <td>34</td>
 <td>34</td>
 </tr>
 <tr>
 <td>wrz 2025</td>
 <td>118</td>
-<td>79</td>
+<td>71</td>
 <td>72</td>
 <td>72</td>
 </tr>
 <tr>
 <td>paź 2025</td>
 <td>573</td>
-<td>336</td>
+<td>327</td>
 <td>349</td>
 <td>352</td>
 </tr>
 <tr>
 <td>lis 2025</td>
 <td>955</td>
-<td>536</td>
+<td>527</td>
 <td>582</td>
 <td>711</td>
 </tr>
 <tr>
 <td>gru 2025</td>
 <td>1 285</td>
-<td>707</td>
+<td>699</td>
 <td>782</td>
 <td>839</td>
 </tr>
 <tr>
 <td><strong>sty 2026</strong></td>
 <td><strong>1 589</strong></td>
-<td><strong>893</strong></td>
+<td><strong>884</strong></td>
 <td><strong>967</strong></td>
 <td><strong>1 296</strong></td>
 </tr>
 <tr>
 <td>lut 2026</td>
 <td>1 282</td>
-<td>719</td>
+<td>711</td>
 <td>781</td>
 <td>858</td>
 </tr>
 <tr>
 <td>mar 2026</td>
 <td>359</td>
-<td>217</td>
+<td>208</td>
 <td>218</td>
 <td>243</td>
 </tr>
 <tr>
 <td>kwi 2026</td>
 <td>295</td>
-<td>183</td>
+<td>174</td>
 <td>180</td>
 <td>185</td>
 </tr>
 <tr>
 <td>maj 2026</td>
 <td>500</td>
-<td>306</td>
+<td>298</td>
 <td>305</td>
 <td>342</td>
 </tr>
 <tr>
 <td>cze 2026</td>
 <td>326</td>
-<td>205</td>
+<td>196</td>
 <td>198</td>
 <td>237</td>
 </tr>
 <tr>
 <td><strong>Suma</strong></td>
 <td><strong>7 336</strong></td>
-<td><strong>4 222</strong></td>
+<td><strong>4 127</strong></td>
 <td><strong>4 467</strong></td>
 <td><strong>5 168</strong></td>
 </tr>
@@ -130,9 +130,9 @@ excerpt: "Pstryk ma świetną aplikację i uczciwie oddaje klientom giełdowe ce
 
 <p>Co z tego widać:</p>
 <ul>
-<li><strong>Latem Pstryk faktycznie wygrywa</strong> - o kilka złotych miesięcznie. W czerwcu zapłaciłem za energię 198 zł, na G12w byłoby 205 zł. Siedem złotych różnicy.</li>
-<li><strong>Zimą Pstryk przegrywa z kretesem.</strong> Sam styczeń bez Tarczy to 1 296 zł wobec 893 zł na G12w - <strong>403 zł różnicy w jeden miesiąc</strong>. Grudzień i luty dokładają po ~130-140 zł.</li>
-<li>Po 11 miesiącach: G12w tańsza o 245 zł przy działającej Tarczy i o <strong>946 zł bez Tarczy</strong>. W pełnym roku z autem (moje projekcje na podstawie tych danych) różnica rośnie do <strong>1 220-1 360 zł rocznie</strong> na korzyść G12w.</li>
+<li><strong>Latem to remis co do pojedynczych złotych.</strong> W czerwcu za energię zapłaciłem w Pstryku 198 zł, na G12w byłoby 196 zł. Z Tarczą Pstryk bywa o złotówkę-dwie od strefówki lepszy albo gorszy - czysty szum.</li>
+<li><strong>Zimą Pstryk przegrywa z kretesem.</strong> Sam styczeń bez Tarczy to 1 296 zł wobec 884 zł na G12w - <strong>411 zł różnicy w jeden miesiąc</strong>. Grudzień i luty dokładają po ~140-150 zł.</li>
+<li>Po 11 miesiącach: G12w tańsza o 340 zł przy działającej Tarczy i o <strong>1 041 zł bez Tarczy</strong>. W pełnym roku z autem (moje projekcje na podstawie tych danych) różnica rośnie do <strong>ok. 1 330-1 460 zł rocznie</strong> na korzyść G12w.</li>
 </ul>
 <p>Mechanizm jest prosty: o rachunku rocznym decyduje zima, bo wtedy kupuję 1 300-1 600 kWh miesięcznie, a zimowy spot potrafi kosztować 0,66-0,81 zł/kWh brutto. Latem, kiedy spot bywa tani, ja prawie nic nie kupuję, bo mam własną produkcję.</p>
 <h2>Dlaczego u mnie wygrywa strefówka</h2>
@@ -172,7 +172,7 @@ excerpt: "Pstryk ma świetną aplikację i uczciwie oddaje klientom giełdowe ce
 </ul>
 <p>I jeszcze jedno, co zaskoczyło mnie podwójnie: strefówka strefówce nierówna - i nie wystarczy porównać stawek za samą energię. Intuicja podpowiada: więcej tanich godzin = taniej, więc weekendowa G12w powinna bić zwykłą G12. Policzyłem na swoim profilu godzinowym (stawki PGE 2026) i najpierw wyszło odwrotnie: na samej energii G12 była o ok. 230 zł na 11 miesięcy tańsza, bo zimą większość mojego poboru i tak przypada na noc 22-6, tanią w obu taryfach, a nocna stawka G12 jest o ponad 6 gr niższa (46,35 vs 52,71 gr brutto). Ale kiedy sięgnąłem do taryfy dystrybucyjnej, obraz się odwrócił: <strong>opłaty przesyłowe też są strefowe, a ich rozpiętość jest ogromna</strong> - w G12 ok. 0,49 zł/kWh w dzień wobec 0,09 zł w nocy. Tanie weekendy G12w obniżają więc także dystrybucję i odrabiają w niej ok. 180 zł. Na pełnym rachunku różnica między G12 a G12w stopniała u mnie do ok. 50 zł - praktyczny remis. Wniosek jest podwójny: po pierwsze, <strong>licz zawsze pełny rachunek (energia plus dystrybucja), nie same stawki sprzedawcy</strong>; po drugie, przy remisie wybieraj taryfę, która wybacza - ja zostaję przy G12w, bo tanie weekendy nie każą mi pilnować zegarka. Uwaga na oferty rynkowe: niższa stawka często idzie w parze z opłatą handlową i umową na czas określony.</p>
 <h2>Werdykt</h2>
-<p>U mnie - dom w pełni elektryczny, 9 kWp na dachu, magazyn, auto elektryczne, łącznie ok. 15 MWh rocznego zapotrzebowania - <strong>taryfa strefowa wygrywa z Pstrykiem o ok. 1 220-1 360 zł rocznie</strong> (licząc wariant G12w, bez Tarczy, bo ona zniknie). A między samymi strefówkami? Na pełnym rachunku G12 i G12w dzieli u mnie ok. 50 zł rocznie, więc zostaję przy G12w - elastyczność tanich weekendów w cenie remisu. Jedenaście miesięcy realnych danych, nie symulacja z ulotki.</p>
+<p>U mnie - dom w pełni elektryczny, 9 kWp na dachu, magazyn, auto elektryczne, łącznie ok. 15 MWh rocznego zapotrzebowania - <strong>taryfa strefowa wygrywa z Pstrykiem o ok. 1 330-1 460 zł rocznie</strong> (licząc wariant G12w, bez Tarczy, bo ona zniknie). A między samymi strefówkami? Na pełnym rachunku G12 i G12w dzieli u mnie ok. 50 zł rocznie, więc zostaję przy G12w - elastyczność tanich weekendów w cenie remisu. Jedenaście miesięcy realnych danych, nie symulacja z ulotki.</p>
 <p>Ale to nie jest werdykt „Pstryk jest zły". To werdykt: <strong>Pstryk jest fajny, ale nie dla każdego :-)</strong> Trzeba go dopasować do swojej sytuacji. Gdybym nie miał paneli i grzał gazem, prawdopodobnie pisałbym teraz tekst odwrotny.</p>
 <p>Morał na koniec: <strong>nie wybieraj taryfy z reklamy, wybierz ją z własnego profilu zużycia.</strong> Ściągnij swoje dane godzinowe (z licznika, falownika albo aplikacji sprzedawcy), policz, ile procent energii kupujesz w godzinach taniej strefy, i dopiero wtedy decyduj. Ja policzyłem - i wracam na strefówkę, choć z apką Pstryka rozstanę się z pewnym żalem.</p>
 <hr />
