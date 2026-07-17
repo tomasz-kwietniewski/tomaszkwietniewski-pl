@@ -23,7 +23,7 @@ excerpt: "Oscary 2021 rozdane. Zapewne niebawem wielu z nas obejrzy w kinach czy
 
 
 
-<iframe loading="lazy" src="https://anchor.fm/andrzej-kohut/embed/episodes/Nomadland--czyli-niewesoe-ycie-staruszka-evmd6d/a-a5cb1el" scrolling="no" width="400px" height="102px" frameborder="0"></iframe>
+<p class="wp-block-paragraph">Posłuchaj odcinka: <a href="https://creators.spotify.com/pod/profile/andrzej-kohut/episodes/Nomadland--czyli-niewesoe-ycie-staruszka-evmd6d" target="_blank" rel="noreferrer noopener">Nomadland, czyli niewesołe życie staruszka - podcast Po amerykańsku</a>.</p>
 
 
 <style>.wp-block-kadence-spacer.kt-block-spacer-_880a4f-53 .kt-block-spacer{height:60px;}.wp-block-kadence-spacer.kt-block-spacer-_880a4f-53 .kt-divider{border-top-width:1px;height:1px;border-top-color:#eee;width:80%;border-top-style:solid;}</style>
