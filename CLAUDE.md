@@ -8,22 +8,28 @@ Nowa wersja strony osobistej tomaszkwietniewski.pl, zastępująca WordPressa (sz
 Trzy role strony: blog (sprawdzone treści: inwestowanie pasywne, technologie, tipy),
 wizytówka osobista z sekcją projektów, baza newslettera (MailerLite - ta sama lista co dotąd).
 
-Stara strona WCIĄŻ DZIAŁA na WordPressie i będzie działać do podmiany DNS (ostatni krok).
+Strona jest NA ŻYWO od 2026-07-17 (GitHub Pages, deploy automatyczny z push do main).
+Stary WordPress dalej działa na SEOHost pod IP 188.210.222.8 - rollback to apex A z powrotem
+na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZENIE.md`).
 
 ## Stan projektu (co już jest zrobione)
 
 - Treść ZMIGROWANA z WordPressa przez REST API: 88 wpisów, 21 podstron, 448 mediów.
-- Repo: https://github.com/tomasz-kwietniewski/tomaszkwietniewski-pl (PRYWATNE, gałąź main).
+- Repo: https://github.com/tomasz-kwietniewski/tomaszkwietniewski-pl (PUBLICZNE, gałąź main;
+  `docs/` z prywatnymi notatkami usunięte z repo i z historii przed upublicznieniem).
 - Pages CMS podpięty i PRZETESTOWANY end-to-end (panel: app.pagescms.org, konto GitHub Tomasza).
-- Brief treści i architektury: `docs/wyciag-tresci.md` (architektura stron, sekcja Projekty,
-  mapowanie kategorii, ton, czego nie umieszczać - CZYTAJ PRZED projektowaniem podstron).
+  Save w panelu = commit do main = auto-publikacja.
 - Pierwszy NOWY wpis (nie z migracji): `content/wpisy/2026-07-16-pstryk-...md`
   (slug: pstryk-czy-taryfa-strefowa). Źródło: repo `C:\Users\L857K\claude\zuzycie-pradu`.
 - **BUILD GOTOWY (2026-07-17):** statyczny generator Eleventy 3 odtwarza design z handoffu
   Claude Design (paczka "Odświeżenie strony Tomasza.zip", handoff v2). Wszystkie 8 widoków
   zbudowane i przetestowane w przeglądarce (Playwright: 0 błędów konsoli, brak poziomego
   scrolla na mobile 375 px, filtr kategorii, donut, e-mail reveal, Pagefind, formularz ML).
-  `npm run verify` (build + asercje) przechodzi. Zostaje: publikacja (patrz `WDROZENIE.md`).
+  `npm run verify` (build + asercje) przechodzi. OPUBLIKOWANE 2026-07-17.
+- **Polityka prywatności PRZEPISANA (2026-07-17):** zgodna z faktycznym stanem strony
+  (newsletter MailerLite, kontakt e-mail, logi GitHub Pages, transfer do USA wg Data Privacy
+  Framework, disclaimer wg MAR zamiast uchylonego rozporządzenia MF z 2005). Strona NIE
+  ustawia cookies i celowo NIE MA banera zgody - patrz konwencja "strona bez cookies" niżej.
 
 ## Jak to zbudowane (Eleventy 3, technologia)
 
@@ -38,6 +44,8 @@ Stara strona WCIĄŻ DZIAŁA na WordPressie i będzie działać do podmiany DNS 
 - Kategorie: 5 nowych, mapowanie starych w `lib/kategorie.js` (nieznana = błąd builda).
 - Miniatury list (brak w frontmatter): pierwszy `<img>` -> miniatura YouTube (pobierana w build
   do `_yt-cache/`, potem `/media/yt/`) -> placeholder SVG kategorii.
+- Osadzenia YouTube: build przepisuje `youtube.com/embed` na `youtube-nocookie.com`
+  (`lib/media.js`) - film nie zapisuje cookies, dopóki użytkownik nie kliknie play.
 - Disclaimer inwestycyjny automatyczny pod wpisami "Finanse i emerytura" + w portfelu na O mnie.
 - Newsletter: formularz POST na endpoint MailerLite z dawnego embedu (fetch w site.js, sukces
   -> `/dziekuje-bardzo/`). RSS `/feed.xml` + fallback `/feed/`. Wyszukiwarka Pagefind (modal).
@@ -55,9 +63,8 @@ Stara strona WCIĄŻ DZIAŁA na WordPressie i będzie działać do podmiany DNS 
 | `content/strony/` | podstrony (o-mnie, kontakt, zestawienia typu ksiazki/podcasty) |
 | `media/` | obrazki z wp-content/uploads, struktura RRRR/MM; treści linkują względnie `media/...` |
 | `.pages.yml` | konfiguracja panelu Pages CMS |
-| `tools/export_wp.py` | ponowny eksport ze starego WP (odpalić przed podmianą DNS!) |
+| `tools/export_wp.py` | ponowny eksport ze starego WP (historyczny; stary WP żyje pod 188.210.222.8) |
 | `tools/fix_entities.py` | dekodowanie encji HTML w title/excerpt |
-| `docs/` | prywatne notatki robocze (NIE publikować - patrz TODO przed upublicznieniem) |
 
 ## Frontmatter wpisu
 
@@ -88,26 +95,18 @@ pod domeną (bez prefiksu /blog/), tak jak na starym WP - zachowuje SEO bez prze
 - Przepływ Tomasza dla nowego wpisu: tytuł + treść + kategorie + Save. Nic więcej.
 - Kategorie w .pages.yml: 5 NOWYCH (Finanse i emerytura, Technologie i dom, Polecam,
   Tipy ułatwiające życie, Ciekawostki / świat) do nowych wpisów + 9 starych z WP,
-  żeby dało się edytować zmigrowane wpisy. Mapowanie starych na nowe: docs/wyciag-tresci.md pkt 5.
+  żeby dało się edytować zmigrowane wpisy. Mapowanie starych na nowe: `lib/kategorie.js`.
 - Stare wpisy mają treść HTML (bloki Gutenberga) - edytor rich-text może przy zapisie
   uprościć znaczniki (klasy wp-block-*). Niegroźne, nowa strona ich nie używa.
-- Zapis w panelu = commit do repo. Po podpięciu deployu każdy Save publikuje stronę.
+- Zapis w panelu = commit do main = od razu publikacja na produkcję.
 
-## Plan dalszy (kolejność)
+## Publikacja - ZROBIONA (2026-07-17)
 
-Kroki 1-5 ZROBIONE (build Eleventy odtwarza design, szablony wszystkich widoków, formularz
-MailerLite, disclaimer, RSS, przekierowania meta-refresh dla starych adresów kategorii).
-Pozostała PUBLIKACJA - pełna instrukcja krok po kroku w `WDROZENIE.md`. W skrócie:
-
-1. **PRZED upublicznieniem repo** (wymóg GitHub Pages na darmowym planie):
-   usunąć `docs/` z repo I Z HISTORII GITA (git filter-repo) - to prywatne notatki.
-2. Świeży eksport ze starego WP (`tools/export_wp.py` - dogra wpisy dodane w międzyczasie),
-   potem `npm run verify`.
-3. Włączyć Pages (Source: GitHub Actions), odkomentować `push:` w `.github/workflows/deploy-pages.yml`.
-4. Domena: passthrough `CNAME.gotowy` -> `CNAME`; DNS apex tomaszkwietniewski.pl na rekordy
-   A/AAAA GitHuba (panel DNS ma Tomasz). Szczegóły w `WDROZENIE.md`.
-5. Po podmianie DNS: sprawdzić produkcję (wpisy, feed, slug NFD, stare adresy kategorii),
-   zgłosić sitemap w Search Console.
+Strona live na GitHub Pages: repo publiczne (docs/ wycięte z historii), workflow
+`.github/workflows/deploy-pages.yml` (trigger: push do main), domena przez passthrough
+`CNAME.gotowy` -> `CNAME`, DNS apex na rekordy A GitHuba (panel SEOHost). Rollback,
+szczegóły DNS i pułapka certyfikatu HTTPS: pamięć projektu + `WDROZENIE.md`.
+Po go-live: zgłoszenie sitemap w Search Console (sprawdź, czy już zrobione).
 
 ## Konwencje (obowiązują w całym projekcie)
 
@@ -115,6 +114,11 @@ Pozostała PUBLIKACJA - pełna instrukcja krok po kroku w `WDROZENIE.md`. W skr�
   wielokropków-znaków; pełna polszczyzna z diakrytykami. (Szczegóły: globalny CLAUDE.md.)
 - Zachowywać oryginalne daty publikacji i slugi zmigrowanych treści.
 - Treści o inwestowaniu: obowiązkowy disclaimer.
+- **STRONA BEZ COOKIES:** zero analityki, trackerów i skryptów zewnętrznych. Nie osadzać
+  iframe'ów zapisujących cookies (playery Spotify/anchor.fm podmienione na linki 2026-07-17;
+  YouTube tylko przez nocookie - robi to build). Każda nowa integracja zbierająca dane
+  (analityka, komentarze, osadzenia) = obowiązkowa aktualizacja polityki prywatności
+  i pytanie o baner zgody (unikać - brak banera to atut strony).
 - Ton tekstów: prosto, po ludzku, bez patosu i sprzedażowego języka.
 - Weryfikacja przed "gotowe": realne uruchomienie + testy w przeglądarce (asercje DOM,
   konsola bez błędów), nie tylko "kompiluje się".
