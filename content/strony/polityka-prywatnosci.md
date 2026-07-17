@@ -12,7 +12,7 @@ typ: "strona"
 <h2>§1. Administrator danych</h2>
 
 <ol>
-<li>Administratorem Twoich danych osobowych jest Tomasz Kwietniewski, prowadzący działalność gospodarczą pod firmą Z sensem Tomasz Kwietniewski, NIP 8222195830, REGON 363040780 (wpis w CEIDG).</li>
+<li>Administratorem Twoich danych osobowych jest Tomasz Kwietniewski, prowadzący działalność gospodarczą pod firmą Z sensem Tomasz Kwietniewski z siedzibą w Warszawie (00-777) przy ul. Władysława Pytlasińskiego 16/13, NIP 8222195830, REGON 363040780 (wpis w CEIDG).</li>
 <li>We wszystkich sprawach dotyczących ochrony danych osobowych napisz na adres: <a href="mailto:kontakt@tomaszkwietniewski.pl">kontakt@tomaszkwietniewski.pl</a>.</li>
 </ol>
 
