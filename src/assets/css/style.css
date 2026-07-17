@@ -401,6 +401,13 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .projekt { background: var(--karta); border-radius: 22px; padding: 34px 36px; transition: transform .3s; }
 .projekt:hover { transform: translateY(-4px); }
 .projekt__obrazek { height: 170px; width: 100%; object-fit: cover; border-radius: 14px; margin-bottom: 20px; display: block; background: #fff; }
+/* Klikalny obrazek projektu (link + zoom przy najechaniu) */
+.projekt-foto { display: block; overflow: hidden; border-radius: 14px; margin-bottom: 20px; }
+.projekt-foto .projekt__obrazek { margin-bottom: 0; border-radius: 0; }
+.projekt-foto img { transition: transform .4s cubic-bezier(.2, .7, .3, 1); }
+.projekt-foto:hover img { transform: scale(1.045); opacity: 1; }
+.projekt-featured .projekt-foto { border-radius: 18px; margin-bottom: 0; }
+.projekt-featured .projekt-foto .projekt-featured__obrazek { border-radius: 0; }
 .projekt__naglowek { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
 .projekt__naglowek h2 { font-weight: 700; font-size: 20px; margin: 0; }
 .projekt p { font-size: 14.5px; line-height: 1.65; color: #3D4A63; margin: 0 0 14px; }
