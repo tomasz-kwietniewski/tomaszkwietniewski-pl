@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Ciekawostki / świat">
+  <rect width="640" height="400" fill="#E8EFFE"/>
+  <circle cx="530" cy="70" r="150" fill="#FFFFFF" opacity=".45"/>
+  <circle cx="90" cy="360" r="120" fill="#1E56D6" opacity=".06"/>
+  <g transform="translate(272,152) scale(4)" fill="none" stroke="#1E56D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/>
+    <ellipse cx="12" cy="12" rx="4" ry="9"/>
+    <path d="M3 12h18"/>
+  </g>
+</svg>

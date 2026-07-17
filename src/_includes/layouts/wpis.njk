@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+---
+<article class="widok" data-pagefind-body>
+  <header class="wpis-naglowek">
+    <a href="/blog/" class="wpis-naglowek__powrot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Wszystkie wpisy</a>
+    <div class="wpis-naglowek__kategorie">{{ wpis.kategorieNowe | join(" · ") }}</div>
+    <h1>{{ wpis.title }}</h1>
+    <div class="wpis-naglowek__autor">
+      <img src="/assets/img/portret.jpg" alt="{{ site.autor }}">
+      <span><strong>{{ site.autor }}</strong> &middot; <time datetime="{{ wpis.date | isoDate }}">{{ wpis.date | dataPL }}</time> &middot; {{ wpis.czasCzytania }}</span>
+    </div>
+  </header>
+
+  <div class="tresc">
+{{ content | safe }}
+  </div>
+
+  {% if wpis.disclaimer %}{% include "partials/disclaimer.njk" %}{% endif %}
+
+  <div class="wpis-tagi" data-pagefind-ignore>
+    {% for kat in wpis.kategorieNowe %}<a href="/blog/?temat={{ kat | slugKategorii }}">{{ kat }}</a>{% endfor %}
+  </div>
+
+  <div class="wpis-cta" data-pagefind-ignore>
+    <div class="wpis-cta__karta">
+      <div>
+        <div class="wpis-cta__tytul">Podobał Ci się ten wpis?</div>
+        <div class="wpis-cta__opis">Zapisz się na newsletter albo postaw mi kawę.</div>
+      </div>
+      <div class="wpis-cta__przyciski">
+        <a href="/newsletter/" class="wpis-cta__glowny">Newsletter</a>
+        <a href="/wsparcie/" class="wpis-cta__drugi">Postaw kawę</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="czytaj-dalej" data-pagefind-ignore>
+    <h2>Czytaj dalej</h2>
+    <div class="czytaj-dalej__siatka">
+      {% for powiazany in wpisy | powiazane(wpis.slug) %}
+      <a href="{{ powiazany.permalink }}" class="karta-wpisu">
+        <img src="{{ powiazany.miniatura }}" alt="" class="karta-wpisu__obrazek" loading="lazy">
+        <span class="karta-wpisu__tresc">
+          <span class="karta-wpisu__kategorie">{{ powiazany.kategorieNowe | join(" · ") }}</span>
+          <span class="karta-wpisu__tytul">{{ powiazany.title }}</span>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- set pelnyTytul = (title + " - " + site.autor) if title else site.title %}
+<title>{{ pelnyTytul }}</title>
+<meta name="description" content="{{ opisSEO or site.description }}">
+<link rel="canonical" href="{{ page.url | absUrl(site.url) }}">
+<meta property="og:type" content="{{ 'article' if ogTyp == 'article' else 'website' }}">
+<meta property="og:title" content="{{ pelnyTytul }}">
+<meta property="og:description" content="{{ opisSEO or site.description }}">
+<meta property="og:url" content="{{ page.url | absUrl(site.url) }}">
+<meta property="og:image" content="{{ (ogObrazek or '/assets/img/plaza.jpg') | absUrl(site.url) }}">
+<meta property="og:locale" content="pl_PL">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="{{ site.autor }} - RSS" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css">

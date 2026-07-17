@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="pl">
+<head>
+{% include "partials/head-seo.njk" %}
+</head>
+<body{% if klasaBody %} class="{{ klasaBody }}"{% endif %}>
+<div class="postep" aria-hidden="true"><div class="postep__pasek" id="postep-pasek"></div></div>
+{% include "partials/nav.njk" %}
+<main>
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+{% include "partials/szukaj-modal.njk" %}
+<script defer src="/assets/js/site.js"></script>
+</body>
+</html>

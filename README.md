@@ -1,17 +1,32 @@
 # tomaszkwietniewski.pl - nowa strona
 
-Repozytorium treści i (docelowo) kodu nowej wersji strony tomaszkwietniewski.pl.
-Zastępuje WordPressa. Stan: treść zmigrowana, projekt graficzny w przygotowaniu (Claude Design).
+Repozytorium treści i kodu nowej wersji strony tomaszkwietniewski.pl. Zastępuje WordPressa.
+Statyczny generator **Eleventy 3** + treść w markdown/HTML, hosting docelowo GitHub Pages.
+
+## Uruchomienie lokalne
+
+```
+npm install
+npm run dev      # podgląd z live reload (Eleventy)
+npm run build    # produkcyjny build do _site/ + indeks wyszukiwarki Pagefind
+npm run verify   # build + asercje poprawności (tools/verify_build.mjs)
+```
+
+Publikacja: patrz `WDROZENIE.md`.
 
 ## Struktura
 
 | Ścieżka | Zawartość |
 |---|---|
-| `content/wpisy/` | 87 wpisów blogowych (markdown: frontmatter YAML + treść) |
-| `content/strony/` | 21 podstron (O mnie, Kontakt, zestawienia itd.) |
+| `content/wpisy/` | wpisy blogowe (markdown: frontmatter YAML + treść HTML) |
+| `content/strony/` | podstrony (O mnie, Kontakt, zestawienia itd.) |
 | `media/` | obrazki i pliki (przeniesione z wp-content/uploads, struktura RRRR/MM) |
 | `.pages.yml` | konfiguracja panelu Pages CMS (https://pagescms.org) |
+| `eleventy.config.js`, `src/`, `lib/` | generator strony (szablony, dane, logika) |
 | `tools/export_wp.py` | skrypt eksportu ze starego WordPressa (do ewentualnego ponowienia) |
+| `tools/verify_build.mjs` | asercje poprawności builda (odpalane też w CI) |
+
+`content/` i `media/` nie są ruszane przez build - Pages CMS działa na nich bez zmian.
 
 ## Jak dodawać i edytować treści (Pages CMS)
 
@@ -43,10 +58,10 @@ Uwagi:
 
 ## Do zrobienia (kolejność)
 
-1. Projekt graficzny w Claude Design -> szablony (strona główna, wpis, lista wpisów, podstrona).
-2. Generator/build strony statycznej z content/ + media/.
-3. Workflow GitHub Actions: build + deploy na GitHub Pages.
-4. Przekierowania 301 wg pola url_stara (jeśli zmieni się struktura adresów).
-5. Podmiana DNS tomaszkwietniewski.pl na GitHub Pages (przed tym: świeży eksport WP
-   skryptem tools/export_wp.py, żeby dograć wpisy dodane w międzyczasie).
-6. Przełączenie repo na publiczne (wymóg GitHub Pages na darmowym planie) - przed startem.
+Build gotowy. Pozostała publikacja - pełna instrukcja w `WDROZENIE.md`:
+
+1. Usunąć `docs/` z repo i historii gita (prywatne notatki) przed upublicznieniem.
+2. Świeży eksport ze starego WP (`tools/export_wp.py`) + `npm run verify`.
+3. Włączyć Pages (Source: GitHub Actions), odkomentować `push:` w workflow.
+4. Domena: passthrough `CNAME.gotowy` + rekordy A/AAAA GitHuba w DNS (apex).
+5. Przełączenie repo na publiczne (wymóg GitHub Pages na darmowym planie).

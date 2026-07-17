@@ -1,0 +1,24 @@
+<nav class="nav" id="nav">
+  <a href="/" class="nav__marka">
+    <img src="/assets/img/portret.jpg" alt="{{ site.autor }}" width="42" height="42">
+    <span>
+      <span class="nav__nazwa">{{ site.autor }}</span>
+      <span class="nav__tagline">{{ site.tagline }}</span>
+    </span>
+  </a>
+  <button class="nav__burger" id="nav-burger" aria-expanded="false" aria-controls="nav-linki" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <div class="nav__linki" id="nav-linki">
+    <a href="/blog/" class="nav__link{% if page.url == '/blog/' %} nav__link--aktywny{% endif %}">Blog</a>
+    <a href="/projekty/" class="nav__link{% if page.url == '/projekty/' %} nav__link--aktywny{% endif %}">Projekty</a>
+    <a href="/o-mnie/" class="nav__link{% if page.url == '/o-mnie/' %} nav__link--aktywny{% endif %}">O mnie</a>
+    <a href="/wsparcie/" class="nav__link{% if page.url == '/wsparcie/' %} nav__link--aktywny{% endif %}">Wsparcie</a>
+    <a href="/kontakt/" class="nav__link{% if page.url == '/kontakt/' %} nav__link--aktywny{% endif %}">Kontakt</a>
+    <a href="/newsletter/" class="nav__newsletter">Newsletter</a>
+    <button class="nav__szukaj" id="nav-szukaj" aria-label="Szukaj na stronie">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+      Szukaj
+    </button>
+  </div>
+</nav>

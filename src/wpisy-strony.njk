@@ -1,0 +1,15 @@
+---
+pagination:
+  data: wpisy
+  size: 1
+  alias: wpis
+permalink: "{{ wpis.permalink }}"
+layout: layouts/wpis.njk
+eleventyComputed:
+  title: "{{ wpis.title }}"
+  opisSEO: "{{ wpis.metaDescription }}"
+  ogObrazek: "{{ wpis.miniatura }}"
+  ogTyp: article
+  klasaBody: widok-wpis
+---
+{{ wpis.bodyHtml | safe }}

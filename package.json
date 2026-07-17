@@ -1,0 +1,22 @@
+{
+  "name": "tomaszkwietniewski-pl",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Statyczna strona tomaszkwietniewski.pl (Eleventy)",
+  "type": "module",
+  "scripts": {
+    "yt-thumbs": "node tools/fetch_yt_thumbs.mjs",
+    "build": "npm run yt-thumbs && eleventy && pagefind --site _site",
+    "dev": "npm run yt-thumbs && eleventy --serve",
+    "check": "node tools/verify_build.mjs",
+    "verify": "npm run build && npm run check"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@fontsource-variable/archivo": "^5.2.8",
+    "@fontsource-variable/bricolage-grotesque": "^5.2.8",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0",
+    "pagefind": "^1.3.0"
+  }
+}

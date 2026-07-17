@@ -1,0 +1,53 @@
+name: Deploy na GitHub Pages
+
+# Uwaga: dopóki repo jest prywatne, zostaje sam wyzwalacz ręczny (workflow_dispatch),
+# żeby każdy zapis z Pages CMS nie odpalał deployu, który i tak by nie opublikował
+# (Pages na darmowym planie wymaga repo publicznego). Po upublicznieniu repo
+# odkomentuj blok `push:` poniżej, żeby publikacja działała automatycznie po każdym pushu.
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Instalacja zależności
+        run: npm ci
+      - name: Build + indeks Pagefind
+        run: npm run build
+      - name: Weryfikacja builda
+        run: npm run check
+      - name: Konfiguracja Pages
+        uses: actions/configure-pages@v5
+      - name: Spakowanie strony
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy na Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

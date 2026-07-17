@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+---
+<article class="widok" data-pagefind-body>
+  <header class="podstrona-naglowek">
+    <h1>{{ strona.title }}</h1>
+    {% if strona.modified %}<div class="podstrona-naglowek__meta">Ostatnia aktualizacja: <time datetime="{{ strona.modified | isoDate }}">{{ strona.modified | dataPL }}</time></div>{% endif %}
+  </header>
+  <div class="tresc">
+{{ content | safe }}
+  </div>
+</article>

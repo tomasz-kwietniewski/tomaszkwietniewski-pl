@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+permalink: /blog/
+title: Blog
+---
+<div class="widok kontener" style="padding-block:64px">
+  <div class="blog-intro">
+    <h1>Blog</h1>
+    <p>Wszystko, co przeczytałem, sprawdziłem i uznałem za warte Twojego czasu. {{ wpisy.length }} wpisów od {{ wpisy[wpisy.length - 1].date.getFullYear() }} roku.</p>
+  </div>
+
+  <div class="filtry" id="filtry" role="group" aria-label="Filtruj wpisy po temacie">
+    <a href="/blog/" class="filtry__pigulka filtry__pigulka--aktywna" data-temat="">Wszystkie</a>
+    {% for nazwa in ["Finanse i emerytura", "Technologie i dom", "Polecam", "Tipy ułatwiające życie", "Ciekawostki / świat"] %}
+    <a href="/blog/?temat={{ nazwa | slugKategorii }}" class="filtry__pigulka" data-temat="{{ nazwa | slugKategorii }}">{{ nazwa }}</a>
+    {% endfor %}
+  </div>
+
+  <div class="pusto" id="blog-pusto" hidden>
+    <div class="pusto__tytul">Tu pojawią się wpisy z tego tematu</div>
+    <p>Jeszcze nic tu nie ma - ale tematy czekają na nowe wpisy.</p>
+    <a href="/blog/" data-temat="">Pokaż wszystkie wpisy</a>
+  </div>
+
+  <div class="siatka-wpisow" id="blog-siatka">
+    {% for wpis in wpisy %}{% include "partials/karta-wpisu.njk" %}{% endfor %}
+  </div>
+</div>

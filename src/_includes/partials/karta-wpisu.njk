@@ -1,0 +1,9 @@
+{# Karta wpisu na listach. Zmienna: wpis #}
+<a href="{{ wpis.permalink }}" class="karta-wpisu" data-cats="{{ wpis.kategorieSlugi | join(' ') }}">
+  <img src="{{ wpis.miniatura }}" alt="" class="karta-wpisu__obrazek" loading="lazy">
+  <span class="karta-wpisu__tresc">
+    <span class="karta-wpisu__kategorie">{{ wpis.kategorieNowe | join(" · ") }}</span>
+    <span class="karta-wpisu__tytul">{{ wpis.title }}</span>
+    <span class="karta-wpisu__data">{{ wpis.date | dataPL }}</span>
+  </span>
+</a>

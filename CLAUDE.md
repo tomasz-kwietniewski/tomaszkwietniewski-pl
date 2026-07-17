@@ -1,6 +1,6 @@
 # CLAUDE.md - nowa strona tomaszkwietniewski.pl
 
-Stan na 2026-07-16. Ten plik to pełny kontekst projektu - utrzymuj go aktualnym po każdej większej zmianie.
+Stan na 2026-07-17. Ten plik to pełny kontekst projektu - utrzymuj go aktualnym po każdej większej zmianie.
 
 ## Czym jest ten projekt
 
@@ -12,17 +12,40 @@ Stara strona WCIĄŻ DZIAŁA na WordPressie i będzie działać do podmiany DNS 
 
 ## Stan projektu (co już jest zrobione)
 
-- Treść ZMIGROWANA z WordPressa przez REST API (2026-07-16): 87 wpisów, 21 podstron, 445 mediów.
+- Treść ZMIGROWANA z WordPressa przez REST API: 88 wpisów, 21 podstron, 448 mediów.
 - Repo: https://github.com/tomasz-kwietniewski/tomaszkwietniewski-pl (PRYWATNE, gałąź main).
 - Pages CMS podpięty i PRZETESTOWANY end-to-end (panel: app.pagescms.org, konto GitHub Tomasza).
 - Brief treści i architektury: `docs/wyciag-tresci.md` (architektura stron, sekcja Projekty,
   mapowanie kategorii, ton, czego nie umieszczać - CZYTAJ PRZED projektowaniem podstron).
-- Pierwszy NOWY wpis (nie z migracji) dodany bezpośrednio do repo (2026-07-16):
-  `content/wpisy/2026-07-16-pstryk-czy-jednak-taryfa-strefowa-kiedy-co-sie-oplaca.md`
-  (slug: pstryk-czy-taryfa-strefowa, kategoria "Technologie i dom", body HTML jak wpisy z WP,
-  media w `media/2026/07/`: hero JPG + 2 wykresy PNG z altami). Źródło i analiza:
-  repo `C:\Users\L857K\claude\zuzycie-pradu` (blog/pstryk-czy-g12w-final.md + analyze/).
-- Czeka na: projekt graficzny z Claude Design (Tomasz zrobi handoff do tego folderu).
+- Pierwszy NOWY wpis (nie z migracji): `content/wpisy/2026-07-16-pstryk-...md`
+  (slug: pstryk-czy-taryfa-strefowa). Źródło: repo `C:\Users\L857K\claude\zuzycie-pradu`.
+- **BUILD GOTOWY (2026-07-17):** statyczny generator Eleventy 3 odtwarza design z handoffu
+  Claude Design (paczka "Odświeżenie strony Tomasza.zip", handoff v2). Wszystkie 8 widoków
+  zbudowane i przetestowane w przeglądarce (Playwright: 0 błędów konsoli, brak poziomego
+  scrolla na mobile 375 px, filtr kategorii, donut, e-mail reveal, Pagefind, formularz ML).
+  `npm run verify` (build + asercje) przechodzi. Zostaje: publikacja (patrz `WDROZENIE.md`).
+
+## Jak to zbudowane (Eleventy 3, technologia)
+
+- Silnik: **Eleventy 3.x** (ESM, `eleventy.config.js`), markdown-it z `html:true` renderuje
+  HTML wpisów z WP 1:1. Zero frameworków front-end; cały JS strony w `src/assets/js/site.js`.
+- **content/ i media/ NIETKNIĘTE** (Pages CMS działa bez zmian). Wpisy i strony czytane jako
+  dane globalne (`src/_data/wpisy.js`, `strony.js` przez gray-matter), HTML generują szablony
+  paginacyjne (`src/wpisy-strony.njk`, `podstrony.njk`, `przekierowanie.njk`; layouty w
+  `src/_includes/`). Logika slug/kategorie/miniatury/media w `lib/*`.
+- URL wpisu: slug z frontmatter (fallback nazwa pliku bez daty) -> `/slug/`. Podstrony: ścieżka
+  z `url_stara` (zachowuje `/tematy/ksiazki/`). Slug NFD (`%cc%a8`) dekodowany do znaków.
+- Kategorie: 5 nowych, mapowanie starych w `lib/kategorie.js` (nieznana = błąd builda).
+- Miniatury list (brak w frontmatter): pierwszy `<img>` -> miniatura YouTube (pobierana w build
+  do `_yt-cache/`, potem `/media/yt/`) -> placeholder SVG kategorii.
+- Disclaimer inwestycyjny automatyczny pod wpisami "Finanse i emerytura" + w portfelu na O mnie.
+- Newsletter: formularz POST na endpoint MailerLite z dawnego embedu (fetch w site.js, sukces
+  -> `/dziekuje-bardzo/`). RSS `/feed.xml` + fallback `/feed/`. Wyszukiwarka Pagefind (modal).
+  Fonty self-hosted (woff2, `src/assets/fonts/`). Postaw kawę: buycoffee.to/tomaszkwietniewski.
+- Komendy: `npm run dev` (podgląd z live reload), `npm run build` (Eleventy + Pagefind),
+  `npm run check` (asercje `tools/verify_build.mjs`), `npm run verify` (build + check).
+  Podgląd statyczny: launch config `strona-static` (python http.server na `_site`, port 8771).
+- Lokalny subagent do stress-testu: `.claude/agents/website-stress-tester.md` (poza gitem).
 
 ## Struktura
 
@@ -72,23 +95,19 @@ pod domeną (bez prefiksu /blog/), tak jak na starym WP - zachowuje SEO bez prze
 
 ## Plan dalszy (kolejność)
 
-1. Handoff z Claude Design (Tomasz wrzuci pliki do tego folderu) -> szablony:
-   strona główna, pojedynczy wpis, lista wpisów/kategorii, podstrona.
-2. Build strony statycznej z content/ + media/. Preferencja Tomasza: lekkie rozwiązania,
-   bez ciężkich frameworków. Markdown z HTML w środku musi się renderować 1:1.
-3. GitHub Actions: build + deploy na GitHub Pages. Playbook Tomasza:
-   `C:\Users\L857K\.claude\playbooks\deploy-github-pages.md` (+ starter w templates/).
-4. Elementy obowiązkowe na stronie: formularz MailerLite (embed, ta sama lista),
-   disclaimer "to nie jest porada inwestycyjna" przy treściach inwestycyjnych,
-   RSS (stary WP ma /feed/ - zadbać o odpowiednik lub przekierowanie).
-5. Przekierowania 301 wg pola `url_stara` tam, gdzie adres się zmieni (przy zachowaniu
-   slugów pod domeną zmian nie będzie). Uwaga: GitHub Pages nie robi prawdziwych 301 -
-   jeśli potrzebne, meta refresh + canonical.
-6. **PRZED upublicznieniem repo** (wymóg GitHub Pages na darmowym planie):
+Kroki 1-5 ZROBIONE (build Eleventy odtwarza design, szablony wszystkich widoków, formularz
+MailerLite, disclaimer, RSS, przekierowania meta-refresh dla starych adresów kategorii).
+Pozostała PUBLIKACJA - pełna instrukcja krok po kroku w `WDROZENIE.md`. W skrócie:
+
+1. **PRZED upublicznieniem repo** (wymóg GitHub Pages na darmowym planie):
    usunąć `docs/` z repo I Z HISTORII GITA (git filter-repo) - to prywatne notatki.
-7. Świeży eksport ze starego WP (`tools/export_wp.py` - dogra wpisy dodane w międzyczasie).
-8. Podmiana DNS tomaszkwietniewski.pl na GitHub Pages (panel DNS ma Tomasz).
-   Subdomeny najlepsipilkarze.* i momentum.* już działają na tym wzorcu.
+2. Świeży eksport ze starego WP (`tools/export_wp.py` - dogra wpisy dodane w międzyczasie),
+   potem `npm run verify`.
+3. Włączyć Pages (Source: GitHub Actions), odkomentować `push:` w `.github/workflows/deploy-pages.yml`.
+4. Domena: passthrough `CNAME.gotowy` -> `CNAME`; DNS apex tomaszkwietniewski.pl na rekordy
+   A/AAAA GitHuba (panel DNS ma Tomasz). Szczegóły w `WDROZENIE.md`.
+5. Po podmianie DNS: sprawdzić produkcję (wpisy, feed, slug NFD, stare adresy kategorii),
+   zgłosić sitemap w Search Console.
 
 ## Konwencje (obowiązują w całym projekcie)
 

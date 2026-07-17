@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+permalink: /newsletter/
+title: Newsletter
+opisSEO: "Esencja w Twojej skrzynce. Finanse osobiste, technologie, tipy - kilka wiadomości w roku, bez spamu. Na start notatka z książki Po Prostu Kupuj."
+---
+<div class="widok">
+  <section class="strona-centr">
+    <span class="etykieta">Newsletter</span>
+    <h1>Esencja w Twojej skrzynce.</h1>
+    <p class="strona-centr__lead">Dzielę się tym, co sam sprawdziłem - finanse osobiste, technologie, tipy ułatwiające życie. Kilka wiadomości w roku, bez spamu. W każdej chwili możesz się wypisać.</p>
+    {% set zImieniem = true %}{% include "partials/newsletter-form.njk" %}{% set zImieniem = false %}
+  </section>
+  <section class="lead-magnet">
+    <div class="lead-magnet__karta">
+      <div class="lead-magnet__ikona">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1E56D6" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+      </div>
+      <div>
+        <h2>Na start: notatka z „Po Prostu Kupuj”</h2>
+        <p>Po zapisie dostaniesz moją obszerną notatkę z książki Nicka Maggiulliego - esencję o inwestowaniu i oszczędzaniu w kilkunastu akapitach, tylko dla zapisanych.</p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,12 @@
+---
+pagination:
+  data: strony.generyczne
+  size: 1
+  alias: strona
+permalink: "{{ strona.permalink }}"
+layout: layouts/podstrona.njk
+eleventyComputed:
+  title: "{{ strona.title }}"
+  opisSEO: "{{ strona.metaDescription }}"
+---
+{{ strona.bodyHtml | safe }}

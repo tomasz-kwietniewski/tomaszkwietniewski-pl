@@ -1,0 +1,24 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for adres in ["/", "/blog/", "/projekty/", "/o-mnie/", "/newsletter/", "/wsparcie/", "/kontakt/"] %}
+  <url><loc>{{ adres | absUrl(site.url) }}</loc></url>
+  {%- endfor %}
+  {%- for wpis in wpisy %}
+  <url>
+    <loc>{{ wpis.permalink | absUrl(site.url) }}</loc>
+    <lastmod>{{ wpis.modified | isoDate }}</lastmod>
+  </url>
+  {%- endfor %}
+  {%- for strona in strony.generyczne %}
+  <url>
+    <loc>{{ strona.permalink | absUrl(site.url) }}</loc>
+    {%- if strona.modified %}
+    <lastmod>{{ strona.modified | isoDate }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endfor %}
+</urlset>

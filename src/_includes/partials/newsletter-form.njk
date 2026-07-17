@@ -1,0 +1,10 @@
+{# Formularz MailerLite - ta sama lista co na starej stronie.
+   Zmienna wariant: "jasny" (domyślny) | "ciemny". Zmienna zImieniem: true dodaje pole imienia. #}
+<form class="form-nl{% if wariant == 'ciemny' %} form-nl--ciemny{% endif %}" action="{{ site.mailerlite.action }}" method="post" data-ml-form>
+  {% if zImieniem %}<input type="text" name="fields[name]" placeholder="Imię" autocomplete="given-name" aria-label="Imię">{% endif %}
+  <input type="email" name="fields[email]" placeholder="Twój adres e-mail" autocomplete="email" aria-label="Adres e-mail" required>
+  <input type="hidden" name="ml-submit" value="1">
+  <input type="hidden" name="anticsrf" value="true">
+  <button type="submit" class="przycisk{% if wariant == 'ciemny' %} przycisk--maly{% endif %}">{{ tekstPrzycisku or "Zapisuję się" }}</button>
+</form>
+<p class="form-nl__komunikat" data-ml-komunikat hidden></p>

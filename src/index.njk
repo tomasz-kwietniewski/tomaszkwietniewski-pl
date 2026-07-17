@@ -1,0 +1,96 @@
+---
+layout: layouts/base.njk
+permalink: /
+---
+<div class="widok">
+
+  <section class="kontener hero">
+    <div class="hero__lewa">
+      <a href="{{ wpisy[0].permalink }}" class="hero__badge">
+        <span class="hero__kropka"></span>
+        Nowy wpis: {{ wpisy[0].title | truncate(52) }}
+      </a>
+      <h1>Warte Twojego czasu:</h1>
+      <div class="hero__rotator" aria-hidden="true">
+        <div>
+          <span>prywatna emerytura</span>
+          <span>nowe technologie</span>
+          <span>esencja w skrzynce</span>
+          <span>prywatna emerytura</span>
+        </div>
+      </div>
+      <p class="hero__lead">Bez mitów, bez szumu, z sensem. Dzielę się tym, co sam przeczytałem, sprawdziłem i przećwiczyłem - o inwestowaniu, IKE i IKZE, technologiach i świecie. Esencję wysyłam w newsletterze.</p>
+      {% include "partials/newsletter-form.njk" %}
+      <div class="hero__dopisek">Kilka wiadomości w roku, bez spamu. Na start notatka z książki „Po Prostu Kupuj”.</div>
+    </div>
+    <div class="hero__prawa">
+      <img src="/assets/img/plaza.jpg" alt="Tomek nad Bałtykiem" class="hero__zdjecie" fetchpriority="high">
+      <div class="hero__chip hero__chip--1">Finanse i emerytura</div>
+      <div class="hero__chip hero__chip--2">Technologie i dom</div>
+      <div class="hero__chip hero__chip--3">Tipy ułatwiające życie</div>
+    </div>
+  </section>
+
+  <section class="kontener sekcja">
+    <div class="sekcja__naglowek">
+      <h2>Tematy</h2>
+      <span class="sekcja__nota">Wybierz temat, żeby zobaczyć wpisy</span>
+    </div>
+    <div class="tematy">
+      {% for nazwa in ["Finanse i emerytura", "Technologie i dom", "Polecam", "Tipy ułatwiające życie", "Ciekawostki / świat"] %}
+      <a href="/blog/?temat={{ nazwa | slugKategorii }}" class="tematy__kafel">
+        {{ nazwa }}
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E56D6" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="kontener sekcja">
+    <div class="sekcja__naglowek">
+      <h2>Ostatnie wpisy</h2>
+      <a href="/blog/" class="sekcja__link">Zobacz wszystkie</a>
+    </div>
+    {% for wpis in wpisy | take(4) %}
+    <a href="{{ wpis.permalink }}" class="ostatnie__wiersz">
+      <img src="{{ wpis.miniatura }}" alt="" class="ostatnie__miniatura" loading="lazy">
+      <span>
+        <span class="ostatnie__kategorie">{{ wpis.kategorieNowe | join(" · ") }}</span>
+        <span class="ostatnie__tytul">{{ wpis.title }}</span>
+        {% if wpis.excerpt %}<span class="ostatnie__opis">{{ wpis.excerpt | truncate(140) }}</span>{% endif %}
+      </span>
+      <span class="ostatnie__meta">
+        <span class="ostatnie__data">{{ wpis.date | dataPL }}</span>
+        <span class="ostatnie__strzalka"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E56D6" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </span>
+    </a>
+    {% endfor %}
+  </section>
+
+  <section class="kontener kim-jestem">
+    <img src="/assets/img/portret.jpg" alt="{{ site.autor }}" class="kim-jestem__portret">
+    <div>
+      <div class="etykieta" style="margin-bottom:10px">Kim jestem</div>
+      <p>Lubię zgłębiać, jak coś działa i dlaczego, a potem dzielić się tym, czego się nauczyłem. Na co dzień chronię prawa autorskie w internecie, po godzinach buduję własne projekty i piszę tego bloga.</p>
+      <div class="kim-jestem__linki">
+        <a href="/o-mnie/">Poznaj mnie bliżej</a>
+        <a href="/projekty/">Zobacz moje projekty</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="kontener dolne-karty">
+    <div class="karta-nl">
+      <h3>Esencja w Twojej skrzynce</h3>
+      <p>Dzielę się tym, co sam sprawdziłem - finanse osobiste, technologie, tipy. Kilka wiadomości w roku. Na start obszerna notatka z książki „Po Prostu Kupuj”.</p>
+      {% set wariant = "ciemny" %}{% set tekstPrzycisku = "Dołączam" %}{% include "partials/newsletter-form.njk" %}{% set wariant = "" %}{% set tekstPrzycisku = "" %}
+    </div>
+    <div class="karta-blogroll">
+      <h3>Polecane strony o finansach</h3>
+      <div class="karta-blogroll__linki">
+        {% for adres in site.blogroll %}<a href="https://{{ adres }}" rel="noopener">{{ adres }}</a>{% endfor %}
+      </div>
+    </div>
+  </section>
+
+</div>
