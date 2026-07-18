@@ -127,5 +127,5 @@ Sitemap zgłoszony w Search Console (2026-07-17). Robots.txt też na niego wskaz
 
 github.com/tomasz-kwietniewski | misjamada.pl | najlepsipilkarze.tomaszkwietniewski.pl |
 pedalowaniezsensem.tomaszkwietniewski.pl (archiwum 2014; domena pedalowaniezsensem.pl WYGASŁA) |
-przeglad.tomaszkwietniewski.pl | momentum.tomaszkwietniewski.pl (niedopracowane - linkować ostrożnie) |
+przeglad.tomaszkwietniewski.pl | momentum.tomaszkwietniewski.pl (dopracowane, kafelek na Projektach od 2026-07-18) |
 Google Play: aplikacja "Hormon Wzrostu Dawkowanie" | kontakt@tomaszkwietniewski.pl
