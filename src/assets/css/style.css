@@ -590,7 +590,8 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
   .wartosci { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 920px) {
+/* Pełna nawigacja mieści się dopiero od ~950 px - poniżej 980 px (bufor) przechodzimy na burger */
+@media (max-width: 980px) {
   .nav__linki { display: none; }
   .nav__burger { display: block; }
   .nav--otwarta .nav__linki {
