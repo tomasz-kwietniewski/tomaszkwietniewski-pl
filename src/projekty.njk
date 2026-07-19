@@ -53,8 +53,13 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, apli
         <h2>Hormon Wzrostu Dawkowanie</h2>
         <span class="badge badge--ciemny">Google Play</span>
       </div>
-      <p>Aplikacja na Androida (Kotlin), która powstała z własnej potrzeby - syn jest w programie lekowym. Przypomnienia o dawkach, kalendarz podań, eksport do Excela. Opublikowana w Google Play i udostępniona innym rodzicom.</p>
-      <a href="https://play.google.com/store/apps/details?id=pl.hormonwzrostu" rel="noopener">Zobacz w Google Play</a>
+      <p>Aplikacja na Androida (Kotlin, Jetpack Compose), która powstała z własnej potrzeby - syn jest w programie lekowym. Codziennie o ustalonej porze przypomina o dawce alarmem o priorytecie budzika, odpornym na usypianie aplikacji, a podanie odznacza się jednym tapnięciem.</p>
+      <p>Cykl ampułki prowadzi według faktycznie podanych dawek - pominięty dzień nie przesuwa rozpiski, a ostatni dzień dostaje resztę z ampułki. Do tego kalendarz historii z komentarzami, korekta podanej dawki, eksport do Excela i kopie zapasowe z przenosinami na nowy telefon. Dane zostają wyłącznie na urządzeniu: bez konta i bez sieci. Interfejs po polsku i angielsku.</p>
+      <p>Opublikowana w Google Play z konta organizacji (aplikacje zdrowotne tego wymagają), dostępna w 177 krajach, kod otwarty na licencji MIT. Aplikacja tylko przypomina o dawce wpisanej przez rodzica - dawkowanie zawsze ustala lekarz.</p>
+      <div class="projekt__linki">
+        <a href="https://play.google.com/store/apps/details?id=pl.hormonwzrostu" rel="noopener">Zobacz w Google Play</a>
+        <a href="https://github.com/tomasz-kwietniewski/hormon-wzrostu-dawkowanie" rel="noopener">Kod na GitHubie</a>
+      </div>
     </div>
 
     <div class="projekt">
@@ -65,7 +70,9 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, apli
         <h2>Inteligentne ładowanie EV z nadwyżek PV</h2>
         <span class="badge">open source</span>
       </div>
-      <p>Home Assistant + AppDaemon: ładowarka za około 1150 zł ładuje auto tylko z nadwyżek słońca. Kod na GitHubie, a cała historia w osobnym wpisie na blogu.</p>
+      <p>Home Assistant + AppDaemon: ładowarka za około 1150 zł ładuje auto tylko z nadwyżek słońca. Skrypt rozmawia z nią lokalnie po sieci domowej (TinyTuya, bez chmury) i co 30 sekund decyduje, co robić.</p>
+      <p>Sześć trybów według priorytetu: ręczny tryb awaryjny, ładowanie na maksimum przy ujemnych cenach prądu (taryfa dynamiczna Pstryk), nocne ładowanie zimą, ładowanie proporcjonalne do nadwyżki PV (6-16 A) dopiero gdy domowy magazyn energii jest pełny, a na końcu bezczynność. Do tego karta na dashboardzie Home Assistant i sensory samowystarczalności energetycznej.</p>
+      <p>Kod na GitHubie (MIT) razem z listą pułapek protokołu Tuya, na które sam się nadziałem - od zamrożonych pomiarów mocy po harmonogram blokujący start ładowania. Cała historia w osobnym wpisie na blogu.</p>
       <div class="projekt__linki">
         <a href="https://github.com/tomasz-kwietniewski/ha-ev-charger" rel="noopener">Kod na GitHubie</a>
         <a href="/jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca/">Przeczytaj wpis</a>
@@ -80,7 +87,9 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, apli
         <h2>Bezpieczeństwo cyfrowe z sensem</h2>
         <span class="badge">edukacja i pomoc</span>
       </div>
-      <p>Pomagam w domowym przeglądzie bezpieczeństwa cyfrowego: hasła i menedżer haseł, 2FA, wycieki danych, higiena kont. Zaczęło się od rodziny i znajomych - bo każdemu warto to raz porządnie ustawić.</p>
+      <p>Domowy przegląd bezpieczeństwa cyfrowego dla osób prywatnych. Filozofia: rozsądny kompromis między paranoją a frywolnością, czyli sensowny poziom ochrony bez utrudniania życia.</p>
+      <p>Dwa etapy: przegląd, czyli diagnoza z raportem i krótką listą priorytetów, oraz wdrożenie, po którym menedżer haseł, 2FA i kopie zapasowe są realnie ustawione. Wejściem jest bezpłatny rekonesans OSINT: za pisemną zgodą sprawdzam wyłącznie publiczne źródła i pokazuję, co internet wie o kliencie - łącznie z danymi, o które nigdy nie pytam, bo w tym cała pointa.</p>
+      <p>Do rekonesansu napisałem lokalne narzędzie webowe (Node + Express) - bezstanowe, nie zapisuje danych klienta i działa tylko w sieci lokalnej. Zaczęło się od rodziny i znajomych, bo każdemu warto to raz porządnie ustawić.</p>
       <a href="https://przeglad.tomaszkwietniewski.pl" rel="noopener">przeglad.tomaszkwietniewski.pl</a>
     </div>
 
@@ -92,8 +101,13 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, apli
         <h2>Najlepsi piłkarze</h2>
         <span class="badge">od 2008</span>
       </div>
-      <p>Ranking piłkarzy wszech czasów według autorskiego systemu punktowego. Zaczęty z przyjacielem na studiach, ręcznie w arkuszu; odświeżony w 2026 jako interaktywny, sortowalny raport z danymi zweryfikowanymi z Wikipedią i narzędziami walidującymi w Pythonie.</p>
-      <a href="https://najlepsipilkarze.tomaszkwietniewski.pl" rel="noopener">najlepsipilkarze.tomaszkwietniewski.pl</a>
+      <p>Ranking piłkarzy wszech czasów według autorskiego systemu punktowego - projekt zaczęty z przyjacielem Emilem na studiach (2008-2010), ręcznie w arkuszu na danych z Wikipedii, odświeżony w 2026 jako interaktywny raport.</p>
+      <p>Punkty sumują się z występów, goli ważonych pozycją (gol obrońcy wart więcej niż napastnika) oraz trofeów i nagród indywidualnych - od mistrzostw świata po Złotą Piłkę. Liczą się tylko czołowe ligi europejskie, a dorobek każdego piłkarza jest zweryfikowany z angielską Wikipedią jako źródłem prawdy; spójności danych pilnują walidatory w Pythonie.</p>
+      <p>Na stronie podium, sortowalny ranking z filtrem pozycji i szukajką, a po kliknięciu piłkarza pełne rozbicie punktów oraz trofea z klubami i latami; zielona kropka oznacza wciąż aktywnych. Czysta strona statyczna, publikowana automatycznie na GitHub Pages.</p>
+      <div class="projekt__linki">
+        <a href="https://najlepsipilkarze.tomaszkwietniewski.pl" rel="noopener">najlepsipilkarze.tomaszkwietniewski.pl</a>
+        <a href="https://github.com/tomasz-kwietniewski/najlepsi-pilkarze" rel="noopener">Kod na GitHubie</a>
+      </div>
     </div>
 
     <div class="projekt">
