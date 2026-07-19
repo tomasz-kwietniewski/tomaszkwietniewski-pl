@@ -411,7 +411,7 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .projekt__naglowek { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
 .projekt__naglowek h2 { font-weight: 700; font-size: 20px; margin: 0; }
 .projekt p { font-size: 14.5px; line-height: 1.65; color: #3D4A63; margin: 0 0 14px; }
-.projekt__linki { display: flex; gap: 18px; flex-wrap: wrap; }
+.projekt__linki { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-between; }
 .projekt__linki a, .projekt > a { font-weight: 600; font-size: 14px; }
 .projekty-github {
   margin-top: 20px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
