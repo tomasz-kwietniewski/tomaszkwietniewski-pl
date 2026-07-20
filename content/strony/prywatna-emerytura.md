@@ -12,6 +12,10 @@ typ: "strona"
 
 
 
+<p class="wp-block-paragraph">Wiem, że sama wiedza często nie wystarcza - najtrudniejsze bywa ruszenie z miejsca. Dlatego prowadzę też indywidualne konsultacje: <a href="https://finansezsensem.pl" rel="noopener">Finanse z sensem</a>. Siadamy razem nad Twoją sytuacją, porządkujemy budżet i budujemy prosty system inwestowania, a na koniec pomagam wszystko wdrożyć - łącznie z założeniem konta i pierwszym zleceniem. Pierwsza rozmowa jest bezpłatna. To edukacja i pomoc praktyczna, nie doradztwo inwestycyjne.</p>
+
+
+
 <p class="wp-block-paragraph">Polecam przede wszystkim następujące źródła:</p>
 
 
