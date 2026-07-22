@@ -12,15 +12,19 @@ const ok = (msg) => console.log("OK: " + msg);
 
 // ---------- 1. Każdy wpis i podstrona ma plik wyjściowy ----------
 const wpisyPliki = readdirSync("content/wpisy").filter((f) => f.endsWith(".md"));
-let wpisowOk = 0;
+const TERAZ = Date.now();
+let wpisowOk = 0, zaplanowane = 0;
 for (const plik of wpisyPliki) {
   const { data: fm } = matter(readFileSync(path.join("content/wpisy", plik), "utf8"));
+  // Wpisy zaplanowane na przyszłość nie są budowane (patrz src/_data/wpisy.js) - pomijamy.
+  if (new Date(fm.date).getTime() > TERAZ) { zaplanowane++; continue; }
   const slug = decodeURIComponent(String(fm.slug || plik.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "")).trim());
   const wyjscie = path.join(SITE, slug, "index.html");
   if (existsSync(wyjscie)) wpisowOk++;
   else blad(`brak pliku wyjściowego dla wpisu ${plik} (oczekiwano ${wyjscie})`);
 }
-if (wpisowOk === wpisyPliki.length) ok(`wpisy: ${wpisowOk}/${wpisyPliki.length} zbudowane`);
+const opublikowane = wpisyPliki.length - zaplanowane;
+if (wpisowOk === opublikowane) ok(`wpisy: ${wpisowOk}/${opublikowane} zbudowane${zaplanowane ? ` (+${zaplanowane} zaplanowane)` : ""}`);
 
 const ZASTEPOWANE = new Set(["start.md", "wszystkie-wpisy.md", "tematy.md", "o-mnie.md", "kontakt.md", "wsparcie.md", "zapis-na-newsletter.md"]);
 const stronyPliki = readdirSync("content/strony").filter((f) => f.endsWith(".md") && !ZASTEPOWANE.has(f));

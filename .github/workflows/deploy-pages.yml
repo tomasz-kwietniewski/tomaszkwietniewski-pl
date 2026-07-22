@@ -6,6 +6,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Codziennie 06:00 UTC (08:00 CEST) - ujawnia wpisy zaplanowane na dany dzień
+    # (wpisy z przyszłą datą są pomijane w buildzie, patrz src/_data/wpisy.js).
+    - cron: "0 6 * * *"
 
 permissions:
   contents: read

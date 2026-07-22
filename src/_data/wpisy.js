@@ -11,9 +11,17 @@ const DIR = "content/wpisy";
 
 export default function () {
   const wpisy = [];
+  // Publikacja zaplanowana: wpis z datą w przyszłości jest pomijany do jej nadejścia.
+  // Cron w .github/workflows/deploy-pages.yml przebudowuje stronę codziennie rano, więc
+  // taki wpis pojawia się sam. Podgląd zaplanowanych lokalnie: ELEVENTY_PRZYSZLE=1 npm run build.
+  const TERAZ = Date.now();
+  const POKAZ_PRZYSZLE = process.env.ELEVENTY_PRZYSZLE === "1";
 
   for (const plik of readdirSync(DIR).filter((f) => f.endsWith(".md"))) {
     const { data: fm, content } = matter(readFileSync(path.join(DIR, plik), "utf8"));
+
+    // Wpis zaplanowany na przyszłość - pomijamy, dopóki data publikacji nie nadejdzie.
+    if (!POKAZ_PRZYSZLE && new Date(fm.date).getTime() > TERAZ) continue;
 
     // Reguła sluga: frontmatter slug, a gdy pusty - nazwa pliku bez daty i .md.
     // decodeURIComponent: wpis ze znakami NFD ma slug w formie %cc%a8 - katalog
