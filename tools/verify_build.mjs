@@ -116,7 +116,7 @@ ok(`feed.xml: ${itemy} pozycji`);
 
 const sitemapa = readFileSync(path.join(SITE, "sitemap.xml"), "utf8");
 const loce = (sitemapa.match(/<loc>/g) || []).length;
-if (loce < wpisyPliki.length + stronyPliki.length + 7) blad(`sitemap.xml ma ${loce} adresów - za mało`);
+if (loce < opublikowane + stronyPliki.length + 7) blad(`sitemap.xml ma ${loce} adresów - za mało`);
 else ok(`sitemap.xml: ${loce} adresów`);
 
 // ---------- 5. Pagefind ----------
