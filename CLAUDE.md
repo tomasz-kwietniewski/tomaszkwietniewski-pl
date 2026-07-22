@@ -44,6 +44,10 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
 - Kategorie: 5 nowych, mapowanie starych w `lib/kategorie.js` (nieznana = błąd builda).
 - Miniatury list (brak w frontmatter): pierwszy `<img>` -> miniatura YouTube (pobierana w build
   do `_yt-cache/`, potem `/media/yt/`) -> placeholder SVG kategorii.
+- Obrazek przewodni (hero): layout wpisu renderuje pole `miniatura` jako duży obrazek na górze
+  każdego wpisu (jak dawny featured image z WP). `wpisy.js` deduplikuje - usuwa wiodący obrazek
+  z treści, gdy to ten sam plik co miniatura (nie wklejać hero ręcznie na początek treści; embed
+  YouTube na starcie zostaje). Styl: `.wpis-obraz` w style.css.
 - Osadzenia YouTube: build przepisuje `youtube.com/embed` na `youtube-nocookie.com`
   (`lib/media.js`) - film nie zapisuje cookies, dopóki użytkownik nie kliknie play.
 - Disclaimer inwestycyjny automatyczny pod wpisami "Finanse i emerytura" + w portfelu na O mnie.
