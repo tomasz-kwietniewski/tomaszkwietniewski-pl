@@ -153,6 +153,9 @@ typ: wpis
 .esej .src{font-size:13px;color:var(--ink-2);line-height:1.7;margin:0}
 .esej .meta{font-size:12.5px;color:var(--ink-3);margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
 
+/* Wiekszy przeswit od ramki/wizualizacji do nastepnego akapitu tekstu (~1 interlinia) */
+.esej :is(.kpis,.bars,.legend,.cols,.fig,.map,.engines,.models,.midnote,.rtable) + p{margin-top:28px}
+
 @media (max-width:640px){
   .esej{font-size:16px}
   .esej .kpis,.esej .cols,.esej .engines,.esej .models{grid-template-columns:1fr}
