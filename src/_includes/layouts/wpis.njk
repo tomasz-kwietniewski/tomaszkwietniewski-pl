@@ -12,6 +12,8 @@ layout: layouts/base.njk
     </div>
   </header>
 
+  {% if wpis.miniatura %}<figure class="wpis-obraz"><img src="{{ wpis.miniatura }}" alt="{{ wpis.title }}" loading="eager"></figure>{% endif %}
+
   <div class="tresc">
 {{ content | safe }}
   </div>

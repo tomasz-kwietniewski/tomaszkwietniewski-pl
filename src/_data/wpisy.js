@@ -22,7 +22,13 @@ export default function () {
     const slug = decodeURIComponent(surowySlug);
 
     const kategorieNowe = mapujKategorie(fm.kategorie, plik);
-    const bodyHtml = rewriteMediaUrls(md.render(content));
+    const rawBody = rewriteMediaUrls(md.render(content));
+    // Miniatura: 1) jawne pole z frontmatter (featured image z WP / ustawione w CMS),
+    // 2) fallback (pierwszy obrazek z treści -> miniatura YouTube -> placeholder).
+    const miniatura = normalizujMiniature(fm.miniatura) || wyznaczMiniature(rawBody, kategorieNowe);
+    // Obrazek przewodni renderuje layout wpisu z pola miniatura. Jeśli treść zaczyna się
+    // od tego samego obrazka, usuwamy go z treści, by nie dublować (hero + ten sam <img>).
+    const bodyHtml = usunWiodacaMiniature(rawBody, miniatura);
     const excerpt = String(fm.excerpt || "").trim();
 
     wpisy.push({
@@ -38,9 +44,7 @@ export default function () {
       excerpt,
       metaDescription: excerpt ? skroc(excerpt, 160) : skroc(tekstZHtml(bodyHtml), 160),
       bodyHtml,
-      // Miniatura: 1) jawne pole z frontmatter (featured image z WP / ustawione w CMS),
-      // 2) fallback (pierwszy obrazek z treści -> miniatura YouTube -> placeholder).
-      miniatura: normalizujMiniature(fm.miniatura) || wyznaczMiniature(bodyHtml, kategorieNowe),
+      miniatura,
       czasCzytania: czasCzytania(bodyHtml),
       disclaimer: kategorieNowe.includes("Finanse i emerytura"),
     });
@@ -62,4 +66,22 @@ function normalizujMiniature(wartosc) {
   if (!v) return null;
   if (/^https?:\/\//.test(v) || v.startsWith("/")) return v;
   return "/" + v.replace(/^\.?\//, "");
+}
+
+// Usuwa wiodący obrazek z treści, gdy jest tym samym plikiem co miniatura (pole
+// frontmatter). Layout wpisu renderuje miniaturę jako hero na górze - bez tego
+// ten sam obrazek pojawiłby się dwa razy. Dotyczy tylko obrazka na samym początku
+// (opakowanego w <p> z markdown ![]() albo w <figure> z bloku obrazka WP); embed
+// YouTube na starcie nie jest ruszany, bo miniatura to osobny plik (thumbnail).
+function usunWiodacaMiniature(html, mini) {
+  if (!mini || !mini.startsWith("/media/")) return html;
+  const esc = mini.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(
+    "^\\s*(?:" +
+      '<p>\\s*<img\\b[^>]*\\bsrc="' + esc + '"[^>]*>\\s*</p>' +
+      "|" +
+      '<figure\\b[^>]*>\\s*<img\\b[^>]*\\bsrc="' + esc + '"[^>]*>\\s*(?:<figcaption\\b[^>]*>[\\s\\S]*?</figcaption>\\s*)?</figure>' +
+    ")\\s*"
+  );
+  return html.replace(re, "");
 }

@@ -309,6 +309,10 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .wpis-naglowek__autor span { font-size: 14px; color: var(--tekst-2); }
 .wpis-naglowek__autor strong { color: var(--tekst); }
 
+/* Obrazek przewodni (hero) - z pola miniatura, renderowany przez layout wpisu */
+.wpis-obraz { max-width: 840px; margin: 0 auto; padding: 0 var(--pad-x); }
+.wpis-obraz img { display: block; width: 100%; height: auto; border-radius: 18px; }
+
 .tresc {
   max-width: 840px; margin: 0 auto; padding: 44px var(--pad-x) 24px;
   font-size: 17.5px; line-height: 1.75; color: var(--tekst-tresc);
