@@ -57,6 +57,12 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
 - Komendy: `npm run dev` (podgląd z live reload), `npm run build` (Eleventy + Pagefind),
   `npm run check` (asercje `tools/verify_build.mjs`), `npm run verify` (build + check).
   Podgląd statyczny: launch config `strona-static` (python http.server na `_site`, port 8771).
+- **Publikacja zaplanowana:** wpis z przyszłą datą (frontmatter `date`, np. `"2026-07-26T08:00:00+02:00"`
+  - zawsze ze strefą, bo runner CI działa w UTC) jest pomijany w buildzie (`src/_data/wpisy.js`) -
+  ukryty (brak strony, /blog/, sitemap, RSS) do czasu. Cron w `deploy-pages.yml` (codziennie 06:00 UTC
+  / 08:00 CEST) przebudowuje stronę i ujawnia wpis, gdy data nadejdzie. Podgląd zaplanowanych lokalnie:
+  `ELEVENTY_PRZYSZLE=1 npx @11ty/eleventy`. `verify_build.mjs` liczy tylko opublikowane (zaplanowane
+  nie są "brakujące" - dotyczy też kontroli sitemap). Publikacja natychmiastowa = data bieżąca/przeszła.
 - Lokalny subagent do stress-testu: `.claude/agents/website-stress-tester.md` (poza gitem).
 
 ## Struktura
