@@ -3,7 +3,8 @@ import path from "node:path";
 import matter from "gray-matter";
 import { md } from "../../lib/markdown.js";
 import { rewriteMediaUrls } from "../../lib/media.js";
-import { czasCzytania, tekstZHtml } from "../../lib/czytanie.js";
+import { tekstZHtml } from "../../lib/czytanie.js";
+import { parsujDate } from "../../lib/daty.js";
 
 const DIR = "content/strony";
 
@@ -20,6 +21,7 @@ const ZASTEPOWANE = new Set([
 
 export default function () {
   const generyczne = [];
+  const zajetePermalinki = new Map();
 
   for (const plik of readdirSync(DIR).filter((f) => f.endsWith(".md"))) {
     if (ZASTEPOWANE.has(plik)) continue;
@@ -30,9 +32,18 @@ export default function () {
     // Ścieżka wyjściowa z url_stara zachowuje zagnieżdżenia typu /tematy/ksiazki/ (SEO bez przekierowań)
     let permalink = `/${slug}/`;
     if (fm.url_stara) {
-      permalink = decodeURIComponent(new URL(fm.url_stara).pathname);
+      try {
+        permalink = decodeURIComponent(new URL(fm.url_stara).pathname);
+      } catch {
+        throw new Error(`Niepoprawny url_stara "${fm.url_stara}" w ${DIR}/${plik}`);
+      }
       if (!permalink.endsWith("/")) permalink += "/";
     }
+
+    if (zajetePermalinki.has(permalink)) {
+      throw new Error(`Zduplikowany permalink "${permalink}": ${zajetePermalinki.get(permalink)} i ${plik}`);
+    }
+    zajetePermalinki.set(permalink, plik);
 
     const bodyHtml = rewriteMediaUrls(md.render(content));
 
@@ -41,8 +52,8 @@ export default function () {
       slug,
       permalink,
       title: String(fm.title || slug),
-      date: fm.date ? new Date(fm.date) : null,
-      modified: fm.modified ? new Date(fm.modified) : null,
+      date: fm.date ? parsujDate(fm.date, `${DIR}/${plik}`) : null,
+      modified: fm.modified ? parsujDate(fm.modified, `${DIR}/${plik}`) : null,
       metaDescription: skroc(tekstZHtml(bodyHtml), 160),
       bodyHtml,
     });

@@ -7,9 +7,12 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Codziennie 06:00 UTC (08:00 CEST) - ujawnia wpisy zaplanowane na dany dzień
-    # (wpisy z przyszłą datą są pomijane w buildzie, patrz src/_data/wpisy.js).
-    - cron: "0 6 * * *"
+    # Ujawnia wpisy zaplanowane na dany dzień (wpisy z przyszłą datą są pomijane
+    # w buildzie, patrz src/_data/wpisy.js). Dwa przebiegi dziennie: 06:20 UTC
+    # (08:20 CEST) publikuje poranne wpisy z marginesem po pełnej godzinie,
+    # 12:20 UTC to zapas na wypadek zgubionego/opóźnionego pierwszego runu
+    # (GitHub potrafi opóźniać crony o kilkadziesiąt minut albo pominąć run).
+    - cron: "20 6,12 * * *"
 
 permissions:
   contents: read

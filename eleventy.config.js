@@ -9,8 +9,9 @@ export default function (eleventyConfig) {
   // Domena własna dla GitHub Pages - plik CNAME w katalogu opublikowanej strony.
   eleventyConfig.addPassthroughCopy({ "CNAME.gotowy": "CNAME" });
 
+  // timeZone jawnie: bez tego data wyświetlana zależałaby od strefy procesu (runner CI = UTC).
   eleventyConfig.addFilter("dataPL", (d) =>
-    new Intl.DateTimeFormat("pl-PL", { day: "numeric", month: "long", year: "numeric" }).format(new Date(d))
+    new Intl.DateTimeFormat("pl-PL", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Warsaw" }).format(new Date(d))
   );
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString());
   eleventyConfig.addFilter("rfc822", (d) => new Date(d).toUTCString());

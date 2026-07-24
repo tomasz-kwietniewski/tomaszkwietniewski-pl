@@ -1,8 +1,8 @@
 ---
 title: "Gospodarczy prymus, sportowy maruder. Dlaczego Polska nie przekłada rozwoju na sport?"
 slug: polska-sport-a-gospodarka
-date: 2026-07-21T18:00:00
-modified: 2026-07-22T12:00:00
+date: "2026-07-21T18:00:00"
+modified: "2026-07-22T12:00:00"
 kategorie:
   - Ciekawostki / świat
 excerpt: "Przez 35 lat Polska była jedną z najszybciej rozwijających się gospodarek świata, a w sporcie wyróżnia się na minus - także na tle uboższych sąsiadów. Dlaczego rozwój nie przełożył się na medale i klubowe trofea? Rzecz o tym, czym naprawdę jest sukces sportowy i dlaczego pieniądze same go nie kupują."

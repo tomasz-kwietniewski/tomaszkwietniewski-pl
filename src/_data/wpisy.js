@@ -6,6 +6,7 @@ import { rewriteMediaUrls } from "../../lib/media.js";
 import { mapujKategorie, SLUGI } from "../../lib/kategorie.js";
 import { wyznaczMiniature } from "../../lib/miniatury.js";
 import { czasCzytania, tekstZHtml } from "../../lib/czytanie.js";
+import { parsujDate } from "../../lib/daty.js";
 
 const DIR = "content/wpisy";
 
@@ -17,17 +18,30 @@ export default function () {
   const TERAZ = Date.now();
   const POKAZ_PRZYSZLE = process.env.ELEVENTY_PRZYSZLE === "1";
 
+  // Wykrywanie kolizji slugów z czytelnym komunikatem (Eleventy też by się wywalił,
+  // ale jego błąd nie wskazuje, które pliki .md kolidują).
+  const zajeteSlugi = new Map();
+
   for (const plik of readdirSync(DIR).filter((f) => f.endsWith(".md"))) {
     const { data: fm, content } = matter(readFileSync(path.join(DIR, plik), "utf8"));
 
+    // Data bez offsetu = czas polski; parser jest deterministyczny niezależnie od
+    // strefy procesu (CI działa w UTC) i failuje głośno na braku/błędzie daty.
+    const data = parsujDate(fm.date, `${DIR}/${plik}`);
+
     // Wpis zaplanowany na przyszłość - pomijamy, dopóki data publikacji nie nadejdzie.
-    if (!POKAZ_PRZYSZLE && new Date(fm.date).getTime() > TERAZ) continue;
+    if (!POKAZ_PRZYSZLE && data.getTime() > TERAZ) continue;
 
     // Reguła sluga: frontmatter slug, a gdy pusty - nazwa pliku bez daty i .md.
     // decodeURIComponent: wpis ze znakami NFD ma slug w formie %cc%a8 - katalog
     // wyjściowy musi mieć zdekodowane znaki (GitHub Pages dopasowuje po dekodowaniu).
     const surowySlug = String(fm.slug || plik.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "")).trim();
     const slug = decodeURIComponent(surowySlug);
+
+    if (zajeteSlugi.has(slug)) {
+      throw new Error(`Zduplikowany slug "${slug}": ${zajeteSlugi.get(slug)} i ${plik} - zmień slug w jednym z nich`);
+    }
+    zajeteSlugi.set(slug, plik);
 
     const kategorieNowe = mapujKategorie(fm.kategorie, plik);
     const rawBody = rewriteMediaUrls(md.render(content));
@@ -44,8 +58,8 @@ export default function () {
       slug,
       permalink: `/${slug}/`,
       title: String(fm.title || slug),
-      date: new Date(fm.date),
-      modified: fm.modified ? new Date(fm.modified) : new Date(fm.date),
+      date: data,
+      modified: fm.modified ? parsujDate(fm.modified, `${DIR}/${plik}`) : data,
       urlStara: fm.url_stara || null,
       kategorieNowe,
       kategorieSlugi: kategorieNowe.map((k) => SLUGI[k]),

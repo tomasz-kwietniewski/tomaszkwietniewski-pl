@@ -1,8 +1,8 @@
 ---
 title: Pstryk czy jednak taryfa strefowa?
 slug: pstryk-czy-taryfa-strefowa
-date: 2026-07-16T23:00:00
-modified: 2026-07-18T12:00:00
+date: "2026-07-16T23:00:00"
+modified: "2026-07-18T12:00:00"
 kategorie:
   - Technologie i dom
 excerpt: Pstryk ma świetną aplikację i uczciwie oddaje klientom giełdowe ceny
