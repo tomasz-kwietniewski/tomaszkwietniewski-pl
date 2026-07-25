@@ -7,4 +7,5 @@
   <input type="hidden" name="anticsrf" value="true">
   <button type="submit" class="przycisk{% if wariant == 'ciemny' %} przycisk--maly{% endif %}">{{ tekstPrzycisku or "Zapisuję się" }}</button>
 </form>
-<p class="form-nl__komunikat" data-ml-komunikat hidden></p>
+{# role=status + aria-live: czytnik ekranu ogłasza komunikat błędu po odsłonięciu #}
+<p class="form-nl__komunikat" data-ml-komunikat role="status" aria-live="polite" hidden></p>

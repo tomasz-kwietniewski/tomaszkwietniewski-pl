@@ -9,12 +9,14 @@ title: Blog
     <p>Wszystko, co przeczytałem, sprawdziłem i uznałem za warte Twojego czasu. {{ wpisy.length }} wpisów od {{ wpisy[wpisy.length - 1].date.getFullYear() }} roku.</p>
   </div>
 
-  <div class="filtry" id="filtry" role="group" aria-label="Filtruj wpisy po temacie">
-    <a href="/blog/" class="filtry__pigulka filtry__pigulka--aktywna" data-temat="">Wszystkie</a>
+  <nav class="filtry" id="filtry" aria-label="Filtruj wpisy po temacie">
+    <a href="/blog/" class="filtry__pigulka filtry__pigulka--aktywna" data-temat="" aria-current="true">Wszystkie</a>
     {% for nazwa in ["Finanse i emerytura", "Technologie i dom", "Polecam", "Tipy ułatwiające życie", "Ciekawostki / świat"] %}
-    <a href="/blog/?temat={{ nazwa | slugKategorii }}" class="filtry__pigulka" data-temat="{{ nazwa | slugKategorii }}">{{ nazwa }}</a>
+    <a href="/blog/temat/{{ nazwa | slugKategorii }}/" class="filtry__pigulka" data-temat="{{ nazwa | slugKategorii }}">{{ nazwa }}</a>
     {% endfor %}
-  </div>
+  </nav>
+  {# licznik dla czytników ekranu - JS ogłasza wynik filtrowania #}
+  <p class="sr-only" aria-live="polite" id="blog-licznik"></p>
 
   <div class="pusto" id="blog-pusto" hidden>
     <div class="pusto__tytul">Tu pojawią się wpisy z tego tematu</div>

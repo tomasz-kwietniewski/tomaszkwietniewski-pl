@@ -94,7 +94,7 @@ opisSEO: "Cześć, jestem Tomek. Lubię zgłębiać, jak coś działa i dlaczego
           <h3>Portfel emerytalny - skład aktualny</h3>
           <div class="portfel__wykres-uklad">
             <div class="donut" id="donut">
-              <svg width="190" height="190" viewBox="0 0 42 42">
+              <svg width="190" height="190" viewBox="0 0 42 42" role="img" aria-label="Wykres kołowy portfela: akcje 67%, obligacje 32%, gotówka 1%">
                 <circle cx="21" cy="21" r="15.915" fill="none" stroke="#E6EAF2" stroke-width="5.5"></circle>
                 <circle data-seg="akcje" class="donut__seg--akcje" cx="21" cy="21" r="15.915" fill="none" stroke="#1E56D6" stroke-width="5.5" stroke-dasharray="67 33" stroke-dashoffset="0"></circle>
                 <circle data-seg="obligacje" class="donut__seg--obligacje" cx="21" cy="21" r="15.915" fill="none" stroke="#8FB0F5" stroke-width="5.5" stroke-dasharray="32 68" stroke-dashoffset="-67"></circle>
@@ -105,13 +105,13 @@ opisSEO: "Cześć, jestem Tomek. Lubię zgłębiać, jak coś działa i dlaczego
                   <div class="donut__pct" id="donut-pct"></div>
                   <div class="donut__opis" id="donut-opis"></div>
                 </div>
-                <div class="donut__podpowiedz" id="donut-podpowiedz">najedź na wykres, aby zobaczyć szczegóły</div>
+                <div class="donut__podpowiedz" id="donut-podpowiedz">najedź na wykres lub legendę, aby zobaczyć szczegóły</div>
               </div>
             </div>
             <div class="legenda">
-              <div class="legenda__wiersz" data-seg="akcje"><span class="legenda__kwadrat" style="background:#1E56D6"></span><span><strong>67%</strong> &middot; Akcje globalne <span>(VWCE / FWIA)</span></span></div>
-              <div class="legenda__wiersz" data-seg="obligacje"><span class="legenda__kwadrat" style="background:#8FB0F5"></span><span><strong>32%</strong> &middot; Obligacje <span>(EDO i ROD)</span></span></div>
-              <div class="legenda__wiersz" data-seg="gotowka"><span class="legenda__kwadrat" style="background:#131A26"></span><span><strong>1%</strong> &middot; Gotówka</span></div>
+              <div class="legenda__wiersz" data-seg="akcje" tabindex="0"><span class="legenda__kwadrat" style="background:#1E56D6"></span><span><strong>67%</strong> &middot; Akcje globalne <span>(VWCE / FWIA)</span></span></div>
+              <div class="legenda__wiersz" data-seg="obligacje" tabindex="0"><span class="legenda__kwadrat" style="background:#8FB0F5"></span><span><strong>32%</strong> &middot; Obligacje <span>(EDO i ROD)</span></span></div>
+              <div class="legenda__wiersz" data-seg="gotowka" tabindex="0"><span class="legenda__kwadrat" style="background:#131A26"></span><span><strong>1%</strong> &middot; Gotówka</span></div>
             </div>
           </div>
         </div>

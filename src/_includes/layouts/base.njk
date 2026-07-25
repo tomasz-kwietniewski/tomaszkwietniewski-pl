@@ -4,9 +4,10 @@
 {% include "partials/head-seo.njk" %}
 </head>
 <body{% if klasaBody %} class="{{ klasaBody }}"{% endif %}>
+<a href="#tresc" class="skip">Przejdź do treści</a>
 <div class="postep" aria-hidden="true"><div class="postep__pasek" id="postep-pasek"></div></div>
 {% include "partials/nav.njk" %}
-<main>
+<main id="tresc">
 {{ content | safe }}
 </main>
 {% include "partials/footer.njk" %}

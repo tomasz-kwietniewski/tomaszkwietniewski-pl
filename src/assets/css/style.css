@@ -43,7 +43,7 @@
   --tekst: #131A26;
   --tekst-tresc: #2A3446;
   --tekst-2: #66748C;
-  --wyciszony: #9AA6BC;
+  --wyciszony: #65728B; /* 4,7:1 na --tlo (WCAG AA); poprzedni #9AA6BC mial 2,4:1 */
   --akcent: #1E56D6;
   --akcent-jasny: #8FB0F5;
   --akcent-tlo: #E8EFFE;
@@ -72,6 +72,20 @@ body {
 }
 a { color: var(--akcent); text-decoration: none; cursor: pointer; }
 a:hover { opacity: .9; }
+
+/* Link "Przejdź do treści" - widoczny tylko po wejściu Tabem */
+.skip {
+  position: absolute; left: 16px; top: -60px; z-index: 100;
+  background: var(--akcent); color: #fff; padding: 12px 20px; border-radius: 0 0 12px 12px;
+  font-weight: 600; transition: top .15s;
+}
+.skip:focus { top: 0; }
+
+/* Tekst tylko dla czytnikow ekranu */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 img { max-width: 100%; }
 h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 :focus-visible { outline: 2px solid var(--akcent); outline-offset: 2px; border-radius: 4px; }
@@ -262,7 +276,7 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .dolne-karty { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; padding-block: 0 64px; }
 .karta-nl { background: var(--akcent); color: #fff; border-radius: 24px; padding: 44px 48px; }
 .karta-nl h3 { font-weight: 700; font-size: 26px; margin: 0 0 12px; }
-.karta-nl p { font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, .75); margin: 0 0 26px; }
+.karta-nl p { font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, .9); margin: 0 0 26px; }
 .karta-blogroll { background: var(--karta); border-radius: 24px; padding: 44px 48px; }
 .karta-blogroll h3 { font-weight: 700; font-size: 20px; margin: 0 0 16px; }
 .karta-blogroll__linki { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; font-size: 14.5px; font-weight: 500; }
@@ -361,7 +375,7 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
   display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
 }
 .wpis-cta__tytul { font-family: var(--naglowki); font-weight: 700; font-size: 21px; margin-bottom: 6px; }
-.wpis-cta__opis { font-size: 14.5px; color: rgba(255, 255, 255, .75); }
+.wpis-cta__opis { font-size: 14.5px; color: rgba(255, 255, 255, .9); }
 .wpis-cta__przyciski { display: flex; gap: 10px; flex: none; flex-wrap: wrap; }
 .wpis-cta__glowny { background: #fff; color: var(--akcent); padding: 13px 22px; border-radius: 12px; font-weight: 700; font-size: 14.5px; }
 .wpis-cta__drugi { border: 1.5px solid rgba(255, 255, 255, .5); color: #fff; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 14.5px; }
