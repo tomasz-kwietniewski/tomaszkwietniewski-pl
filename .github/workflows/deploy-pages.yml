@@ -43,6 +43,14 @@ jobs:
           path: _yt-cache
           key: yt-thumbs-${{ hashFiles('content/wpisy/**') }}
           restore-keys: yt-thumbs-
+      # Warianty WebP z shortcode'u "obrazek" - bez cache każdy run przetwarzałby
+      # ~100 obrazków od zera (sharp).
+      - name: Cache przetworzonych obrazków
+        uses: actions/cache@v4
+        with:
+          path: _img-cache
+          key: img-opt-${{ hashFiles('media/**', 'src/assets/img/**') }}
+          restore-keys: img-opt-
       - name: Instalacja zależności
         run: npm ci
       - name: Build + indeks Pagefind

@@ -24,7 +24,7 @@ permalink: /
       <div class="hero__dopisek">Kilka wiadomości w roku, bez spamu. Na start notatka z książki „Po Prostu Kupuj”.</div>
     </div>
     <div class="hero__prawa">
-      <img src="/assets/img/plaza.jpg" alt="Tomek nad Bałtykiem" class="hero__zdjecie" fetchpriority="high">
+      {% obrazek "/assets/img/plaza.jpg", alt="Tomek nad Bałtykiem", klasa="hero__zdjecie", loading="eager", fetchpriority="high", szerokosci=[480, 640, 960, 1160], sizes="(max-width: 900px) calc(100vw - 48px), 580px" %}
       <div class="hero__chip hero__chip--1">Finanse i emerytura</div>
       <div class="hero__chip hero__chip--2">Technologie i dom</div>
       <div class="hero__chip hero__chip--3">Tipy ułatwiające życie</div>
@@ -53,7 +53,7 @@ permalink: /
     </div>
     {% for wpis in wpisy | take(4) %}
     <a href="{{ wpis.permalink }}" class="ostatnie__wiersz">
-      <img src="{{ wpis.miniatura }}" alt="" class="ostatnie__miniatura" loading="lazy">
+      {% obrazek wpis.miniatura, klasa="ostatnie__miniatura", szerokosci=[340, 680], sizes="(max-width: 700px) calc(100vw - 48px), 170px" %}
       <span>
         <span class="ostatnie__kategorie">{{ wpis.kategorieNowe | join(" · ") }}</span>
         <span class="ostatnie__tytul">{{ wpis.title }}</span>
@@ -75,7 +75,7 @@ permalink: /
 
   <section class="kontener">
     <div class="kim-jestem">
-      <img src="/assets/img/portret.jpg" alt="{{ site.autor }}" class="kim-jestem__portret">
+      {% obrazek "/assets/img/portret.jpg", alt=site.autor, klasa="kim-jestem__portret", szerokosci=[140, 280], sizes="140px" %}
       <div>
         <div class="etykieta" style="margin-bottom:10px">Kim jestem</div>
         <p>Lubię zgłębiać, jak coś działa i dlaczego, a potem dzielić się tym, czego się nauczyłem. Na co dzień chronię prawa autorskie w internecie, po godzinach buduję własne projekty i piszę tego bloga.</p>

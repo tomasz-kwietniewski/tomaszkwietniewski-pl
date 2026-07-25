@@ -7,12 +7,13 @@ layout: layouts/base.njk
     <div class="wpis-naglowek__kategorie">{{ wpis.kategorieNowe | join(" · ") }}</div>
     <h1>{{ wpis.title }}</h1>
     <div class="wpis-naglowek__autor">
-      <img src="/assets/img/portret.jpg" alt="{{ site.autor }}">
+      {% obrazek "/assets/img/portret.jpg", szerokosci=[84], sizes="40px" %}
       <span><strong>{{ site.autor }}</strong> &middot; <time datetime="{{ wpis.date | isoDate }}">{{ wpis.date | dataPL }}</time> &middot; {{ wpis.czasCzytania }}</span>
     </div>
   </header>
 
-  {% if wpis.miniatura %}<figure class="wpis-obraz"><img src="{{ wpis.miniatura }}" alt="{{ wpis.title }}" loading="eager"></figure>{% endif %}
+  {# alt="" - obrazek przewodni jest dekoracyjny, tytuł jest tuż nad nim w H1 #}
+  {% if wpis.miniatura %}<figure class="wpis-obraz">{% obrazek wpis.miniatura, loading="eager", fetchpriority="high", szerokosci=[480, 800, 1200, 1600], sizes="(max-width: 840px) calc(100vw - 48px), 792px" %}</figure>{% endif %}
 
   <div class="tresc">
 {{ content | safe }}
@@ -42,7 +43,7 @@ layout: layouts/base.njk
     <div class="czytaj-dalej__siatka">
       {% for powiazany in wpisy | powiazane(wpis.slug) %}
       <a href="{{ powiazany.permalink }}" class="karta-wpisu">
-        <img src="{{ powiazany.miniatura }}" alt="" class="karta-wpisu__obrazek" loading="lazy">
+        {{ powiazany | kartaObrazek | safe }}
         <span class="karta-wpisu__tresc">
           <span class="karta-wpisu__kategorie">{{ powiazany.kategorieNowe | join(" · ") }}</span>
           <span class="karta-wpisu__tytul">{{ powiazany.title }}</span>

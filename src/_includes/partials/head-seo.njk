@@ -12,6 +12,10 @@
 <meta property="og:locale" content="pl_PL">
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="alternate" type="application/rss+xml" title="{{ site.autor }} - RSS" href="/feed.xml">
+{# Preload obu subsetów: polskie diakrytyki (ą ę ł...) są w latin-ext - preload
+   samego latin dawał FOUT dokładnie na polskich znakach. #}
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/archivo-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/style.css">

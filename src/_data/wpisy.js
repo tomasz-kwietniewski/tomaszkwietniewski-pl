@@ -8,10 +8,11 @@ import { wyznaczMiniature } from "../../lib/miniatury.js";
 import { czasCzytania, tekstZHtml } from "../../lib/czytanie.js";
 import { parsujDate } from "../../lib/daty.js";
 import { slugWpisu, skroc } from "../../lib/zrodla.js";
+import { metadaneObrazka } from "../../lib/obrazki.js";
 
 const DIR = "content/wpisy";
 
-export default function () {
+export default async function () {
   const wpisy = [];
   // Publikacja zaplanowana: wpis z datą w przyszłości jest pomijany do jej nadejścia.
   // Cron w .github/workflows/deploy-pages.yml przebudowuje stronę codziennie rano, więc
@@ -70,6 +71,16 @@ export default function () {
   }
 
   wpisy.sort((a, b) => b.date - a.date);
+
+  // Warianty WebP miniatur do kart na listach - liczone tu, w warstwie danych,
+  // bo async shortcode w partialu włączanym w pętli renderuje się pusto
+  // (ograniczenie Nunjucks). Filtr kartaObrazek w eleventy.config.js buduje tag.
+  await Promise.all(
+    wpisy.map(async (w) => {
+      w.obrazekKarty = await metadaneObrazka(w.miniatura, [320, 480, 800]);
+    })
+  );
+
   return wpisy;
 }
 

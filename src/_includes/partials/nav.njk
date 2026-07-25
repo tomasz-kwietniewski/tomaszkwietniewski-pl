@@ -1,6 +1,7 @@
 <nav class="nav" id="nav">
   <a href="/" class="nav__marka">
-    <img src="/assets/img/portret.jpg" alt="{{ site.autor }}" width="42" height="42">
+    {# alt="" - link tuż obok zawiera nazwisko, czytnik nie powtarza go trzykrotnie #}
+    {% obrazek "/assets/img/portret.jpg", loading="eager", szerokosci=[84], sizes="42px" %}
     <span>
       <span class="nav__nazwa">{{ site.autor }}</span>
       <span class="nav__tagline">{{ site.tagline }}</span>

@@ -6,4 +6,4 @@ node_modules/
 _site/
 _yt-cache/
 .playwright-mcp/
-*.jpeg
+_img-cache/

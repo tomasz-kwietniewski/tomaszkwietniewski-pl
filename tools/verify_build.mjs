@@ -51,6 +51,13 @@ for (const p of ["index.html", "blog/index.html", "projekty/index.html", "o-mnie
 }
 ok("widoki główne i pliki techniczne obecne");
 
+// /blog/ musi listować wszystkie opublikowane wpisy. Łapie regresję typu
+// "async w include+for renderuje pustą siatkę" - strona istnieje, kart brak.
+const blogHtml = readFileSync(path.join(SITE, "blog", "index.html"), "utf8");
+const kartyNaBlogu = (blogHtml.match(/class="karta-wpisu"/g) || []).length;
+if (kartyNaBlogu !== opublikowane) blad(`/blog/ ma ${kartyNaBlogu} kart wpisów, oczekiwano ${opublikowane}`);
+else ok(`/blog/: ${kartyNaBlogu} kart wpisów`);
+
 // ---------- 2. Odwołania do /media/ i /assets/ wskazują istniejące pliki ----------
 function htmlPliki(dir) {
   const wynik = [];

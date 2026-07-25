@@ -8,7 +8,7 @@ opisSEO: "Cześć, jestem Tomek. Lubię zgłębiać, jak coś działa i dlaczego
 
   <section class="kontener omnie-intro">
     <div class="omnie-intro__foto">
-      <img src="/assets/img/portret.jpg" alt="{{ site.autor }}">
+      {% obrazek "/assets/img/portret.jpg", alt=site.autor, loading="eager", szerokosci=[340, 680], sizes="(max-width: 700px) 60vw, 340px" %}
     </div>
     <div class="omnie-intro__tekst">
       <div class="etykieta" style="margin-bottom:16px">O mnie</div>
