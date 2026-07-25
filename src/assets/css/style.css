@@ -209,7 +209,9 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .hero__rotator span { display: block; line-height: 1.15; color: var(--akcent); white-space: nowrap; }
 .hero__lead { font-size: 17px; line-height: 1.65; color: var(--tekst-2); max-width: 490px; margin: 0 0 32px; }
 .hero__dopisek { margin-top: 18px; font-size: 13.5px; color: var(--wyciszony); }
-.hero__zdjecie { width: 100%; border-radius: 24px; display: block; box-shadow: var(--cien-hero); }
+/* height: auto konieczne - <img> ma atrybuty width/height (z eleventy-img,
+   chronia przed CLS); bez tego wysokosc bralaby sie z atrybutu i rozciagala zdjecie */
+.hero__zdjecie { width: 100%; height: auto; border-radius: 24px; display: block; box-shadow: var(--cien-hero); }
 .hero__chip {
   position: absolute; background: #fff; border-radius: 999px; padding: 10px 20px;
   font-size: 13px; font-weight: 600; box-shadow: 0 10px 26px rgba(19, 26, 38, .14);
