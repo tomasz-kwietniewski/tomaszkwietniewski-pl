@@ -50,19 +50,36 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   YouTube na starcie zostaje). Styl: `.wpis-obraz` w style.css.
 - Osadzenia YouTube: build przepisuje `youtube.com/embed` na `youtube-nocookie.com`
   (`lib/media.js`) - film nie zapisuje cookies, dopóki użytkownik nie kliknie play.
+  Iframe'y INNE niż YouTube są wycinane z treści w buildzie (`usunObceOsadzenia` -
+  oEmbedy WP ładowały zewnętrzne zasoby; zostaje fallback-link z blockquote).
+- **Obrazki responsywne (2026-07-25):** shortcode `{% obrazek %}` + filtr `kartaObrazek`
+  (`lib/obrazki.js`, @11ty/eleventy-img) generują warianty WebP z srcset/width/height
+  do `_img-cache/` (kopiowane po buildzie do `/media/opt/`; cache w CI). UWAGA: async
+  shortcode NIE działa w `{% include %}` w pętli (Nunjucks renderuje pusto) - dlatego
+  karty używają filtra, a metadane liczy `wpisy.js`. Tabele z treści build owija
+  w `.tabela-przewijana` (`opakujTabele`).
+- **Strony kategorii:** `/blog/temat/<slug>/` (paginacja `src/blog-temat.njk` po
+  `src/_data/kategorieLista.js`) - działają bez JS; filtr JS na /blog/ to nakładka.
+  Przekierowania `/category/...` i tagi wpisów celują w te strony.
 - Disclaimer inwestycyjny automatyczny pod wpisami "Finanse i emerytura" + w portfelu na O mnie.
 - Newsletter: formularz POST na endpoint MailerLite z dawnego embedu (fetch w site.js, sukces
   -> `/dziekuje-bardzo/`). RSS `/feed.xml` + fallback `/feed/`. Wyszukiwarka Pagefind (modal).
   Fonty self-hosted (woff2, `src/assets/fonts/`). Postaw kawę: buycoffee.to/tomaszkwietniewski.
-- Komendy: `npm run dev` (podgląd z live reload), `npm run build` (Eleventy + Pagefind),
-  `npm run check` (asercje `tools/verify_build.mjs`), `npm run verify` (build + check).
+- Komendy: `npm run dev` (podgląd z live reload), `npm run build` (clean + Eleventy + Pagefind),
+  `npm run check` (test dat + asercje `tools/verify_build.mjs`), `npm run verify` (build + check).
   Podgląd statyczny: launch config `strona-static` (python http.server na `_site`, port 8771).
-- **Publikacja zaplanowana:** wpis z przyszłą datą (frontmatter `date`, np. `"2026-07-26T08:00:00+02:00"`
-  - zawsze ze strefą, bo runner CI działa w UTC) jest pomijany w buildzie (`src/_data/wpisy.js`) -
-  ukryty (brak strony, /blog/, sitemap, RSS) do czasu. Cron w `deploy-pages.yml` (codziennie 06:00 UTC
-  / 08:00 CEST) przebudowuje stronę i ujawnia wpis, gdy data nadejdzie. Podgląd zaplanowanych lokalnie:
-  `ELEVENTY_PRZYSZLE=1 npx @11ty/eleventy`. `verify_build.mjs` liczy tylko opublikowane (zaplanowane
-  nie są "brakujące" - dotyczy też kontroli sitemap). Publikacja natychmiastowa = data bieżąca/przeszła.
+- **Daty (2026-07-25):** parser `lib/daty.js` - data bez offsetu we frontmatter oznacza
+  czas polski (Europe/Warsaw) niezależnie od strefy procesu (runner CI = UTC); brak/błąd
+  daty i zduplikowany slug wysadzają build z nazwą pliku. Pages CMS może zapisywać daty
+  bez offsetu - parser to obsługuje. Nie pisać dat YAML bez cudzysłowu z offsetem.
+- **Publikacja zaplanowana:** wpis z przyszłą datą (frontmatter `date`) jest pomijany
+  w buildzie (`src/_data/wpisy.js`) - ukryty (brak strony, /blog/, sitemap, RSS) do czasu.
+  Cron w `deploy-pages.yml` (`20 6,12 * * *` = 08:20 i 14:20 CEST; drugi przebieg to zapas
+  na zgubiony run) przebudowuje stronę i ujawnia wpis. Podgląd zaplanowanych lokalnie:
+  `ELEVENTY_PRZYSZLE=1 npx @11ty/eleventy`. `verify_build.mjs` liczy tylko opublikowane
+  i pilnuje, że zaplanowane NIE wyciekły do `_site`. Publikacja natychmiastowa = data
+  bieżąca/przeszła. UWAGA: GitHub wyłącza cron po 60 dniach bez commitów - po dłuższej
+  przerwie przed zaplanowaniem wpisu odpalić ręcznie Run workflow (szczegóły: WDROZENIE.md).
 - Lokalny subagent do stress-testu: `.claude/agents/website-stress-tester.md` (poza gitem).
 
 ## Struktura
