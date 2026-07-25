@@ -2,7 +2,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { md } from "../../lib/markdown.js";
-import { rewriteMediaUrls, opakujTabele } from "../../lib/media.js";
+import { rewriteMediaUrls, opakujTabele, usunObceOsadzenia } from "../../lib/media.js";
 import { mapujKategorie, SLUGI } from "../../lib/kategorie.js";
 import { wyznaczMiniature } from "../../lib/miniatury.js";
 import { czasCzytania, tekstZHtml } from "../../lib/czytanie.js";
@@ -42,7 +42,7 @@ export default async function () {
     zajeteSlugi.set(slug, plik);
 
     const kategorieNowe = mapujKategorie(fm.kategorie, plik);
-    const rawBody = opakujTabele(rewriteMediaUrls(md.render(content)));
+    const rawBody = usunObceOsadzenia(opakujTabele(rewriteMediaUrls(md.render(content))));
     // Miniatura: 1) jawne pole z frontmatter (featured image z WP / ustawione w CMS),
     // 2) fallback (pierwszy obrazek z treści -> miniatura YouTube -> placeholder).
     const miniatura = normalizujMiniature(fm.miniatura) || wyznaczMiniature(rawBody, kategorieNowe);
