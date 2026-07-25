@@ -38,7 +38,7 @@ permalink: /
     </div>
     <div class="tematy">
       {% for nazwa in ["Finanse i emerytura", "Technologie i dom", "Polecam", "Tipy ułatwiające życie", "Ciekawostki / świat"] %}
-      <a href="/blog/?temat={{ nazwa | slugKategorii }}" class="tematy__kafel">
+      <a href="/blog/temat/{{ nazwa | slugKategorii }}/" class="tematy__kafel">
         {{ nazwa }}
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E56D6" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>

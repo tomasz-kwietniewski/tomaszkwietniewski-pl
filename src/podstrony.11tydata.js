@@ -5,5 +5,6 @@ export default {
     permalink: (data) => data.strona.permalink,
     title: (data) => data.strona.title,
     opisSEO: (data) => data.strona.metaDescription,
+    noindex: (data) => data.strona.noindex,
   },
 };

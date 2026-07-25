@@ -17,9 +17,7 @@ eleventyExcludeFromCollections: true
     <link>{{ wpis.permalink | absUrl(site.url) }}</link>
     <guid isPermaLink="true">{{ wpis.permalink | absUrl(site.url) }}</guid>
     <pubDate>{{ wpis.date | rfc822 }}</pubDate>
-    {%- if wpis.excerpt %}
-    <description>{{ wpis.excerpt }}</description>
-    {%- endif %}
+    <description>{{ wpis.excerpt or wpis.metaDescription }}</description>
     {%- for kat in wpis.kategorieNowe %}
     <category>{{ kat }}</category>
     {%- endfor %}

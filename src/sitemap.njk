@@ -7,18 +7,21 @@ eleventyExcludeFromCollections: true
   {%- for adres in ["/", "/blog/", "/projekty/", "/o-mnie/", "/newsletter/", "/wsparcie/", "/kontakt/"] %}
   <url><loc>{{ adres | absUrl(site.url) }}</loc></url>
   {%- endfor %}
+  {%- for kat in kategorieLista %}
+  <url><loc>{{ ("/blog/temat/" + kat.slug + "/") | absUrl(site.url) }}</loc></url>
+  {%- endfor %}
   {%- for wpis in wpisy %}
   <url>
     <loc>{{ wpis.permalink | absUrl(site.url) }}</loc>
     <lastmod>{{ wpis.modified | isoDate }}</lastmod>
   </url>
   {%- endfor %}
-  {%- for strona in strony.generyczne %}
+  {%- for strona in strony.generyczne %}{%- if not strona.noindex %}
   <url>
     <loc>{{ strona.permalink | absUrl(site.url) }}</loc>
     {%- if strona.modified %}
     <lastmod>{{ strona.modified | isoDate }}</lastmod>
     {%- endif %}
   </url>
-  {%- endfor %}
+  {%- endif %}{%- endfor %}
 </urlset>

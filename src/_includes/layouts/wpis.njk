@@ -22,7 +22,7 @@ layout: layouts/base.njk
   {% if wpis.disclaimer %}{% include "partials/disclaimer.njk" %}{% endif %}
 
   <div class="wpis-tagi" data-pagefind-ignore>
-    {% for kat in wpis.kategorieNowe %}<a href="/blog/?temat={{ kat | slugKategorii }}">{{ kat }}</a>{% endfor %}
+    {% for kat in wpis.kategorieNowe %}<a href="/blog/temat/{{ kat | slugKategorii }}/">{{ kat }}</a>{% endfor %}
   </div>
 
   <div class="wpis-cta" data-pagefind-ignore>

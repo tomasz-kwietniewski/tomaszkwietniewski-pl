@@ -60,6 +60,8 @@ export default function (eleventyConfig) {
   // Absolutny URL produkcyjny; encodeURI odtwarza formę %CC%A8 dla slugów ze znakami NFD.
   eleventyConfig.addFilter("absUrl", (p, base) => new URL(encodeURI(p), base || "https://tomaszkwietniewski.pl").href);
   eleventyConfig.addFilter("slugKategorii", (nazwa) => SLUGI[nazwa] || "");
+  // Wpisy z danej kategorii (strony /blog/temat/<slug>/)
+  eleventyConfig.addFilter("wTemacie", (wpisy, slug) => wpisy.filter((w) => w.kategorieSlugi.includes(slug)));
   eleventyConfig.addFilter("take", (tablica, n) => (tablica || []).slice(0, n));
 
   // 3 powiązane wpisy: najpierw ta sama kategoria główna, dopełnienie najnowszymi.

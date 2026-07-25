@@ -9,6 +9,10 @@ import { ZASTEPOWANE, permalinkStrony, skroc } from "../../lib/zrodla.js";
 
 const DIR = "content/strony";
 
+// Strony techniczne - dostępne, ale niewidoczne dla wyszukiwarek (noindex,
+// poza sitemap). /dziekuje-bardzo/ to podziękowanie po zapisie na newsletter.
+const NOINDEX = new Set(["dziekuje-bardzo.md"]);
+
 export default function () {
   const generyczne = [];
   const zajetePermalinki = new Map();
@@ -35,6 +39,7 @@ export default function () {
       date: fm.date ? parsujDate(fm.date, `${DIR}/${plik}`) : null,
       modified: fm.modified ? parsujDate(fm.modified, `${DIR}/${plik}`) : null,
       metaDescription: skroc(tekstZHtml(bodyHtml), 160),
+      noindex: NOINDEX.has(plik),
       bodyHtml,
     });
   }

@@ -1,0 +1,25 @@
+---
+# Strona kategorii - permalink/title/opisSEO w blog-temat.11tydata.js.
+layout: layouts/base.njk
+pagination:
+  data: kategorieLista
+  size: 1
+  alias: kat
+---
+<div class="widok kontener" style="padding-block:64px">
+  <div class="blog-intro">
+    <h1>{{ kat.nazwa }}</h1>
+    <p>{{ kat.opis }} {% set wTemacie = wpisy | wTemacie(kat.slug) %}{{ wTemacie.length }} {% if wTemacie.length == 1 %}wpis{% elif wTemacie.length < 5 %}wpisy{% else %}wpisów{% endif %}.</p>
+  </div>
+
+  <nav class="filtry" aria-label="Filtruj wpisy po temacie">
+    <a href="/blog/" class="filtry__pigulka">Wszystkie</a>
+    {% for k in kategorieLista %}
+    <a href="/blog/temat/{{ k.slug }}/" class="filtry__pigulka{% if k.slug == kat.slug %} filtry__pigulka--aktywna{% endif %}"{% if k.slug == kat.slug %} aria-current="true"{% endif %}>{{ k.nazwa }}</a>
+    {% endfor %}
+  </nav>
+
+  <div class="siatka-wpisow">
+    {% for wpis in wTemacie %}{% include "partials/karta-wpisu.njk" %}{% endfor %}
+  </div>
+</div>
