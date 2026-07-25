@@ -1,12 +1,8 @@
 ---
+# Reszta danych w podstrony.11tydata.js (funkcje zamiast stringów szablonu).
 pagination:
   data: strony.generyczne
   size: 1
   alias: strona
-permalink: "{{ strona.permalink }}"
-layout: layouts/podstrona.njk
-eleventyComputed:
-  title: "{{ strona.title }}"
-  opisSEO: "{{ strona.metaDescription }}"
 ---
 {{ strona.bodyHtml | safe }}

@@ -1,9 +1,11 @@
 ---
+# Permalink w przekierowanie.11tydata.js. Meta refresh z content="0" Google
+# traktuje jak 301; canonical wskazuje nowy adres. Bez noindex - noindex
+# blokowałby przekazanie mocy linków, którą ma zapewnić canonical.
 pagination:
   data: przekierowania
   size: 1
   alias: przek
-permalink: "{{ przek.od }}"
 eleventyExcludeFromCollections: true
 ---
 <!doctype html>
@@ -12,7 +14,6 @@ eleventyExcludeFromCollections: true
 <meta charset="utf-8">
 <meta http-equiv="refresh" content="0; url={{ przek.do }}">
 <link rel="canonical" href="{{ przek.do | absUrl(site.url) }}">
-<meta name="robots" content="noindex">
 <title>Przekierowanie</title>
 </head>
 <body>

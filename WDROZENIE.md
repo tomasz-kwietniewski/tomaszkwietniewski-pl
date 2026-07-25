@@ -1,55 +1,48 @@
-# Wdrożenie strony na GitHub Pages
+# Wdrożenie i runbook awaryjny
 
-Strona jest zbudowana i przetestowana lokalnie. Publikacja to kilka kroków, w tej kolejności.
+Strona jest WDROŻONA i live od 2026-07-17 (GitHub Pages, deploy automatyczny
+z push do main). Ten plik to runbook na wypadek awarii - kroki wdrożeniowe
+zostały wykonane i NIE należy ich powtarzać (historia: git log, pamięć projektu).
 
-## 1. Przed upublicznieniem repo (WYMÓG: Pages na darmowym planie działa tylko z repo publicznym)
+## Stan produkcji
 
-- **Usuń `docs/` z repo I Z HISTORII gita** (to prywatne notatki robocze):
-  ```
-  git rm -r --cached docs
-  git commit -m "Usuniecie prywatnych notatek docs/ przed upublicznieniem"
-  # oraz z historii:
-  git filter-repo --path docs --invert-paths
-  ```
-  (albo `git filter-branch` / BFG, jeśli `git-filter-repo` niedostępne)
-- Sprawdź, że w repo nie ma innych prywatnych plików (CLAUDE.md projektu jest ok - opisuje projekt, nie zawiera sekretów).
-
-## 2. Świeży eksport ze starego WordPressa (dogranie wpisów dodanych w międzyczasie)
-
-```
-python tools/export_wp.py
-```
-Potem `npm run verify`, żeby potwierdzić, że wszystko dalej się buduje.
-
-## 3. Włączenie Pages i workflow
-
-- GitHub: repo -> Settings -> Pages -> Source: **GitHub Actions**.
-- W `.github/workflows/deploy-pages.yml` odkomentuj blok `push: branches: [main]`
-  (wtedy każdy zapis z Pages CMS = publikacja). Zostaw `workflow_dispatch` do ręcznego odpalania.
-- Pierwszy deploy: zakładka Actions -> "Deploy na GitHub Pages" -> Run workflow.
-
-## 4. Domena własna (CNAME)
-
-- **Dopiero na tym etapie** wgraj plik `CNAME` do katalogu, który trafia do published site.
-  Najprościej: dodaj do `eleventy.config.js` passthrough:
-  ```js
-  eleventyConfig.addPassthroughCopy({ "CNAME.gotowy": "CNAME" });
-  ```
-  (plik `CNAME.gotowy` z treścią `tomaszkwietniewski.pl` jest już w repo)
-- DNS: `tomaszkwietniewski.pl` to domena apex - potrzebne rekordy **A/AAAA** na adresy GitHuba
-  (nie CNAME, bo to apex). Aktualne adresy A GitHub Pages:
+- Hosting: GitHub Pages, repo publiczne `tomasz-kwietniewski/tomaszkwietniewski-pl`,
+  workflow `.github/workflows/deploy-pages.yml` (push do main + cron 2x dziennie + ręcznie).
+- Domena: apex `tomaszkwietniewski.pl`, rekordy A w panelu DNS SEOHost na adresy GitHuba:
   185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
-  (+ rekordy AAAA na 2606:50c0:8000..8003::153). Panel DNS ma Tomasz.
-- Po propagacji DNS: Settings -> Pages -> Custom domain -> `tomaszkwietniewski.pl`, zaznacz "Enforce HTTPS".
+  (+ AAAA 2606:50c0:8000..8003::153). Plik CNAME przez passthrough `CNAME.gotowy` -> `CNAME`.
+- Stary WordPress DZIAŁA dalej na SEOHost pod IP **188.210.222.8** (zapas do rollbacku).
 
-## 5. Po podmianie DNS
+## Rollback (strona na Pages padła / trzeba wrócić do WP)
 
-- Sprawdź na produkcji: strona główna, kilka wpisów, `/feed.xml`, wpis ze slugiem NFD
-  (`/wojna-energetyczna-czy-polska-jest-bezpieczna-piotr-maciążek-wywiad/`), stary adres kategorii
-  (`/category/inwestowanie/` -> ma przekierować na `/blog/?temat=finanse-i-emerytura`).
-- Zgłoś nową sitemap w Google Search Console.
+1. Panel DNS SEOHost: usuń rekordy A GitHuba dla apexu i ustaw **A -> 188.210.222.8**.
+2. Poczekaj na propagację (TTL; zwykle do godziny).
+3. PUŁAPKA CERTYFIKATU: po powrocie na SEOHost sprawdź, czy certyfikat SSL dla
+   domeny na hostingu jest ważny (szczegóły: pamięć projektu, notatka o certyfikatach).
+   ACME na SEOHost wystawia i odnawia automatycznie - ale po okresie wskazywania
+   na GitHub walidacja mogła nie przebiegać.
+4. Stary WP ma treści tylko do daty migracji (2026-07) - nowsze wpisy istnieją
+   wyłącznie w tym repo.
+
+## Awaria builda / deployu (strona stoi, deploy nie przechodzi)
+
+- Zakładka Actions -> ostatni run "Deploy na GitHub Pages" -> logi kroku
+  "Weryfikacja builda" (asercje `tools/verify_build.mjs` mówią wprost, co pękło).
+- Deploy można odpalić ręcznie: Actions -> Run workflow (workflow_dispatch).
+- UWAGA CRON: GitHub wyłącza harmonogramy (schedule) w repo bez commitów przez
+  60 dni. Po dłuższej przerwie w publikowaniu wpis zaplanowany może się nie
+  opublikować - wtedy ręczny Run workflow (i to od razu resetuje licznik).
+
+## Kontrola po zmianach DNS / większych zmianach
+
+- Strona główna, kilka wpisów, `/feed.xml`, wpis ze slugiem NFD
+  (`/wojna-energetyczna-czy-polska-jest-bezpieczna-piotr-maciążek-wywiad/`),
+  stary adres kategorii (`/category/inwestowanie/` - ma przekierować).
+- `https://` wymuszone (Settings -> Pages -> Enforce HTTPS).
+- Search Console: sitemap zgłoszony 2026-07-17.
 
 ## Uwaga o `site.url`
 
-`src/_data/site.js` ma `url: https://tomaszkwietniewski.pl` na sztywno - canonicale i OG
-wskazują produkcję nawet przy podglądzie na `*.github.io`, co chroni SEO. Nie zmieniaj tego.
+`src/_data/site.js` ma `url: https://tomaszkwietniewski.pl` na sztywno - canonicale
+i OG wskazują produkcję nawet przy podglądzie na `*.github.io`, co chroni SEO.
+Nie zmieniaj tego.

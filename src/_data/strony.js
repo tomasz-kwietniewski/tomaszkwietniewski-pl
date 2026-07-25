@@ -5,19 +5,9 @@ import { md } from "../../lib/markdown.js";
 import { rewriteMediaUrls } from "../../lib/media.js";
 import { tekstZHtml } from "../../lib/czytanie.js";
 import { parsujDate } from "../../lib/daty.js";
+import { ZASTEPOWANE, permalinkStrony, skroc } from "../../lib/zrodla.js";
 
 const DIR = "content/strony";
-
-// Strony zastąpione nowym designem (mają własne szablony w src/ albo przekierowanie)
-const ZASTEPOWANE = new Set([
-  "start.md",           // -> / (nowa strona główna)
-  "wszystkie-wpisy.md", // -> /blog/
-  "tematy.md",          // -> /blog/
-  "o-mnie.md",          // -> nowy /o-mnie/
-  "kontakt.md",         // -> nowy /kontakt/
-  "wsparcie.md",        // -> nowy /wsparcie/
-  "zapis-na-newsletter.md", // -> nowy /newsletter/
-]);
 
 export default function () {
   const generyczne = [];
@@ -28,17 +18,7 @@ export default function () {
 
     const { data: fm, content } = matter(readFileSync(path.join(DIR, plik), "utf8"));
     const slug = String(fm.slug || plik.replace(/\.md$/, "")).trim();
-
-    // Ścieżka wyjściowa z url_stara zachowuje zagnieżdżenia typu /tematy/ksiazki/ (SEO bez przekierowań)
-    let permalink = `/${slug}/`;
-    if (fm.url_stara) {
-      try {
-        permalink = decodeURIComponent(new URL(fm.url_stara).pathname);
-      } catch {
-        throw new Error(`Niepoprawny url_stara "${fm.url_stara}" w ${DIR}/${plik}`);
-      }
-      if (!permalink.endsWith("/")) permalink += "/";
-    }
+    const permalink = permalinkStrony(fm, `${DIR}/${plik}`);
 
     if (zajetePermalinki.has(permalink)) {
       throw new Error(`Zduplikowany permalink "${permalink}": ${zajetePermalinki.get(permalink)} i ${plik}`);
@@ -60,10 +40,4 @@ export default function () {
   }
 
   return { generyczne };
-}
-
-function skroc(tekst, max) {
-  if (tekst.length <= max) return tekst;
-  const ciety = tekst.slice(0, max);
-  return ciety.slice(0, Math.max(ciety.lastIndexOf(" "), 0)) + "...";
 }

@@ -25,12 +25,15 @@ export default function (eleventyConfig) {
     const aktualny = wpisy.find((w) => w.slug === slug);
     const glowna = aktualny ? aktualny.kategorieNowe[0] : null;
     const inne = wpisy.filter((w) => w.slug !== slug);
-    const zTejKategorii = inne.filter((w) => glowna && w.kategorieNowe.includes(glowna));
-    const reszta = inne.filter((w) => !zTejKategorii.includes(w));
+    const zTejKategorii = new Set(inne.filter((w) => glowna && w.kategorieNowe.includes(glowna)));
+    const reszta = inne.filter((w) => !zTejKategorii.has(w));
     return [...zTejKategorii, ...reszta].slice(0, 3);
   });
 
-  eleventyConfig.setServerOptions({ showAllHosts: false });
+  // content/ i lib/ leżą poza input (src/), a wpisy czytamy readdirSync w _data -
+  // bez jawnego watch npm run dev nie widziałby edycji treści.
+  eleventyConfig.addWatchTarget("content/");
+  eleventyConfig.addWatchTarget("lib/");
 
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },

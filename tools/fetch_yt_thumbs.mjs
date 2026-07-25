@@ -13,7 +13,10 @@ const DIR = "content/wpisy";
 const idy = new Set();
 
 for (const plik of readdirSync(DIR).filter((f) => f.endsWith(".md"))) {
-  const { content } = matter(readFileSync(path.join(DIR, plik), "utf8"));
+  const { data: fm, content } = matter(readFileSync(path.join(DIR, plik), "utf8"));
+  // Wpis z jawną miniaturą we frontmatter nie korzysta z fallbacku YouTube -
+  // nie ma po co renderować treści ani pobierać miniatury.
+  if (String(fm.miniatura || "").trim()) continue;
   const bodyHtml = rewriteMediaUrls(md.render(content));
   const spec = specMiniatury(bodyHtml);
   if (spec.typ === "yt") idy.add(spec.id);
@@ -31,7 +34,7 @@ for (const id of idy) {
     continue;
   }
   try {
-    const res = await fetch(`https://img.youtube.com/vi/${id}/hqdefault.jpg`);
+    const res = await fetch(`https://img.youtube.com/vi/${id}/hqdefault.jpg`, { signal: AbortSignal.timeout(10000) });
     if (res.ok) {
       writeFileSync(plik, Buffer.from(await res.arrayBuffer()));
       pobrane++;

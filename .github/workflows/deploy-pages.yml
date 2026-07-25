@@ -26,6 +26,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repo
         uses: actions/checkout@v7
@@ -34,6 +35,14 @@ jobs:
         with:
           node-version: 24
           cache: npm
+      # Miniatury YouTube między buildami - bez cache każdy run (push + 2x cron)
+      # pobierałby je od nowa z img.youtube.com (zależność builda od sieci).
+      - name: Cache miniatur YouTube
+        uses: actions/cache@v4
+        with:
+          path: _yt-cache
+          key: yt-thumbs-${{ hashFiles('content/wpisy/**') }}
+          restore-keys: yt-thumbs-
       - name: Instalacja zależności
         run: npm ci
       - name: Build + indeks Pagefind
@@ -49,6 +58,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

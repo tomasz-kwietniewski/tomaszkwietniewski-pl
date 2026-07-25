@@ -4,6 +4,8 @@
 import { readdirSync, readFileSync, existsSync, statSync } from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { parsujDate } from "../lib/daty.js";
+import { ZASTEPOWANE, slugWpisu, permalinkStrony } from "../lib/zrodla.js";
 
 const SITE = "_site";
 let bledy = 0;
@@ -16,23 +18,27 @@ const TERAZ = Date.now();
 let wpisowOk = 0, zaplanowane = 0;
 for (const plik of wpisyPliki) {
   const { data: fm } = matter(readFileSync(path.join("content/wpisy", plik), "utf8"));
-  // Wpisy zaplanowane na przyszłość nie są budowane (patrz src/_data/wpisy.js) - pomijamy.
-  if (new Date(fm.date).getTime() > TERAZ) { zaplanowane++; continue; }
-  const slug = decodeURIComponent(String(fm.slug || plik.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "")).trim());
+  const slug = slugWpisu(fm, plik);
   const wyjscie = path.join(SITE, slug, "index.html");
+  // Wpisy zaplanowane na przyszłość nie są budowane (patrz src/_data/wpisy.js).
+  // Asercja negatywna: gdyby taki wpis MIAŁ plik wyjściowy, to wyciek (np. artefakt
+  // po podglądzie ELEVENTY_PRZYSZLE=1 bez wyczyszczenia _site).
+  if (parsujDate(fm.date, plik).getTime() > TERAZ) {
+    zaplanowane++;
+    if (existsSync(wyjscie)) blad(`wpis zaplanowany ${plik} wyciekł do builda (${wyjscie} istnieje)`);
+    continue;
+  }
   if (existsSync(wyjscie)) wpisowOk++;
   else blad(`brak pliku wyjściowego dla wpisu ${plik} (oczekiwano ${wyjscie})`);
 }
 const opublikowane = wpisyPliki.length - zaplanowane;
 if (wpisowOk === opublikowane) ok(`wpisy: ${wpisowOk}/${opublikowane} zbudowane${zaplanowane ? ` (+${zaplanowane} zaplanowane)` : ""}`);
 
-const ZASTEPOWANE = new Set(["start.md", "wszystkie-wpisy.md", "tematy.md", "o-mnie.md", "kontakt.md", "wsparcie.md", "zapis-na-newsletter.md"]);
 const stronyPliki = readdirSync("content/strony").filter((f) => f.endsWith(".md") && !ZASTEPOWANE.has(f));
 let stronOk = 0;
 for (const plik of stronyPliki) {
   const { data: fm } = matter(readFileSync(path.join("content/strony", plik), "utf8"));
-  let sciezka = fm.url_stara ? decodeURIComponent(new URL(fm.url_stara).pathname) : `/${fm.slug || plik.replace(/\.md$/, "")}/`;
-  if (!sciezka.endsWith("/")) sciezka += "/";
+  const sciezka = permalinkStrony(fm, plik);
   const wyjscie = path.join(SITE, sciezka, "index.html");
   if (existsSync(wyjscie)) stronOk++;
   else blad(`brak pliku wyjściowego dla podstrony ${plik} (oczekiwano ${wyjscie})`);
@@ -40,12 +46,12 @@ for (const plik of stronyPliki) {
 if (stronOk === stronyPliki.length) ok(`podstrony: ${stronOk}/${stronyPliki.length} zbudowane`);
 
 // Widoki główne + techniczne
-for (const p of ["index.html", "blog/index.html", "projekty/index.html", "o-mnie/index.html", "newsletter/index.html", "wsparcie/index.html", "kontakt/index.html", "404.html", "feed.xml", "feed/index.html", "sitemap.xml", "robots.txt"]) {
+for (const p of ["index.html", "blog/index.html", "projekty/index.html", "o-mnie/index.html", "newsletter/index.html", "wsparcie/index.html", "kontakt/index.html", "404.html", "feed.xml", "feed/index.html", "sitemap.xml", "robots.txt", "CNAME"]) {
   if (!existsSync(path.join(SITE, p))) blad(`brak ${p}`);
 }
 ok("widoki główne i pliki techniczne obecne");
 
-// ---------- 2. Odwołania do /media/ wskazują istniejące pliki ----------
+// ---------- 2. Odwołania do /media/ i /assets/ wskazują istniejące pliki ----------
 function htmlPliki(dir) {
   const wynik = [];
   for (const el of readdirSync(dir)) {
@@ -67,21 +73,21 @@ for (const plik of html) {
     blad(`relatywny adres "media/..." w ${plik}`);
     relatywneMedia++;
   }
-  const adresy = [...tresc.matchAll(/\s(?:src|href|poster)="(\/media\/[^"]+)"/g)].map((m) => m[1]);
+  const adresy = [...tresc.matchAll(/\s(?:src|href|poster)="(\/(?:media|assets)\/[^"]+)"/g)].map((m) => m[1]);
   const zSrcset = [...tresc.matchAll(/\ssrcset="([^"]*)"/g)].flatMap((m) =>
-    m[1].split(",").map((c) => c.trim().split(/\s+/)[0]).filter((u) => u.startsWith("/media/"))
+    m[1].split(",").map((c) => c.trim().split(/\s+/)[0]).filter((u) => u.startsWith("/media/") || u.startsWith("/assets/"))
   );
   for (const adres of [...adresy, ...zSrcset]) {
     const czysty = decodeURIComponent(adres.split("?")[0].split("#")[0]);
     if (sprawdzone.has(czysty)) continue;
     sprawdzone.add(czysty);
     if (!existsSync(path.join(SITE, czysty))) {
-      blad(`brak pliku media: ${czysty} (użyty m.in. w ${plik})`);
+      blad(`brak pliku: ${czysty} (użyty m.in. w ${plik})`);
       brakujaceMedia++;
     }
   }
 }
-if (!brakujaceMedia && !relatywneMedia) ok(`media: ${sprawdzone.size} unikalnych adresów /media/ - wszystkie istnieją`);
+if (!brakujaceMedia && !relatywneMedia) ok(`media+assets: ${sprawdzone.size} unikalnych adresów - wszystkie istnieją`);
 
 // ---------- 3. Sanity 1:1 - charakterystyczne fragmenty treści przeszły przez markdown-it ----------
 const sanity = [
@@ -108,7 +114,9 @@ if (!zCodeBlokiem) ok("sanity 1:1 treści przeszło");
 const feed = readFileSync(path.join(SITE, "feed.xml"), "utf8");
 if (!feed.startsWith("<?xml")) blad("feed.xml nie zaczyna się od deklaracji XML");
 const itemy = (feed.match(/<item>/g) || []).length;
-if (itemy < 10) blad(`feed.xml ma tylko ${itemy} pozycji`);
+// Feed bierze take(20) najnowszych opublikowanych - dokładna liczba, nie próg.
+const oczekiwaneItemy = Math.min(20, opublikowane);
+if (itemy !== oczekiwaneItemy) blad(`feed.xml ma ${itemy} pozycji, oczekiwano ${oczekiwaneItemy}`);
 const niedomkniete = (feed.match(/<item>/g) || []).length !== (feed.match(/<\/item>/g) || []).length;
 if (niedomkniete) blad("feed.xml: niedomknięte <item>");
 if (/&(?!amp;|lt;|gt;|quot;|apos;|#)/.test(feed)) blad("feed.xml: niezaescapowany znak & - XML może się nie parsować");
