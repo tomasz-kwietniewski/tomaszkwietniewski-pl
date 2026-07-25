@@ -43,6 +43,7 @@
   --tekst: #131A26;
   --tekst-tresc: #2A3446;
   --tekst-2: #66748C;
+  --grafit: #3D4A63; /* opisy na jasnych kartach */
   --wyciszony: #65728B; /* 4,7:1 na --tlo (WCAG AA); poprzedni #9AA6BC mial 2,4:1 */
   --akcent: #1E56D6;
   --akcent-jasny: #8FB0F5;
@@ -61,7 +62,7 @@
 
 /* ---------- Baza ---------- */
 * { box-sizing: border-box; }
-html { scroll-behavior: auto; -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background: var(--tlo);
@@ -69,7 +70,13 @@ body {
   font-family: "Archivo", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  /* flex + min-height: na krotkich stronach (404, /wsparcie/) stopka trzyma sie dolu
+     (margin-top: auto na .stopka dziala tylko we flexowym rodzicu) */
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
+main { flex: 1 0 auto; }
 a { color: var(--akcent); text-decoration: none; cursor: pointer; }
 a:hover { opacity: .9; }
 
@@ -233,7 +240,6 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .sekcja__naglowek { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
 .sekcja__naglowek h2 { font-weight: 700; font-size: 28px; margin: 0; }
 .sekcja__nota { font-size: 14px; color: var(--wyciszony); }
-.sekcja__link { font-weight: 600; font-size: 14px; }
 
 .tematy { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
 .tematy__kafel {
@@ -350,11 +356,11 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .tresc iframe { max-width: 100%; border: 0; border-radius: 14px; }
 .tresc iframe[src*="youtube"] { width: 100%; aspect-ratio: 16 / 9; height: auto; }
 .tresc .wp-block-embed__wrapper { margin: 0 0 24px; }
-.tresc table {
-  display: block; overflow-x: auto; max-width: 100%; border-collapse: collapse;
-  margin: 0 0 24px; font-size: 15px; line-height: 1.5;
-}
-.tresc th, .tresc td { border: 1px solid var(--border); padding: 10px 14px; text-align: left; white-space: nowrap; }
+/* Tabele z tresci owijane w .tabela-przewijana (lib/media.js) - tabela zachowuje
+   semantyke uklad (colspan, szerokosci kolumn), a przewija sie tylko gdy trzeba */
+.tresc .tabela-przewijana { overflow-x: auto; max-width: 100%; margin: 0 0 24px; }
+.tresc table { border-collapse: collapse; margin: 0; font-size: 15px; line-height: 1.5; }
+.tresc th, .tresc td { border: 1px solid var(--border); padding: 10px 14px; text-align: left; }
 .tresc th { background: var(--karta); font-weight: 600; }
 .tresc pre { overflow-x: auto; background: var(--karta); border-radius: 14px; padding: 20px 24px; font-size: 14px; }
 .tresc hr { border: 0; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -411,7 +417,7 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 }
 .projekt-featured__obrazek { height: 300px; width: 100%; object-fit: cover; border-radius: 18px; }
 .projekt-featured h2 { font-weight: 700; font-size: 26px; margin: 0 0 10px; }
-.projekt-featured p { font-size: 15px; line-height: 1.65; color: #3D4A63; margin: 0 0 12px; }
+.projekt-featured p { font-size: 15px; line-height: 1.65; color: var(--grafit); margin: 0 0 12px; }
 .projekt-featured p + p { font-size: 14.5px; color: var(--tekst-2); margin-bottom: 16px; }
 .projekt-featured a { font-weight: 600; font-size: 14.5px; }
 .badge { background: #fff; border-radius: 999px; padding: 5px 13px; font-size: 12px; font-weight: 600; color: var(--akcent); white-space: nowrap; }
@@ -428,7 +434,7 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .projekt-featured .projekt-foto .projekt-featured__obrazek { border-radius: 0; }
 .projekt__naglowek { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
 .projekt__naglowek h2 { font-weight: 700; font-size: 20px; margin: 0; }
-.projekt p { font-size: 14.5px; line-height: 1.65; color: #3D4A63; margin: 0 0 14px; }
+.projekt p { font-size: 14.5px; line-height: 1.65; color: var(--grafit); margin: 0 0 14px; }
 .projekt__linki { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-between; }
 .projekt__linki a, .projekt > a { font-weight: 600; font-size: 14px; }
 .projekty-github {
@@ -496,7 +502,6 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .donut { position: relative; width: 190px; height: 190px; animation: donutIn .9s cubic-bezier(.2, .7, .3, 1) both; }
 .donut svg { transform: rotate(-90deg); overflow: visible; display: block; }
 .donut circle { transition: stroke-width .2s, stroke-opacity .2s; }
-.donut [data-seg] { cursor: pointer; }
 .donut__seg--akcje { animation: arc67 1.2s .2s cubic-bezier(.2, .7, .3, 1) both; }
 .donut__seg--obligacje { animation: arc32 1.2s .5s cubic-bezier(.2, .7, .3, 1) both; }
 .donut__seg--gotowka { animation: arc1 .8s .9s cubic-bezier(.2, .7, .3, 1) both; }
@@ -538,7 +543,7 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 }
 .lead-magnet__ikona { width: 72px; height: 92px; background: #fff; border-radius: 10px; box-shadow: 0 10px 24px rgba(19, 26, 38, .12); display: grid; place-items: center; }
 .lead-magnet h2 { font-weight: 700; font-size: 20px; margin: 0 0 6px; }
-.lead-magnet p { font-size: 14.5px; line-height: 1.65; color: #3D4A63; margin: 0; }
+.lead-magnet p { font-size: 14.5px; line-height: 1.65; color: var(--grafit); margin: 0; }
 
 .wsparcie-karty { max-width: 1080px; margin: 0 auto; padding: 0 var(--pad-x) 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .wsparcie-karta { border-radius: 24px; padding: 40px; display: flex; flex-direction: column; align-items: flex-start; }
@@ -546,7 +551,7 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .wsparcie-karta--dalej { background: var(--karta); animation: fadeUp .7s .4s both; }
 .wsparcie-karta__ikona { width: 48px; height: 48px; border-radius: 14px; background: #fff; display: grid; place-items: center; margin-bottom: 18px; }
 .wsparcie-karta h2 { font-weight: 700; font-size: 21px; margin: 0 0 10px; }
-.wsparcie-karta p { font-size: 14.5px; line-height: 1.65; color: #3D4A63; margin: 0 0 22px; flex: 1; }
+.wsparcie-karta p { font-size: 14.5px; line-height: 1.65; color: var(--grafit); margin: 0 0 22px; flex: 1; }
 .wsparcie-karta__przyciski { display: flex; gap: 10px; flex-wrap: wrap; }
 .wsparcie-karta__przyciski .przycisk--bialy { background: #fff; color: var(--tekst); border: 1.5px solid var(--border-input); box-shadow: none; }
 .wsparcie-karta__przyciski .przycisk--niebieski-kontur { background: transparent; color: var(--akcent); border: 1.5px solid var(--akcent); box-shadow: none; }

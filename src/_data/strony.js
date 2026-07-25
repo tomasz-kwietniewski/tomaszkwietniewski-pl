@@ -2,7 +2,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { md } from "../../lib/markdown.js";
-import { rewriteMediaUrls } from "../../lib/media.js";
+import { rewriteMediaUrls, opakujTabele } from "../../lib/media.js";
 import { tekstZHtml } from "../../lib/czytanie.js";
 import { parsujDate } from "../../lib/daty.js";
 import { ZASTEPOWANE, permalinkStrony, skroc } from "../../lib/zrodla.js";
@@ -29,7 +29,7 @@ export default function () {
     }
     zajetePermalinki.set(permalink, plik);
 
-    const bodyHtml = rewriteMediaUrls(md.render(content));
+    const bodyHtml = opakujTabele(rewriteMediaUrls(md.render(content)));
 
     generyczne.push({
       plik,
