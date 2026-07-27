@@ -3,7 +3,7 @@ title: "Jak za 1150 zł zrobiłem inteligentne ładowanie auta elektrycznego z n
 slug: "jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca"
 miniatura: "/media/2026/05/2026-05-04_ladowanie_EV.png"
 date: "2026-05-02T09:15:13"
-modified: "2026-06-08T21:37:07"
+modified: "2026-07-27T11:35:00"
 url_stara: "https://tomaszkwietniewski.pl/jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca/"
 typ: "wpis"
 kategorie: ["Nowe technologie", "Tipy ułatwiające życie"]
@@ -261,7 +261,7 @@ print(status)</code></pre>
 
 
 
-<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Tryb</th><th>Warunek</th><th>Działanie</th></tr></thead><tbody><tr><td><code>EMERGENCY</code></td><td>Włączony ręcznie przez toggle w HA</td><td>Ładuj natychmiast na 13A (~9 kW), niezależnie od PV i cen</td></tr><tr><td><code>NEGATIVE_PRICE</code></td><td>Cena Pstryk &lt; 0 zł/kWh</td><td>Ładuj na maksimum (16A)</td></tr><tr><td><code>WINTER_NIGHT</code></td><td>Tryb zimowy włączony, godz. 22–6</td><td>Ładuj na 10A (tania taryfa nocna)</td></tr><tr><td><code>SOLAR</code></td><td>SOC baterii ≥ 95% i nadwyżka PV ≥ 1,6 kW</td><td>Ładuj proporcjonalnie do nadwyżki (6–16A)</td></tr><tr><td><code>BATTERY_PRIORITY</code></td><td>SOC &lt; 95%</td><td>Czekaj, priorytet ładowania baterii</td></tr><tr><td><code>IDLE</code></td><td>Brak nadwyżek lub auto niepodłączone</td><td>Ładowarka wyłączona</td></tr></tbody></table></figure>
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Tryb</th><th>Warunek</th><th>Działanie</th></tr></thead><tbody><tr><td><code>EMERGENCY</code></td><td>Włączony ręcznie przez toggle w HA</td><td>Ładuj natychmiast na 13A (~9 kW), niezależnie od PV i cen</td></tr><tr><td><code>NEGATIVE_PRICE</code></td><td>Cena Pstryk &lt; 0 zł/kWh</td><td>Ładuj na 13A (~9 kW, bufor ~2 kW na dom)</td></tr><tr><td><code>WINTER_NIGHT</code></td><td>Tryb zimowy włączony, godz. 22–6</td><td>Ładuj na 10A (tania taryfa nocna)</td></tr><tr><td><code>SOLAR</code></td><td>SOC baterii ≥ 95% i nadwyżka ≥ 1,6 kW</td><td>Ładuj proporcjonalnie do nadwyżki (6–16A)</td></tr><tr><td><code>BATTERY_PRIORITY</code></td><td>SOC &lt; 95%</td><td>Czekaj, priorytet ładowania baterii</td></tr><tr><td><code>IDLE</code></td><td>Brak nadwyżek lub auto niepodłączone</td><td>Ładowarka wyłączona</td></tr></tbody></table></figure>
 
 
 
@@ -308,11 +308,35 @@ SOC_EMERGENCY_MIN   = 20   # nie drenuj magazynu poniżej 20%</code></pre>
 
 
 
-<h3 class="wp-block-heading">Uśrednianie PCC — eliminacja migotania</h3>
+<h3 class="wp-block-heading">Nadwyżka to nie samo PCC</h3>
 
 
 
-<p class="wp-block-paragraph">PCC &#8222;migocze&#8221; — raz -0,1 kW, raz +0,2 kW, raz -0,5 kW — nawet gdy bilans jest w zasadzie zero. To normalne przy hybrydowym falowniku, regulacja nie jest idealna. Bez filtrowania skrypt zmieniałby prąd ładowania co 30 sekund.</p>
+<p class="wp-block-paragraph">Naturalny odruch: &#8222;nadwyżka to jest to, co wypycham do sieci&#8221;, czyli PCC. Przy falowniku hybrydowym to jednak zły sygnał sterujący, bo Sofar w trybie self-use <strong>aktywnie kompensuje deficyt z magazynu</strong> i trzyma PCC blisko zera. Przy PV 1 kW, domu 5 kW i ładowarce ciągnącej 4 kW licznik pokaże PCC bliskie zeru, a skrypt uzna, że jest równowaga. Realnie w tym czasie opróżnia baterię domową.</p>
+
+
+
+<p class="wp-block-paragraph">Dlatego nadwyżkę liczę jako minimum z dwóch sygnałów:</p>
+
+
+
+<pre class="wp-block-code"><code>surplus_without_ev_kw = min(grid_power, pv_power - load_power)</code></pre>
+
+
+
+<p class="wp-block-paragraph"><code>PV minus dom</code> widzi deficyt maskowany przez magazyn. PCC z kolei pilnuje, żeby nie zabrać mocy, którą falownik akurat wpompowuje do baterii (przy SOC 95-99% <code>PV minus dom</code> jest większe niż realny eksport). Minimum z obu to nadwyżka, którą można wziąć bez szkody dla magazynu.</p>
+
+
+
+<p class="wp-block-paragraph">Sprawdzone na żywych danych w dniu wdrożenia: PV 2,8 kW, dom 0,4 kW, a PCC tylko 0,04 kW. Różnica 2,4 kW szła do ładującego się magazynu. Sam <code>PV minus dom</code> uznałby ją za wolną i podebrał baterii, <code>min()</code> widzi realne 40 W.</p>
+
+
+
+<h3 class="wp-block-heading">Uśrednianie, czyli eliminacja migotania</h3>
+
+
+
+<p class="wp-block-paragraph">Sygnał &#8222;migocze&#8221;: raz -0,1 kW, raz +0,2 kW, raz -0,5 kW, nawet gdy bilans jest w zasadzie zero. To normalne przy hybrydowym falowniku, regulacja nie jest idealna. Bez filtrowania skrypt zmieniałby prąd ładowania co 30 sekund.</p>
 
 
 
@@ -322,10 +346,12 @@ SOC_EMERGENCY_MIN   = 20   # nie drenuj magazynu poniżej 20%</code></pre>
 
 <pre class="wp-block-code"><code>PCC_HISTORY_SIZE = 3
 
-self._pcc_history.append(grid_power)
-if len(self._pcc_history) &gt; PCC_HISTORY_SIZE:
-    self._pcc_history.pop(0)
-avg_pcc = sum(self._pcc_history) / len(self._pcc_history)</code></pre>
+# uwaga: do historii trafia wartość PO doliczeniu poboru ładowarki,
+# żeby każda próbka znaczyła to samo (patrz Problem 19)
+self._surplus_history.append(available_kw)
+if len(self._surplus_history) &gt; PCC_HISTORY_SIZE:
+    self._surplus_history.pop(0)
+avg_available_kw = sum(self._surplus_history) / len(self._surplus_history)</code></pre>
 
 
 
@@ -339,10 +365,12 @@ avg_pcc = sum(self._pcc_history) / len(self._pcc_history)</code></pre>
 
 <pre class="wp-block-code"><code>SURPLUS_BIAS_W = 1000  # bufor zachęcający do startu
 
-if avg_pcc &gt; 0:
-    surplus_w = avg_pcc * 1000 + SURPLUS_BIAS_W
-else:
-    surplus_w = SURPLUS_BIAS_W</code></pre>
+# Bez podłogi: przy imporcie wychodzi ujemne i regulacja redukuje prąd
+surplus_w = avg_available_kw * 1000 + SURPLUS_BIAS_W</code></pre>
+
+
+
+<p class="wp-block-paragraph">Ważne, żeby nie zastępować ujemnej nadwyżki stałą wartością biasu. Pierwotna wersja tak robiła i sterowanie &#8222;uciekało&#8221; w górę przy zachmurzeniu. Szczegóły w Problemie 19.</p>
 
 
 
@@ -607,6 +635,79 @@ ERROR HASS: Error setting state: Bad Request</code></pre>
 
 
 
+<h3 class="wp-block-heading">Problem 19: Regulacja SOLAR &#8222;uciekała w górę&#8221; przy zachmurzeniu</h3>
+
+
+
+<p class="wp-block-paragraph">Najpoważniejszy błąd, jaki znalazłem w tym projekcie, i jednocześnie taki, którego nigdy nie zdiagnozowałem z logów. Objawiał się tylko jako &#8222;auto ładuje się mocniej niż powinno, a potem nagle stop&#8221;.</p>
+
+
+
+<p class="wp-block-paragraph">Pierwotny kod liczył nadwyżkę tak: jeśli PCC pokazuje eksport, to <code>nadwyżka = PCC + 1000 W</code>, a jeśli import, to po prostu <code>nadwyżka = 1000 W</code>. Ta druga gałąź wyrzucała informację o tym, <strong>jak duży</strong> jest import. A w trybie SOLAR do nadwyżki dolicza się jeszcze moc ładowarki (bo jej pobór siedzi już w zużyciu domu), więc przy deficycie wychodziło:</p>
+
+
+
+<pre class="wp-block-code"><code>available = 1000 W + moc_ladowarki
+target    = int(available / 690)</code></pre>
+
+
+
+<p class="wp-block-paragraph">To jest dodatnie sprzężenie zwrotne. Ładowarka na 6A (4,1 kW) daje <code>target = int(5140/690) = 7A</code>, przy 7A (4,8 kW) wychodzi 8A, i tak dalej aż do 16A. Wszystko to mimo że słońce zaszło za chmurę, a energia leci z magazynu domowego. Warunek STOP wymagałby przy tym mocy ładowarki poniżej 200 W, czyli w praktyce nie zadziała nigdy. Ładowanie kończyło się dopiero, gdy SOC magazynu spadł poniżej 95% i wszedł <code>BATTERY_PRIORITY</code>, czyli po niepotrzebnym cyklu rozładowania baterii.</p>
+
+
+
+<p class="wp-block-paragraph">Poprawka to nadwyżka liczona jako <code>min(PCC, PV minus dom)</code> bez podłogi (opisana wyżej, w sekcji o nadwyżce). Przy imporcie wartość schodzi poniżej zera, więc regulacja realnie redukuje prąd, a histereza STOP wreszcie działa.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Kolejność operacji okazała się równie ważna, co sam wzór.</strong> Pierwsza wersja poprawki uśredniała nadwyżkę, a moc ładowarki dodawała dopiero przy podejmowaniu decyzji. Symulacja pokazała, że to wciąż daje skok prądu: w pierwszej iteracji po starcie sesji historia zawiera próbkę zmierzoną przy wyłączonej ładowarce i próbkę zmierzoną przy 7,6 kW poboru. Dodanie do takiej średniej bieżącej mocy ładowarki liczy ten pobór półtora raza i przy PV 8 kW skrypt skakał na 16A, czyli 11 kW. Kompensacja musi iść <strong>przed</strong> uśrednianiem, żeby każda próbka w historii znaczyła to samo: ile w tej chwili jest do dyspozycji dla auta.</p>
+
+
+
+<p class="wp-block-paragraph">Jest jeszcze przypadek brzegowy na styku z Problemem 14. Gdy DP 102 zamarznie, ładowarka raportuje <code>WORKING</code> i 0 W, więc kompensacja wychodzi zerowa, a <code>PV minus dom</code> pokazuje ogromny deficyt, bo auto realnie ciągnie 8 kW. Skrypt uznałby to za brak nadwyżki i przerwał realnie trwającą sesję, zamiast pozwolić watchdogowi dojść do progu i ostrzec. Dlatego po dwóch iteracjach <code>WORKING + 0 W</code> do kompensacji podstawiana jest ostatnia znana moc. Dwie iteracje, bo tuż po starcie sesji chwilowe zero jest normalne, auto negocjuje z wallboxem.</p>
+
+
+
+<h3 class="wp-block-heading">Problem 20: Dedup komend bez ponowień to zakleszczenie sterowania</h3>
+
+
+
+<p class="wp-block-paragraph">Naprawa STOP-spamu z Problemu 13 wprowadziła pole <code>_last_sent_switch</code>, czyli &#8222;nie wysyłaj drugi raz tego samego&#8221;. Rozwiązała klikanie stycznika, ale wprowadziła cichą regresję: funkcja wysyłająca komendę łykała wyjątek sieciowy, a <code>_last_sent_switch</code> i tak zapisywało się na &#8222;wysłano START&#8221;. Jeden zgubiony pakiet w Wi-Fi (a wallbox stoi w garażu, zasięg bywa marny) i skrypt do końca życia procesu uważał, że START poszedł. Ładowanie nie ruszało aż do restartu AppDaemona albo przełączenia trybu awaryjnego. W drugą stronę było gorzej: nieudany STOP oznaczał ładowanie mimo trybu priorytetu baterii.</p>
+
+
+
+<p class="wp-block-paragraph">Poprawka ma dwie warstwy. Po pierwsze, funkcje wysyłające zwracają informację o powodzeniu, a stan &#8222;ostatnio wysłane&#8221; aktualizuje się tylko przy udanej wysyłce, więc nieudana komenda jest ponawiana w następnej iteracji. Po drugie, osobno obsłużony jest przypadek &#8222;komenda poszła, ale wallbox jej nie wykonał&#8221;: licznik niezgodności między intencją a stanem ładowarki, ponowienie co 4 iteracje (2 minuty). START ma limit 3 ponowień, bo auto może być po prostu naładowane do 100% i nie przyjmie sesji. STOP dostaje 5 prób i głośny błąd w logach, zamiast walić w stycznik w nieskończoność.</p>
+
+
+
+<p class="wp-block-paragraph">Ten błąd potwierdził się w terenie dokładnie w chwili wdrożenia poprawki. Auto ładowało się wtedy na 5,2 kW przy SOC magazynu 46%, czyli w warunkach, w których stary skrypt powinien był wysłać STOP. Nie wysyłał, bo miał zapamiętane, że już zatrzymał. Ręczny start ze Smart Life przechodził w ten sposób niezauważony. Nowy kod zatrzymał sesję w pierwszej iteracji po restarcie.</p>
+
+
+
+<h3 class="wp-block-heading">Problem 21: TinyTuya zwraca błąd jako słownik, nie wyjątek</h3>
+
+
+
+<p class="wp-block-paragraph"><code>device.status()</code> przy problemach sieciowych często <strong>nie rzuca wyjątku</strong>, tylko zwraca słownik <code>{&quot;Error&quot;: &quot;Network Error&quot;, &quot;Err&quot;: &quot;901&quot;}</code>. Stary kod sięgał po klucz <code>dps</code>, dostawał pusty słownik, status wychodził <code>UNKNOWN</code>, a <code>UNKNOWN</code> jest na liście stanów &#8222;gotowy do ładowania&#8221;. Efekt: ładowarka uznana za dostępną i gotową, komendy wysyłane w próżnię.</p>
+
+
+
+<p class="wp-block-paragraph">Poprawka sprawdza obecność klucza <code>Error</code> w odpowiedzi i traktuje taką sytuację jak brak łączności. Przy okazji limit ponowień gniazda zszedł z 3 na 1, bo trzy próby po 6 sekund timeoutu plus drugi odczyt potrafiły zablokować wątek AppDaemona na około 36 sekund, czyli dłużej niż interwał pętli.</p>
+
+
+
+<h3 class="wp-block-heading">Problem 22: Nieatomowy zapis pliku z licznikami</h3>
+
+
+
+<p class="wp-block-paragraph"><code>ev_charger_data.json</code> trzyma liczniki energii i całe 10-letnie archiwum, a zapisywany był w miejscu: otwórz do zapisu, zrzuć JSON. Przerwanie w trakcie (restart dodatku, brak miejsca) zostawia obcięty plik. Gorzej: od tego momentu <strong>każdy</strong> kolejny zapis padał już na etapie wczytania starej zawartości, a odczyt cicho zwracał wartości domyślne. Liczniki wyzerowane, archiwum niedostępne, w logach tylko ostrzeżenie co 30 sekund.</p>
+
+
+
+<p class="wp-block-paragraph">Poprawka: zapis do pliku tymczasowego i podmiana przez <code>os.replace()</code>, która jest atomowa w obrębie tego samego systemu plików. Nieczytelny plik jest odkładany z końcówką <code>.corrupt</code>, a skrypt startuje od pustego stanu, zamiast zapętlać się na błędzie.</p>
+
+
+
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
 
@@ -639,7 +740,7 @@ ERROR HASS: Error setting state: Bad Request</code></pre>
 
 
 
-<p class="wp-block-paragraph"><strong>Lato (kwiecień–wrzesień):</strong><br>Polska ma dobre nasłonecznienie — 9 kWp produkuje regularnie nadwyżki powyżej 1,6 kW. Auto ładuje się za darmo z nadwyżek PV. Przy ujemnych cenach Pstryk (które latem zdarzają się regularnie w południe) system ładuje na maksimum — operator energii dopłaca za pobieranie prądu.</p>
+<p class="wp-block-paragraph"><strong>Lato (kwiecień–wrzesień):</strong><br>Polska ma dobre nasłonecznienie — 9 kWp produkuje regularnie nadwyżki powyżej 1,6 kW. Auto ładuje się za darmo z nadwyżek PV. Przy ujemnych cenach Pstryk (które latem zdarzają się regularnie w południe) system ładuje na 13A, czyli około 9 kW, a operator energii dopłaca za pobieranie prądu.</p>
 
 
 
@@ -717,6 +818,50 @@ ERROR HASS: Error setting state: Bad Request</code></pre>
 
 
 
+<h2 class="wp-block-heading">Audyt kodu, czyli co siedziało w skrypcie przez trzy miesiące</h2>
+
+
+
+<p class="wp-block-paragraph">Skrypt działał od maja i robił swoje, więc przez długi czas nie było powodu do niego zaglądać. W lipcu usiadłem do porządnego przeglądu całości: linijka po linijce, z pytaniem &#8222;czy to na pewno robi to, co myślę&#8221;. Wyszły cztery błędy, z czego dwa realnie kosztowały mnie energię z magazynu domowego. Żaden nie rzucał się w oczy w logach, bo żaden nie powodował awarii. Po prostu system zachowywał się odrobinę inaczej, niż sądziłem.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Najciekawszy okazał się błąd w samej regulacji.</strong> Gdy nadeszła chmura i zaczynałem pobierać prąd z sieci, skrypt zamiast zejść z mocy ładowania, <em>podkręcał</em> ją. Krok po kroku: 6A, 7A, 8A, aż do maksimum. Powód jest podręcznikowy i dlatego wart opisania: przy imporcie kod gubił informację o tym, jak duży jest deficyt, i podstawiał w to miejsce stałą wartość. A ponieważ do nadwyżki dolicza się moc ładowarki, każda kolejna iteracja widziała &#8222;więcej dostępnej mocy&#8221; niż poprzednia. Klasyczne dodatnie sprzężenie zwrotne, w pętli, którą sam napisałem i której przez kwartał nie zauważyłem. Ładowanie kończyło się dopiero wtedy, gdy magazyn domowy spadł poniżej 95% i wchodził tryb priorytetu baterii, czyli już po niepotrzebnym cyklu rozładowania.</p>
+
+
+
+<p class="wp-block-paragraph">Przy okazji wyszła rzecz, która zmieniła moje rozumienie własnej instalacji. <strong>Licznik na złączu z siecią nie mówi prawdy o nadwyżce, jeśli ma się falownik hybrydowy.</strong> Sofar w trybie autokonsumpcji aktywnie dopełnia deficyt z magazynu, żeby utrzymać zerowy bilans z siecią. Efekt jest taki, że przy PV 1 kW, domu 5 kW i aucie ciągnącym 4 kW licznik pokazuje spokojne zero, a bateria w garażu po cichu się opróżnia. Teraz nadwyżkę liczę jako minimum z dwóch rzeczy: tego, co faktycznie wypycham do sieci, i tego, co zostaje z produkcji po odjęciu zużycia domu. Pierwsze pilnuje, żeby nie podbierać mocy ładującej się baterii, drugie widzi deficyt, który bateria maskuje.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Drugi poważny błąd był bardziej perfidny, bo powstał przy naprawianiu innego błędu.</strong> W maju walczyłem z tym, że skrypt co 30 sekund wysyłał do wallboxa komendę STOP i słychać było klikanie stycznika. Naprawa była prosta: zapamiętuj, co ostatnio wysłałeś, i nie powtarzaj. Tyle że zapamiętywanie działo się także wtedy, gdy wysyłka się nie udała. Wystarczył jeden zgubiony pakiet Wi-Fi (a wallbox stoi w garażu, zasięg bywa marny), żeby skrypt do końca życia procesu był przekonany, że komendę wysłał. W praktyce: ładowanie nie ruszało, dopóki czegoś nie zrestartowałem, albo, w drugą stronę, auto ładowało się mimo trybu priorytetu baterii.</p>
+
+
+
+<p class="wp-block-paragraph">Ten drugi wariant potwierdził się w najlepszy możliwy sposób: dokładnie w chwili wgrywania poprawki. Auto ciągnęło wtedy 5,2 kW przy magazynie naładowanym w 46%, czyli w sytuacji, w której skrypt od dawna powinien był je zatrzymać. Nie zatrzymywał, bo miał zapisane, że już to zrobił. Nowa wersja ucięła sesję w pierwszej iteracji po restarcie. Trudno o lepszy dowód, że błąd nie był teoretyczny.</p>
+
+
+
+<p class="wp-block-paragraph">Do tego doszły dwie rzeczy z gatunku &#8222;cicha awaria&#8221;. Biblioteka TinyTuya przy problemach z siecią nie zgłasza wyjątku, tylko zwraca słownik z kluczem <code>Error</code>, a stary kod interpretował to jako &#8222;ładowarka gotowa do pracy&#8221;. I plik z licznikami energii oraz dziesięcioletnim archiwum zapisywał się nieatomowo, więc jedno przerwanie w złym momencie mogło go uszkodzić tak, że od tej pory każdy kolejny zapis cicho padał, a liczniki wracały do zera.</p>
+
+
+
+<h3 class="wp-block-heading">Czego się nauczyłem o testowaniu takich systemów</h3>
+
+
+
+<p class="wp-block-paragraph">Napisałem do skryptu zestaw prostych testów, bez żadnego frameworka, podmieniając AppDaemon i TinyTuya atrapami. Ale najwięcej dała nie tabelka testów, tylko <strong>symulacja całego dnia</strong>: słońce, chmura, powrót słońca, wieczór, z wallboxem reagującym na komendy jak prawdziwy. Dopiero ona pokazała błąd, którego testy jednostkowe nie widziały, bo dotyczył kolejności operacji. Uśrednianie odczytów robiłem <em>przed</em> doliczeniem poboru ładowarki, przez co średnia mieszała próbki mierzone przy różnej mocy ładowania i tuż po starcie sesji prąd skakał na maksimum.</p>
+
+
+
+<p class="wp-block-paragraph">Wniosek na przyszłość jest chyba taki: przy sterowaniu ze sprzężeniem zwrotnym sprawdzanie pojedynczych funkcji to za mało. Trzeba puścić pętlę w czasie i zobaczyć, dokąd zbiega. Po poprawkach symulacja wygląda tak, jak powinna: 11A stabilnie w pełnym słońcu, przy chmurze redukcja 10, 8, 7, 6 amperów, stop, a potem płynny powrót w górę.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
 <h2 class="wp-block-heading">Koszt całego rozwiązania</h2>
 
 
@@ -754,6 +899,9 @@ CHARGER_WORKING_STATES = {"WORKING"}
 
 def _get_charger_data(self):
     raw = self._device.status()
+    # tinytuya zwraca błąd jako słownik, nie wyjątek (Problem 21)
+    if not isinstance(raw, dict) or "Error" in raw:
+        raise RuntimeError(f"tinytuya zwrocil blad: {raw!r}")
     dps = raw.get("dps", {})
 
     status  = str(dps.get("109", "unknown")).upper()
@@ -769,22 +917,28 @@ def _get_charger_data(self):
 
 
 
-<p class="wp-block-paragraph"><strong>Obliczanie nadwyżki z uśrednianiem PCC:</strong></p>
+<p class="wp-block-paragraph"><strong>Obliczanie nadwyżki z uśrednianiem:</strong></p>
 
 
 
-<pre class="wp-block-code"><code># Sofar: dodatni PCC = eksport (nadwyżka), ujemny = import
+<pre class="wp-block-code"><code># Sofar: dodatni PCC = eksport (nadwyżka), ujemny = import.
+# min() bierze wariant konserwatywny: PV minus dom widzi deficyt
+# maskowany przez magazyn, PCC pilnuje mocy idącej do baterii.
+surplus_without_ev_kw = min(grid_power, pv_power - load_power)
+
+# Pobór auta siedzi już w load_power, doliczamy go z powrotem PRZED
+# uśrednianiem, żeby każda próbka w historii znaczyła to samo.
+available_kw = surplus_without_ev_kw + charger_power_kw
+
 # Uśredniamy ostatnie 3 odczyty (90s) żeby wyeliminować migotanie
-self._pcc_history.append(grid_power)
-if len(self._pcc_history) &gt; PCC_HISTORY_SIZE:
-    self._pcc_history.pop(0)
-avg_pcc = sum(self._pcc_history) / len(self._pcc_history)
+self._surplus_history.append(available_kw)
+if len(self._surplus_history) &gt; PCC_HISTORY_SIZE:
+    self._surplus_history.pop(0)
+avg_available_kw = sum(self._surplus_history) / len(self._surplus_history)
 
-# Bias +1000W — agresywniejsze wykorzystanie nadwyżek
-if avg_pcc &gt; 0:
-    surplus_w = avg_pcc * 1000 + SURPLUS_BIAS_W
-else:
-    surplus_w = SURPLUS_BIAS_W</code></pre>
+# Bias +1000W, agresywniejsze wykorzystanie nadwyżek.
+# BEZ podłogi: przy imporcie wychodzi ujemne, więc regulacja redukuje prąd.
+surplus_w = avg_available_kw * 1000 + SURPLUS_BIAS_W</code></pre>
 
 
 
@@ -801,7 +955,7 @@ else:
 
     # 2. Ujemna cena energii
     if price &lt; 0:
-        return ("NEGATIVE_PRICE", MAX_CURRENT_A)  # 16A
+        return ("NEGATIVE_PRICE", NEGATIVE_PRICE_CURRENT_A)  # 13A
 
     # 3. Tryb zimowy — nocne ładowanie
     if winter_mode and in_night_window:
@@ -889,4 +1043,4 @@ def _is_emergency_active(self):
 
 
 
-<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia).</em></p>
+<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji.</em></p>
