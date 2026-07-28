@@ -3,7 +3,7 @@ title: "Jak za 1150 zł zrobiłem inteligentne ładowanie auta elektrycznego z n
 slug: "jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca"
 miniatura: "/media/2026/05/2026-05-04_ladowanie_EV.png"
 date: "2026-05-02T09:15:13"
-modified: "2026-07-27T11:35:00"
+modified: "2026-07-28T14:10:00"
 url_stara: "https://tomaszkwietniewski.pl/jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca/"
 typ: "wpis"
 kategorie: ["Nowe technologie", "Tipy ułatwiające życie"]
@@ -708,6 +708,46 @@ target    = int(available / 690)</code></pre>
 
 
 
+<h3 class="wp-block-heading">Problem 23: Regulacja goniąca szum, czyli ładowarka pikająca co 30 sekund</h3>
+
+
+
+<p class="wp-block-paragraph">Ten problem zgłosiło ucho, nie log. Dzień po naprawie regulacji usłyszałem przez otwarte okno, że wallbox pika bardzo często. Logi potwierdziły od ręki: w ciągu trzech minut prąd zmienił się pięć razy, w tym sekwencja <strong>10A, 11A, z powrotem 10A w ciągu minuty</strong>.</p>
+
+
+
+<p class="wp-block-paragraph">Pierwsza przyczyna to brak strefy nieczułości. Komenda szła do ładowarki, ilekroć nowy cel różnił się od poprzedniego choćby o jeden amper. Tyle że jeden amper to zaledwie 690 W (trzy fazy razy 230 V), a dzielenie jest obcinane w dół. Gdy nadwyżka stanęła dokładnie na granicy stopnia, wystarczyło wahanie rzędu <strong>30 W</strong>, czyli ułamka procenta, żeby cel przeskakiwał w każdej iteracji. W symulacji stabilnego słońca z takim właśnie szumem stary kod wygenerował 29 zmian prądu w kwadrans.</p>
+
+
+
+<p class="wp-block-paragraph">Druga przyczyna jest ciekawsza. Porównałem cel z rzeczywistą mocą i okazało się, że <strong>auto dochodzi do zadanego prądu z opóźnieniem około minuty</strong>: przy celu 10A moc odpowiadała najpierw 8,5A, minutę później 9,4A. A ponieważ zmierzony pobór ładowarki wraca do wyliczenia nadwyżki, sterownik reagował na stan, który jeszcze się nie ustalił, i sam sobie produkował oscylacje. Podręcznikowy błąd: pętla regulacji szybsza niż obiekt, którym steruje.</p>
+
+
+
+<p class="wp-block-paragraph">Rozwiązanie ma dwie warstwy. <strong>Histereza plus minus 250 W wokół progu stopnia</strong> - żeby podnieść prąd, nadwyżka musi przekroczyć próg z zapasem, i tak samo w drugą stronę. Oraz <strong>potwierdzenie zmiany w czasie</strong> - nowy cel musi utrzymać się przez dwie iteracje, zanim komenda pójdzie do wallboxa. Wyjątkiem jest spadek o trzy ampery lub więcej, który idzie natychmiast, bo chroni przyłącze 11 kW, gdy nagle ruszy pompa ciepła albo piekarnik.</p>
+
+
+
+<p class="wp-block-paragraph">Świadomie wygładzam też <em>małe</em> redukcje, choć pierwszy szkic poprawki miał je wykonywać od ręki. Zmieniłem zdanie po prostej refleksji: krótkie zejście w magazyn domowy nie jest tragedią, bo magazyn i tak się doładuje, gdy słońce wyjdzie zza chmury. Rzadsze szarpanie ładowarką jest tego warte.</p>
+
+
+
+<p class="wp-block-paragraph">Efekt zmierzony na symulacji, w tym na prawdziwych nadwyżkach z logów:</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Scenariusz</th><th>Przed</th><th>Po</th></tr></thead><tbody><tr><td>Realne logi (3 minuty)</td><td>5 zmian</td><td>1</td></tr><tr><td>Pochmurne 30 minut</td><td>52 zmiany</td><td>1</td></tr><tr><td>Stabilne słońce 15 minut</td><td>29 zmian</td><td>0</td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph">Koszt wolniejszego podbijania mocy to 0,04-0,09 kWh, czyli kilka groszy. Weryfikacja na produkcji potwierdziła rzecz jeszcze ładniejszą: w oknie dwóch i pół minuty produkcja PV spadła chwilowo z 6,8 kW do 1,6 kW, bo przeszła chmura, a prąd <strong>nie zmienił się ani razu</strong>. Dołek nie utrzymał się przez wymagane dwie iteracje, więc sterownik go zignorował i słońce wróciło.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Wniosek ogólny:</strong> przy sterowaniu ze sprzężeniem zwrotnym nie wystarczy poprawnie policzyć wartość zadaną. Trzeba jeszcze zapytać, jak szybko obiekt na nią odpowiada, i nie wysyłać komend częściej. Inaczej regulator ściga własny ogon.</p>
+
+
+
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
 
@@ -855,6 +895,10 @@ target    = int(available / 690)</code></pre>
 
 
 <p class="wp-block-paragraph">Wniosek na przyszłość jest chyba taki: przy sterowaniu ze sprzężeniem zwrotnym sprawdzanie pojedynczych funkcji to za mało. Trzeba puścić pętlę w czasie i zobaczyć, dokąd zbiega. Po poprawkach symulacja wygląda tak, jak powinna: 11A stabilnie w pełnym słońcu, przy chmurze redukcja 10, 8, 7, 6 amperów, stop, a potem płynny powrót w górę.</p>
+
+
+
+<p class="wp-block-paragraph">Dopisek z następnego dnia: ta sama historia dostała ciąg dalszy, którego nie wychwyciły ani testy, ani symulacja. Zgłosiło go ucho - usłyszałem przez okno, że ładowarka pika co pół minuty. Regulacja liczyła poprawnie, tylko wysyłała komendy znacznie częściej, niż auto było w stanie za nimi nadążyć. Opisałem to jako Problem 23 wyżej. Morał: nawet dobra symulacja nie zastąpi tego, że system stoi w garażu i wydaje dźwięki.</p>
 
 
 
@@ -1043,4 +1087,4 @@ def _is_emergency_active(self):
 
 
 
-<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji.</em></p>
+<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji. Aktualizacja 6: 28 lipca 2026 - Problem 23: regulacja goniąca szum (prąd zmieniany co 30 sekund, sekwencje 10A, 11A, 10A). Histereza plus minus 250 W wokół progu stopnia oraz potwierdzenie zmiany przez dwie iteracje; duży spadek nadal natychmiastowy. Zmierzone: 52 zmiany prądu w pochmurne pół godziny zeszły do jednej.</em></p>
