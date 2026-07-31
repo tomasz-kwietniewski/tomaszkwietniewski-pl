@@ -33,7 +33,8 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   w nav (po Projektach) i w stopce; przekierowanie `/tematy/` -> `/polecam/` (przekierowania.js).
   Burger nav od 1080 px (pełne menu z Polecam potrzebuje ~1050 px); `.nav__link` ma nowrap.
   verify_build.mjs pilnuje 7 kafelków na hubie; sanity ksiazki sprawdza `polecana-okladka`.
-  Treść sprzętowa (komputery/telefony) przeniesiona 1:1 - wymaga aktualizacji merytorycznej.
+  Polecane telefony zaktualizowane merytorycznie (stan: lipiec 2026); polecane-komputery
+  przeniesione 1:1 ze starego WP - jeszcze do aktualizacji merytorycznej.
 - **Polityka prywatności PRZEPISANA (2026-07-17):** zgodna z faktycznym stanem strony
   (newsletter MailerLite, kontakt e-mail, logi GitHub Pages, transfer do USA wg Data Privacy
   Framework, disclaimer wg MAR zamiast uchylonego rozporządzenia MF z 2005). Strona NIE
