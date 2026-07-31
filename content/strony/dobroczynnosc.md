@@ -19,6 +19,7 @@ typ: "strona"
 <p>Polecam organizacje społeczne i pożytku publicznego (OPP):</p>
 
 <ul>
+<li>Fundacja Misja MADA (Adopcja Serca na Madagaskarze; prowadzę ich serwis internetowy): <a href="https://misjamada.pl/" target="_blank" rel="noreferrer noopener">misjamada.pl</a></li>
 <li>Fundacja L'Arche Warszawa: <a href="https://www.larche.org.pl/warszawa/" target="_blank" rel="noreferrer noopener">larche.org.pl/warszawa</a></li>
 <li>Pallotyńska Fundacja Misyjna Salvatti.pl: <a href="https://salvatti.pl/" target="_blank" rel="noreferrer noopener">salvatti.pl</a></li>
 <li>Stowarzyszenie mali bracia Ubogich: <a href="https://www.malibracia.org.pl/" target="_blank" rel="noreferrer noopener">malibracia.org.pl</a></li>
