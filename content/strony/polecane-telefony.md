@@ -38,6 +38,6 @@ typ: "strona"
 
 <p><a href="https://mobilevikings.pl/referral/48507630636/" target="_blank" rel="noreferrer noopener">mobilevikings.pl/referral/48507630636</a></p>
 
-<p>Ewentualnie fajną ofertą jest też Orange Flex (od niedawna także dla jednoosobowej działalności gospodarczej). Wklejam z aplikacji (Ola dostanie 70 zł, a Ty 30 zł). Najlepiej link otworzyć na telefonie. Dostaniesz 30 zł, które wykorzystasz na Flexa lub zwrócisz sobie na kartę. Pobierz apkę, zarejestruj się, wpisz kod ALEKSANDRA5P9W przed wyborem metody płatności i aktywuj Plan. Tutaj ściągniesz aplikację: <a href="https://flexapp.pl/MPrG4Cdogsv58A8W8" target="_blank" rel="noreferrer noopener">flexapp.pl</a></p>
+<p>Ewentualnie fajną ofertą jest też Orange Flex (także dla jednoosobowej działalności gospodarczej). Sami już z niego nie korzystamy, ale oferta nadal jest w porządku i mogę ją polecić. Wszystko załatwiasz w aplikacji Orange Flex - rejestracja, wybór planu i przeniesienie numeru.</p>
 
 <p>Cenowo wychodzi bardzo podobnie. Flex ma mały pakiet danych w UE, a Vikings nie. Vikings ma kumulację GB internetu, a we Flexie przepadają co miesiąc. Vikings to zasięg Play, a Flex oczywiście Orange. W obu przejście to kwestia wypełnienia formularza w aplikacji i tyle. Resztę już oni zrobią. Trzeba tylko trochę poczekać na przeniesienie.</p>
