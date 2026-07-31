@@ -16,6 +16,7 @@ typ: "strona"
 <li>Uwaga! Naukowy bełkot: <a href="https://www.youtube.com/channel/UC_7PqixGIdE-jjoHKMPYpGA/videos" target="_blank" rel="noreferrer noopener">youtube.com/NaukowyBelkot</a></li>
 <li>Polimaty (Radek Kotarski): <a href="https://www.youtube.com/user/Polimaty/videos" target="_blank" rel="noreferrer noopener">youtube.com/user/Polimaty</a></li>
 <li>Dieta Irenka Owsiak:-) <a href="https://www.youtube.com/channel/UC-jk6JivLV1EwYzYeuUDzSg/videos" target="_blank" rel="noreferrer noopener">youtube.com/DietaIrenkaOwsiak</a></li>
+<li>Dr Bartek Kulczyński: <a href="https://www.youtube.com/@drbartekpl" target="_blank" rel="noreferrer noopener">youtube.com/@drbartekpl</a></li>
 </ul>
 
 <h2>Historyczne</h2>
