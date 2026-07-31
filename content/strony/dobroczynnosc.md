@@ -44,6 +44,4 @@ typ: "strona"
 
 <h2>Twórcy, których wspieram na Patronite</h2>
 
-<figure><img loading="lazy" decoding="async" width="1024" height="345" src="media/2021/06/patronite-logos-1-1024x345.png" alt="Logotypy twórców wspieranych na Patronite"></figure>
-
-<p>Lista twórców, z których pracy korzystam i których wspieram na Patronite: Gdzie Bądź, Dział Zagraniczny, Globstory, Leszek Sykulski, PodróżoVanie, Dariusz Rosiak, Modlitwa w drodze, Uwaga Naukowy Bełkot, Langusta na palmie, Ciekawe historie, Wojna Idei/Szymon mówi i Podcast historyczny.</p>
+<p>Lista twórców, z których pracy korzystam i których wspieram na Patronite: 52Notatki i Przyjaciele, Piotr Żyłka, Więź, Dudek o Historii, Dzikoprzygody, Dariusz Rosiak, Radio Naukowe, Podcast Historyczny, Tomasz Samołyk i MotoDziennik.</p>
