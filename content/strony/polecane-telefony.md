@@ -124,6 +124,10 @@ typ: "strona"
 <li>Komfort obsługi jest ważniejszy niż wydajność w grach.</li>
 </ul>
 
+<h3>Mój osobisty wybór: Vivo X200 Ultra z chińskiej dystrybucji</h3>
+
+<p>Ja osobiście celuję w <strong>Vivo X200 Ultra</strong> z chińskiej dystrybucji - to top jakości aparatu w smartfonach i według mnie jedyna opcja, za którą warto dołożyć powyżej progów z tego zestawienia. Ceny w Chinach są dużo niższe niż w oficjalnej dystrybucji, za niewielkie kompromisy (m.in. kwestia gwarancji i wgrania globalnego oprogramowania). Kupuję w sprawdzonym przeze mnie sklepie: <a href="https://tradingshenzhen.com/en/vivo-x200-x200-pro-mini-x200-pro-x200-ultra" target="_blank" rel="noreferrer noopener">tradingshenzhen.com</a> (wariant 12/256 GB od ok. 3300 zł) - z tego samego źródła mam laptopy opisane na stronie <a href="/tematy/polecane-komputery/">Polecane komputery</a>.</p>
+
 <h3>Jak kupować opłacalnie</h3>
 
 <ul>
