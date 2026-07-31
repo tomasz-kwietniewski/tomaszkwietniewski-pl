@@ -46,10 +46,17 @@ for (const plik of stronyPliki) {
 if (stronOk === stronyPliki.length) ok(`podstrony: ${stronOk}/${stronyPliki.length} zbudowane`);
 
 // Widoki główne + techniczne
-for (const p of ["index.html", "blog/index.html", "projekty/index.html", "o-mnie/index.html", "newsletter/index.html", "wsparcie/index.html", "kontakt/index.html", "404.html", "feed.xml", "feed/index.html", "sitemap.xml", "robots.txt", "CNAME"]) {
+for (const p of ["index.html", "blog/index.html", "projekty/index.html", "polecam/index.html", "o-mnie/index.html", "newsletter/index.html", "wsparcie/index.html", "kontakt/index.html", "404.html", "feed.xml", "feed/index.html", "sitemap.xml", "robots.txt", "CNAME"]) {
   if (!existsSync(path.join(SITE, p))) blad(`brak ${p}`);
 }
 ok("widoki główne i pliki techniczne obecne");
+
+// Hub /polecam/ linkuje wszystkie podstrony z polecankami
+const polecamHtml = readFileSync(path.join(SITE, "polecam", "index.html"), "utf8");
+const polecamCele = ["/tematy/ksiazki/", "/tematy/podcasty/", "/tematy/kanaly-youtube/", "/tematy/filmy-i-seriale/", "/tematy/dobroczynnosc/", "/tematy/polecane-komputery/", "/tematy/polecane-telefony/"];
+const polecamBraki = polecamCele.filter((c) => !polecamHtml.includes(`href="${c}"`));
+if (polecamBraki.length) blad(`/polecam/ nie linkuje: ${polecamBraki.join(", ")}`);
+else ok(`/polecam/: ${polecamCele.length} kafelków z linkami`);
 
 // /blog/ musi listować wszystkie opublikowane wpisy. Łapie regresję typu
 // "async w include+for renderuje pustą siatkę" - strona istnieje, kart brak.
@@ -100,7 +107,7 @@ if (!brakujaceMedia && !relatywneMedia) ok(`media+assets: ${sprawdzone.size} uni
 const sanity = [
   { plik: "pocket/index.html", fragment: "wp-block-paragraph" },
   { plik: "pstryk-czy-taryfa-strefowa/index.html", fragment: "<table" },
-  { plik: "tematy/ksiazki/index.html", fragment: "wp-block-kadence-iconlist" },
+  { plik: "tematy/ksiazki/index.html", fragment: "polecana-okladka" },
 ];
 for (const s of sanity) {
   const p = path.join(SITE, s.plik);

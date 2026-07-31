@@ -139,7 +139,7 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .nav__nazwa { display: block; font-family: var(--naglowki); font-weight: 700; font-size: 17px; line-height: 1.2; }
 .nav__tagline { display: block; font-size: 11.5px; color: var(--tekst-2); }
 .nav__linki { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; }
-.nav__link { padding: 9px 16px; border-radius: 999px; color: var(--tekst); }
+.nav__link { padding: 9px 16px; border-radius: 999px; color: var(--tekst); white-space: nowrap; }
 .nav__link:hover { background: var(--hover-nav); opacity: 1; }
 .nav__link--aktywny { color: var(--akcent); background: var(--akcent-tlo); }
 .nav__link--aktywny:hover { background: var(--akcent-tlo); }
@@ -448,6 +448,29 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .projekty-kredyt { margin: 18px 0 0; font-size: 12px; line-height: 1.5; color: var(--wyciszony); }
 .projekty-kredyt a { color: var(--tekst-2); text-decoration: underline; }
 
+/* ---------- Polecam ---------- */
+.polecam-intro { max-width: 720px; margin-bottom: 40px; animation: fadeUp .7s both; }
+.polecam-intro h1 { font-weight: 700; font-size: 44px; letter-spacing: -.01em; margin: 0 0 14px; }
+.polecam-intro p { font-size: 16.5px; line-height: 1.65; color: var(--tekst-2); margin: 0; }
+.polecam-siatka { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.polecam-karta {
+  display: block; background: var(--karta); border-radius: 22px; padding: 30px 32px;
+  color: inherit; transition: transform .3s; animation: fadeUp .7s .05s both;
+}
+.polecam-karta:hover { transform: translateY(-4px); }
+.polecam-karta__ikona {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 14px; background: var(--akcent-tlo);
+  color: var(--akcent); margin-bottom: 16px;
+}
+.polecam-karta h2 { font-weight: 700; font-size: 19px; margin: 0 0 8px; }
+.polecam-karta p { font-size: 14.5px; line-height: 1.6; color: var(--grafit); margin: 0; }
+.polecam-stopka { margin: 32px 0 0; font-size: 14.5px; color: var(--tekst-2); }
+.polecam-stopka a { font-weight: 600; }
+/* Okładki polecanych książek - wyśrodkowane, w naturalnym rozmiarze */
+.tresc .polecana-okladka { text-align: center; }
+.tresc .polecana-okladka img { display: inline-block; }
+
 /* ---------- O mnie ---------- */
 .omnie-intro { padding-block: 72px 56px; display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; }
 .omnie-intro__foto { position: relative; animation: fadeUp .8s .1s cubic-bezier(.2, .7, .3, 1) both; }
@@ -609,14 +632,15 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
   .dolne-karty { grid-template-columns: 1fr; }
   .projekty-siatka { grid-template-columns: 1fr; }
   .projekt-featured { grid-template-columns: 1fr; }
+  .polecam-siatka { grid-template-columns: repeat(2, 1fr); }
   .omnie-intro { grid-template-columns: 1fr; gap: 44px; }
   .kontakt { grid-template-columns: 1fr; gap: 44px; }
   .portfel__uklad { grid-template-columns: 1fr; }
   .wartosci { grid-template-columns: 1fr; }
 }
 
-/* Pełna nawigacja mieści się dopiero od ~950 px - poniżej 980 px (bufor) przechodzimy na burger */
-@media (max-width: 980px) {
+/* Pełna nawigacja (z pozycją Polecam) mieści się dopiero od ~1050 px - poniżej 1080 px (bufor) przechodzimy na burger */
+@media (max-width: 1080px) {
   .nav__linki { display: none; }
   .nav__burger { display: block; }
   .nav--otwarta .nav__linki {
@@ -660,6 +684,8 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
   .hero__chip { display: none; }
   .blog-intro h1 { font-size: 36px; }
   .omnie-intro h1, .kontakt__lewa h1 { font-size: 36px; }
+  .polecam-siatka { grid-template-columns: 1fr; }
+  .polecam-intro h1 { font-size: 36px; }
 }
 
 @media (max-width: 480px) {
@@ -667,6 +693,7 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
   .form-nl .przycisk { width: 100%; text-align: center; }
   .wpis-cta__przyciski { width: 100%; }
   .projekt { padding: 26px 22px; }
+  .polecam-karta { padding: 26px 22px; }
 }
 
 /* Bardzo wąskie ekrany (np. okładka Galaxy Fold ~280 px) - nagłówek i stopka muszą się zmieścić */

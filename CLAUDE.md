@@ -26,6 +26,14 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   zbudowane i przetestowane w przeglądarce (Playwright: 0 błędów konsoli, brak poziomego
   scrolla na mobile 375 px, filtr kategorii, donut, e-mail reveal, Pagefind, formularz ML).
   `npm run verify` (build + asercje) przechodzi. OPUBLIKOWANE 2026-07-17.
+- **Sekcja "Polecam" (2026-07-31):** hub `/polecam/` (szablon `src/polecam.njk`, kafelki
+  `.polecam-*` w style.css) + 7 podstron z polecankami przepisanych z HTML Kadence na czysty
+  HTML: ksiazki, podcasty, kanaly-youtube, filmy-i-seriale, dobroczynnosc, polecane-komputery,
+  polecane-telefony (adresy `/tematy/...` bez zmian - permalink z `url_stara`). Link "Polecam"
+  w nav (po Projektach) i w stopce; przekierowanie `/tematy/` -> `/polecam/` (przekierowania.js).
+  Burger nav od 1080 px (pełne menu z Polecam potrzebuje ~1050 px); `.nav__link` ma nowrap.
+  verify_build.mjs pilnuje 7 kafelków na hubie; sanity ksiazki sprawdza `polecana-okladka`.
+  Treść sprzętowa (komputery/telefony) przeniesiona 1:1 - wymaga aktualizacji merytorycznej.
 - **Polityka prywatności PRZEPISANA (2026-07-17):** zgodna z faktycznym stanem strony
   (newsletter MailerLite, kontakt e-mail, logi GitHub Pages, transfer do USA wg Data Privacy
   Framework, disclaimer wg MAR zamiast uchylonego rozporządzenia MF z 2005). Strona NIE

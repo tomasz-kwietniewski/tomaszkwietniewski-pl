@@ -11,7 +11,7 @@ export default function () {
   const lista = [
     { od: "/start/", do: "/" },
     { od: "/wszystkie-wpisy/", do: "/blog/" },
-    { od: "/tematy/", do: "/blog/" },
+    { od: "/tematy/", do: "/polecam/" },
     { od: "/zapis-na-newsletter/", do: "/newsletter/" },
   ];
 
