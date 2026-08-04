@@ -7,15 +7,15 @@ kategorie:
 excerpt: "Benzyna kosztuje dziś 7,50 zł za litr, a przejechanie 100 km elektrykiem ładowanym w domu - nawet trzy razy mniej. Policzyłem uczciwie, z ubezpieczeniem, serwisem i wykupem po leasingu, ile naprawdę kosztuje przesiadka na elektryka. W środku interaktywny kalkulator - podstaw swoje liczby i sprawdź sam."
 typ: wpis
 ---
-Benzyna Pb95 kosztuje dziś średnio około 7,50 zł za litr i jest najdroższa w tym roku. Diesel przebił 8 zł. Przy takich cenach przejechanie 100 km zwykłym autem spalinowym to wydatek rzędu 50-60 zł. Tym samym dystansem w samochodzie elektrycznym ładowanym w domu - nawet bez żadnych sztuczek, w najzwyklejszej taryfie - jedzie się za jakieś 20-25 zł. A jak ktoś ma taryfę nocną, to za 10-12 zł.
+Benzyna Pb95 kosztuje dziś średnio około 7,50 zł za litr i jest najdroższa w tym roku. Diesel przebił 8 zł. Przy takich cenach przejechanie 100 km zwykłym autem spalinowym to wydatek rzędu 50-60 zł. Tę samą odległość samochodem elektrycznym, ładowanym w domu, nawet bez żadnych sztuczek, w najzwyklejszej taryfie, można przejechać za jakieś 20-25 złotych. A jak ktoś ma taryfę nocną, to za 10-12 zł.
 
-Ta różnica robi się na tyle duża, że moim zdaniem ekonomia w końcu zwycięży i elektryki spopularyzują się nie dlatego, że są modne albo ekologiczne, tylko dlatego, że ludzie zaczną liczyć. W tym wpisie chcę pokazać, jak to policzyć uczciwie - razem z ubezpieczeniem, serwisem i wykupem po leasingu, a nie tylko "paliwo kontra prąd". W środku znajdziesz interaktywny kalkulator, w który podstawisz swoje liczby.
+Ta różnica robi się na tyle duża, że moim zdaniem ekonomia w końcu zwycięży i elektryki spopularyzują się nie dlatego, że są modne albo ekologiczne, tylko dlatego, że ludzie zaczną liczyć. W tym wpisie chcę pokazać, jak to policzyć uczciwie - razem z ubezpieczeniem, serwisem i wykupem po leasingu, a nie tylko "paliwo kontra prąd". Poniżej znajdziesz interaktywny kalkulator, w który podstawisz swoje liczby.
 
-## Dla kogo to w ogóle działa
+## Dla kogo?
 
 Nie będę udawał, że elektryk opłaca się każdemu. Widzę dwa warunki:
 
-**Po pierwsze: dostęp do gniazdka.** Przy domu, w garażu albo w pracy - tam, gdzie samochód i tak długo stoi. Nie potrzebujesz wallboxa ani siły. Zwykłe gniazdko 230 V pozwala ładować z mocą około 2-3 kW, czyli przez noc uzupełnisz kilkanaście do dwudziestu kilku kWh - więcej, niż przeciętny kierowca zużywa na dzienne dojazdy. Szacuję, że taką możliwość ma ponad połowa Polaków: cały dom jednorodzinny, spora część szeregówek, coraz więcej miejsc pracy. Jeśli mieszkasz w bloku bez dostępu do ładowania i w pracy też go nie masz - ten rachunek na dziś działa u Ciebie słabiej i tego też nie będę ukrywał.
+**Po pierwsze: dostęp do gniazdka.** Przy domu, w garażu albo w pracy - tam, gdzie samochód i tak długo stoi. Nie potrzebujesz wallboxa ani siły. Zwykłe gniazdko 230 V pozwala ładować z mocą około 2-3 kW, czyli przez noc uzupełnisz kilkanaście do dwudziestu kilku kWh - więcej, niż przeciętny kierowca zużywa na dzienne dojazdy. Szacuję, że taką możliwość ma ponad połowa Polaków: domy jednorodzinne, spora część szeregówek, coraz więcej miejsc pracy, a także garaże podziemne w blokach - tam często da się założyć oddzielny licznik i zrobić gniazdko przy własnym miejscu postojowym. Czasem uda się to nawet przy wyznaczonym miejscu parkingowym pod blokiem. Jeśli mieszkasz w bloku bez dostępu do ładowania i w pracy też go nie masz - ten rachunek na dziś działa u Ciebie słabiej i tego też nie będę ukrywał.
 
 **Po drugie: nie robisz bardzo długich tras kilka razy w tygodniu.** Podkreślam - chodzi o częstotliwość, nie o sam fakt. Przedstawiciel handlowy jeżdżący 500 km dziennie to nie jest dziś klient na elektryka. Ale dłuższa trasa raz na miesiąc czy dwa? Nowoczesne elektryki mają realne zasięgi 400-600 km, sieć szybkich ładowarek przy trasach jest już przyzwoita, a przerwa na ładowanie to około 30 minut - akurat na kawę. Trzeba się przyzwyczaić do planowania ładowań, ale da się z tym żyć, mówię to z własnego doświadczenia. Te dwa warunki spełnia, na moje oko, zdecydowana większość kierowców.
 
@@ -36,9 +36,9 @@ Konkretne liczby, stan na początek sierpnia 2026 (ceny paliw za [e-petrol.pl](h
 
 Zwróć uwagę na dwie rzeczy. Cenę prądu przyjąłem celowo niekorzystnie - 1,30 zł/kWh to zwykła całodobowa taryfa, bez żadnej optymalizacji, bez fotowoltaiki, bez magazynu energii. Nawet wtedy elektryk jest ponad dwa razy tańszy w jeździe od benzyniaka i diesla. A wystarczy jeden wniosek do sprzedawcy prądu o taryfę dwustrefową (G12w), żeby ładować w nocy i w weekendy za około 70 groszy i zejść poniżej połowy tego kosztu.
 
-Druga rzecz: LPG. Jeśli jeździsz na gazie, to Twoja jazda już jest tania i oszczędność z przesiadki na elektryka będzie wyraźnie mniejsza. Nie będę naciągał - dla kierowcy na LPG ten rachunek wygląda inaczej i kalkulator niżej uczciwie Ci to pokaże.
+Druga rzecz: LPG. Jeśli jeździsz na gazie, to Twoja jazda już jest tania i oszczędność z przesiadki na elektryka będzie wyraźnie mniejsza. Nie będę naciągał - dla samochodu z LPG ten rachunek wygląda inaczej i kalkulator niżej uczciwie Ci to pokaże.
 
-Przy 15 tys. km rocznie (typowy przebieg polskiej rodziny) różnica między benzyniakiem a elektrykiem ładowanym w domu to **5-6,5 tys. zł rocznie na samej energii**. Jeśli dojeżdżasz codziennie do pracy i robisz 25-30 tys. km, robi się z tego grubo ponad 10 tys. zł. To są pieniądze, które dziś zostawiasz na stacji benzynowej co do złotówki.
+Przy 15 tys. km rocznie (typowy przebieg polskiej rodziny) różnica między benzyniakiem a elektrykiem ładowanym w domu to **5-6,5 tys. zł rocznie na samej energii**. Jeśli dojeżdżasz codziennie do pracy i robisz 25-30 tys. km, robi się z tego grubo ponad 10 tys. zł. To są pieniądze, które dziś zostawiasz na stacji benzynowej - co roku i we wszystkie kolejne lata. Rok w rok wiele tysięcy złotych, które kumulują się do całkiem ładnej sumy. I to są pieniądze, które musisz wyjąć z własnej kieszeni. Skoro tak, to czemu nie wydać ich inaczej - na przykład na częściowe sfinansowanie nowszego, elektrycznego samochodu?
 
 ## Scenariusz przesiadki, który ma sens
 
@@ -46,7 +46,7 @@ Nie piszę tu o kupowaniu nowego elektryka za gotówkę, bo mało kto trzyma 120
 
 1. **Sprzedajesz obecne auto.** Sensowny, jeżdżący samochód spalinowy jest dziś wart powiedzmy 20-50 tys. zł. Przyjmijmy 25 tys.
 2. **Te pieniądze stają się wkładem własnym** do leasingu, abonamentu albo kredytu na elektryka.
-3. **Wybierasz elektryka za około 100-125 tys. zł.** W tym budżecie mieści się dziś używana Tesla Model 3 z lat 2021-2023 (rynek: [otomoto](https://www.otomoto.pl/osobowe/tesla/model-3), sensowne egzemplarze od ok. 90-110 tys.) albo - i to mnie ostatnio pozytywnie zaskoczyło - fabrycznie nowe auta. Leapmotor B10, elektryczny SUV sprzedawany w polskich salonach sieci Stellantis, kosztuje w promocji 125 700 zł, a w abonamencie [SimplyDrive](https://www.stellantis-financial-services.pl/leasing-abonamentowy-simplydrive-konsument) z wkładem 20% (ok. 25 tys. zł) wychodzi od około 800 zł miesięcznie przy limicie 20 tys. km rocznie. Mniejszy B05 jest jeszcze tańszy.
+3. **Wybierasz elektryka za około 100-125 tys. zł.** W tym budżecie mieści się dziś używana Tesla Model 3 z lat 2021-2023 (rynek: [otomoto](https://www.otomoto.pl/osobowe/tesla/model-3), sensowne egzemplarze od ok. 90-110 tys.) albo - i to mnie ostatnio pozytywnie zaskoczyło - fabrycznie nowe auta. Leapmotor B10, elektryczny SUV sprzedawany w polskich salonach sieci Stellantis, kosztuje w promocji 125 700 zł, a w abonamencie [SimplyDrive](https://www.stellantis-financial-services.pl/leasing-abonamentowy-simplydrive-konsument) z wkładem 20% (ok. 25 tys. zł) wychodzi od około 800 zł miesięcznie przy limicie 20 tys. km rocznie. Mniejszy B05 jest jeszcze tańszy. Jest też wariant budżetowy: sensowny używany elektryk, na przykład Nissan Leaf drugiej generacji, za jakieś 40-60 tys. zł. Zasięg nie będzie już imponował, ale na 200 km dojazdów do pracy spokojnie wystarczy - nie trzeba od razu celować w opcję premium, a kalkulator niżej łatwo przestawisz na taki scenariusz.
 4. **Po 3 latach decydujesz:** wykupujesz auto za ustaloną z góry kwotę, oddajesz je i bierzesz kolejne, albo wracasz do spalinowego, jeśli elektryk Ci nie podszedł. Masz trzy lata na przetestowanie tej technologii w swoim życiu, jeżdżąc nowym samochodem.
 
 I teraz clou: rata takiego leasingu to, zależnie od auta i wkładu, około 800-1400 zł miesięcznie. Ale częścią tej raty nie płacisz Ty - płaci ją różnica w kosztach energii. Przy 15 tys. km rocznie oszczędzasz na paliwie około 400-550 zł miesięcznie. Realnie z Twojego portfela ubywa więc znacznie mniej, niż wynosi rata.
@@ -146,6 +146,7 @@ Wszystkie pola są edytowalne - przesuwaj suwaki albo wpisz wartości z ręki, w
 <div class="kafel"><div class="n ok" id="w-100ev">22 zł</div><div class="l">koszt 100 km elektrykiem</div></div>
 <div class="kafel"><div class="n ok" id="w-oszczrok">5100 zł</div><div class="l">oszczędność na energii rocznie</div></div>
 <div class="kafel"><div class="n" id="w-ratarealna">975 zł</div><div class="l">realna rata: rata minus miesięczna oszczędność na energii</div></div>
+<div class="kafel"><div class="n" id="w-zwrot">19 lat</div><div class="l">mniej więcej po tylu latach oszczędność na energii pokryje różnicę ceny aut</div></div>
 </div>
 <div class="slupki">
 <h4>Pełny miesięczny koszt posiadania</h4>
@@ -197,6 +198,24 @@ torEv[0].style.width=(d.rata/maxTor*100)+"%";
 torEv[1].style.width=(pradMies/maxTor*100)+"%";
 torEv[2].style.width=(d.ubev/12/maxTor*100)+"%";
 torEv[3].style.width=(d.serwev/12/maxTor*100)+"%";
+function tt(el,nazwa,kwota,suma){el.title=nazwa+": "+zl(kwota)+"/mies. ("+(suma>0?Math.round(kwota/suma*100):0)+"%)"}
+tt(torStare[0],"Paliwo",paliwoMies,miesStare);
+tt(torStare[1],"Ubezpieczenie",d.ubstare/12,miesStare);
+tt(torStare[2],"Serwis",d.serwstare/12,miesStare);
+tt(torStare[3],"Utrata wartości",d.utratastare/12,miesStare);
+tt(torEv[0],"Rata",d.rata,miesEv);
+tt(torEv[1],"Prąd",pradMies,miesEv);
+tt(torEv[2],"Ubezpieczenie",d.ubev/12,miesEv);
+tt(torEv[3],"Serwis",d.serwev/12,miesEv);
+var roznicaCeny=d.cenaev-d.wartosc;
+var zwrot=oszczEnergiiRok>0&&roznicaCeny>0?roznicaCeny/oszczEnergiiRok:0;
+var zwrotTxt="-";
+if(zwrot>0){
+var zw=zwrot<10?Math.round(zwrot*10)/10:Math.round(zwrot);
+zwrotTxt=String(zw).replace(".",",")+" "+(zw===Math.floor(zw)&&zw>=2&&zw<=4?"lata":"lat");
+if(zw===1)zwrotTxt="1 rok";
+}
+$("w-zwrot").textContent=zwrotTxt;
 var w;
 if(doplata>0){w="Jazda nowym elektrykiem kosztuje Cię realnie <strong>"+zl(doplata)+" miesięcznie więcej</strong>, niż zostanie przy obecnym aucie - tyle dopłacasz za przesiadkę ze starego auta do nowego, po odliczeniu wszystkich oszczędności."}
 else{w="Uwaga: z Twoimi liczbami przesiadka na elektryka jest realnie <strong>tańsza o "+zl(-doplata)+" miesięcznie</strong> niż zostanie przy obecnym aucie - oszczędności pokrywają całą ratę z nawiązką."}
@@ -205,6 +224,10 @@ $("w-werdykt").innerHTML=w;
 var drobne="Orientacyjna wartość elektryka po "+d.okres+" mies.: "+zl(rezydualna)+" - mniej więcej tyle wyniesie wykup, jeśli zdecydujesz się auto zatrzymać. ";
 if(brakuje>0){drobne+="Na start brakuje Ci "+zl(brakuje)+" wkładu ponad to, co dostaniesz ze sprzedaży obecnego auta."}
 else if(brakuje<0){drobne+="Ze sprzedaży obecnego auta po wpłacie wkładu zostaje Ci jeszcze "+zl(-brakuje)+"."}
+if(zwrot>0&&d.cenaprad>0.75){
+var oszczNoc=(d.przebieg/100)*(koszt100spal-d.zuzycie*0.70);
+if(oszczNoc>0){drobne+=" Przy ładowaniu nocą za 0,70 zł/kWh różnica ceny aut zwraca się już po ok. "+Math.round(roznicaCeny/oszczNoc)+" latach."}
+}
 $("w-drobne").textContent=drobne;
 }
 pola.forEach(function(p){
@@ -233,7 +256,7 @@ Kalkulator wyżej celowo uwzględnia rzeczy, które w entuzjastycznych porównan
 
 **Stare auto też kosztuje - i to działa w drugą stronę.** Dziesięcioletni spalinowy samochód to realnie 2-4 tys. zł rocznie na serwis, naprawy i niespodzianki, a do tego on też traci wartość, tylko wolniej. Elektryk na gwarancji potrzebuje w zasadzie przeglądów i opon. W uczciwym rachunku obie strony równania muszą być pełne.
 
-**Utrata wartości elektryka.** Tu nie ma co czarować: elektryki tanieją szybko. Analitycy szacują, że po 3 latach nowy elektryk traci około 40-50% wartości ([Info-Ekspert dla wyborkierowcow.pl](https://www.wyborkierowcow.pl/ile-traca-na-wartosci-auta-elektryczne-porownanie/)) - dlatego w kalkulatorze domyślnie stoi 45%, a nie optymistyczne 30%. Ważna rzecz: w leasingu z opcją zwrotu to ryzyko bierze na siebie w dużej mierze leasingodawca. Rata jest skalkulowana z góry, wykup ustalony na starcie - jeśli rynek używanych elektryków będzie gorszy, niż zakładano, po prostu oddajesz auto. To jeden z powodów, dla których uważam leasing czy abonament za rozsądniejszą formę pierwszego elektryka niż zakup za gotówkę.
+**Utrata wartości elektryka.** Tu nie ma co czarować: elektryki tanieją szybko. Analitycy szacują, że po 3 latach nowy elektryk traci około 40-50% wartości ([Info-Ekspert dla wyborkierowcow.pl](https://www.wyborkierowcow.pl/ile-traca-na-wartosci-auta-elektryczne-porownanie/)) - dlatego w kalkulatorze domyślnie stoi 45%, a nie optymistyczne 30%. Ważna rzecz: w leasingu z opcją zwrotu to ryzyko bierze na siebie w dużej mierze leasingodawca. Rata jest skalkulowana z góry, wykup ustalony na starcie - jeśli rynek używanych elektryków będzie gorszy, niż zakładano, po prostu oddajesz auto. Nie znaczy to, że leasing jest lepszy od gotówki - finansowanie to zawsze dodatkowy koszt i jeśli masz odłożone pieniądze, zakup za gotówkę jest równie dobrym rozwiązaniem. Leasing z opcją zwrotu ma za to dwie wygody: ryzyko wartości rezydualnej bierze na siebie leasingodawca, a cały proces sprzedaży używanego auta masz z głowy.
 
 **Ładowanie w trasie.** Szybkie ładowarki DC przy autostradach kosztują 2-3 zł za kWh, czyli w trasie elektryk potrafi kosztować tyle co spalinowy. Jeśli 90-95% ładowań robisz w domu, ten koszt ginie w statystyce - ale gdyby ktoś nie miał gniazdka i ładował głównie na mieście, cały ten rachunek się rozpada. Dlatego to jest warunek numer jeden.
 
@@ -241,7 +264,7 @@ Kalkulator wyżej celowo uwzględnia rzeczy, które w entuzjastycznych porównan
 
 ## Moje doświadczenie
 
-Nie piszę tego zza biurka. Od ponad dwóch lat jeżdżę elektrycznym Citroenem Spacetourer z baterią 75 kWh - dużym, rodzinnym (i, przyznaję, prądożernym) autem. Ładuję go w domu, głównie z nadwyżek fotowoltaiki i w tanich godzinach taryfy dynamicznej, przez zwykłą ładowarkę na gniazdku siłowym. Koszt jazdy po mieście i okolicy jest u mnie tak niski, że przestałem go traktować jako pozycję w budżecie. W trasy dalekie jeździmy całą rodziną - da się, planując ładowania z grubsza tak, jak i tak planuje się postoje z dziećmi.
+Nie piszę tego zza biurka. Od kilku miesięcy jeżdżę elektrycznym Citroenem Spacetourer z baterią 75 kWh - dużym, rodzinnym (i, przyznaję, prądożernym) autem - a rynek elektryków, także od strony opinii użytkowników, śledzę od kilku lat. Ładuję go w domu, głównie z nadwyżek fotowoltaiki i w tanich godzinach taryfy dynamicznej, przez zwykłą ładowarkę na gniazdku siłowym. Koszt jazdy po mieście i okolicy jest u mnie tak niski, że przestałem go traktować jako pozycję w budżecie. W trasy dalekie jeździmy całą rodziną - da się, planując ładowania z grubsza tak, jak i tak planuje się postoje z dziećmi.
 
 Najciekawsze jest co innego: prawie każdy znajomy, który elektryka próbował, już przy nim został. Cała niechęć do elektryków koncentruje się wśród osób, które nigdy żadnym nie jeździły. Dlatego tak podoba mi się model "leasing na 3 lata jako test": nie musisz wierzyć mnie ani nikomu innemu. Policz swoje liczby w kalkulatorze wyżej, a potem po prostu spróbuj - jeżdżąc nowym autem, taniej, ciszej i wygodniej.
 
