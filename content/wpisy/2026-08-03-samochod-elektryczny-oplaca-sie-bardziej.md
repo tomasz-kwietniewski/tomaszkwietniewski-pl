@@ -1,7 +1,7 @@
 ---
 title: "Samochód elektryczny opłaca się bardziej. Policz to na swoich liczbach"
 slug: samochod-elektryczny-oplaca-sie-bardziej
-date: "2026-08-03T12:00:00"
+date: "2026-08-31T09:00:00"
 kategorie:
   - Technologie i dom
 excerpt: "Benzyna kosztuje dziś 7,50 zł za litr, a przejechanie 100 km elektrykiem ładowanym w domu - nawet trzy razy mniej. Policzyłem uczciwie, z ubezpieczeniem, serwisem i wykupem po leasingu, ile naprawdę kosztuje przesiadka na elektryka. W środku interaktywny kalkulator - podstaw swoje liczby i sprawdź sam."
