@@ -1,12 +1,15 @@
 ---
-title: "Messi najlepszym piłkarzem wszech czasów? Nasz autorski ranking w liczbach"
+title: Messi najlepszym piłkarzem wszech czasów? Nasz autorski ranking w liczbach
 slug: ranking-najlepszych-pilkarzy
-date: "2026-07-26T08:00:00+02:00"
-modified: "2026-07-26T08:00:00+02:00"
+date: 2026-08-04T11:40:00
+modified: 2026-08-04T11:40:00
 kategorie:
   - Ciekawostki / świat
-excerpt: "Kto był naprawdę najlepszym piłkarzem? Od kilkunastu lat z przyjacielem liczymy to w autorskim rankingu - osiągnięcia zamieniamy na punkty za występy, gole i trofea. Na dziś 150 nazwisk, a na szczycie Lionel Messi. Oto jak to działa i co jeszcze z tego wynika."
-miniatura: /media/2026/07/2026-07-26_Najlepsi_pilkarze_ranking_wszech_czasow.jpg
+excerpt: Kto był naprawdę najlepszym piłkarzem? Od kilkunastu lat z przyjacielem
+  liczymy to w autorskim rankingu - osiągnięcia zamieniamy na punkty za występy,
+  gole i trofea. Na dziś 150 nazwisk, a na szczycie Lionel Messi. Oto jak to
+  działa i co jeszcze z tego wynika.
+miniatura: /media/2026-07-26_Najlepsi_pilkarze_ranking_wszech_czasow-1.png
 typ: wpis
 ---
 Kto był naprawdę najlepszym piłkarzem? Można się o to spierać przy piwie w nieskończoność - albo spróbować to policzyć. Od kilkunastu lat robimy z przyjacielem to drugie: prowadzimy autorski ranking, w którym osiągnięcia zawodników zamieniamy na punkty. Na dziś obejmuje 150 nazwisk, a na jego szczycie stoi Lionel Messi. Oto jak to liczymy i co jeszcze z tego wynika.
