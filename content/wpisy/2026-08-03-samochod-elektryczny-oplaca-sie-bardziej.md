@@ -89,7 +89,9 @@ Wszystkie pola są edytowalne - przesuwaj suwaki albo wpisz wartości z ręki, w
 .kalk .slupek .glowa{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;margin-bottom:6px;flex-wrap:wrap}
 .kalk .slupek .glowa strong{font-family:var(--naglowki);font-size:15px}
 .kalk .tor{height:26px;background:var(--hover-nav);border-radius:6px;overflow:hidden;display:flex}
-.kalk .seg{height:100%;min-width:0;transition:width .25s}
+.kalk .seg{height:100%;min-width:0;transition:width .25s,filter .15s;cursor:help}
+.kalk .tor .seg:hover{filter:brightness(1.18)}
+.kalk-tip{position:fixed;z-index:60;background:var(--tekst);color:#fff;padding:7px 12px;border-radius:8px;font-size:13px;line-height:1.4;pointer-events:none;white-space:nowrap;box-shadow:0 6px 18px rgba(19,26,38,.25);display:none}
 .kalk .seg.paliwo{background:#C0303A}
 .kalk .seg.prad{background:#187A4B}
 .kalk .seg.rata{background:var(--akcent)}
@@ -198,7 +200,7 @@ torEv[0].style.width=(d.rata/maxTor*100)+"%";
 torEv[1].style.width=(pradMies/maxTor*100)+"%";
 torEv[2].style.width=(d.ubev/12/maxTor*100)+"%";
 torEv[3].style.width=(d.serwev/12/maxTor*100)+"%";
-function tt(el,nazwa,kwota,suma){el.title=nazwa+": "+zl(kwota)+"/mies. ("+(suma>0?Math.round(kwota/suma*100):0)+"%)"}
+function tt(el,nazwa,kwota,suma){el.dataset.tip=nazwa+": "+zl(kwota)+"/mies. ("+(suma>0?Math.round(kwota/suma*100):0)+"%)";el.setAttribute("aria-label",el.dataset.tip)}
 tt(torStare[0],"Paliwo",paliwoMies,miesStare);
 tt(torStare[1],"Ubezpieczenie",d.ubstare/12,miesStare);
 tt(torStare[2],"Serwis",d.serwstare/12,miesStare);
@@ -243,6 +245,29 @@ ustaw("cenapal",p.cena);ustaw("spalanie",p.spalanie);licz();
 });
 kalk.querySelectorAll("[data-prad]").forEach(function(b){
 b.addEventListener("click",function(){ustaw("cenaprad",b.dataset.prad);licz()});
+});
+var tip=document.createElement("div");
+tip.className="kalk-tip";
+document.body.appendChild(tip);
+var tipTimer=null;
+function tipPokaz(el,x,y){
+if(!el.dataset.tip)return;
+tip.textContent=el.dataset.tip;
+tip.style.display="block";
+var szer=tip.offsetWidth;
+var lewo=Math.min(Math.max(8,x-szer/2),window.innerWidth-szer-8);
+tip.style.left=lewo+"px";
+tip.style.top=Math.max(8,y-40)+"px";
+}
+function tipSchowaj(){tip.style.display="none";if(tipTimer){clearTimeout(tipTimer);tipTimer=null}}
+kalk.querySelectorAll(".tor .seg").forEach(function(seg){
+seg.addEventListener("mousemove",function(e){tipPokaz(seg,e.clientX,e.clientY)});
+seg.addEventListener("mouseleave",tipSchowaj);
+seg.addEventListener("click",function(e){
+tipPokaz(seg,e.clientX,e.clientY);
+if(tipTimer)clearTimeout(tipTimer);
+tipTimer=setTimeout(tipSchowaj,2500);
+});
 });
 licz();
 })();
