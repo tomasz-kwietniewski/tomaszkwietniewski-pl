@@ -9,7 +9,7 @@ typ: wpis
 ---
 Benzyna Pb95 kosztuje dziś średnio około 7,50 zł za litr i jest najdroższa w tym roku. Diesel przebił 8 zł. Przy takich cenach przejechanie 100 km zwykłym autem spalinowym to wydatek rzędu 50-60 zł. Tę samą odległość samochodem elektrycznym, ładowanym w domu, nawet bez żadnych sztuczek, w najzwyklejszej taryfie, można przejechać za jakieś 20-25 złotych. A jak ktoś ma taryfę nocną, to za 10-12 zł.
 
-Ta różnica robi się na tyle duża, że moim zdaniem ekonomia w końcu zwycięży i elektryki spopularyzują się nie dlatego, że są modne albo ekologiczne, tylko dlatego, że ludzie zaczną liczyć. W tym wpisie chcę pokazać, jak to policzyć uczciwie - razem z ubezpieczeniem, serwisem i wykupem po leasingu, a nie tylko "paliwo kontra prąd". Poniżej znajdziesz interaktywny kalkulator, w który podstawisz swoje liczby.
+Ta różnica robi się na tyle duża, że moim zdaniem ekonomia w końcu zwycięży i elektryki spopularyzują się nie dlatego, że są modne albo ekologiczne, tylko dlatego, że ludzie zaczną liczyć, co się bardziej opłaca. W tym wpisie chcę pokazać, jak to policzyć uczciwie - razem z ubezpieczeniem, serwisem i wykupem po leasingu, a nie tylko "paliwo kontra prąd". Poniżej znajdziesz interaktywny kalkulator, w który podstawisz swoje liczby.
 
 ## Dla kogo?
 
@@ -266,6 +266,6 @@ Kalkulator wyżej celowo uwzględnia rzeczy, które w entuzjastycznych porównan
 
 Nie piszę tego zza biurka. Od kilku miesięcy jeżdżę elektrycznym Citroenem Spacetourer z baterią 75 kWh - dużym, rodzinnym (i, przyznaję, prądożernym) autem - a rynek elektryków, także od strony opinii użytkowników, śledzę od kilku lat. Ładuję go w domu, głównie z nadwyżek fotowoltaiki i w tanich godzinach taryfy dynamicznej, przez zwykłą ładowarkę na gniazdku siłowym. Koszt jazdy po mieście i okolicy jest u mnie tak niski, że przestałem go traktować jako pozycję w budżecie. W trasy dalekie jeździmy całą rodziną - da się, planując ładowania z grubsza tak, jak i tak planuje się postoje z dziećmi.
 
-Najciekawsze jest co innego: prawie każdy znajomy, który elektryka próbował, już przy nim został. Cała niechęć do elektryków koncentruje się wśród osób, które nigdy żadnym nie jeździły. Dlatego tak podoba mi się model "leasing na 3 lata jako test": nie musisz wierzyć mnie ani nikomu innemu. Policz swoje liczby w kalkulatorze wyżej, a potem po prostu spróbuj - jeżdżąc nowym autem, taniej, ciszej i wygodniej.
+Najciekawsze jest co innego: każdy użytkownik, który elektryka spróbował, już przy nim został - znam to z materiałów wideo, z rozmów z użytkownikami i z własnych obserwacji. Cała niechęć do elektryków koncentruje się wśród osób, które nigdy żadnym nie jeździły. Dlatego tak podoba mi się model "leasing na 3 lata jako test": nie musisz wierzyć mnie ani nikomu innemu. Policz swoje liczby w kalkulatorze wyżej, a potem po prostu spróbuj - jeżdżąc nowym autem, taniej, ciszej i wygodniej.
 
 *Ceny paliw, prądu i aut w tym wpisie odzwierciedlają stan z początku sierpnia 2026. Wpis nie jest sponsorowany - Leapmotor i Tesla pojawiają się jako przykłady, bo takie oferty znalazłem, licząc ten scenariusz dla siebie. To nie jest porada finansowa ani inwestycyjna.*
