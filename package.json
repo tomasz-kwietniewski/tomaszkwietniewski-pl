@@ -9,7 +9,7 @@
     "yt-thumbs": "node tools/fetch_yt_thumbs.mjs",
     "build": "npm run clean && npm run yt-thumbs && eleventy && pagefind --site _site",
     "dev": "npm run clean && npm run yt-thumbs && eleventy --serve",
-    "check": "node tools/test_daty.mjs && node tools/verify_build.mjs",
+    "check": "node tools/test_daty.mjs && node tools/verify_build.mjs && node tools/sprawdz_wpis.mjs",
     "verify": "npm run build && npm run check"
   },
   "engines": {

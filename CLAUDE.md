@@ -75,7 +75,8 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   -> `/dziekuje-bardzo/`). RSS `/feed.xml` + fallback `/feed/`. Wyszukiwarka Pagefind (modal).
   Fonty self-hosted (woff2, `src/assets/fonts/`). Postaw kawę: buycoffee.to/tomaszkwietniewski.
 - Komendy: `npm run dev` (podgląd z live reload), `npm run build` (clean + Eleventy + Pagefind),
-  `npm run check` (test dat + asercje `tools/verify_build.mjs`), `npm run verify` (build + check).
+  `npm run check` (test dat + asercje `tools/verify_build.mjs` + kontrola treści
+  `tools/sprawdz_wpis.mjs`), `npm run verify` (build + check).
   Podgląd statyczny: launch config `strona-static` (python http.server na `_site`, port 8771).
 - **Daty (2026-07-25):** parser `lib/daty.js` - data bez offsetu we frontmatter oznacza
   czas polski (Europe/Warsaw) niezależnie od strefy procesu (runner CI = UTC); brak/błąd
@@ -100,6 +101,7 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
 | `media/` | obrazki z wp-content/uploads, struktura RRRR/MM; treści linkują względnie `media/...` |
 | `docs/` | **warsztat artykułów - POZA GITEM** (`.gitignore`): źródła, recenzje, notatki. Schemat: `docs/README.md` |
 | `.pages.yml` | konfiguracja panelu Pages CMS |
+| `tools/sprawdz_wpis.mjs` | kontrola treści w `npm run check`: offset w datach (pułapka Pages CMS), interpunkcja nowych wpisów, bogate eseje (puste linie w `.esej`, `<pre><code>`, 1x h1) + ostrzeżenie o zmianie `<style>` |
 | `tools/export_wp.py` | ponowny eksport ze starego WP (historyczny; stary WP żyje pod 188.210.222.8) |
 | `tools/fix_entities.py` | dekodowanie encji HTML w title/excerpt |
 
