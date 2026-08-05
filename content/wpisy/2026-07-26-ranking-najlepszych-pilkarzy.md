@@ -1,7 +1,7 @@
 ---
 title: Messi najlepszym piłkarzem wszech czasów? Nasz autorski ranking w liczbach
 slug: ranking-najlepszych-pilkarzy
-date: 2026-07-25T07:40:00
+date: 2026-07-26T08:00:00
 modified: 2026-08-04T11:40:00
 kategorie:
   - Ciekawostki / świat
