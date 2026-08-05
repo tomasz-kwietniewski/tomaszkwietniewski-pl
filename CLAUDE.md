@@ -98,6 +98,7 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
 | `content/wpisy/` | wpisy blogowe, format: `RRRR-MM-DD-slug.md` (frontmatter YAML + treść HTML z WP) |
 | `content/strony/` | podstrony (o-mnie, kontakt, zestawienia typu ksiazki/podcasty) |
 | `media/` | obrazki z wp-content/uploads, struktura RRRR/MM; treści linkują względnie `media/...` |
+| `docs/` | **warsztat artykułów - POZA GITEM** (`.gitignore`): źródła, recenzje, notatki. Schemat: `docs/README.md` |
 | `.pages.yml` | konfiguracja panelu Pages CMS |
 | `tools/export_wp.py` | ponowny eksport ze starego WP (historyczny; stary WP żyje pod 188.210.222.8) |
 | `tools/fix_entities.py` | dekodowanie encji HTML w title/excerpt |
@@ -155,6 +156,11 @@ Sitemap zgłoszony w Search Console (2026-07-17). Robots.txt też na niego wskaz
   YouTube tylko przez nocookie - robi to build). Każda nowa integracja zbierająca dane
   (analityka, komentarze, osadzenia) = obowiązkowa aktualizacja polityki prywatności
   i pytanie o baner zgody (unikać - brak banera to atut strony).
+- **Warsztat artykułu idzie do `docs/`, NIGDY do `content/`.** `content/wpisy/` zawiera
+  wyłącznie pliki `.md` (to katalog kolekcji Pages CMS, a repo jest publiczne - materiały
+  źródłowe i raporty PDF nie mogą tam trafić). Jeden folder w `docs/artykuly/` = jeden wpis,
+  nazwa folderu = nazwa pliku `.md` bez rozszerzenia; tematy bez daty publikacji w
+  `docs/pomysly/`. Schemat i mapa zawartości: `docs/README.md`.
 - Ton tekstów: prosto, po ludzku, bez patosu i sprzedażowego języka.
 - Weryfikacja przed "gotowe": realne uruchomienie + testy w przeglądarce (asercje DOM,
   konsola bez błędów), nie tylko "kompiluje się".
