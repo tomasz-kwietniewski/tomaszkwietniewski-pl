@@ -1,5 +1,6 @@
 export/
 *.zip
+docs/
 __pycache__/
 .claude/
 node_modules/
