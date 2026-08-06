@@ -34,9 +34,13 @@ typ: wpis
 .esej .pol-t{color:var(--pol);font-weight:600}
 .esej .nor-t{color:var(--nor);font-weight:600}
 
-/* Ramka archiwalna (nota otwierająca i zamykająca) */
+/* Ramka archiwalna (nota otwierająca i marker komentarza z 2026) */
 .esej .arch{background:var(--nor-soft);border:1px solid #CDDFEF;border-left:3px solid var(--nor);border-radius:12px;padding:20px 22px;margin:0 0 8px}
 .esej .arch.koniec{margin:56px 0 0}
+/* Komentarz z 2026 roku - inny głos niż praca z 2006, stąd niebieska krawędź */
+.esej .part.dzis{border-top:2px solid var(--nor)}
+.esej .part.dzis .part-tag{color:var(--nor)}
+.esej .part.dzis > .arch{margin:0 0 28px}
 .esej .arch .lab{font-family:var(--disp);font-weight:600;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--nor);margin:0 0 10px}
 .esej .arch p{font-size:14.5px;color:var(--ink-2);line-height:1.6;margin:0 0 12px}
 .esej .arch p:last-child{margin-bottom:0}
@@ -155,7 +159,7 @@ typ: wpis
 <div class="arch">
 <p class="lab">Nota archiwalna</p>
 <p>To jest praca, którą napisaliśmy w czwórkę na studiach, jesienią 2006 roku. Wisiała przez lata na Google Sites - platformie, która kiedyś po prostu zniknie. Przenoszę ją tutaj w całości, bo szkoda by było, gdyby przepadła.</p>
-<p><strong>Tekst jest oryginalny</strong>, poprawione zostały wyłącznie literówki. Nowe są tylko tytuły sekcji, wykresy i te dwie ramki - żeby dało się to czytać dwadzieścia lat później. Dlatego wpis ma datę oryginału, a nie datę przeniesienia na stronę; na blogu pojawił się w sierpniu 2026 roku.</p>
+<p><strong>Tekst jest oryginalny</strong>, poprawione zostały wyłącznie literówki. Nowe są tytuły sekcji, wykresy oraz komentarz, który dopisałem na końcu - żeby dało się to czytać dwadzieścia lat później. Dlatego wpis ma datę oryginału, a nie datę przeniesienia na stronę; na blogu pojawił się w sierpniu 2026 roku.</p>
 <p>Jedno zastrzeżenie: w oryginale były zdjęcia prasowe z kwietnia 2005 bez podanego autora i licencji. Nie przenoszę ich - wszystkie grafiki poniżej są zrobione od zera.</p>
 </div>
 <div class="lead">
@@ -309,11 +313,37 @@ typ: wpis
 <p>Los ruchu kibicowskiego dążącego do pojednania zwaśnionych fanów potoczył się w naszej opinii niestety według tego drugiego, negatywnego scenariusza. Ludzie działający pod wpływem impulsu jakim była śmierć papieża, pełni entuzjazmu poczuli w sobie moc i siłę by dokonać to, czego być może pragnęli już od dawna - przywrócenia normalności na polskich stadionach i w relacjach między kibicami różnych klubów. Niestety ruch ten napotkał na problemy (np. niechęć nielicznej aczkolwiek dominującej grupy kibiców-chuliganów), wobec których początkowy entuzjazm okazał się zbyt słaby (sam entuzjazm i chęć zmiany nie wystarczą...?). Stąd też rozpatrywany tylko w perspektywie bezpośredniego osiągnięcia celu (pojednania kibiców) ruch ten nie osiągnął sukcesu, o czym świadczą liczne przypadki wandalizmu a wręcz bandytyzmu po 2005 roku.</p>
 <p>Jednak naszym zdaniem w dłuższej perspektywie dążenia zapoczątkowane przez ten ruch, dzięki aprobacie opinii publicznej, mediów, mogą przełożyć się na konkretne działania rządu i miejmy nadzieje „wykopanie" patologicznych zachowań z polskich stadionów. Obecnie powstaje rządowy program mający na celu walkę ze stadionowymi chuliganami. Być może działania te nie są oparte na tak wzniosłych wartościach jakimi kierował się ruch kibiców dążący do pojednania, jednak w ostatecznym rozrachunku mogą osiągnąć podobny skutek. Podsumowując, uważamy że ruch społeczny kibiców dążący do pojednania tego środowiska po śmierci Jana Pawła II zakończył się porażką, jednak przyczynił się do rozpoczęcia debaty publicznej na temat chuligaństwa na stadionach i istnieje realna szansa, że choć innymi środkami i przez inne podmioty, cel zostanie zrealizowany.</p>
 </div>
-<div class="arch koniec">
-<p class="lab">Dopisek z 2026 roku</p>
-<p>Tu kończy się praca z 2006 roku. Ostatnie zdanie mówi o „rządowym programie, który dopiero powstaje" - i to akurat okazało się prorocze, choć nie w sposób, który wtedy przewidywaliśmy. Zmieniło to nie pojednanie, tylko infrastruktura i przepisy: ustawa o bezpieczeństwie imprez masowych, zakazy stadionowe, identyfikacja kibiców i monitoring, a przede wszystkim <strong>stadiony zbudowane na Euro 2012</strong>. Dokładnie ta „nowoczesna infrastruktura", której brak wskazywaliśmy jako jedną z przyczyn bezradności.</p>
-<p>Skutek jest połowiczny i nie taki, o jakim marzyli ludzie na Błoniach. Z trybun w Ekstraklasie zniknęła regularna przemoc, wróciły rodziny z dziećmi, a doping i oprawy są dziś na poziomie, o którym w 2006 roku nikt nie śmiał myśleć. Ale bójki nie zniknęły - przeniosły się poza stadion, w umówione miejsca, dokładnie tak, jak opisywaliśmy w części o „pojedynkach" w lasach i na parkingach. Konflikty w Krakowie, Łodzi czy Warszawie trwają.</p>
-<p>Czyli: cel negatywny ruchu, o którym pisaliśmy - ograniczenie przemocy na stadionach - został w dużej mierze osiągnięty, tylko innymi środkami. Cel pozytywny, czyli samo pojednanie, nie. <strong>Nasza ówczesna diagnoza się obroniła.</strong> To dlatego warto było tę pracę odkopać.</p>
+<div class="part dzis">
+<p class="part-tag">Komentarz z 2026 roku</p>
+<h2>Dwadzieścia lat później: jedyna droga, jaką znam</h2>
+<div class="arch">
+<p class="lab">Uwaga</p>
+<p>Tu kończy się praca z 2006 roku. Wszystko poniżej dopisałem dzisiaj, po dwudziestu latach obserwowania tego, co dzieje się w sporcie i na trybunach.</p>
+</div>
+<p>Pierwsza rzecz, która mnie uderzyła przy przenoszeniu tego tekstu: on się prawie nie przeterminował. Zmieniło się otoczenie, nie mechanizm. Ostatnie zdanie pracy mówi o „rządowym programie, który dopiero powstaje" i to akurat okazało się prorocze, choć nie w sposób, który wtedy przewidywaliśmy. Zmieniły to nie pojednanie i nie przemiana serc, tylko przepisy i beton: ustawa o bezpieczeństwie imprez masowych, zakazy stadionowe, identyfikacja kibiców, monitoring, a przede wszystkim <strong>stadiony zbudowane na Euro 2012</strong>. Dokładnie ta „nowoczesna infrastruktura", której brak wskazywaliśmy jako jedną z przyczyn bezradności.</p>
+<p>Skutek jest połowiczny i nie taki, o jakim marzyli ludzie na Błoniach. Z trybun w Ekstraklasie zniknęła regularna przemoc, wróciły rodziny z dziećmi, a doping i oprawy są dziś na poziomie, o jakim w 2006 roku nikt nie śmiał myśleć. Ale bójki nie zniknęły. Przeniosły się poza stadion, w umówione miejsca, dokładnie tak, jak opisywaliśmy w części o „pojedynkach" w lasach i na parkingach.</p>
+<h3>Dwie rzeczy, które naprawdę działają</h3>
+<p>Po tych dwudziestu latach uważam, że na chuligaństwo na trybunach działają tylko dwie rzeczy. Obie są nudne i obie działają obok ludzkich intencji, nie dzięki nim.</p>
+<div class="models">
+<div class="model"><p class="lab">Droga pierwsza</p><h4>Bogatsze społeczeństwo</h4><p>Działa sama z siebie i nikogo nie wyklucza, ale bardzo powoli. Mniej biedy to mniej ludzi szukających sensu w bijatyce. Nie da się tego wdrożyć decyzją ani programem.</p></div>
+<div class="model tak"><p class="lab">Droga druga - ta, która działa szybko</p><h4>Cena biletu</h4><p>Skuteczna i sprawdzona, ale działa przez wymianę publiczności. Z trybun znikają nie tylko chuligani, tylko wszyscy, dla których bilet staje się za drogi.</p></div>
+</div>
+<p>Pierwsza to po prostu bogacenie się społeczeństwa i to jedyna droga, którą nazwałbym zdrową. W Polsce jest dziś bezpieczniej niż w latach dziewięćdziesiątych, przestępczości jest mniej, ludziom żyje się lepiej. Mniej osób szuka adrenaliny, przynależności i poczucia własnej ważności w bijatyce na parkingu, bo ma co robić ze swoim życiem. To działa powoli, samo z siebie i nikt tego nie musi ogłaszać.</p>
+<p>Trzeba jednak uczciwie powiedzieć, że samo środowisko zmieniło się w tym czasie na gorsze.</p>
+<div class="midnote">
+<p>Dziś <strong>grupy chuligańskie i przestępczość zorganizowana mocno się przenikają</strong>. Chodzi głównie o handel narkotykami i o rolę „ramienia siłowego" dla grup przestępczych, a całe środowisko przecina się z częścią klubów mieszanych sztuk walki. Policja rozpracowała i ujawniła sporo takich spraw.</p>
+<p>Nie znaczy to, że każdy chuligan działa w grupie przestępczej. Ale te dwa światy leżą dziś znacznie bliżej siebie niż w 2006 roku, kiedy pisaliśmy o „żołnierzach walczących o honor klubu".</p>
+</div>
+<p>A wpływ tych grup na polskie kluby wciąż jest duży. To akurat jedno z tych zdań sprzed dwudziestu lat, których przy przenoszeniu nie musiałem ruszać.</p>
+<h3>Druga droga i jej cena</h3>
+<p>Druga rzecz to cena biletu. Kiedy patrzę na kraje zachodnie, nie widzę żadnej innej drogi, która realnie zadziałała. W Anglii nie chodziło o same ładne stadiony, tylko o wymianę publiczności. Ceny podniesiono tak wysoko, że produkt stał się niedostępny dla biedniejszych, a przy okazji dla tych agresywnych. Napisaliśmy o tym w 2006 roku jako o czymś, czego „trochę szkoda by było". Dziś myślę, że to po prostu jedyne, co działa szybko.</p>
+<p>Koszt jest realny i mam z nim problem. Traci klasa robotnicza i ludzie nieuprzywilejowani, czyli dokładnie ci, z których piłka wyrosła. Tracą dostęp do widowiska na żywo, zostają im transmisje w telewizji i w internecie. Doping siada. W zamian dostajemy trybuny spokojne, rodzinne, bez prostactwa, chamstwa, wyzwisk i przemocy. <strong>Oglądanie piłki na żywo staje się w pewnym sensie elitarne.</strong></p>
+<p>Nie mam złudzeń, że stoją za tym wyłącznie dobre intencje. Stoją za tym pieniądze i chęć zwiększenia zysków. Ale pozbycie się chuliganów jest tego świadomym skutkiem, a nie przypadkiem. I obstawiam, że w Polsce z czasem pójdzie to tą samą drogą.</p>
+<p>To wniosek częściowo smutny, bo piłka wyszła ze środowisk robotniczych i tam była najbardziej swoja. Jest takie stare angielskie powiedzenie:</p>
+<p class="pull">„Piłka nożna to dżentelmeńska gra dla chuliganów, a rugby to chuligańska gra dla dżentelmenów."</p>
+<p class="pull-src">stare angielskie powiedzenie</p>
+<p>Wciąż jest w tym sporo prawdy. A jednak to piłka zdobyła świat, nie rugby. Zdobyła go jako gra dostępna dla każdego i tym bardziej szkoda, jeśli powoli przestaje taka być.</p>
+<p>Wracając do pytania z 2006 roku: cel negatywny tamtego ruchu, czyli ograniczenie przemocy na stadionach, został w dużej mierze osiągnięty - tylko zupełnie innymi środkami, niż wyobrażali sobie ludzie na Błoniach. Cel pozytywny, czyli samo pojednanie, nie. <strong>Nasza ówczesna diagnoza się obroniła.</strong> To dlatego warto było tę pracę odkopać.</p>
 </div>
 <div class="zrodla">
 <h2>Przypisy</h2>
