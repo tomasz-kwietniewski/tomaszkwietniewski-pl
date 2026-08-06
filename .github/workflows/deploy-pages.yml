@@ -8,11 +8,13 @@ on:
   workflow_dispatch:
   schedule:
     # Ujawnia wpisy zaplanowane na dany dzień (wpisy z przyszłą datą są pomijane
-    # w buildzie, patrz src/_data/wpisy.js). Dwa przebiegi dziennie: 06:20 UTC
-    # (08:20 CEST) publikuje poranne wpisy z marginesem po pełnej godzinie,
-    # 12:20 UTC to zapas na wypadek zgubionego/opóźnionego pierwszego runu
-    # (GitHub potrafi opóźniać crony o kilkadziesiąt minut albo pominąć run).
-    - cron: "20 6,12 * * *"
+    # w buildzie, patrz src/_data/wpisy.js). Trzy przebiegi dziennie, każdy
+    # 20 minut po pełnej godzinie, żeby dać margines wpisom planowanym na równą:
+    # 05:20 UTC (07:20 CEST) dla wpisów na 7:00, 06:20 UTC (08:20 CEST) dla
+    # wpisów na 8:00, a 12:20 UTC to zapas na wypadek zgubionego albo
+    # opóźnionego wcześniejszego runu (GitHub potrafi opóźniać crony
+    # o kilkadziesiąt minut albo pominąć run).
+    - cron: "20 5,6,12 * * *"
 
 permissions:
   contents: read

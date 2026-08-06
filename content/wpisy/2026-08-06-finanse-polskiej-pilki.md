@@ -1,9 +1,10 @@
 ---
 title: "Ekstraklasa rosła szybciej niż Real Madryt. I dogoni go około 2099 roku"
 slug: finanse-polskiej-pilki
-date: "2026-08-06T09:00:00"
+date: "2026-08-08T07:00:00"
 kategorie:
   - Ciekawostki / świat
+miniatura: /media/2026/08/2026-08-06_polska_liga_vs_real_madryt.jpg
 excerpt: "Kluby Ekstraklasy zarobiły rekordowe 1,27 mld zł. Przeliczyłem osiemnaście lat raportów finansowych na realne złotówki, udział w PKB i przeciętne wynagrodzenia. Polska piłka rosła szybciej niż najbogatsze kluby Europy - a mimo to różnica w euro się podwoiła i będzie rosła jeszcze przez pokolenie."
 typ: wpis
 ---
