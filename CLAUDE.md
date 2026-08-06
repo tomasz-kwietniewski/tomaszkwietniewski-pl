@@ -94,12 +94,21 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   bez offsetu - parser to obsługuje. Nie pisać dat YAML bez cudzysłowu z offsetem.
 - **Publikacja zaplanowana:** wpis z przyszłą datą (frontmatter `date`) jest pomijany
   w buildzie (`src/_data/wpisy.js`) - ukryty (brak strony, /blog/, sitemap, RSS) do czasu.
-  Cron w `deploy-pages.yml` (`20 6,12 * * *` = 08:20 i 14:20 CEST; drugi przebieg to zapas
-  na zgubiony run) przebudowuje stronę i ujawnia wpis. Podgląd zaplanowanych lokalnie:
-  `ELEVENTY_PRZYSZLE=1 npx @11ty/eleventy`. `verify_build.mjs` liczy tylko opublikowane
-  i pilnuje, że zaplanowane NIE wyciekły do `_site`. Publikacja natychmiastowa = data
-  bieżąca/przeszła. UWAGA: GitHub wyłącza cron po 60 dniach bez commitów - po dłuższej
+  Cron w `deploy-pages.yml` (`20 5,6,12 * * *` = 07:20, 08:20 i 14:20 CEST; trzeci przebieg
+  to zapas na zgubiony run) przebudowuje stronę i ujawnia wpis. Podgląd zaplanowanych
+  lokalnie: `ELEVENTY_PRZYSZLE=1 npx @11ty/eleventy`. `verify_build.mjs` liczy tylko
+  opublikowane i pilnuje, że zaplanowane NIE wyciekły do `_site`. Publikacja natychmiastowa
+  = data bieżąca/przeszła. UWAGA: GitHub wyłącza cron po 60 dniach bez commitów - po dłuższej
   przerwie przed zaplanowaniem wpisu odpalić ręcznie Run workflow (szczegóły: WDROZENIE.md).
+- **Wpis archiwalny (data cofnięta w przeszłość, od 2026-08-06):** reprint starej treści
+  dostaje `date` z epoki oryginału i `modified` z realną datą przeniesienia. Skutek: wpis
+  ląduje na dole `/blog/` (sortowanie tylko po `date`), NIE trafia na stronę główną
+  (`src/index.njk` bierze `wpisy | take(4)`) ani do `feed.xml` (20 najnowszych), ale JEST
+  w sitemapie, w kategorii i w Pagefind. `modified` daje poprawny `<lastmod>`
+  (`src/sitemap.njk`), więc Google widzi stronę jako nową mimo starej daty publikacji -
+  bez tego świeżo dodany wpis z datą sprzed lat może się nie zaindeksować. Na stronie wpisu
+  `modified` nie jest wyświetlane, czytelnik widzi tylko starą datę - dlatego taki wpis
+  musi mieć w treści notę wyjaśniającą, skąd ta data. Wzorzec: `pojednanie-kibicow-2005`.
 - Lokalny subagent do stress-testu: `.claude/agents/website-stress-tester.md` (poza gitem).
 
 ## Struktura
@@ -156,6 +165,17 @@ Strona live na GitHub Pages: repo publiczne (docs/ wycięte z historii), workflo
 `CNAME.gotowy` -> `CNAME`, DNS apex na rekordy A GitHuba (panel SEOHost). Rollback,
 szczegóły DNS i pułapka certyfikatu HTTPS: pamięć projektu + `WDROZENIE.md`.
 Sitemap zgłoszony w Search Console (2026-07-17). Robots.txt też na niego wskazuje.
+
+**PUŁAPKA: push do `main` nie zawsze wywołuje deploy.** 2026-08-06 commit `bba0a59`
+wylądował na `origin/main`, workflow był `active`, a GitHub Actions po prostu nie utworzyło
+uruchomienia - po sześciu minutach nadal żadnego śladu w API. Ratunek: `workflow_dispatch`.
+Dlatego **zielony push nie jest dowodem publikacji** - po każdym wdrożeniu sprawdzić,
+czy run w ogóle powstał, i dopiero potem potwierdzać efekt na produkcji:
+
+```bash
+gh run list --limit 3
+gh workflow run "Deploy na GitHub Pages" --ref main
+```
 
 ## Konwencje (obowiązują w całym projekcie)
 
