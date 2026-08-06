@@ -1,10 +1,10 @@
 ---
-title: "Ekstraklasa rosła szybciej niż Real Madryt. A przepaść i tak urosła trzykrotnie"
+title: "Ekstraklasa rosła szybciej niż Real Madryt. I dogoni go około 2099 roku"
 slug: finanse-polskiej-pilki
 date: "2026-08-06T09:00:00"
 kategorie:
   - Ciekawostki / świat
-excerpt: "Kluby Ekstraklasy zarobiły rekordowe 1,27 mld zł. Przeliczyłem osiemnaście lat raportów finansowych na realne złotówki, udział w PKB i przeciętne wynagrodzenia - i wyszło, że polska piłka rosła szybciej niż najbogatsze kluby Europy, a mimo to dystans do nich się potroił."
+excerpt: "Kluby Ekstraklasy zarobiły rekordowe 1,27 mld zł. Przeliczyłem osiemnaście lat raportów finansowych na realne złotówki, udział w PKB i przeciętne wynagrodzenia. Polska piłka rosła szybciej niż najbogatsze kluby Europy - a mimo to różnica w euro się podwoiła i będzie rosła jeszcze przez pokolenie."
 typ: wpis
 ---
 <style>
@@ -121,7 +121,7 @@ typ: wpis
 <div class="kpis">
 <div class="kpi"><p class="n">5,2×</p><p class="l">tyle razy wzrosły przychody Ekstraklasy w latach 2007-2024/25, licząc w zwykłych złotówkach</p></div>
 <div class="kpi"><p class="n">1,6×</p><p class="l">tyle wynosi ten sam wzrost, gdy zmierzyć go w przeciętnych polskich wynagrodzeniach</p></div>
-<div class="kpi cap"><p class="n">913 mln €</p><p class="l">o tyle najbogatszy klub Europy jest dziś bogatszy od całej Ekstraklasy. W 2007 r. o 312 mln</p></div>
+<div class="kpi cap"><p class="n">913 mln €</p><p class="l">o tyle najbogatszy klub Europy jest dziś bogatszy od całej Ekstraklasy. W 2007 r. o 455 mln, licząc w dzisiejszych cenach</p></div>
 </div>
 <div class="lead">
 <p>Raporty o finansach polskiej piłki wychodzą co roku od 2007 i za każdym razem mówią to samo: rekord. To prawda - liczby faktycznie rosną. Kłopot w tym, że sama kwota w złotówkach nie mówi nic, dopóki nie ma się do czego jej odnieść. W 2007 r. przeciętna pensja w Polsce wynosiła 2 866 zł, dziś jest to 9 379 zł. Bilet, kadra i sztab też kosztują dziś inaczej.</p>
@@ -171,7 +171,10 @@ typ: wpis
 <p class="figcap">Przychody z podstawowej działalności klubów Ekstraklasy, indeks 2007 = 100. Źródła: Deloitte i Grant Thornton (przychody), GUS (wynagrodzenia), Eurostat (indeks cen). Przerwa w danych za sezon 2019/2020.</p>
 </div>
 <p>Czerwona linia to nagłówek, który znacie: przychody wzrosły <strong>5,2-krotnie</strong>. Niebieska pokazuje, ile z tego zostaje po odliczeniu inflacji - <strong>2,8 raza</strong>, czyli prawie połowa wzrostu okazuje się złudzeniem cenowym. Ale najciekawsza jest szara.</p>
-<p>Szara linia mierzy ligę w przeciętnych polskich wynagrodzeniach: ile pensji zwykłego Polaka można kupić za przychody wszystkich klubów razem. I ta linia w zasadzie stoi w miejscu od dekady. W 2007 r. cała Ekstraklasa była warta około 5 900 przeciętnych rocznych pensji brutto. W 2015 r. - już 9 900. W sezonie 2024/2025, w rekordowym roku - <strong>9 338</strong>. Mniej niż dziesięć lat wcześniej.</p>
+<h3>Skąd szara linia, czyli po co mierzyć ligę pensjami</h3>
+<p>Złotówka jest kiepską miarą czegokolwiek w perspektywie osiemnastu lat, bo sama zmienia wartość. Dlatego obok inflacji warto użyć jednostki, która sama się urealnia: <strong>rocznego wynagrodzenia przeciętnego Polaka</strong>. Rachunek jest prosty - bierzemy roczne przychody wszystkich osiemnastu klubów i dzielimy przez przeciętną roczną pensję brutto w danym roku. Wychodzi liczba, która mówi: ilu przeciętnie zarabiającym Polakom liga mogłaby zapłacić roczną pensję za to, co w tym roku zarobiła.</p>
+<p>Trzeba od razu powiedzieć, czego ta liczba <em>nie</em> obejmuje, bo łatwo ją nadinterpretować. To nie jest wartość ligi ani jej majątek, tylko <strong>roczny przychód klubów</strong>. Nie ma w niej stadionów - te w 83 procentach nie należą do klubów, tylko do samorządów. Nie ma wydatków kibiców na dojazdy, piwo czy koszulki, nie ma podatków, które generuje wokół siebie mecz, ani miejsc pracy w otoczeniu. Cały ten szerszy ślad gospodarczy PwC wyliczyło osobno na jakieś 1,7 mld zł wartości dodanej rocznie. Tu chodzi wyłącznie o to, co wpływa na konta klubów: bilety, prawa mediowe i pieniądze od sponsorów.</p>
+<p>I ta linia w zasadzie stoi w miejscu od dekady. W 2007 r. przychody Ekstraklasy odpowiadały około 5 900 przeciętnych rocznych pensji brutto. W 2015 r. - już 9 900. W sezonie 2024/2025, w rekordowym roku - <strong>9 338</strong>. Mniej niż dziesięć lat wcześniej. Liga zarabia dziś więcej złotówek, ale za te złotówki może opłacić mniej ludzkiej pracy.</p>
 <p class="pull">Rekordowe przychody polskiej piłki kupują dziś mniej ludzkiej pracy niż w 2015 roku. Liga nie tyle urosła, ile nadążyła za pensjami - i to nie do końca.</p>
 <p>Podobnie wygląda to od strony gospodarki. Przychody Ekstraklasy to w 2007 r. było 0,171 promila polskiego PKB, a dziś 0,269 promila. Wzrost realny, ale skromny - i wciąż poniżej szczytu, który liga osiągnęła w <strong>2016 roku</strong> (0,310 promila). Ten szczyt to nie przypadek: to rok, w którym Legia zagrała w fazie grupowej Ligi Mistrzów. Jedna kampania jednego klubu w europejskiej elicie dała polskiej piłce więcej niż następne osiem lat komercyjnego rozwoju.</p>
 <p>Dla porządku zastrzeżenie: kluby nie zatrudniają za przeciętną krajową i kupują zawodników na rynku europejskim, nie polskim. To jednak argument na niekorzyść, nie na korzyść - koszty rosną im według stawek, które ustala Zachód, a przychody według tego, na co stać Polskę.</p>
@@ -276,12 +279,12 @@ typ: wpis
 </div>
 <div class="part">
 <p class="part-tag">Część V - Dystans do rdzenia</p>
-<h2>Dogoniliśmy Europę. Przepaść urosła trzykrotnie</h2>
+<h2>Dogoniliśmy Europę. Przepaść i tak się podwoiła</h2>
 <p>Szedłem do tych danych z gotową tezą: że polska piłka biegła szybko, ale najbogatsze kluby Europy biegły szybciej, i stąd nasza nieobecność w Lidze Mistrzów. Liczby tę tezę przewracają.</p>
-<p>Licząc w euro, przychody Ekstraklasy wzrosły od 2007 r. <strong>4,6-krotnie</strong>. W tym samym czasie dwadzieścia najbogatszych klubów świata z rankingu Deloitte Money League urosło 3,4-krotnie, a najbogatszy klub - 3,2-krotnie. Udział Ekstraklasy w przychodach tej dwudziestki wzrósł z 1,45 do 2,00 procent. Sprawdziłem to jeszcze na innej mierze, licząc od 2014 r., dla którego UEFA podaje przychody całego europejskiego futbolu: przez dekadę Europa urosła o 81 procent, a Polska o 121. <strong>Rośliśmy szybciej niż rdzeń, i to wyraźnie.</strong></p>
+<p>Licząc w euro, przychody Ekstraklasy wzrosły od 2007 r. <strong>4,6-krotnie</strong>. W tym samym czasie dwadzieścia najbogatszych klubów świata z rankingu Deloitte Money League urosło 3,4-krotnie, a najbogatszy klub - 3,2-krotnie. (To mnożniki nominalne; po odliczeniu inflacji w strefie euro wychodzi odpowiednio 3,2, 2,3 i 2,2 raza, ale ponieważ wszystkie trzy dzieli się przez ten sam indeks cen, samo porównanie się nie zmienia.) Udział Ekstraklasy w przychodach tej dwudziestki wzrósł z 1,45 do 2,00 procent. Sprawdziłem to jeszcze na innej mierze, licząc od 2014 r., dla którego UEFA podaje przychody całego europejskiego futbolu: przez dekadę Europa urosła o 81 procent, a Polska o 121. <strong>Rośliśmy szybciej niż rdzeń, i to wyraźnie.</strong></p>
 <p>A teraz to samo na wykresie.</p>
 <div class="fig">
-<div class="plotno"><svg viewBox="0 0 720 340" role="img" aria-label="Wykres slupkowy: w 2007 roku cala Ekstraklasa miala 54 miliony euro przychodow, a najbogatszy klub Europy 366 milionow - roznica 312 milionow. W sezonie 2024/2025 Ekstraklasa ma 248 milionow, a najbogatszy klub 1161 milionow - roznica 913 milionow euro.">
+<div class="plotno"><svg viewBox="0 0 720 340" role="img" aria-label="Wykres slupkowy w cenach z 2025 roku: w 2007 cala Ekstraklasa miala 78 milionow euro przychodow, a najbogatszy klub Europy 533 milionow - roznica 455 milionow. W sezonie 2024/2025 Ekstraklasa ma 248 milionow, a najbogatszy klub 1161 milionow - roznica 913 milionow euro.">
 <line x1="52" y1="286" x2="704" y2="286" stroke="#DCE2E8" stroke-width="1"/>
 <text x="44" y="290" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-size="10.5" font-weight="400" fill="#8593A0">0</text>
 <line x1="52" y1="205" x2="704" y2="205" stroke="#EAEEF2" stroke-width="1"/>
@@ -290,14 +293,14 @@ typ: wpis
 <text x="44" y="129" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-size="10.5" font-weight="400" fill="#8593A0">800</text>
 <line x1="52" y1="44" x2="704" y2="44" stroke="#EAEEF2" stroke-width="1"/>
 <text x="44" y="48" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-size="10.5" font-weight="400" fill="#8593A0">1200</text>
-<rect x="145" y="275" width="74" height="11" rx="4" fill="#C0303A"/>
-<text x="182" y="266" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="14" font-weight="600" fill="#C0303A">54</text>
-<rect x="237" y="212" width="74" height="74" rx="4" fill="#15202B"/>
-<text x="274" y="203" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="14" font-weight="600" fill="#15202B">366</text>
-<line x1="324" y1="212" x2="324" y2="275" stroke="#8593A0" stroke-width="1.2" stroke-dasharray="3 3"/>
-<text x="331" y="242" text-anchor="start" font-family="Bricolage Grotesque, sans-serif" font-size="11" font-weight="400" fill="#8593A0">różnica</text>
-<text x="331" y="257" text-anchor="start" font-family="Bricolage Grotesque, sans-serif" font-size="13" font-weight="600" fill="#51616C">312 mln</text>
-<text x="228" y="308" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="12" font-weight="600" fill="#51616C">2007</text>
+<rect x="145" y="270" width="74" height="16" rx="4" fill="#C0303A"/>
+<text x="182" y="261" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="14" font-weight="600" fill="#C0303A">78</text>
+<rect x="237" y="179" width="74" height="107" rx="4" fill="#15202B"/>
+<text x="274" y="170" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="14" font-weight="600" fill="#15202B">533</text>
+<line x1="324" y1="179" x2="324" y2="270" stroke="#8593A0" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="331" y="222" text-anchor="start" font-family="Bricolage Grotesque, sans-serif" font-size="11" font-weight="400" fill="#8593A0">różnica</text>
+<text x="331" y="237" text-anchor="start" font-family="Bricolage Grotesque, sans-serif" font-size="13" font-weight="600" fill="#51616C">455 mln</text>
+<text x="228" y="308" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="12" font-weight="600" fill="#51616C">2007 (w cenach z 2025)</text>
 <rect x="471" y="236" width="74" height="50" rx="4" fill="#C0303A"/>
 <text x="508" y="227" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="14" font-weight="600" fill="#C0303A">248</text>
 <rect x="563" y="52" width="74" height="234" rx="4" fill="#15202B"/>
@@ -307,9 +310,15 @@ typ: wpis
 <text x="657" y="157" text-anchor="start" font-family="Bricolage Grotesque, sans-serif" font-size="13" font-weight="600" fill="#51616C">913 mln</text>
 <text x="554" y="308" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="12" font-weight="600" fill="#51616C">sezon 2024/25</text>
 </svg></div><p class="legend"><span><i class="dot" style="background:#C0303A"></i>cała Ekstraklasa (18 klubów)</span><span><i class="dot" style="background:#15202B"></i>najbogatszy klub Europy</span></p>
-<p class="figcap">Przychody z podstawowej działalności wszystkich klubów Ekstraklasy wobec przychodów najbogatszego klubu Europy (Real Madryt w 2007 i w sezonie 2024/2025), w mln euro. Świadomie tylko dwa momenty - dla lat pośrednich nie ma w pełni porównywalnych danych. Źródła: Deloitte, Grant Thornton, Deloitte Football Money League, kursy średnioroczne NBP.</p>
+<p class="figcap">Przychody z podstawowej działalności wszystkich klubów Ekstraklasy wobec przychodów najbogatszego klubu Europy (Real Madryt w obu momentach), w mln euro <strong>według cen z 2025 r.</strong> - kwoty z 2007 r. przeliczone indeksem cen strefy euro, inaczej zestawialibyśmy dwie różne jednostki. Świadomie tylko dwa momenty: dla lat pośrednich nie ma w pełni porównywalnych danych. Źródła: Deloitte, Grant Thornton, Deloitte Football Money League, Eurostat, kursy średnioroczne NBP.</p>
 </div>
-<p>Proporcja rzeczywiście się poprawiła: w 2007 r. najbogatszy klub Europy miał prawie siedmiokrotność przychodów całej naszej ligi, dziś ma niecałe pięć. Tylko że proporcja to nie jest to, czym się płaci za piłkarza. Różnica w pieniądzach - realna kwota, o którą tamten klub jest bogatszy - urosła z <strong>312 do 913 mln euro</strong>. Potroiła się. Dogoniliśmy w procentach i zostaliśmy w tyle o dodatkowe sześćset milionów euro rocznie.</p>
+<p>Proporcja rzeczywiście się poprawiła: w 2007 r. najbogatszy klub Europy miał prawie siedmiokrotność przychodów całej naszej ligi, dziś ma niecałe pięć. Tylko że proporcja to nie jest to, czym się płaci za piłkarza.</p>
+<p>Różnica w pieniądzach wynosiła w 2007 r. 312 mln euro, a dziś wynosi 913 mln. Zestawianie tych dwóch kwot wprost byłoby jednak tym samym błędem, który opisałem na początku: przez osiemnaście lat ceny w strefie euro wzrosły o 45 procent, więc euro z 2007 r. i euro z 2025 r. to nie ta sama jednostka. Po urealnieniu tamte 312 mln odpowiada dzisiejszym <strong>455 mln euro</strong>. Rzetelne porównanie brzmi więc tak: różnica dzieląca całą polską ligę od jednego klubu <strong>podwoiła się w realnych pieniądzach</strong>, z 455 do 913 mln euro. To mniej dramatycznie niż „potroiła się", ale wciąż jest to podwojenie w okresie, w którym rzekomo doganialiśmy.</p>
+<h3>To w takim razie kiedy dogonimy?</h3>
+<p>Skoro rośniemy szybciej, pytanie nasuwa się samo. Da się na nie odpowiedzieć, choć odpowiedź jest niewesoła. W latach 2007-2024/25 przychody Ekstraklasy rosły średnio o <strong>8,9 procent rocznie</strong> (w euro), a najbogatszego klubu Europy o <strong>6,6 procent</strong>. Gdyby oba tempa utrzymały się bez zmian, cała polska liga zrównałaby się z jednym Realem Madryt <strong>około roku 2099</strong>.</p>
+<p>Gorsza jest jednak druga liczba. Nadwyżka tempa jest tak mała wobec różnicy poziomów, że <strong>różnica w euro rośnie jeszcze przez mniej więcej sześćdziesiąt lat</strong> - mniej więcej do 2085 - i dopiero potem zaczyna maleć. Za dekadę wyniesie nie 913 mln, lecz około 1,6 mld euro. Innymi słowy: nawet w scenariuszu, w którym wszystko idzie po naszej myśli, przez całe życie zawodowe dzisiejszego dwudziestolatka dystans będzie się <em>powiększał</em>.</p>
+<p>To oczywiście nie jest prognoza. Nikt nie wie, co się stanie z prawami telewizyjnymi, czy powstanie jakaś wersja Superligi, czy UEFA nie zmieni zasad podziału pieniędzy. Ten rachunek pokazuje tylko, co naprawdę znaczy „rośniemy szybciej od rdzenia" przy takiej różnicy skali: znaczy tyle, że nadganiamy w tempie, którego pojedyncze pokolenie nie zdąży zauważyć.</p>
+<p class="pull">Rośniemy szybciej od najbogatszych i mimo to oddalamy się od nich w pieniądzach. Przy dzisiejszym tempie przepaść przestanie się powiększać dopiero około 2085 roku.</p>
 <h3>Za to sąsiadów wyprzedziliśmy naprawdę</h3>
 <p>Jest jednak liga, którą Polska wyprzedziła w tym czasie zupełnie realnie: skandynawska. W raporcie Deloitte za sezon 2018/2019 polskie kluby miały 133 mln euro przychodów i były <em>poniżej</em> Danii, Norwegii i Szwecji. Pięć lat później dane UEFA wyglądają tak:</p>
 <div class="rtable">
@@ -332,19 +341,20 @@ typ: wpis
 <p>Po przeliczeniu wszystkiego wychodzi obraz, którego się nie spodziewałem, i wcale nie jest prostszy od tego, z którym zaczynałem.</p>
 <p>Względem rdzenia europejskiej piłki polska liga <em>naprawdę</em> się podciągnęła: rosła szybciej niż najbogatsze kluby świata, szybciej niż europejski futbol jako całość, i awansowała na czternaste miejsce w Europie, wyprzedzając kraje, które jeszcze dekadę temu były poza zasięgiem. Ta część mojej dawnej tezy była błędna i dobrze, że sprawdziłem.</p>
 <p>Względem własnego kraju polska piłka niemal drgnęła: w przeciętnych wynagrodzeniach jest dziś mniejsza niż w 2015 r., a jej udział w PKB wciąż nie dogonił rekordu z 2016. Rekordowe miliardy w nagłówkach to w dużej mierze inflacja i to, że Polacy zaczęli więcej zarabiać.</p>
-<p>A trzecia rzecz jest tą, która decyduje o wyniku sportowym. W piłce nie płaci się procentami PKB ani indeksami wzrostu. Płaci się euro. Transfer za dwadzieścia milionów euro kosztuje dwadzieścia milionów euro niezależnie od tego, o ile procent czyjaś liga urosła w ostatniej dekadzie. I właśnie w tej jednej walucie, jedynej, która się liczy przy stole negocjacyjnym, <strong>dystans potroił się</strong>. Można biec szybciej od kogoś, kto ma dziesięć razy dłuższe nogi, i mimo to oddalać się od niego z każdym krokiem.</p>
+<p>A trzecia rzecz jest tą, która decyduje o wyniku sportowym. W piłce nie płaci się procentami PKB ani indeksami wzrostu. Płaci się euro. Transfer za dwadzieścia milionów euro kosztuje dwadzieścia milionów euro niezależnie od tego, o ile procent czyjaś liga urosła w ostatniej dekadzie. I właśnie w tej jednej walucie, jedynej, która się liczy przy stole negocjacyjnym, <strong>dystans się podwoił</strong> - i przy dzisiejszym tempie będzie rósł jeszcze przez pokolenie albo dwa. Można biec szybciej od kogoś, kto ma dziesięć razy dłuższe nogi, i mimo to oddalać się od niego z każdym krokiem.</p>
 <p>To zresztą domyka wątek, który zostawiłem otwarty w <a href="/polska-sport-a-gospodarka/">poprzednim tekście o sporcie i gospodarce</a>. Pisałem tam, że stadion to hardware, a system to software. Dane UEFA pokazują to teraz w liczbach: trzecie miejsce w Europie w budowaniu obiektów, pięćdziesiąte pierwsze w bilansach klubów, które w nich grają. Zbudowaliśmy hardware. Wciąż go nie mamy czym uruchomić.</p>
 </div>
 <div class="summary">
 <h4>W skrócie</h4>
 <ul>
 <li><strong>203 mln zł (2007) i 1 051 mln zł (2024/25).</strong> To przychody z podstawowej działalności, jedyna wielkość liczona tak samo przez osiemnaście lat. Popularne porównanie „380 mln zł do 1,27 mld zł" miesza dwie różne metodyki, bo transfery doliczane są dopiero od 2017.</li>
-<li><strong>5,2× nominalnie, 2,8× realnie, 1,6× w pensjach.</strong> Mierzona w przeciętnych polskich wynagrodzeniach liga jest dziś <em>mniejsza</em> niż w 2015 r.</li>
+<li><strong>5,2× nominalnie, 2,8× realnie, 1,6× w pensjach.</strong> Ostatnia miara to roczne przychody klubów podzielone przez przeciętną roczną pensję brutto. Tak liczona liga jest dziś <em>mniejsza</em> niż w 2015 r.</li>
 <li><strong>Szczyt był w 2016, nie dziś.</strong> Udział Ekstraklasy w PKB wciąż nie wrócił do poziomu z roku, w którym Legia grała w fazie grupowej Ligi Mistrzów.</li>
 <li><strong>Struktura zmieniła się na lepsze.</strong> Prawa mediowe wzrosły z 24 do 41 procent przychodów, komercyjne spadły z 60 do 39. Mniej zależności od pojedynczego mecenasa.</li>
 <li><strong>Dzień meczowy: z 17 na 20 procent.</strong> Kilkanaście stadionów światowej klasy po Euro 2012 przesunęło tę pozycję o trzy punkty procentowe.</li>
 <li><strong>Rośliśmy szybciej niż rdzeń.</strong> Ekstraklasa 4,6× w euro wobec 3,4× dla dwudziestu najbogatszych klubów świata; +121 procent wobec +81 dla całej Europy w latach 2014-2024.</li>
-<li><strong>I mimo to przepaść urosła trzykrotnie.</strong> Różnica między najbogatszym klubem Europy a całą Ekstraklasą: 312 mln euro w 2007, 913 mln euro dziś.</li>
+<li><strong>I mimo to przepaść się podwoiła.</strong> Różnica między najbogatszym klubem Europy a całą Ekstraklasą: 455 mln euro w 2007 (w dzisiejszych cenach) wobec 913 mln euro obecnie. Nominalnie wygląda to na potrojenie, ale euro sprzed osiemnastu lat nie jest tym samym euro.</li>
+<li><strong>Przy tym tempie zrównanie wypada około 2099 r.</strong> A różnica w euro rośnie jeszcze przez jakieś sześćdziesiąt lat, zanim w ogóle zacznie maleć. To nie prognoza, tylko ilustracja tego, co znaczy „rosnąć szybciej" przy takiej różnicy skali.</li>
 <li><strong>14. liga Europy, 51. bilans.</strong> Trzecie miejsce na kontynencie w inwestycjach stadionowych, 83 procent stadionów w rękach samorządów, jedenaście klubów z ujemnym kapitałem własnym.</li>
 </ul>
 </div>
@@ -352,8 +362,8 @@ typ: wpis
 <h2>Źródła i metoda</h2>
 <p class="src"><strong>Przychody klubów.</strong> Deloitte, <em>Piłkarska Liga Finansowa</em> - edycje za rok 2016 (lipiec 2017), rok 2019 (październik 2020) i sezon 2021/2022 (wrzesień 2022). Grant Thornton, <em>Finansowa Ekstraklasa</em> - sezony 2022/2023, 2023/2024 i 2024/2025. Grant Thornton kontynuuje szereg Deloitte, dzięki czemu dane są porównywalne. Pomocniczo: EY i Ekstraklasa SA, <em>Ekstraklasa piłkarskiego biznesu</em> (2012, 2016, 2017) - inna metodyka, dlatego nie wchodzi do szeregu; Grant Thornton, <em>Finansowa pierwsza liga</em> (2022/23, 2023/24, 2024/25); PwC, <em>Ekstraklasa - kibice, kluby i miasto</em> (2025).</p>
 <p class="src"><strong>Kontekst europejski.</strong> UEFA, <em>The European Club Finance and Investment Landscape 2025</em> - dane za rok obrotowy 2023/2024 dla wszystkich 55 federacji. Deloitte, <em>Football Money League</em> - edycje 2008 i 2026. Deloitte, <em>Piłkarska liga finansowa - rok 2019</em> (porównanie lig spoza wielkiej piątki za sezon 2018/2019).</p>
-<p class="src"><strong>Dane makroekonomiczne.</strong> Przeciętne miesięczne wynagrodzenie brutto - GUS, Bank Danych Lokalnych. PKB w cenach bieżących i roczny indeks cen konsumpcyjnych - Eurostat. Kursy średnioroczne EUR/PLN - policzone ze wszystkich notowań tabeli A Narodowego Banku Polskiego z danego roku.</p>
-<p class="src"><strong>Jak liczyłem.</strong> Wszystkie porównania w czasie oparte są na przychodach z podstawowej działalności (dzień meczowy, prawa mediowe i marketingowe, przychody komercyjne), bez transferów - bo tylko ta wielkość jest liczona tak samo od 2007 r. Sezony przypisano do roku, w którym się kończą, zgodnie z rokiem obrotowym klubów. Urealnienie: roczny indeks cen, ceny z 2025 r. Zestaw danych i skrypt liczący są opisane w tekście na tyle dokładnie, żeby każdy rachunek dało się powtórzyć.</p>
+<p class="src"><strong>Dane makroekonomiczne.</strong> Przeciętne miesięczne wynagrodzenie brutto - GUS, Bank Danych Lokalnych. PKB w cenach bieżących oraz roczne indeksy cen konsumpcyjnych dla Polski i dla strefy euro - Eurostat. Kursy średnioroczne EUR/PLN - policzone ze wszystkich notowań tabeli A Narodowego Banku Polskiego z danego roku.</p>
+<p class="src"><strong>Jak liczyłem.</strong> Wszystkie porównania w czasie oparte są na przychodach z podstawowej działalności (dzień meczowy, prawa mediowe i marketingowe, przychody komercyjne), bez transferów - bo tylko ta wielkość jest liczona tak samo od 2007 r. Sezony przypisano do roku, w którym się kończą, zgodnie z rokiem obrotowym klubów. Kwoty złotowe urealniam polskim indeksem cen, a kwoty w euro - indeksem strefy euro; w obu przypadkach do cen z 2025 r. Wskaźnik „w przeciętnych wynagrodzeniach" to roczne przychody klubów podzielone przez przeciętne roczne wynagrodzenie brutto w danym roku. Rachunek dogonienia zakłada, że obie strony rosną dalej w tempie zmierzonym w latach 2007-2024/25 (średnia geometryczna) - to nie jest prognoza, tylko ekstrapolacja obecnego tempa.</p>
 <p class="meta">Tekst jest rozwinięciem wątku klubowego z eseju <a href="/polska-sport-a-gospodarka/">Gospodarczy prymus, sportowy maruder</a>. Stan danych: sierpień 2026.</p>
 </div>
 </div>
