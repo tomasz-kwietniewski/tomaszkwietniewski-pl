@@ -57,6 +57,16 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   każdego wpisu (jak dawny featured image z WP). `wpisy.js` deduplikuje - usuwa wiodący obrazek
   z treści, gdy to ten sam plik co miniatura (nie wklejać hero ręcznie na początek treści; embed
   YouTube na starcie zostaje). Styl: `.wpis-obraz` w style.css.
+- **Bogaty esej SKŁADANY SKRYPTEM (od 2026-08-06):** wpis
+  `2026-08-06-finanse-polskiej-pilki.md` nie jest pisany ręcznie - powstaje z
+  `docs/artykuly/2026-08-06-finanse-polskiej-pilki/` (`styl.css` + `tresc.html` ze
+  znacznikami wykresów + `narzedzia/wykresy.py` generujące SVG z CSV) przez
+  `narzedzia/zloz.py`. To odpowiedź na pułapkę rozjazdu CSS z eseju o sporcie: skoro
+  `.md` jest artefaktem, nie da się go rozjechać ze źródłem. `zloz.py` blokuje zapis,
+  gdy w treści są puste linie wewnątrz `.esej`, długie myślniki albo nie zgadza się
+  bilans `<div>`. **Nie edytować tego `.md` ręcznie ani przez Pages CMS.**
+  Wykresy SVG w tym eseju są w kontenerze `.plotno` (przewijanie w poziomie) - bez tego
+  wykres 720 px zgnieciony do 240 px na telefonie ma etykiety wielkości 3 px.
 - Osadzenia YouTube: build przepisuje `youtube.com/embed` na `youtube-nocookie.com`
   (`lib/media.js`) - film nie zapisuje cookies, dopóki użytkownik nie kliknie play.
   Iframe'y INNE niż YouTube są wycinane z treści w buildzie (`usunObceOsadzenia` -
