@@ -278,7 +278,7 @@ typ: wpis
 <div class="part">
 <p class="part-tag">Część V - Epilog</p>
 <h2>Rok później: „łże pojednanie"</h2>
-<p>Dziś z perspektywy czasu można stwierdzić, że omawiany ruch społeczny był bardzo nietrwały i nie osiągnął swojego celu, skończył się porażką... Redaktor Agaton Koziński we Wprost nr 16/2005 napisał o „łże pojednaniu".</p>
+<p>Dziś z perspektywy czasu można stwierdzić, że omawiany ruch społeczny był bardzo nietrwały i nie osiągnął swojego celu, skończył się porażką... Redaktor Agaton Koziński we Wprost nr 16/2006 napisał o „łże pojednaniu".</p>
 <div class="midnote">
 <p>„Wieczór 22 marca 2006. 23-letni Mariusz wraca do domu po meczu hokeja Cracovia - GKS. Dopada go grupa wiślaków. Krzyczą: „To za Marcina, śmierć za śmierć". Uderzają nożem, kopią leżącego. Bicia zaprzestaną dopiero wtedy, gdy chłopak przestanie się ruszać. Mariusza uratował strażnik z pobliskiego targowiska, który wezwał pomoc.</p>
 <p>Na policji Mariusz powiedział, że nożem zranił się sam. To święta zasada: kibice Cracovii nie składają zeznań, bo - jak mówią - „nie chcą się pucować".</p>
