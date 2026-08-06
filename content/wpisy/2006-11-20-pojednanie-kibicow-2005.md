@@ -322,6 +322,28 @@ typ: wpis
 </div>
 <p>Pierwsza rzecz, która mnie uderzyła przy przenoszeniu tego tekstu: on się prawie nie przeterminował. Zmieniło się otoczenie, nie mechanizm. Ostatnie zdanie pracy mówi o „rządowym programie, który dopiero powstaje" i to akurat okazało się prorocze, choć nie w sposób, który wtedy przewidywaliśmy. Zmieniły to nie pojednanie i nie przemiana serc, tylko przepisy i beton: ustawa o bezpieczeństwie imprez masowych, zakazy stadionowe, identyfikacja kibiców, monitoring, a przede wszystkim <strong>stadiony zbudowane na Euro 2012</strong>. Dokładnie ta „nowoczesna infrastruktura", której brak wskazywaliśmy jako jedną z przyczyn bezradności.</p>
 <p>Skutek jest połowiczny i nie taki, o jakim marzyli ludzie na Błoniach. Z trybun w Ekstraklasie zniknęła regularna przemoc, wróciły rodziny z dziećmi, a doping i oprawy są dziś na poziomie, o jakim w 2006 roku nikt nie śmiał myśleć. Ale bójki nie zniknęły. Przeniosły się poza stadion, w umówione miejsca, dokładnie tak, jak opisywaliśmy w części o „pojedynkach" w lasach i na parkingach.</p>
+<h3>Kto dziś siedzi na trybunach</h3>
+<p>Zmieniło się też coś, czego na naszym ówczesnym rysunku w ogóle nie widać. Kibiców okazjonalnych narysowaliśmy jako mały owal <em>poza</em> stadionem - bo w 2006 roku faktycznie tam byli, przed telewizorem. Dziś siedzą na trybunach i moim zdaniem stanowią mniej więcej <strong>połowę ludzi na meczu</strong>.</p>
+<p>Nie chodzą na każdy mecz i nie prowadzą dopingu. Czasem wstaną, czasem posłuchają przyśpiewek bardziej jako widownia niż jako uczestnicy. Przychodzą obejrzeć piłkę na żywo, wypić piwo, pogadać ze znajomymi - bo to jednak inne przeżycie niż transmisja. To zwyczajna rozrywka i w całej tej historii jest to najlepsza wiadomość.</p>
+<div class="fig">
+<div class="plotno">
+<svg viewBox="0 0 720 380" role="img" aria-label="Ten sam diagram widziany w 2026 roku. Wszystkie cztery grupy są teraz wewnątrz ramki stadionu. Największe koło to kibice okazjonalni, mniej więcej połowa ludzi na meczu. Mniejsze koła to kolejno kibice zaangażowani, ultrasi i najmniejsze koło chuliganów.">
+<rect x="16" y="44" width="688" height="304" rx="16" fill="#FFFFFF" stroke="#DCE2E8" stroke-width="1.5"/>
+<text x="36" y="30" font-family="Bricolage Grotesque, sans-serif" font-size="15" font-weight="600" letter-spacing="2.4" fill="#8593A0">STADION</text>
+<circle cx="490" cy="200" r="118" fill="#51616C" fill-opacity="0.10" stroke="#8593A0" stroke-width="1.5"/>
+<circle cx="292" cy="200" r="88" fill="#1F5C99" fill-opacity="0.13" stroke="#1F5C99" stroke-width="1.5"/>
+<circle cx="190" cy="205" r="58" fill="#6B5CA5" fill-opacity="0.15" stroke="#6B5CA5" stroke-width="1.5"/>
+<circle cx="120" cy="212" r="32" fill="#C0303A" fill-opacity="0.16" stroke="#C0303A" stroke-width="1.5"/>
+<text x="490" y="194" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="19" font-weight="600" fill="#3F4E5A">Kibice okazjonalni</text>
+<text x="490" y="218" text-anchor="middle" font-family="Archivo, sans-serif" font-size="14" fill="#51616C">mniej więcej połowa trybun</text>
+<text x="292" y="194" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="15" font-weight="600" fill="#1F5C99">Kibice zaangażowani</text>
+<text x="292" y="216" text-anchor="middle" font-family="Archivo, sans-serif" font-size="13" fill="#51616C">trzon dopingu</text>
+<text x="190" y="134" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="15" font-weight="600" fill="#6B5CA5">Ultrasi</text>
+<text x="106" y="172" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="14" font-weight="600" fill="#C0303A">Chuligani</text>
+</svg>
+</div>
+<p class="figcap">Ten sam obrazek, ale dzisiaj. Kibice okazjonalni przestali być owalem poza stadionem - siedzą na trybunach i to oni są dziś największą grupą na meczu. Wielkość kół jest poglądowa, a same proporcje to moja obserwacja z 2026 roku, nie dane z pracy.</p>
+</div>
 <h3>Dwie rzeczy, które naprawdę działają</h3>
 <p>Po tych dwudziestu latach uważam, że na chuligaństwo na trybunach działają tylko dwie rzeczy. Obie są nudne i obie działają obok ludzkich intencji, nie dzięki nim.</p>
 <div class="models">
