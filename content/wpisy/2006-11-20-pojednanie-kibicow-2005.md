@@ -125,6 +125,12 @@ typ: wpis
 .esej .rrow.poland{background:var(--pol-soft)}
 .esej .rrow.poland .country{color:var(--pol)}
 .esej .rrow.poland .ach{color:#8E2028}
+/* Wariant tabeli: bilans postulatow z 2014 (szersza pierwsza kolumna, werdykt zamiast liczby) */
+.esej .rtable.bilans .rrow{grid-template-columns:232px 116px 1fr}
+.esej .rtable.bilans .pop{text-align:left;font-family:var(--disp);font-weight:600;font-size:12.5px}
+.esej .rtable.bilans .pop.tak{color:var(--nor)}
+.esej .rtable.bilans .pop.nie{color:var(--pol)}
+.esej .rtable.bilans .country{line-height:1.35}
 
 /* Przypisy */
 .esej sup{font-size:11px;line-height:0}
@@ -147,7 +153,7 @@ typ: wpis
   .esej .os{padding:20px 16px 6px}
   .esej .os-el{grid-template-columns:74px 16px 1fr;gap:0 10px}
   .esej .os-data{font-size:12.5px}
-  .esej .rrow{grid-template-columns:1fr;gap:0}
+  .esej .rrow,.esej .rtable.bilans .rrow{grid-template-columns:1fr;gap:0}
   .esej .rrow > div{padding:10px 16px}
   .esej .rrow .country{padding-bottom:2px}
   .esej .rrow .pop{padding-top:0;padding-bottom:2px}
@@ -315,14 +321,18 @@ typ: wpis
 </div>
 <div class="part dzis">
 <p class="part-tag">Komentarz z 2026 roku</p>
-<h2>Dwadzieścia lat później: jedyna droga, jaką znam</h2>
+<h2>Dwadzieścia lat później, czyli co naprawdę zmieniło trybuny</h2>
 <div class="arch">
 <p class="lab">Uwaga</p>
 <p>Tu kończy się praca z 2006 roku. Wszystko poniżej dopisałem dzisiaj, po dwudziestu latach obserwowania tego, co dzieje się w sporcie i na trybunach.</p>
+<p>Sięgam też po dwa własne teksty z maja 2011 roku, pisane na gorąco po finale Pucharu Polski w Bydgoszczy, i po prezentację, którą zrobiłem dla znajomych w lutym 2014. Cytaty z nich są oznaczone datami - dzięki temu widać, które tezy się obroniły, a które nie.</p>
 </div>
 <p>Pierwsza rzecz, która mnie uderzyła przy przenoszeniu tego tekstu: on się prawie nie przeterminował. Zmieniło się otoczenie, nie mechanizm. Ostatnie zdanie pracy mówi o „rządowym programie, który dopiero powstaje" i to akurat okazało się prorocze, choć nie w sposób, który wtedy przewidywaliśmy. Zmieniły to nie pojednanie i nie przemiana serc, tylko przepisy i beton: ustawa o bezpieczeństwie imprez masowych, zakazy stadionowe, identyfikacja kibiców, monitoring, a przede wszystkim <strong>stadiony zbudowane na Euro 2012</strong>. Dokładnie ta „nowoczesna infrastruktura", której brak wskazywaliśmy jako jedną z przyczyn bezradności.</p>
 <p>Skutek jest połowiczny i nie taki, o jakim marzyli ludzie na Błoniach. Z trybun w Ekstraklasie zniknęła regularna przemoc, wróciły rodziny z dziećmi, a doping i oprawy są dziś na poziomie, o jakim w 2006 roku nikt nie śmiał myśleć. Ale bójki nie zniknęły. Przeniosły się poza stadion, w umówione miejsca, dokładnie tak, jak opisywaliśmy w części o „pojedynkach" w lasach i na parkingach.</p>
+<p>Że tak to się skończy, dało się przewidzieć wcześniej, niż wtedy sądzono. W maju 2011 roku, w środku paniki po finale Pucharu Polski w Bydgoszczy, kiedy premier zapowiadał zamykanie stadionów Legii i Lecha, napisałem: „wydarzenia wczorajsze nie oznaczają problemów z chuligaństwem podczas EURO 2012, takowe są bardzo mało prawdopodobne". Turniej przeszedł bez żadnej awantury, którą warto by dziś pamiętać. Przypominam to nie po to, żeby się chwalić, tylko dlatego, że za chwilę będę stawiał kolejne tezy o przyszłości - a wypada pokazać, jak mi poszło poprzednim razem.</p>
 <h3>Kto dziś siedzi na trybunach</h3>
+<p class="pull">„Mecz ≠ zadyma, kibic ≠ chuligan"</p>
+<p class="pull-src">teza mojej prezentacji z lutego 2014 roku</p>
 <p>Zmieniło się też coś, czego na naszym ówczesnym rysunku w ogóle nie widać. Kibiców okazjonalnych narysowaliśmy jako mały owal <em>poza</em> stadionem - bo w 2006 roku faktycznie tam byli, przed telewizorem. Dziś siedzą na trybunach i moim zdaniem stanowią mniej więcej <strong>połowę ludzi na meczu</strong>.</p>
 <p>Nie chodzą na każdy mecz i nie prowadzą dopingu. Czasem wstaną, czasem posłuchają przyśpiewek bardziej jako widownia niż jako uczestnicy. Przychodzą obejrzeć piłkę na żywo, wypić piwo, pogadać ze znajomymi - bo to jednak inne przeżycie niż transmisja. To zwyczajna rozrywka i w całej tej historii jest to najlepsza wiadomość.</p>
 <div class="fig">
@@ -344,11 +354,24 @@ typ: wpis
 </div>
 <p class="figcap">Ten sam obrazek, ale dzisiaj. Kibice okazjonalni przestali być owalem poza stadionem - siedzą na trybunach i to oni są dziś największą grupą na meczu. Wielkość kół jest poglądowa, a same proporcje to moja obserwacja z 2026 roku, nie dane z pracy.</p>
 </div>
+<h3>Siedem postulatów z 2014 roku, dwanaście lat później</h3>
+<p>W lutym 2014 roku zrobiłem dla znajomych prezentację o środowisku kibiców. Kończyła się slajdem „Jak usunąć chuliganów ze stadionów?" i listą siedmiu punktów. To wygodny materiał, bo jest datowany i konkretny - da się go po prostu odhaczyć.</p>
+<div class="rtable bilans">
+<div class="rrow head"><div>Postulat z 2014</div><div>Stan</div><div>Co się z tym stało</div></div>
+<div class="rrow"><div class="country">Koniec „układania się" z chuliganami</div><div class="pop tak">częściowo</div><div class="ach">Zaczęła jedna Legia, reszta ligi bardzo różnie. Formalne i nieformalne układy z grupami kibicowskimi nie zniknęły.</div></div>
+<div class="rrow"><div class="country">Surowe prawo i nieuchronność kary</div><div class="pop tak">zrobione</div><div class="ach">Zakazy stadionowe, identyfikacja kibiców, tryb przyspieszony. To akurat zadziałało lepiej, niż się spodziewałem.</div></div>
+<div class="rrow"><div class="country">Współpraca klubów, PZPN, policji, prokuratury i sądów</div><div class="pop tak">zrobione</div><div class="ach">Dziś to rutyna, a w 2014 było postulatem. Wtedy wątpiłem, czy ktokolwiek pójdzie w tej sprawie razem.</div></div>
+<div class="rrow"><div class="country">Nowoczesne stadiony i monitoring</div><div class="pop tak">zrobione</div><div class="ach">Euro 2012 załatwiło to jednym ruchem i to była największa pojedyncza zmiana ze wszystkich.</div></div>
+<div class="rrow"><div class="country">Edukacja i kształtowanie postaw obywatelskich</div><div class="pop nie">nietknięte</div><div class="ach">Najtrudniejszy i najtańszy punkt z całej listy. Nikt się za niego nie zabrał, bo nie widać go w statystykach po jednym sezonie.</div></div>
+<div class="rrow poland"><div class="country">Kierunek niemiecki, a nie brytyjski</div><div class="pop nie">przegrane</div><div class="ach">Poszliśmy w stronę droższego biletu, nie w stronę umowy z ultrasami. Tego jednego żałuję najbardziej.</div></div>
+<div class="rrow"><div class="country">Bezpieczna i legalna pirotechnika</div><div class="pop nie">bez zmian</div><div class="ach">Nadal nielegalna. I nadal odpalana, tyle że teraz z konsekwencjami dla klubów.</div></div>
+</div>
+<p>Bilans jest znośny: cztery punkty odhaczone, jeden nietknięty, dwa przegrane. Tyle że odhaczono te, które da się kupić i zapisać w ustawie, a poległy te, które wymagają cierpliwości albo zaufania do kibiców.</p>
 <h3>Dwie rzeczy, które naprawdę działają</h3>
-<p>Po tych dwudziestu latach uważam, że na chuligaństwo na trybunach działają tylko dwie rzeczy. Obie są nudne i obie działają obok ludzkich intencji, nie dzięki nim.</p>
+<p>Po tych dwudziestu latach uważam, że na chuligaństwo na trybunach działają na dużą skalę tylko dwie rzeczy. Obie są nudne i obie działają obok ludzkich intencji, nie dzięki nim.</p>
 <div class="models">
 <div class="model"><p class="lab">Droga pierwsza</p><h4>Bogatsze społeczeństwo</h4><p>Działa sama z siebie i nikogo nie wyklucza, ale bardzo powoli. Mniej biedy to mniej ludzi szukających sensu w bijatyce. Nie da się tego wdrożyć decyzją ani programem.</p></div>
-<div class="model tak"><p class="lab">Droga druga - ta, która działa szybko</p><h4>Cena biletu</h4><p>Skuteczna i sprawdzona, ale działa przez wymianę publiczności. Z trybun znikają nie tylko chuligani, tylko wszyscy, dla których bilet staje się za drogi.</p></div>
+<div class="model tak"><p class="lab">Droga druga - ta, którą świat wybiera</p><h4>Cena biletu</h4><p>Najczęstsza, nie najlepsza. Działa przez wymianę publiczności: z trybun znikają nie tylko chuligani, ale i ultrasi oraz wszyscy, dla których bilet staje się za drogi.</p></div>
 </div>
 <p>Pierwsza to po prostu bogacenie się społeczeństwa i to jedyna droga, którą nazwałbym zdrową. W Polsce jest dziś bezpieczniej niż w latach dziewięćdziesiątych, przestępczości jest mniej, ludziom żyje się lepiej. Mniej osób szuka adrenaliny, przynależności i poczucia własnej ważności w bijatyce na parkingu, bo ma co robić ze swoim życiem. To działa powoli, samo z siebie i nikt tego nie musi ogłaszać.</p>
 <p>Trzeba jednak uczciwie powiedzieć, że samo środowisko zmieniło się w tym czasie na gorsze.</p>
@@ -357,15 +380,25 @@ typ: wpis
 <p>Nie znaczy to, że każdy chuligan działa w grupie przestępczej. Ale te dwa światy leżą dziś znacznie bliżej siebie niż w 2006 roku, kiedy pisaliśmy o „żołnierzach walczących o honor klubu".</p>
 </div>
 <p>A wpływ tych grup na polskie kluby wciąż jest duży. To akurat jedno z tych zdań sprzed dwudziestu lat, których przy przenoszeniu nie musiałem ruszać.</p>
+<p>Pierwszy postulat z tamtej listy, koniec układania się z chuliganami, przez lata realizowała w Polsce właściwie jedna Legia. W 2011 roku pisałem, że to jedyny klub, który zerwał współpracę z grupami kibicowskimi wspierającymi chuliganów. Popierałem to konsekwentnie, choć jako kibica strasznie mnie bolało, że na meczach nie ma atmosfery piłkarskiego święta, a stadion świecił pustkami. Lech w tym samym czasie współpracował dalej. Z dzisiejszej perspektywy tamta decyzja wygląda na kosztowną i słuszną, a obie te trybuny wyglądają dziś zupełnie inaczej.</p>
 <h3>Druga droga i jej cena</h3>
-<p>Druga rzecz to cena biletu. Kiedy patrzę na kraje zachodnie, nie widzę żadnej innej drogi, która realnie zadziałała. W Anglii nie chodziło o same ładne stadiony, tylko o wymianę publiczności. Ceny podniesiono tak wysoko, że produkt stał się niedostępny dla biedniejszych, a przy okazji dla tych agresywnych. Napisaliśmy o tym w 2006 roku jako o czymś, czego „trochę szkoda by było". Dziś myślę, że to po prostu jedyne, co działa szybko.</p>
+<p>Druga rzecz to cena biletu i tu muszę być precyzyjny, bo łatwo mnie źle zrozumieć. Nie twierdzę, że to droga najlepsza. Twierdzę, że to droga, którą świat wybiera najczęściej i która przynosi skutek. W Anglii nie chodziło o same ładne stadiony, tylko o wymianę publiczności: ceny podniesiono tak wysoko, że produkt stał się niedostępny dla biedniejszych, a przy okazji dla tych agresywnych. Napisaliśmy o tym w 2006 roku jako o czymś, czego „trochę szkoda by było". Dziś widzę, że tego jest coraz więcej - bilet staje się produktem premium, ultrasi są z trybun wypychani, a chuligani znikają przy okazji.</p>
 <p>Koszt jest realny i mam z nim problem. Traci klasa robotnicza i ludzie nieuprzywilejowani, czyli dokładnie ci, z których piłka wyrosła. Tracą dostęp do widowiska na żywo, zostają im transmisje w telewizji i w internecie. Doping siada. W zamian dostajemy trybuny spokojne, rodzinne, bez prostactwa, chamstwa, wyzwisk i przemocy. <strong>Oglądanie piłki na żywo staje się w pewnym sensie elitarne.</strong></p>
-<p>Nie mam złudzeń, że stoją za tym wyłącznie dobre intencje. Stoją za tym pieniądze i chęć zwiększenia zysków. Ale pozbycie się chuliganów jest tego świadomym skutkiem, a nie przypadkiem. I obstawiam, że w Polsce z czasem pójdzie to tą samą drogą.</p>
+<p>Nie mam złudzeń, że stoją za tym wyłącznie dobre intencje. Stoją za tym pieniądze i chęć zwiększenia zysków. Ale pozbycie się chuliganów jest tego świadomym skutkiem, a nie przypadkiem.</p>
+<h3>Zdrowszy wyjątek i to, co zrobili Anglicy</h3>
+<p>Zdrowsza droga istnieje i wciąż uważam ją za lepszą. To model niemiecki. W Dortmundzie trybuna ultrasów, słynna „żółta ściana", to <strong>24 454 miejsca stojące</strong>, największa taka trybuna w europejskiej piłce - doping i oprawy są tam traktowane jako element widowiska, a nie jako problem do usunięcia. I nie odbywa się to kosztem frekwencji: w sezonie 2025/26 na mecze Borussii przychodziło średnio blisko 80 tysięcy widzów, najwięcej w całej Bundeslidze. Ciekawostka, która dużo mówi o tym, jak wąski jest ten wyjątek: na mecze europejskich pucharów trybuna stojąca i tak musi zostać przerobiona na siedzącą, a pojemność stadionu spada z 81 do 66 tysięcy.</p>
+<p>Co ciekawe, Anglicy w międzyczasie zawrócili z części swojej drogi. W 2022 roku rząd uchylił obowiązek stadionów wyłącznie siedzących i dopuścił licencjonowane strefy stojące na specjalnych siedziskach z barierką. Dziś w samej Premier League jest ich ponad 60 tysięcy, najwięcej na Anfield. Tyle że stanie odzyskali już po wymianie publiczności i przy wysokich cenach - wrócił element widowiska, nie wróciła dawna widownia.</p>
+<h3>A w Polsce? Ani jedno, ani drugie</h3>
+<p>Mamy własny model i to chyba najuczciwszy opis stanu rzeczy. Stadiony i przepisy jak w Anglii, bo zbudowane pod Euro 2012, z monitoringiem i zakazami stadionowymi. Doping i oprawy jak w Niemczech, w europejskiej czołówce, tylko bez niemieckiej umowy z ultrasami. A ceny w klubach z górnej półki poszły już w górę: w sezonie 2025/26 bilet na ligowy mecz Lecha kosztuje 80 złotych, karnet ponad tysiąc. Legia zrobiła to inaczej - cen nie podniosła, tylko ograniczyła pulę karnetów do 7500 i dopuściła do nich wyłącznie tych, którzy mieli karnet w ostatnich trzech sezonach. U nas selekcja idzie więc dwoma torami naraz, ceną i kolejką. Przemoc z trybun zniknęła, ale nie zniknęła: przeniosła się na ustawki poza stadionem. Nikt tego modelu nie zaprojektował, wyszedł sam.</p>
+<p>Pirotechnika to zresztą osobna, wciąż nierozwiązana sprawa. W 2011 roku pisałem, że race i oprawy same w sobie nie są chuligaństwem, że w cywilizowanych krajach trybuna ultrasów jest po prostu miejscem, gdzie się to robi, i że dałoby się to zalegalizować - ze szkoleniami prowadzonymi choćby przez straż pożarną i odpalaniem w porozumieniu ze służbami. Piętnaście lat później nadal jest nielegalna i nadal odpalana. Zmieniło się tyle, że rzadziej wrzuca się ją do jednego worka z bijatyką na parkingu.</p>
+<p>Pisałem wyżej, że droga ceny biletu jest tą, którą świat wybiera. W Polsce nie ma już czego obstawiać - to się dzieje, na razie na górze tabeli, bo tam jest popyt, który da się zmonetyzować.</p>
 <p>To wniosek częściowo smutny, bo piłka wyszła ze środowisk robotniczych i tam była najbardziej swoja. Jest takie stare angielskie powiedzenie:</p>
 <p class="pull">„Piłka nożna to dżentelmeńska gra dla chuliganów, a rugby to chuligańska gra dla dżentelmenów."</p>
 <p class="pull-src">stare angielskie powiedzenie</p>
 <p>Wciąż jest w tym sporo prawdy. A jednak to piłka zdobyła świat, nie rugby. Zdobyła go jako gra dostępna dla każdego i tym bardziej szkoda, jeśli powoli przestaje taka być.</p>
 <p>Wracając do pytania z 2006 roku: cel negatywny tamtego ruchu, czyli ograniczenie przemocy na stadionach, został w dużej mierze osiągnięty - tylko zupełnie innymi środkami, niż wyobrażali sobie ludzie na Błoniach. Cel pozytywny, czyli samo pojednanie, nie. <strong>Nasza ówczesna diagnoza się obroniła.</strong> To dlatego warto było tę pracę odkopać.</p>
+<p>A prezentację z 2014 roku kończyłem slajdem, pod którym podpisuję się do dziś:</p>
+<p class="pull">„Piłka nożna jest najważniejszą z rzeczy... nieważnych."</p>
 </div>
 <div class="zrodla">
 <h2>Przypisy</h2>
