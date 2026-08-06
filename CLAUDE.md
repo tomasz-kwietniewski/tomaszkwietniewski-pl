@@ -166,11 +166,16 @@ Strona live na GitHub Pages: repo publiczne (docs/ wycięte z historii), workflo
 szczegóły DNS i pułapka certyfikatu HTTPS: pamięć projektu + `WDROZENIE.md`.
 Sitemap zgłoszony w Search Console (2026-07-17). Robots.txt też na niego wskazuje.
 
-**PUŁAPKA: push do `main` nie zawsze wywołuje deploy.** 2026-08-06 commit `bba0a59`
-wylądował na `origin/main`, workflow był `active`, a GitHub Actions po prostu nie utworzyło
-uruchomienia - po sześciu minutach nadal żadnego śladu w API. Ratunek: `workflow_dispatch`.
-Dlatego **zielony push nie jest dowodem publikacji** - po każdym wdrożeniu sprawdzić,
-czy run w ogóle powstał, i dopiero potem potwierdzać efekt na produkcji:
+**PUŁAPKA: push do `main` nie zawsze wywołuje deploy.** 2026-08-06 dwa pushe (`bba0a59`
+i `5f4e935`) wylądowały na `origin/main`, workflow był `active`, a GitHub Actions nie
+utworzyło dla nich uruchomienia - żadnego śladu w API. Przyczyna: **awaria GitHuba**
+(status Actions i Pages `major_outage`, opóźnione dostarczanie webhooków). `workflow_dispatch`
+działał normalnie i to nim wdrożyliśmy wpis, bo ręczne zlecenie nie idzie przez webhooka.
+
+Wniosek na stałe: **zielony push nie jest dowodem publikacji.** Po każdym wdrożeniu sprawdzić,
+czy run w ogóle powstał, a jeśli nie - zlecić ręcznie i dopiero potem potwierdzać efekt
+na produkcji. Dotyczy to też zapisów z Pages CMS: one publikują przez ten sam trigger,
+więc w czasie awarii Tomasz zapisze wpis w panelu i nic się nie opublikuje.
 
 ```bash
 gh run list --limit 3
