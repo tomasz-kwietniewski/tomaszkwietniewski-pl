@@ -3,7 +3,7 @@ title: "Jak za 1150 zł zrobiłem inteligentne ładowanie auta elektrycznego z n
 slug: "jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca"
 miniatura: "/media/2026/05/2026-05-04_ladowanie_EV.png"
 date: "2026-05-02T09:15:13"
-modified: "2026-07-28T14:10:00"
+modified: "2026-08-11T14:35:00"
 url_stara: "https://tomaszkwietniewski.pl/jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca/"
 typ: "wpis"
 kategorie: ["Nowe technologie", "Tipy ułatwiające życie"]
@@ -748,6 +748,75 @@ target    = int(available / 690)</code></pre>
 
 
 
+<h3 class="wp-block-heading">Problem 24: Ładowarka zawieszona przez 36 godzin, a system tego nie zauważył</h3>
+
+
+
+<p class="wp-block-paragraph">Ten problem zgłosiłem ja, patrząc na wykres przepływów energii. Cztery kilowaty nadwyżki szły do sieci, auto stało podłączone kablem, a na jego desce rozdzielczej świecił się komunikat &#8222;ładowanie zakończone&#8221;. Skrypt w tym samym czasie pracował z pozoru wzorowo: liczył nadwyżkę, trzymał tryb solarny i regulował prąd. Najpierw do 9 amperów, potem do 7, potem do 8.</p>
+
+
+
+<p class="wp-block-paragraph">Diagnoza zajęła kilkanaście minut i sprowadziła się do jednego pytania: <strong>czy dane, które czytamy, w ogóle są świeże?</strong></p>
+
+
+
+<p class="wp-block-paragraph">Watchdog zgłosił podejrzenie zamrożonych pomiarów cztery razy w ciągu półtorej doby. Za każdym razem dołączał do logu surowy odczyt z ładowarki. Wszystkie cztery były identyczne, co do znaku:</p>
+
+
+
+<pre class="wp-block-code"><code>{"L1":[2430,0,0],"L2":[2430,0,0],"L3":[2430,0,0],"t":330,"p":0,"d":0,"e":0}</code></pre>
+
+
+
+<p class="wp-block-paragraph">Napięcie 243,0 V dokładnie takie samo na wszystkich trzech fazach i temperatura obudowy niezmieniona od poprzedniego dnia. Realny pomiar tak nie wygląda. Napięcie w sieci drga o kilka woltów w każdej minucie, trzy fazy praktycznie nigdy nie mają identycznej wartości, a obudowa nagrzewa się i stygnie razem z pogodą. To nie było &#8222;auto nie chce się ładować&#8221;. To był martwy blok danych.</p>
+
+
+
+<p class="wp-block-paragraph">Reszta obrazu układała się w to samo:</p>
+
+
+
+<ul class="wp-block-list">
+<li>ładowarka <strong>ignorowała polecenia w obie strony</strong>: cztery komendy startu poprzedniego dnia i cztery komendy stopu następnego, wszystkie bez najmniejszej reakcji;</li>
+<li>ten sam status przez <strong>641 kolejnych odczytów</strong>, bez jednej zmiany mocy;</li>
+<li><strong>ani jednej sekundy z mocą powyżej zera przez 36 godzin</strong>, licznik sesji na zerze;</li>
+<li>przy tym zero błędów łączności, a ping do urządzenia wracał w 3 milisekundy.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ładowarka odpowiadała w sieci, tylko jej oprogramowanie stało. Auto pokazywało &#8222;ładowanie zakończone&#8221;, bo urządzenie przestało podawać sygnał sterujący i sesja została zamknięta.</p>
+
+
+
+<p class="wp-block-paragraph">Lekarstwo okazało się takie samo jak przy Problemie 14: <strong>Reboot z aplikacji Smart Life</strong> (Settings, absolutnie nie Reset to Factory). Moc skoczyła z zera na 3700 W w niecałą minutę, przy zupełnie nietkniętym kodzie. To zresztą najczystszy dowód, jaki mogłem dostać: skoro niczego nie zmieniłem w skrypcie, a wszystko ruszyło, to skrypt nie był winowajcą.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Najciekawsze jest jednak to, co ta awaria powiedziała o moim własnym kodzie.</strong> Ładowarka zawiesiła się z powodu swojego oprogramowania i na to nie mam wpływu. Ale to, że nikt się o tym nie dowiedział przez półtorej doby, przy dwóch słonecznych dniach z rzędu, było już winą skryptu. Znalazłem siedem osobnych usterek i wszystkie należą do jednej rodziny: <strong>system nie odróżniał &#8222;urządzenie milczy&#8221; od &#8222;urządzenie mówi, że wszystko gra&#8221;</strong>.</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Watchdog rozpoznawał awarię po najsłabszym możliwym sygnale.</strong> Patrzył wyłącznie na to, czy moc wynosi zero, co wygląda dokładnie tak samo przy awarii i przy aucie, które jest po prostu naładowane do pełna. Mocniejszy trop leżał w danych przez cały czas: niezmienny surowy odczyt. Teraz porównuję właśnie jego, a najczystszym wskaźnikiem okazała się temperatura, bo ona drga zawsze. Czas wykrycia spadł z &#8222;nigdy&#8221; do pięciu minut.</li>
+<li><strong>Licznik gubił się przy migotaniu trybu.</strong> Liczył się tylko wtedy, gdy skrypt chciał ładować, więc każde chwilowe zejście do bezczynności kasowało go do zera. A przy nadwyżce stojącej na granicy progu tryb przeskakuje tam i z powrotem co kilka minut. W czasie awarii licznik wyzerował się w połowie, przy stanie 40. Ten sam błąd podcinał kompensację poboru, przez co skrypt potrafił zatrzymać realnie trwającą sesję. Jedna poprawka naprawiła oba.</li>
+<li><strong>Jedyną reakcją na awarię było ostrzeżenie w logu.</strong> Czyli w miejscu, do którego nikt normalnie nie zagląda. Teraz powstaje powiadomienie w Home Assistant, jedno na zdarzenie, kasowane samo po powrocie ładowarki do pracy.</li>
+<li><strong>Komendy startu i stopu miały osobne liczniki i żaden nie łączył kropek.</strong> Każdy z osobna mieścił się w swoim limicie i milkł, choć razem opowiadały jedną historię: to urządzenie nie wykonuje niczego, o co je prosimy.</li>
+<li><strong>&#8222;Odpuszczam do zmiany warunków&#8221; znaczyło w praktyce &#8222;do jutra&#8221;.</strong> Po trzech nieudanych próbach startu skrypt milkł, a licznik prób zerował się wyłącznie w sytuacji, w której przy trwającej nadwyżce nigdy się nie znajdziemy. Efekt: cisza od wpół do jedenastej do końca dnia, przy nadwyżce dochodzącej do 8,6 kW. Teraz po pół godziny wraca kolejna seria prób.</li>
+<li><strong>Przy aktywnym statusie skrypt nie miał żadnej drogi wznowienia sesji.</strong> Warunek, który miał wysłać komendę startu, brzmiał &#8222;jeśli ładowarka nie pracuje&#8221;, a ona twierdziła, że pracuje. Komenda nie mogła pójść z definicji. To boli podwójnie, bo auta Stellantisa po zatrzymaniu ładowania zamykają sesję i same jej nie wznawiają. Doszedł cykl stop i start po piętnastu minutach bez poboru, z twardym limitem dwóch prób, żeby nie wrócić do klikania stycznikiem z Problemu 13.</li>
+<li><strong>Zadany prąd szedł na ślepo.</strong> Ładowarka udostępnia pole z informacją, jaki prąd faktycznie ma ustawiony. Czytałem je, ale nigdy nie porównywałem z tym, co wysłałem. Skrypt posłał 6, 9, 7 i 8 amperów do martwego urządzenia i każdą komendę uznał za wykonaną, bo funkcja wysyłająca nie zgłosiła błędu.</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">Jest jeszcze ósma poprawka, której nie wymyśliłem przy biurku. Wdrożyłem zmiany, po czym nadeszła chmura i ładowarka przeszła w stan wstrzymania. Zobaczyłem wtedy coś, co powinno być oczywiste: przy zatrzymanym ładowaniu prąd nie płynie, więc pomiary mogą stać w miejscu <strong>zupełnie legalnie</strong>. Mój świeży licznik zamrożenia rósł jednak niezależnie od tego, czy w ogóle chcemy ładować. Pierwsza minuta po powrocie słońca spełniałaby oba warunki naraz i wyrzucała fałszywy alarm. Codziennie rano. A powiadomienie, które myli się regularnie, przestaje cokolwiek znaczyć, czyli traci się dokładnie to, co się właśnie zbudowało. Poprawka poszła tego samego popołudnia.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Wniosek ogólny, chyba najważniejszy z całego projektu:</strong> status z urządzenia to deklaracja, nie fakt. &#8222;Pracuję&#8221; znaczy tylko tyle, że urządzenie tak twierdzi. Dopóki nie skonfrontuje się tej deklaracji z czymś niezależnym, czyli ze świeżością danych, z potwierdzeniem wykonania komendy i z realnym przepływem mocy, sterownik potrafi godzinami wykonywać bardzo precyzyjne obliczenia na martwym obiekcie i nie mieć o tym najmniejszego pojęcia. Warto pytać nie tylko &#8222;co urządzenie mówi&#8221;, ale też &#8222;kiedy ostatnio powiedziało coś nowego&#8221;.</p>
+
+
+
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
 
@@ -1087,4 +1156,4 @@ def _is_emergency_active(self):
 
 
 
-<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji. Aktualizacja 6: 28 lipca 2026 - Problem 23: regulacja goniąca szum (prąd zmieniany co 30 sekund, sekwencje 10A, 11A, 10A). Histereza plus minus 250 W wokół progu stopnia oraz potwierdzenie zmiany przez dwie iteracje; duży spadek nadal natychmiastowy. Zmierzone: 52 zmiany prądu w pochmurne pół godziny zeszły do jednej.</em></p>
+<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji. Aktualizacja 6: 28 lipca 2026 - Problem 23: regulacja goniąca szum (prąd zmieniany co 30 sekund, sekwencje 10A, 11A, 10A). Histereza plus minus 250 W wokół progu stopnia oraz potwierdzenie zmiany przez dwie iteracje; duży spadek nadal natychmiastowy. Zmierzone: 52 zmiany prądu w pochmurne pół godziny zeszły do jednej. Aktualizacja 7: 11 sierpnia 2026 - Problem 24: ładowarka zawieszona przez 36 godzin (odpowiadała w sieci, ale nie aktualizowała danych i ignorowała wszystkie komendy), a system tego nie zauważył. Rozpoznawanie awarii po niezmiennym surowym odczycie pomiarów zamiast po samym zerze mocy, powiadomienie w Home Assistant zamiast ostrzeżenia w logu, cykl budzenia sesji, gdy ładowarka twierdzi że pracuje, a prąd nie płynie, potwierdzanie zadanego prądu, koniec z trwałym odpuszczaniem prób startu. Testy jednostkowe wzrosły z 24 do 51.</em></p>
