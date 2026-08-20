@@ -817,6 +817,74 @@ target    = int(available / 690)</code></pre>
 
 
 
+<h3 class="wp-block-heading">Problem 25: Alarm, którego nikt nie ogląda, nie jest alarmem</h3>
+
+
+
+<p class="wp-block-paragraph">Tydzień po naprawieniu poprzedniego problemu ta sama awaria wróciła. Tym razem wykrywanie zadziałało wzorowo: system rozpoznał zamrożone pomiary po pięciu minutach i zaalarmował <strong>sześć razy</strong> w ciągu dwóch dni. Każdy alarm z surowym odczytem, każdy z gotową instrukcją, co kliknąć.</p>
+
+
+
+<p class="wp-block-paragraph">Awaria trwała <strong>dwadzieścia dwie i pół godziny</strong>. Do sieci uciekło minimum 12,2 kWh nadwyżki, a drugiego dnia rano ładowarka stała, podczas gdy z dachu szło 7-9 kW.</p>
+
+
+
+<p class="wp-block-paragraph">Dlaczego? Bo powiadomienie trafiało do panelu Home Assistanta, a do panelu nikt nie zagląda w środku dnia roboczego. Diagnostyka była bez zarzutu. Adresat nie istniał.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Pierwszy wniosek jest banalny i właśnie dlatego łatwo go przegapić:</strong> wykrycie awarii ma wartość dopiero wtedy, gdy dociera tam, gdzie człowiek naprawdę patrzy. Alarm idzie więc teraz dodatkowo powiadomieniem na telefon. Panel został jako drugi kanał, nie jedyny.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Drugi wniosek jest ciekawszy.</strong> Skoro lekarstwo jest znane od maja, zawsze to samo i całkowicie mechaniczne, czyli restart z aplikacji, to dlaczego w ogóle czeka na człowieka? Skrypt wie o awarii pięć minut po jej wystąpieniu, a jedyne, co potrafi, to poprosić o kliknięcie. Zbudowałem więc mechanizm, który restartuje ładowarkę sam: reaktywnie, gdy rozpozna zawieszenie, z limitem trzech prób i dziesięciominutowym odstępem, plus profilaktycznie raz na dobę w nocy, wstrzymany, gdy akurat płynie prąd.</p>
+
+
+
+<p class="wp-block-paragraph">Warto zauważyć, że mój pierwszy pomysł brzmiał &#8222;restartujmy co rano&#8221; i wcale by nie wystarczył. Tamta awaria zaczęła się w środku dnia, więc poranny restart uratowałby dokładnie nic z popołudnia. Profilaktyka jest higieną, nie mechanizmem ratunkowym.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>I tu zaczyna się część, która się nie udała.</strong> Okazało się, że wysłanie komendy restartu wcale nie jest trywialne.</p>
+
+
+
+<p class="wp-block-paragraph">Podłączyłem się do ładowarki podsłuchem odpytującym ją trzy razy na sekundę i poprosiłem domownika o kliknięcie restartu w aplikacji. Wynik zaskoczył mnie na trzy sposoby. Po pierwsze, <strong>żadne z widocznych pól nie drgnęło</strong>. Po drugie, urządzenie <strong>ani na moment nie zniknęło z sieci</strong>, co znaczy, że &#8222;restart&#8221; wcale nie restartuje całego sprzętu, a jedynie moduł wykonawczy. Po trzecie, widać było za to jego skutek: napięcie sygnału sterującego, którym ładowarka rozmawia z autem, spadło na trzy sekundy do zera.</p>
+
+
+
+<p class="wp-block-paragraph">Przy okazji wyszło, że pole, które przez trzy miesiące uważałem za numer wersji, jest w rzeczywistości <strong>napięciem tego właśnie sygnału</strong>. Około 12 V znaczy &#8222;auto odpięte&#8221;, 9 V &#8222;podłączone&#8221;, 6 V &#8222;ładuje&#8221;. Ładowarka przez cały czas mówiła mi, czy kabel siedzi w gnieździe, a ja tego nie czytałem.</p>
+
+
+
+<p class="wp-block-paragraph">Skoro komendy nie widać w odczycie, musi być <strong>tylko do zapisu</strong>. I to nie jest teoria: pole, którym od miesięcy włączam i wyłączam ładowanie, też nie pojawia się w żadnym odczycie ani skanie, a działa bez zarzutu. Takich komend po prostu nie da się podsłuchać.</p>
+
+
+
+<p class="wp-block-paragraph">Zostało zapytać producenta. Chmura zna pełny model urządzenia, więc założyłem konto deweloperskie i wyciągnąłem listę wszystkich pól z ich oryginalnymi nazwami. Znalazłem tam dokładnie to, czego szukałem: pole nazwane wprost &#8222;wykonaj restart&#8221;. Wysłałem. Nic. Wysłałem przez chmurę. Chmura potwierdziła przyjęcie, urządzenie nie zareagowało.</p>
+
+
+
+<p class="wp-block-paragraph">Po kilkunastu podejściach trafiłem wreszcie na kombinację, która zadziałała: nie samo ustawienie wartości, lecz pełna zmiana stanu, najpierw wyłącz, potem włącz. Napięcie sygnału spadło do zera dokładnie sekundę po komendzie. Sukces. Tyle że <strong>jedyny</strong>. Pięć kolejnych prób, w tym po dłuższych przerwach, nie dało nic.</p>
+
+
+
+<p class="wp-block-paragraph">Jeden sukces na sześć prób to nie jest mechanizm, tylko anegdota. Automat ma mnie ratować przed dobową awarią, więc nie może opierać się na komendzie działającej raz na kilka razy, w okolicznościach, których nie umiem odtworzyć. Mechanizm jest więc gotowy, przetestowany i <strong>uśpiony</strong>: czeka na jedną brakującą stałą.</p>
+
+
+
+<p class="wp-block-paragraph">Jedna rzecz z tego etapu jest warta zapamiętania jako metoda. Pierwszą próbę uznałem za obiecującą, bo po komendzie ładowarka kilka razy przestała odpowiadać, a chmura wepchnęła swoje ustawienia, czyli dokładnie to, co widuję po prawdziwym restarcie. Dopiero <strong>próba kontrolna</strong>, czyli identyczny pomiar bez wysyłania czegokolwiek, pokazała, że to był zwykły szum. Bez niej wpisałbym do kodu komendę, która nic nie robi, i dowiedziałbym się o tym przy następnej awarii, czyli w najgorszym możliwym momencie. Przy pomiarach na urządzeniu, które ktoś inny również odpytuje, wynik bez grupy kontrolnej jest wart tyle co nic.</p>
+
+
+
+<p class="wp-block-paragraph">Z tego samego podsłuchu wypadła jeszcze jedna poprawka, tym razem zupełnie przypadkiem. Ładowarka przy starcie sesji przechodzi przez krótki stan pośredni, trwający kilkanaście sekund, który znaczy &#8222;kabel włożony&#8221;. Nie miałem go na żadnej liście, więc skrypt widział wtedy status, którego nie rozpoznawał, i uznawał, że <strong>auto jest odpięte</strong>. Przy pętli co pół minuty to od czasu do czasu jedna iteracja bez sterowania, czyli drobiazg. Gorszy jest wariant, w którym ładowarka zawiesiłaby się właśnie w tym stanie: watchdog by tego nie zobaczył, bo zamrożenie liczy się wyłącznie wtedy, gdy skrypt w ogóle chce ładować. Cicha dziura dokładnie tej samej rodziny co cały poprzedni problem.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Wniosek na koniec:</strong> dwie z trzech rzeczy, które wyniosłem z tej sesji, nie wzięły się z naprawiania tego, co zepsute, tylko z <strong>przyglądania się urządzeniu przy normalnej pracy</strong>. Napięcie sygnału sterującego i ten stan pośredni leżały w danych od miesięcy. Wystarczyło raz spojrzeć z rozdzielczością większą niż co trzydzieści sekund.</p>
+
+
+
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
 
@@ -1156,4 +1224,4 @@ def _is_emergency_active(self):
 
 
 
-<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji. Aktualizacja 6: 28 lipca 2026 - Problem 23: regulacja goniąca szum (prąd zmieniany co 30 sekund, sekwencje 10A, 11A, 10A). Histereza plus minus 250 W wokół progu stopnia oraz potwierdzenie zmiany przez dwie iteracje; duży spadek nadal natychmiastowy. Zmierzone: 52 zmiany prądu w pochmurne pół godziny zeszły do jednej. Aktualizacja 7: 11 sierpnia 2026 - Problem 24: ładowarka zawieszona przez 36 godzin (odpowiadała w sieci, ale nie aktualizowała danych i ignorowała wszystkie komendy), a system tego nie zauważył. Rozpoznawanie awarii po niezmiennym surowym odczycie pomiarów zamiast po samym zerze mocy, powiadomienie w Home Assistant zamiast ostrzeżenia w logu, cykl budzenia sesji, gdy ładowarka twierdzi że pracuje, a prąd nie płynie, potwierdzanie zadanego prądu, koniec z trwałym odpuszczaniem prób startu. Testy jednostkowe wzrosły z 24 do 51.</em></p>
+<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji. Aktualizacja 6: 28 lipca 2026 - Problem 23: regulacja goniąca szum (prąd zmieniany co 30 sekund, sekwencje 10A, 11A, 10A). Histereza plus minus 250 W wokół progu stopnia oraz potwierdzenie zmiany przez dwie iteracje; duży spadek nadal natychmiastowy. Zmierzone: 52 zmiany prądu w pochmurne pół godziny zeszły do jednej. Aktualizacja 7: 11 sierpnia 2026 - Problem 24: ładowarka zawieszona przez 36 godzin (odpowiadała w sieci, ale nie aktualizowała danych i ignorowała wszystkie komendy), a system tego nie zauważył. Rozpoznawanie awarii po niezmiennym surowym odczycie pomiarów zamiast po samym zerze mocy, powiadomienie w Home Assistant zamiast ostrzeżenia w logu, cykl budzenia sesji, gdy ładowarka twierdzi że pracuje, a prąd nie płynie, potwierdzanie zadanego prądu, koniec z trwałym odpuszczaniem prób startu. Testy jednostkowe wzrosły z 24 do 51. Aktualizacja 8: 20 sierpnia 2026 - Problem 25: ta sama awaria wróciła i mimo sześciu poprawnych alarmów trwała 22,5 godziny, bo powiadomienie szło wyłącznie do panelu Home Assistanta. Alarm idzie teraz również na telefon. Doszedł mechanizm automatycznego restartu ładowarki, na razie uśpiony: komenda restartu okazała się poleceniem tylko do zapisu, którego nie da się podsłuchać, a to znalezione w modelu producenta zadziałało raz na sześć prób. Przy okazji: pole, które uważałem za numer wersji, jest napięciem sygnału sterującego między ładowarką a autem, oraz naprawiony stan pośredni przy starcie sesji, przez który skrypt widział podłączone auto jako odpięte. Testy jednostkowe: 51 do 67.</em></p>
