@@ -49,6 +49,24 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
       </a>
     </div>
 
+    <div class="projekt-featured">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <span class="badge">edukacja i pomoc</span>
+        </div>
+        <h2>Bezpieczeństwo cyfrowe z sensem</h2>
+        <p>Domowy przegląd bezpieczeństwa cyfrowego dla osób prywatnych. Filozofia: rozsądny kompromis między paranoją a frywolnością, czyli sensowny poziom ochrony bez utrudniania życia.</p>
+        <p>Dwa etapy: przegląd, czyli diagnoza z raportem i krótką listą priorytetów, oraz wdrożenie, po którym menedżer haseł, 2FA i kopie zapasowe są realnie ustawione. Wejściem jest bezpłatny rekonesans OSINT: za pisemną zgodą sprawdzam wyłącznie publiczne źródła i pokazuję, co internet wie o kliencie - łącznie z danymi, o które nigdy nie pytam, bo w tym cała pointa.</p>
+        <p>Do rekonesansu napisałem lokalne narzędzie webowe (Node + Express) - bezstanowe, nie zapisuje danych klienta i działa tylko w sieci lokalnej. Zaczęło się od rodziny i znajomych, bo każdemu warto to raz porządnie ustawić.</p>
+        <div class="projekt__linki">
+          <a href="https://przeglad.tomaszkwietniewski.pl" rel="noopener">przeglad.tomaszkwietniewski.pl</a>
+        </div>
+      </div>
+      <a href="https://przeglad.tomaszkwietniewski.pl" rel="noopener" class="projekt-foto" aria-label="Otwórz przeglad.tomaszkwietniewski.pl">
+        <img src="/assets/img/projekty/proj-przeglad.webp" alt="Bezpieczeństwo cyfrowe z sensem - przeglad.tomaszkwietniewski.pl" class="projekt-featured__obrazek" style="object-position:0 0" loading="lazy">
+      </a>
+    </div>
+
     <div class="projekt">
       <a href="https://momentum.tomaszkwietniewski.pl" rel="noopener" class="projekt-foto" aria-label="Otwórz momentum.tomaszkwietniewski.pl">
         <img src="/assets/img/projekty/proj-momentum.webp" alt="Dashboard aplikacji Momentum Strategy z aktywnym sygnałem GEM" class="projekt__obrazek" style="object-position:0 0" loading="lazy">
@@ -98,17 +116,20 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
     </div>
 
     <div class="projekt">
-      <a href="https://przeglad.tomaszkwietniewski.pl" rel="noopener" class="projekt-foto" aria-label="Otwórz przeglad.tomaszkwietniewski.pl">
-        <img src="/assets/img/projekty/proj-przeglad.webp" alt="Bezpieczeństwo cyfrowe z sensem - przeglad.tomaszkwietniewski.pl" class="projekt__obrazek" style="object-position:0 0" loading="lazy">
+      <a href="https://kalkulatorpv.tomaszkwietniewski.pl" rel="noopener" class="projekt-foto" aria-label="Otwórz kalkulatorpv.tomaszkwietniewski.pl">
+        <img src="/assets/img/projekty/proj-kalkulator.webp" alt="Kalkulator opłacalności fotowoltaiki i magazynu energii" class="projekt__obrazek" style="object-position:0 0" loading="lazy">
       </a>
       <div class="projekt__naglowek">
-        <h2>Bezpieczeństwo cyfrowe z sensem</h2>
-        <span class="badge">edukacja i pomoc</span>
+        <h2>Kalkulator fotowoltaiki i magazynu</h2>
+        <span class="badge">open source</span>
       </div>
-      <p>Domowy przegląd bezpieczeństwa cyfrowego dla osób prywatnych. Filozofia: rozsądny kompromis między paranoją a frywolnością, czyli sensowny poziom ochrony bez utrudniania życia.</p>
-      <p>Dwa etapy: przegląd, czyli diagnoza z raportem i krótką listą priorytetów, oraz wdrożenie, po którym menedżer haseł, 2FA i kopie zapasowe są realnie ustawione. Wejściem jest bezpłatny rekonesans OSINT: za pisemną zgodą sprawdzam wyłącznie publiczne źródła i pokazuję, co internet wie o kliencie - łącznie z danymi, o które nigdy nie pytam, bo w tym cała pointa.</p>
-      <p>Do rekonesansu napisałem lokalne narzędzie webowe (Node + Express) - bezstanowe, nie zapisuje danych klienta i działa tylko w sieci lokalnej. Zaczęło się od rodziny i znajomych, bo każdemu warto to raz porządnie ustawić.</p>
-      <a href="https://przeglad.tomaszkwietniewski.pl" rel="noopener">przeglad.tomaszkwietniewski.pl</a>
+      <p>Typowy kalkulator pyta użytkownika o autokonsumpcję - czyli o liczbę, której ten nie zna, a która najmocniej decyduje o wyniku. Ten ją liczy: symuluje 8 760 godzin roku na zmierzonym profilu realnego domu, z pracą magazynu, taryfami strefowymi i net-billingiem. Silnik odtwarza rzeczywisty pobór z sieci z odchyłką 0,7% wobec faktur.</p>
+      <p>Dzięki temu odpowiada na pytanie, które generyczne kalkulatory obchodzą bokiem: czy magazyn się zwraca. Na profilu domu odniesienia podnosi autokonsumpcję z 45% do 70%, ale wydłuża zwrot całej inwestycji z 2,9 do 4,7 roku - i kalkulator mówi to wprost, zamiast chować za jedną sumaryczną liczbą.</p>
+      <p>Liczy dla pięciu operatorów sieci (stawki i godziny stref wprost z ich taryf), dziesięciu lokalizacji nasłonecznienia z PVGIS i czterech sposobów ogrzewania. Można też wgrać własny plik godzinowy z licznika - zostaje w przeglądarce, bo strona po załadowaniu nie wykonuje żadnego zapytania sieciowego.</p>
+      <div class="projekt__linki">
+        <a href="https://kalkulatorpv.tomaszkwietniewski.pl" rel="noopener">kalkulatorpv.tomaszkwietniewski.pl</a>
+        <a href="https://github.com/tomasz-kwietniewski/kalkulator-pv" rel="noopener">Kod na GitHubie</a>
+      </div>
     </div>
 
     <div class="projekt">
