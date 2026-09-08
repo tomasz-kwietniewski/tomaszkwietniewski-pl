@@ -2,7 +2,7 @@
 title: Pstryk czy jednak taryfa strefowa?
 slug: pstryk-czy-taryfa-strefowa
 date: "2026-07-16T23:00:00"
-modified: "2026-07-18T12:00:00"
+modified: "2026-09-08T18:00:00"
 kategorie:
   - Technologie i dom
 excerpt: Pstryk ma świetną aplikację i uczciwie oddaje klientom giełdowe ceny
@@ -49,26 +49,26 @@ Poniżej koszt energii, którą realnie kupiłem z sieci od sierpnia 2025 do cze
 | Miesiąc | Zakup z sieci [kWh] | G12w [zł] | Pstryk z Tarczą [zł] | Pstryk bez Tarczy [zł] |
 | ------------ | ------------------- | --------- | -------------------- | ---------------------- |
 | sie 2025 | 55 | 33 | 34 | 34 |
-| wrz 2025 | 118 | 71 | 72 | 72 |
-| paź 2025 | 573 | 327 | 349 | 352 |
-| lis 2025 | 955 | 527 | 582 | 711 |
-| gru 2025 | 1 285 | 699 | 782 | 839 |
+| wrz 2025 | 118 | 71 | 73 | 73 |
+| paź 2025 | 573 | 319 | 352 | 352 |
+| lis 2025 | 955 | 527 | 588 | 711 |
+| gru 2025 | 1 285 | 699 | 790 | 839 |
 | **sty 2026** | **1 589** | **884** | **967** | **1 296** |
 | lut 2026 | 1 282 | 711 | 781 | 858 |
-| mar 2026 | 359 | 208 | 218 | 243 |
+| mar 2026 | 359 | 207 | 218 | 243 |
 | kwi 2026 | 295 | 174 | 180 | 185 |
 | maj 2026 | 500 | 298 | 305 | 342 |
 | cze 2026 | 326 | 196 | 198 | 237 |
-| **Suma** | **7 336** | **4 127** | **4 467** | **5 168** |
+| **Suma** | **7 336** | **4 118** | **4 485** | **5 169** |
 
 
-![Wykres słupkowy: miesięczna różnica kosztu energii między Pstrykiem bez Tarczy a taryfą G12w, sierpień 2025 - czerwiec 2026. Zimą strefówka tańsza nawet o 403 zł w styczniu, latem Pstryk tańszy o 7-8 zł.](/media/2026/07/pstryk-vs-strefowka.png)
+![Wykres słupkowy: miesięczna różnica kosztu energii między Pstrykiem bez Tarczy a taryfą G12w, sierpień 2025 - czerwiec 2026. Zimą strefówka tańsza o 411 zł w styczniu, latem różnica spada do kilku złotych.](/media/2026/07/pstryk-vs-strefowka.png)
 
 Co z tego widać:
 
 - **Latem to remis co do pojedynczych złotych.** W czerwcu za energię zapłaciłem w Pstryku 198 zł, na G12w byłoby 196 zł. Z Tarczą Pstryk bywa o złotówkę-dwie od strefówki lepszy albo gorszy - czysty szum.
 - **Zimą Pstryk przegrywa z kretesem.** Sam styczeń bez Tarczy to 1 296 zł wobec 884 zł na G12w - **411 zł różnicy w jeden miesiąc**. Grudzień i luty dokładają po ~140-150 zł.
-- Po 11 miesiącach: G12w tańsza o 340 zł przy działającej Tarczy i o **1 041 zł bez Tarczy**. W pełnym roku z autem (moje projekcje na podstawie tych danych) różnica rośnie do **ok. 1 330-1 460 zł rocznie** na korzyść G12w.
+- Po 11 miesiącach: G12w tańsza o 367 zł przy działającej Tarczy i o **1 051 zł bez Tarczy**. W pełnym roku z autem (moje projekcje na podstawie tych danych) różnica rośnie do **ok. 1 330-1 460 zł rocznie** na korzyść G12w.
 
 Mechanizm jest prosty: o rachunku rocznym decyduje zima, bo wtedy kupuję 1 300-1 600 kWh miesięcznie, a zimowy spot potrafi kosztować 0,66-0,81 zł/kWh brutto. Latem, kiedy spot bywa tani, ja prawie nic nie kupuję, bo mam własną produkcję.
 
