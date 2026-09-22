@@ -3,7 +3,7 @@ title: "Jak za 1150 zł zrobiłem inteligentne ładowanie auta elektrycznego z n
 slug: "jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca"
 miniatura: "/media/2026/05/2026-05-04_ladowanie_EV.png"
 date: "2026-05-02T09:15:13"
-modified: "2026-08-11T14:35:00"
+modified: "2026-09-22T09:10:00"
 url_stara: "https://tomaszkwietniewski.pl/jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca/"
 typ: "wpis"
 kategorie: ["Nowe technologie", "Tipy ułatwiające życie"]
@@ -283,6 +283,30 @@ print(status)</code></pre>
 
 <pre class="wp-block-code"><code>EMERGENCY_CURRENT_A = 13   # zostawia ~2 kW bufora na dom przy przyłączu 11 kW
 SOC_EMERGENCY_MIN   = 20   # nie drenuj magazynu poniżej 20%</code></pre>
+
+
+
+<h3 class="wp-block-heading">Wyłącznik automatyki, czyli kiedy chcę sterować sam</h3>
+
+
+
+<p class="wp-block-paragraph">Nad wszystkimi trybami stoi jeden przełącznik: suwak w nagłówku karty „System EV i Magazyn" na dashboardzie. Wyłączony znaczy dokładnie tyle, że skrypt przestaje sterować. Nie wysyła do ładowarki niczego: ani startu, ani zatrzymania, ani zmiany prądu. Nie rusza harmonogramu ustawionego w aplikacji, nie restartuje urządzenia i nie alarmuje. Dalej tylko mierzy, więc na dashboardzie widać moc, prąd i energię sesji, a tryb ładowania brzmi „Ręcznie (Smart Life)". Ładowarką steruję wtedy z aplikacji albo przyciskiem na obudowie.</p>
+
+
+
+<p class="wp-block-paragraph">Kilka decyzji, które nie są oczywiste:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Tryb awaryjny gaśnie razem z automatyką.</strong> Zostawiony włączony odpaliłby się sam po jej powrocie, godziny później, bez niczyjej decyzji.</li>
+<li><strong>Po włączeniu skrypt od razu przejmuje stery</strong>, a nie po 30 sekundach, i zapomina, co wysłał przed przerwą, bo w aplikacji mogłem w tym czasie zmienić prąd albo zatrzymać ładowanie. Trzeba pamiętać o konsekwencji: gdy magazyn ma mniej niż 95%, a nadwyżki nie ma, powrót automatyki zatrzyma ładowanie uruchomione ręcznie.</li>
+<li><strong>Sesja uruchomiona z aplikacji liczy energię od zera.</strong> Wcześniej sesję otwierała wyłącznie komenda startu wysłana przez skrypt, więc przy ładowaniu z ręki licznik doliczał energię poprzednich sesji.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Przy wyłączonej automatyce nikt nie pilnuje magazynu domowego. Falownik może pokrywać pobór auta z baterii aż do własnego progu rozładowania. To świadomy wybór: skoro steruję sam, to sam decyduję.</p>
 
 
 
@@ -949,6 +973,34 @@ target    = int(available / 690)</code></pre>
 
 
 
+<h3 class="wp-block-heading">Problem 27: Automatyka, która nie pozwalała naładować auta</h3>
+
+
+
+<p class="wp-block-paragraph">22 września rano, pierwszy naprawdę jesienny tydzień. Słońca mało, magazyn domowy rozładowany do 18%, a auto trzeba było przygotować na cały dzień jazdy. Włączyłem „Ładuj na maksa" na cztery godziny. Nic. Na dashboardzie „Priorytet baterii", ładowarka w pauzie.</p>
+
+
+
+<p class="wp-block-paragraph">Tryb awaryjny ma próg: gdy magazyn domowy ma mniej niż 20%, nie ładuje, żeby auto nie wydrenowało baterii do zera. Przełącznik świecił się na „włączony", a skrypt co 30 sekund zapisywał w logu, że wstrzymuje ładowanie. Uruchomiłem więc ładowanie ręcznie w aplikacji. Ładowarka ruszyła na 7,9 kW, a skrypt w ciągu 30 sekund ją zatrzymał. Spróbowałem jeszcze raz - znowu to samo. Z punktu widzenia kodu wszystko było poprawne: magazyn poniżej 95%, nadwyżki brak, więc auto ma czekać. Z punktu widzenia człowieka, który za pół godziny wyjeżdża, system zamienił się w przeszkodę.</p>
+
+
+
+<p class="wp-block-paragraph">Szukałem wyłącznika i wydawało mi się, że go mam: suwak w nagłówku karty na dashboardzie. Okazało się, że to nie wyłącznik. Home Assistant sam dorysowuje taki suwak na karcie z listą encji i przełącza nim <strong>wszystkie</strong> przełączniki z karty naraz. U mnie były to „Ładuj na maksa" i „Tryb zimowy". Wyłączony gasił oba tryby, a skrypt dalej sterował. Włączony włączał oba jednocześnie.</p>
+
+
+
+<p class="wp-block-paragraph">Naprawa ma dwie części. W skrypcie pojawił się wyłącznik automatyki opisany wyżej: przy wyłączonym skrypt nie wysyła do ładowarki absolutnie nic. Na karcie suwak w nagłówku steruje teraz tylko nim. Home Assistant bierze do tego suwaka wyłącznie zwykłe wiersze z encją, więc przełączniki trybu awaryjnego i zimowego trafiły do wierszy warunkowych. Suwak ich nie widzi, a przy wyłączonej automatyce po prostu znikają z karty, bo i tak nic by wtedy nie robiły.</p>
+
+
+
+<p class="wp-block-paragraph">Po drodze wyszły dwie drobniejsze rzeczy. Licznik „Energia sesja" pokazywał tamtego ranka 53 kWh, bo sesję otwierała wyłącznie komenda startu ze skryptu, a ładowanie uruchomione z aplikacji dopisywało się do poprzednich. Teraz nowa sesja zaczyna się w chwili, gdy ładowarka przechodzi w ładowanie bez komendy ze skryptu. Liczy się moment przejścia, a nie sam stan, bo po zatrzymaniu przez skrypt ładowarka potrafi ładować jeszcze około dwóch minut - to końcówka tej samej sesji, a nie nowa. Druga rzecz: przy włączaniu automatyki skrypt zapomina, co wysłał przed przerwą. Inaczej po ręcznej sesji uznałby, że zatrzymanie już wysłał, i ponowiłby je dopiero po dwóch minutach ładowania z magazynu.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Wniosek:</strong> automatyka, która chroni mnie przed samym sobą, musi mieć wyłącznik w zasięgu jednego kliknięcia. Każdy z progów był rozsądny osobno, ale razem nie zostawiały żadnej drogi, żeby powiedzieć systemowi „teraz steruję ja", poza wyłączeniem całego AppDaemona. I drobniejsza lekcja: element interfejsu, który wygląda jak wyłącznik główny, wcale nie musi nim być. Warto sprawdzić, co naprawdę przełącza, zanim zacznie się na nim polegać.</p>
+
+
+
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
 
@@ -961,7 +1013,7 @@ target    = int(available / 690)</code></pre>
 
 
 
-<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Typ</th><th>Entity ID</th><th>Opis</th></tr></thead><tbody><tr><td>Text</td><td><code>input_text.ev_charger_status</code></td><td>Status ładowarki (WORKING/SLEEP/PAUSE…)</td></tr><tr><td>Text</td><td><code>input_text.ev_charger_mode</code></td><td>Aktywny tryb (SOLAR/EMERGENCY…)</td></tr><tr><td>Text</td><td><code>input_text.ev_data</code></td><td>JSON z pełnymi danymi sesji</td></tr><tr><td>Toggle</td><td><code>input_boolean.ev_tryb_zimowy</code></td><td>Tryb zimowy — nocne ładowanie 22–6</td></tr><tr><td>Toggle</td><td><code>input_boolean.ev_tryb_awaryjny</code></td><td>Tryb awaryjny — ładuj na maksa teraz</td></tr><tr><td>Number</td><td><code>input_number.ev_awaryjny_godziny</code></td><td>Czas trybu awaryjnego (0,5–8h)</td></tr><tr><td>Button</td><td><code>input_button.ev_archiwizuj_teraz</code></td><td>Ręczna archiwizacja bieżącego miesiąca (opcjonalny)</td></tr></tbody></table></figure>
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Typ</th><th>Entity ID</th><th>Opis</th></tr></thead><tbody><tr><td>Text</td><td><code>input_text.ev_charger_status</code></td><td>Status ładowarki (WORKING/SLEEP/PAUSE…)</td></tr><tr><td>Text</td><td><code>input_text.ev_charger_mode</code></td><td>Aktywny tryb (SOLAR/EMERGENCY…)</td></tr><tr><td>Text</td><td><code>input_text.ev_data</code></td><td>JSON z pełnymi danymi sesji</td></tr><tr><td>Toggle</td><td><code>input_boolean.ev_tryb_zimowy</code></td><td>Tryb zimowy — nocne ładowanie 22–6</td></tr><tr><td>Toggle</td><td><code>input_boolean.ev_tryb_awaryjny</code></td><td>Tryb awaryjny — ładuj na maksa teraz</td></tr><tr><td>Number</td><td><code>input_number.ev_awaryjny_godziny</code></td><td>Czas trybu awaryjnego (0,5–8h)</td></tr><tr><td>Button</td><td><code>input_button.ev_archiwizuj_teraz</code></td><td>Ręczna archiwizacja bieżącego miesiąca (opcjonalny)</td></tr><tr><td>Toggle</td><td><code>input_boolean.ev_automatyka</code></td><td>Wyłącznik automatyki - wyłączony oznacza sterowanie ręczne (opcjonalny)</td></tr></tbody></table></figure>
 
 
 
@@ -1272,7 +1324,7 @@ def _is_emergency_active(self):
 
 
 
-<p class="wp-block-paragraph">System obsługuje sześć trybów pracy: solarny (proporcjonalnie do nadwyżek), awaryjny (ładuj teraz na maksa), ujemne ceny (operator płaci), zimowy (nocna taryfa), priorytet baterii i bezczynność. Wszystko sterowane z poziomu dashboardu HA.</p>
+<p class="wp-block-paragraph">System obsługuje sześć trybów pracy: solarny (proporcjonalnie do nadwyżek), awaryjny (ładuj teraz na maksa), ujemne ceny (operator płaci), zimowy (nocna taryfa), priorytet baterii i bezczynność. Wszystko sterowane z poziomu dashboardu HA, a jednym suwakiem można całą automatykę wyłączyć i sterować ładowarką ręcznie.</p>
 
 
 
@@ -1288,4 +1340,4 @@ def _is_emergency_active(self):
 
 
 
-<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji. Aktualizacja 6: 28 lipca 2026 - Problem 23: regulacja goniąca szum (prąd zmieniany co 30 sekund, sekwencje 10A, 11A, 10A). Histereza plus minus 250 W wokół progu stopnia oraz potwierdzenie zmiany przez dwie iteracje; duży spadek nadal natychmiastowy. Zmierzone: 52 zmiany prądu w pochmurne pół godziny zeszły do jednej. Aktualizacja 7: 11 sierpnia 2026 - Problem 24: ładowarka zawieszona przez 36 godzin (odpowiadała w sieci, ale nie aktualizowała danych i ignorowała wszystkie komendy), a system tego nie zauważył. Rozpoznawanie awarii po niezmiennym surowym odczycie pomiarów zamiast po samym zerze mocy, powiadomienie w Home Assistant zamiast ostrzeżenia w logu, cykl budzenia sesji, gdy ładowarka twierdzi że pracuje, a prąd nie płynie, potwierdzanie zadanego prądu, koniec z trwałym odpuszczaniem prób startu. Testy jednostkowe wzrosły z 24 do 51. Aktualizacja 8: 20 sierpnia 2026 - Problem 25: ta sama awaria wróciła i mimo sześciu poprawnych alarmów trwała 22,5 godziny, bo powiadomienie szło wyłącznie do panelu Home Assistanta. Alarm idzie teraz również na telefon. Doszedł mechanizm automatycznego restartu ładowarki, na razie uśpiony: komenda restartu okazała się poleceniem tylko do zapisu, którego nie da się podsłuchać, a to znalezione w modelu producenta zadziałało raz na sześć prób. Przy okazji: pole, które uważałem za numer wersji, jest napięciem sygnału sterującego między ładowarką a autem, oraz naprawiony stan pośredni przy starcie sesji, przez który skrypt widział podłączone auto jako odpięte. Testy jednostkowe: 51 do 67. Poszukiwania komendy restartu zamknięte: chmura Tuya nie ma modelu tego wallboxa (pusta lista funkcji, kategoria ustawiona na lampę), więc ani kanał deweloperski, ani aplikacyjny nie kojarzy z nim żadnej komendy - aplikacja producenta steruje nim własnym panelem, omijającym publiczne API. Aktualizacja 9: 25 sierpnia 2026 - Problem 26: skrypt wysyłał komendy startu do pustego gniazda i rzucił dwa fałszywe alarmy o awarii, bo dwa stany ładowarki znaczące „nie widzę auta" traktował jako gotowość do ładowania. Naprawione odczytem napięcia sygnału sterującego - tego samego, które tydzień wcześniej zapisałem jako ciekawostkę bez zastosowania. Testy jednostkowe: 67 do 75.</em></p>
+<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji. Aktualizacja 6: 28 lipca 2026 - Problem 23: regulacja goniąca szum (prąd zmieniany co 30 sekund, sekwencje 10A, 11A, 10A). Histereza plus minus 250 W wokół progu stopnia oraz potwierdzenie zmiany przez dwie iteracje; duży spadek nadal natychmiastowy. Zmierzone: 52 zmiany prądu w pochmurne pół godziny zeszły do jednej. Aktualizacja 7: 11 sierpnia 2026 - Problem 24: ładowarka zawieszona przez 36 godzin (odpowiadała w sieci, ale nie aktualizowała danych i ignorowała wszystkie komendy), a system tego nie zauważył. Rozpoznawanie awarii po niezmiennym surowym odczycie pomiarów zamiast po samym zerze mocy, powiadomienie w Home Assistant zamiast ostrzeżenia w logu, cykl budzenia sesji, gdy ładowarka twierdzi że pracuje, a prąd nie płynie, potwierdzanie zadanego prądu, koniec z trwałym odpuszczaniem prób startu. Testy jednostkowe wzrosły z 24 do 51. Aktualizacja 8: 20 sierpnia 2026 - Problem 25: ta sama awaria wróciła i mimo sześciu poprawnych alarmów trwała 22,5 godziny, bo powiadomienie szło wyłącznie do panelu Home Assistanta. Alarm idzie teraz również na telefon. Doszedł mechanizm automatycznego restartu ładowarki, na razie uśpiony: komenda restartu okazała się poleceniem tylko do zapisu, którego nie da się podsłuchać, a to znalezione w modelu producenta zadziałało raz na sześć prób. Przy okazji: pole, które uważałem za numer wersji, jest napięciem sygnału sterującego między ładowarką a autem, oraz naprawiony stan pośredni przy starcie sesji, przez który skrypt widział podłączone auto jako odpięte. Testy jednostkowe: 51 do 67. Poszukiwania komendy restartu zamknięte: chmura Tuya nie ma modelu tego wallboxa (pusta lista funkcji, kategoria ustawiona na lampę), więc ani kanał deweloperski, ani aplikacyjny nie kojarzy z nim żadnej komendy - aplikacja producenta steruje nim własnym panelem, omijającym publiczne API. Aktualizacja 9: 25 sierpnia 2026 - Problem 26: skrypt wysyłał komendy startu do pustego gniazda i rzucił dwa fałszywe alarmy o awarii, bo dwa stany ładowarki znaczące „nie widzę auta" traktował jako gotowość do ładowania. Naprawione odczytem napięcia sygnału sterującego - tego samego, które tydzień wcześniej zapisałem jako ciekawostkę bez zastosowania. Testy jednostkowe: 67 do 75. Aktualizacja 10: 22 września 2026 - Problem 27: przy magazynie domowym rozładowanym do 18% tryb awaryjny stał zablokowany progiem ochrony baterii, a ładowanie uruchomione ręcznie w aplikacji skrypt zatrzymywał w 30 sekund. Doszedł wyłącznik automatyki: wyłączony znaczy, że skrypt nie wysyła do ładowarki nic, także nie czyści harmonogramu, nie restartuje jej i nie alarmuje. Suwak w nagłówku karty na dashboardzie okazał się przełącznikiem wszystkich przełączników z karty naraz, a teraz steruje tylko wyłącznikiem. Przy okazji sesja uruchomiona z aplikacji liczy energię od zera. Testy jednostkowe: 75 do 89.</em></p>
