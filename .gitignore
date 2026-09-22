@@ -8,3 +8,6 @@ _site/
 _yt-cache/
 .playwright-mcp/
 _img-cache/
+
+# Kontekst dla Codexa - lokalna kopia CLAUDE.md z importu, nie tresc repo
+/AGENTS.md
