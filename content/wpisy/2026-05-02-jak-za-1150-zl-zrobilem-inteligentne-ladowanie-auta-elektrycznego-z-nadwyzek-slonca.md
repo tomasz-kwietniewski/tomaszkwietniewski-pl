@@ -3,7 +3,7 @@ title: "Jak za 1150 zł zrobiłem inteligentne ładowanie auta elektrycznego z n
 slug: "jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca"
 miniatura: "/media/2026/05/2026-05-04_ladowanie_EV.png"
 date: "2026-05-02T09:15:13"
-modified: "2026-09-22T09:10:00"
+modified: "2026-10-02T23:30:00"
 url_stara: "https://tomaszkwietniewski.pl/jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca/"
 typ: "wpis"
 kategorie: ["Nowe technologie", "Tipy ułatwiające życie"]
@@ -53,6 +53,7 @@ excerpt: "Mam fotowoltaikę 9 kWp, magazyn energii 15 kWh i Citroëna Spacetoure
 
 
 <li><strong>Centrum automatyki:</strong> Home Assistant na Synology NAS DS420+</li>
+<li><strong>Odczyt falownika:</strong> integracja Solarman (logger Wi-Fi Sofara)</li>
 
 
 
@@ -314,7 +315,7 @@ SOC_EMERGENCY_MIN   = 20   # nie drenuj magazynu poniżej 20%</code></pre>
 
 
 
-<p class="wp-block-paragraph">To jedna z ważniejszych pułapek. Sensor <code>sensor.sofar_modbus_inverter_active_power_pcc_total</code> może mieć różny znak w zależności od wersji firmware i trybu pracy falownika. W mojej instalacji:</p>
+<p class="wp-block-paragraph">To jedna z ważniejszych pułapek. Sensor <code>sensor.sofar_logger_activepower_pcc_total</code> (integracja Solarman, wartość w watach) może mieć różny znak w zależności od wersji firmware i trybu pracy falownika. W mojej instalacji:</p>
 
 
 
@@ -1001,6 +1002,38 @@ target    = int(available / 690)</code></pre>
 
 
 
+<h3 class="wp-block-heading">Problem 28: Dwie integracje na jednym loggerze falownika</h3>
+
+
+
+<p class="wp-block-paragraph">1 października, po restarcie Home Assistanta, encje Sofara z integracji SolaX Modbus (SOC, moc baterii, PCC) przeszły w stan „niedostępny” i zostały tak przez 21 godzin. Na liście integracji wpis miał status „załadowany”, nic nie świeciło na czerwono. Skrypt dostawał w tym czasie SOC równy zero, więc konsekwentnie wybierał priorytet baterii i nie ładował auta z PV. Pomogło dopiero ręczne przeładowanie integracji następnego wieczoru.</p>
+
+
+
+<p class="wp-block-paragraph">W logu od miesięcy leciały tysiące wpisów <code>request ask for transaction_id=N but got id=M, Skipping</code>. Leciały także wtedy, gdy wszystko działało, więc nauczyłem się je ignorować. A to był właśnie trop. Falownik czytały równolegle dwie integracje: SolaX Modbus dla skryptu i Solarman dla panelu Energia. Obie łączyły się z tym samym loggerem Wi-Fi na porcie 8899. Logger wpuszcza kilka połączeń naraz, ale odpowiedzi rozsyła do wszystkich. Na każde swoje zapytanie SolaX dostawał 5-10 cudzych odpowiedzi, z losowymi numerami transakcji, jakie nadaje Solarman, i w rytmie jego odczytów co około 6 sekund. Razem około 60 obcych ramek na minutę.</p>
+
+
+
+<p class="wp-block-paragraph">Zwykle biblioteka Modbus odrzucała obce ramki i jakoś się udawało. Przy starcie Home Assistanta pech trafił w jedno konkretne zapytanie: SolaX pyta wtedy falownik o liczbę pakietów baterii. Odpowiedź utonęła w cudzych ramkach, a kod integracji nie zabezpiecza się przed jej brakiem (<code>range(0, None)</code>). Wyjątek wywrócił tworzenie wszystkich sensorów, ale sam wpis został „załadowany” i niczego nie ponawiał. Ten błąd siedzi w aktualnym kodzie integracji, więc to nie był jednorazowy wypadek, tylko kwestia czasu.</p>
+
+
+
+<p class="wp-block-paragraph">Hipotezę sprawdziłem najprostszym eksperymentem: wyłączyłem Solarmana na 27 minut. Obce ramki spadły z około 60 na minutę do zera. Została jedna co dwie minuty, sygnał „żyję”, który logger wysyła sam z siebie. Dokumentacja integracji SolaX zresztą to przewiduje: przy więcej niż jednym kliencie zaleca proxy Modbus, które jako jedyne rozmawia z falownikiem.</p>
+
+
+
+<p class="wp-block-paragraph">Naprawa: jedna integracja zamiast dwóch. Zostałem przy Solarmanie, bo ma wszystko, czego potrzebuje skrypt (SOC, PV, zużycie domu, PCC, tryb pracy), już zasilał panel Energia i przez całą 21-godzinną awarię SolaXa działał normalnie. Dwie rzeczy wymagały uwagi. Solarman podaje moc w watach, nie w kilowatach, więc skrypt przelicza ją według jednostki zapisanej w encji i działa z każdą z tych integracji. Znak PCC zostaje ten sam, bo obie czytają ten sam rejestr falownika. Szablony i automatyzacje w Home Assistancie przepisałem skryptem, który najpierw pokazuje różnice na sucho, robi kopię i umie wszystko wycofać.</p>
+
+
+
+<p class="wp-block-paragraph">Doszedł też watchdog, bo awaria trwała 21 godzin głównie dlatego, że nikt o niej nie wiedział. To ta sama lekcja co w Problemie 25. Automatyzacja w Home Assistancie sprawdza, czy z falownika płyną dane: czy SOC jest dostępny i czy licznik cyklu odczytu Solarmana się zmienia. Po 10 minutach ciszy wysyła push na telefon, przeładowuje integrację i po pięciu minutach melduje, czy pomogło. Działa niezależnie od AppDaemona i odzywa się najwyżej raz na pół godziny.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Wniosek:</strong> błąd, który „leci zawsze, także gdy wszystko działa”, to nie szum, tylko objaw, który jeszcze nie trafił na swoją okazję. I druga lekcja: urządzenie, które przyjmuje kilka połączeń naraz, wcale nie musi umieć ich od siebie oddzielić.</p>
+
+
+
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
 
@@ -1218,7 +1251,17 @@ def _get_charger_data(self):
 
 
 
-<pre class="wp-block-code"><code># Sofar: dodatni PCC = eksport (nadwyżka), ujemny = import.
+<pre class="wp-block-code"><code>def power_kw(entity_id):
+    # Solarman podaje moc w W, logika liczy w kW
+    val = safe_float(entity_id)
+    unit = self.get_state(entity_id, attribute="unit_of_measurement")
+    return val / 1000.0 if unit == "W" else val
+
+grid_power = power_kw(SENSOR_GRID_POWER)   # dodatni = eksport
+pv_power   = power_kw(SENSOR_PV_POWER)
+load_power = power_kw(SENSOR_LOAD_POWER)
+
+# Sofar: dodatni PCC = eksport (nadwyżka), ujemny = import.
 # min() bierze wariant konserwatywny: PV minus dom widzi deficyt
 # maskowany przez magazyn, PCC pilnuje mocy idącej do baterii.
 surplus_without_ev_kw = min(grid_power, pv_power - load_power)
@@ -1340,4 +1383,4 @@ def _is_emergency_active(self):
 
 
 
-<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji. Aktualizacja 6: 28 lipca 2026 - Problem 23: regulacja goniąca szum (prąd zmieniany co 30 sekund, sekwencje 10A, 11A, 10A). Histereza plus minus 250 W wokół progu stopnia oraz potwierdzenie zmiany przez dwie iteracje; duży spadek nadal natychmiastowy. Zmierzone: 52 zmiany prądu w pochmurne pół godziny zeszły do jednej. Aktualizacja 7: 11 sierpnia 2026 - Problem 24: ładowarka zawieszona przez 36 godzin (odpowiadała w sieci, ale nie aktualizowała danych i ignorowała wszystkie komendy), a system tego nie zauważył. Rozpoznawanie awarii po niezmiennym surowym odczycie pomiarów zamiast po samym zerze mocy, powiadomienie w Home Assistant zamiast ostrzeżenia w logu, cykl budzenia sesji, gdy ładowarka twierdzi że pracuje, a prąd nie płynie, potwierdzanie zadanego prądu, koniec z trwałym odpuszczaniem prób startu. Testy jednostkowe wzrosły z 24 do 51. Aktualizacja 8: 20 sierpnia 2026 - Problem 25: ta sama awaria wróciła i mimo sześciu poprawnych alarmów trwała 22,5 godziny, bo powiadomienie szło wyłącznie do panelu Home Assistanta. Alarm idzie teraz również na telefon. Doszedł mechanizm automatycznego restartu ładowarki, na razie uśpiony: komenda restartu okazała się poleceniem tylko do zapisu, którego nie da się podsłuchać, a to znalezione w modelu producenta zadziałało raz na sześć prób. Przy okazji: pole, które uważałem za numer wersji, jest napięciem sygnału sterującego między ładowarką a autem, oraz naprawiony stan pośredni przy starcie sesji, przez który skrypt widział podłączone auto jako odpięte. Testy jednostkowe: 51 do 67. Poszukiwania komendy restartu zamknięte: chmura Tuya nie ma modelu tego wallboxa (pusta lista funkcji, kategoria ustawiona na lampę), więc ani kanał deweloperski, ani aplikacyjny nie kojarzy z nim żadnej komendy - aplikacja producenta steruje nim własnym panelem, omijającym publiczne API. Aktualizacja 9: 25 sierpnia 2026 - Problem 26: skrypt wysyłał komendy startu do pustego gniazda i rzucił dwa fałszywe alarmy o awarii, bo dwa stany ładowarki znaczące „nie widzę auta" traktował jako gotowość do ładowania. Naprawione odczytem napięcia sygnału sterującego - tego samego, które tydzień wcześniej zapisałem jako ciekawostkę bez zastosowania. Testy jednostkowe: 67 do 75. Aktualizacja 10: 22 września 2026 - Problem 27: przy magazynie domowym rozładowanym do 18% tryb awaryjny stał zablokowany progiem ochrony baterii, a ładowanie uruchomione ręcznie w aplikacji skrypt zatrzymywał w 30 sekund. Doszedł wyłącznik automatyki: wyłączony znaczy, że skrypt nie wysyła do ładowarki nic, także nie czyści harmonogramu, nie restartuje jej i nie alarmuje. Suwak w nagłówku karty na dashboardzie okazał się przełącznikiem wszystkich przełączników z karty naraz, a teraz steruje tylko wyłącznikiem. Przy okazji sesja uruchomiona z aplikacji liczy energię od zera. Testy jednostkowe: 75 do 89.</em></p>
+<p class="wp-block-paragraph"><em>Artykuł napisany na podstawie rzeczywistej instalacji. Pierwsza wersja: maj 2026. Aktualizacja: maj 2026 — dodano tryb EMERGENCY, obsługę stanu PAUSE, uśrednianie PCC, obniżenie progu startu do 1600W. Aktualizacja 2: maj 2026 — uśrednianie PCC rozszerzone do 3 próbek (90s), bias wydzielony jako nazwana stała SURPLUS_BIAS_W, poprawka komentarzy znaku PCC. Aktualizacja 3: 12 maja 2026 — dodano Problem 12 (AppDaemon skanuje apps/ rekurencyjnie — duplikaty aplikacji przy backupie wewnątrz folderu). Aktualizacja 4: 8 czerwca 2026 — Problemy 13–16 (STOP-spam w gałęzi IDLE, zamrożony DP 102 w firmware dé EV v2.9.4, chmura Tuya a harmonogram DP 151, ukryte pole <code>e</code> = energia sesji × 0,1 kWh); archiwum historii miesięcznej z retencją 10 lat — wykres i tabela porównawcza na dashboardzie, ręczny przycisk archiwizacji (Problemy 17–18: dane ginące przy resecie miesiąca oraz <code>set_state</code> 400 w HA 2026.x → publikacja przez REST API rdzenia). Aktualizacja 5: 27 lipca 2026 — audyt kodu, Problemy 19-22: regulacja SOLAR &#8222;uciekająca&#8221; w górę przy zachmurzeniu (nadwyżka liczona teraz jako minimum z eksportu i z produkcji minus zużycie domu, bez podłogi), dedup komend START/STOP bez ponowień, TinyTuya zwracająca błąd jako słownik zamiast wyjątku, nieatomowy zapis pliku z licznikami; tryb ujemnych cen zszedł z 16A na 13A (bufor na dom), doszły testy jednostkowe i symulacja pętli regulacji. Aktualizacja 6: 28 lipca 2026 - Problem 23: regulacja goniąca szum (prąd zmieniany co 30 sekund, sekwencje 10A, 11A, 10A). Histereza plus minus 250 W wokół progu stopnia oraz potwierdzenie zmiany przez dwie iteracje; duży spadek nadal natychmiastowy. Zmierzone: 52 zmiany prądu w pochmurne pół godziny zeszły do jednej. Aktualizacja 7: 11 sierpnia 2026 - Problem 24: ładowarka zawieszona przez 36 godzin (odpowiadała w sieci, ale nie aktualizowała danych i ignorowała wszystkie komendy), a system tego nie zauważył. Rozpoznawanie awarii po niezmiennym surowym odczycie pomiarów zamiast po samym zerze mocy, powiadomienie w Home Assistant zamiast ostrzeżenia w logu, cykl budzenia sesji, gdy ładowarka twierdzi że pracuje, a prąd nie płynie, potwierdzanie zadanego prądu, koniec z trwałym odpuszczaniem prób startu. Testy jednostkowe wzrosły z 24 do 51. Aktualizacja 8: 20 sierpnia 2026 - Problem 25: ta sama awaria wróciła i mimo sześciu poprawnych alarmów trwała 22,5 godziny, bo powiadomienie szło wyłącznie do panelu Home Assistanta. Alarm idzie teraz również na telefon. Doszedł mechanizm automatycznego restartu ładowarki, na razie uśpiony: komenda restartu okazała się poleceniem tylko do zapisu, którego nie da się podsłuchać, a to znalezione w modelu producenta zadziałało raz na sześć prób. Przy okazji: pole, które uważałem za numer wersji, jest napięciem sygnału sterującego między ładowarką a autem, oraz naprawiony stan pośredni przy starcie sesji, przez który skrypt widział podłączone auto jako odpięte. Testy jednostkowe: 51 do 67. Poszukiwania komendy restartu zamknięte: chmura Tuya nie ma modelu tego wallboxa (pusta lista funkcji, kategoria ustawiona na lampę), więc ani kanał deweloperski, ani aplikacyjny nie kojarzy z nim żadnej komendy - aplikacja producenta steruje nim własnym panelem, omijającym publiczne API. Aktualizacja 9: 25 sierpnia 2026 - Problem 26: skrypt wysyłał komendy startu do pustego gniazda i rzucił dwa fałszywe alarmy o awarii, bo dwa stany ładowarki znaczące „nie widzę auta" traktował jako gotowość do ładowania. Naprawione odczytem napięcia sygnału sterującego - tego samego, które tydzień wcześniej zapisałem jako ciekawostkę bez zastosowania. Testy jednostkowe: 67 do 75. Aktualizacja 10: 22 września 2026 - Problem 27: przy magazynie domowym rozładowanym do 18% tryb awaryjny stał zablokowany progiem ochrony baterii, a ładowanie uruchomione ręcznie w aplikacji skrypt zatrzymywał w 30 sekund. Doszedł wyłącznik automatyki: wyłączony znaczy, że skrypt nie wysyła do ładowarki nic, także nie czyści harmonogramu, nie restartuje jej i nie alarmuje. Suwak w nagłówku karty na dashboardzie okazał się przełącznikiem wszystkich przełączników z karty naraz, a teraz steruje tylko wyłącznikiem. Przy okazji sesja uruchomiona z aplikacji liczy energię od zera. Testy jednostkowe: 75 do 89. Aktualizacja 11: 2 października 2026 - Problem 28: dwie integracje czytały falownik przez ten sam logger Wi-Fi, który rozsyła odpowiedzi do wszystkich połączeń. Po restarcie Home Assistanta jedna z nich nie utworzyła sensorów i przez 21 godzin skrypt widział magazyn jako pusty. Test z wyłączoną drugą integracją potwierdził przyczynę. Został jeden odczyt falownika (Solarman), a nowy watchdog po 10 minutach bez danych przeładowuje integrację i wysyła powiadomienie na telefon. Testy jednostkowe: 89 do 91.</em></p>
