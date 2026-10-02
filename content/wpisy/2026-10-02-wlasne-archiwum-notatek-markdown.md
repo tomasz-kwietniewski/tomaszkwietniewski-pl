@@ -81,6 +81,6 @@ Nie było idealnie i chyba warto o tym napisać, bo te pułapki czekają na każ
 - Kopie zapasowe w trzech miejscach.
 - Zero złotych abonamentu.
 
-Uczciwie trzeba dodać, ile to kosztowało: kilka wieczorów pracy, własny NAS i trochę cierpliwości do szczegółów. To rozwiązanie dla kogoś, kto lubi mieć kontrolę i nie boi się technicznych drobiazgów. Jeśli chcesz pójść podobną drogą bez programowania, sam Obsidian z jednym z gotowych clipperów do Markdown da ci większość tych korzyści.
+Uczciwie trzeba dodać, ile to kosztowało: kilka wieczorów pracy, własny NAS i trochę cierpliwości do szczegółów. To rozwiązanie dla kogoś, kto lubi mieć kontrolę i nie boi się technicznych drobiazgów. Jeśli chcesz pójść podobną drogą bez programowania, sam Obsidian z jednym z gotowych clipperów do Markdown da ci większość tych korzyści. A jeśli chcesz skorzystać z moich narzędzi, wtyczkę do Brave, program dla Windows i aplikację na Androida udostępniłem na GitHubie w repozytorium [moje-archiwum](https://github.com/tomasz-kwietniewski/moje-archiwum), na licencji MIT.
 
 Najważniejsza zmiana jest jednak w głowie. Przez dwadzieścia lat to programy decydowały, gdzie i jak leżą moje notatki. Teraz to ja decyduję, a programy są tylko narzędziami do ich oglądania. Jeśli za kilka lat pojawi się coś lepszego niż Obsidian, po prostu otworzę w tym ten sam folder. Bez eksportu, bez importu i bez wpisu na bloga o kolejnej przeprowadzce.
