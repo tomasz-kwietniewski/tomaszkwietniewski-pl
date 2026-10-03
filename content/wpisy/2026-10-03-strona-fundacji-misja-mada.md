@@ -114,7 +114,7 @@ Brakujące tłumaczenie ma jeszcze jedną złośliwą cechę - niczego nie psuje
 
 ### Przeprowadzka z arkuszy
 
-Arkusze prowadzone latami mają swoje zwyczaje. Wpłaty bywały zwijane w zakresy, część kolumn była ukryta, ta sama osoba raz występowała z imieniem, raz bez, pary zapisane były razem. Skrypt przeniósł do bazy to, co dało się przypisać jednoznacznie. Wiersze niejednoznaczne trafiły na osobny ekran, na którym rozstrzygało się je ręcznie, jeden po drugim, w razie wątpliwości pytając fundację. Zgadywanie, czyja jest wpłata, to nie jest zadanie dla programu.
+Arkusze prowadzone latami mają swoje zwyczaje. Wpłaty bywały zwijane w zakresy, część kolumn była ukryta, ta sama osoba raz występowała z imieniem, raz bez, pary zapisane były razem. Skrypt przeniósł do bazy to, co dało się przypisać jednoznacznie. Wiersze niejednoznaczne trafiły na osobny ekran, na którym pracownicy fundacji rozstrzygali je ręcznie, jeden po drugim. Zgadywanie, czyja jest wpłata, to nie jest zadanie dla programu.
 
 Jedna pułapka była szczególnie zdradliwa: eksport arkusza Google do HTML pomija ukryte kolumny. Opłacone miesiące wyglądały przez to jak zaległości. Dopiero pełny plik Excela dał prawdziwy obraz. Od tamtej pory przy każdej migracji porównuję sumy po obu stronach, zanim uznam, że dane się przeniosły.
 
@@ -126,6 +126,7 @@ Jedna pułapka była szczególnie zdradliwa: eksport arkusza Google do HTML pomi
 - **Lekkie testy.** Zamiast dużego frameworka testowego - własne, minimalne skrypty w PHP i Node, razem kilkaset sprawdzeń: płatności cykliczne, moduł adopcji, odczyt wyciągu, skrypty Google na atrapach API, kompletność tłumaczeń. Uruchamiają się automatycznie przy każdej zmianie, zanim trafi do głównej gałęzi.
 - **Automatyczne wdrożenie.** Zmiana w głównej gałęzi sama trafia na serwer przez GitHub Actions. Hasła i klucze żyją tylko na serwerze, poza repozytorium.
 - **Kopia bazy co noc.** Zapisana poza katalogiem strony, sprawdzana po zapisie, przechowywana 30 dni. Raz odtworzyłem ją na próbę do osobnej bazy i zgadzała się z produkcją co do rekordu - kopia, której nikt nie próbował odtworzyć, to tylko nadzieja.
+- **Z pomocą agentów AI.** Kod piszę razem z agentami AI (Claude Code i Codex). To, co ma powstać, ustalam z fundacją, decyzje projektowe podejmuję sam i każdą zmianę sprawdzam, zanim trafi na produkcję. Agent przyspiesza pisanie, ale za to, co działa u fundacji, odpowiadam ja.
 - **Bez śledzenia.** Strona nie ma analityki i nie ustawia odwiedzającym cookies, więc nie potrzebuje banera zgód.
 
 ## Jak pracujemy z fundacją
