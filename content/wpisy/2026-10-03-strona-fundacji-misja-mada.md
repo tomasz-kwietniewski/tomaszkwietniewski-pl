@@ -92,7 +92,7 @@ Potem trzeba przypisać każdy przelew do właściwej osoby i dziecka. Panel szu
 
 <figure>
 <a href="/media/2026/10/mada-import-podzial.webp"><img src="/media/2026/10/mada-import-podzial.webp" alt="Operacja z wyciągu w panelu: przelew 280 zł od darczyńcy z dwojgiem dzieci, rozdzielony na dwie adopcje po 140 zł za wrzesień i październik, pod każdą pasek opłaconych miesięcy" width="945" height="855" loading="lazy"></a>
-<figcaption>Jeden przelew za dwoje dzieci. Tytuł nie mówi, za jakie miesiące, więc panel dzieli kwotę po równo i liczy okres od pierwszego nieopłaconego miesiąca. Pod każdą adopcją pasek: zielone opłacone, czerwone zaległe, w ramce miesiące tej wpłaty.</figcaption>
+<figcaption>Jeden przelew za dwoje dzieci, z miesiącami wypisanymi w tytule. Panel dzieli kwotę po równo, a okres bierze z tytułu. Pod każdą adopcją pasek: zielone opłacone, czerwone zaległe, w ramce miesiące tej wpłaty.</figcaption>
 </figure>
 
 Panel tylko podpowiada. Nic nie zapisuje się samo - pracownik widzi propozycję, pasek miesięcy pod spodem i klika. Najbardziej przydatne okazało się ostrzeżenie o możliwym dublu: gdy ktoś wcześniej wpisał wpłatę ręcznie, a potem przychodzi wyciąg z tym samym przelewem, panel mówi, która to wpłata, kto i kiedy ją wpisał, i zostawia wiersz niezaznaczony.
@@ -103,6 +103,8 @@ Panel tylko podpowiada. Nic nie zapisuje się samo - pracownik widzi propozycję
 </figure>
 
 Przy przeglądzie importu wyszedł też błąd, którego testy nie łapały. Darczyńca płacący za dwoje dzieci osobnymi przelewami robi dwa identyczne przelewy tego samego dnia: ta sama kwota, ten sam nadawca, ten sam tytuł. Mechanizm, który miał chronić przed wczytaniem tego samego wyciągu dwa razy, uznawał drugi przelew za kopię i go pomijał. Poprawka była prosta, a ten przypadek ma dziś własny test. Takie scenariusze bierze się z życia, nie z wyobraźni.
+
+Coś znalazł nawet ten tekst. Przy robieniu zrzutów zauważyłem, że u darczyńcy z kilkorgiem dzieci panel ostrzegał „w tytule jest wrzesień, październik, ale bez roku”, choć rok w tytule był. Okres liczył się dobrze, ale fałszywy alarm jest groźniejszy, niż wygląda: uczy ludzi przeklikiwać ostrzeżenia, także te prawdziwe. Poprawka z testem trafiła do fundacji tego samego dnia, a przy okazji doszło ostrzeżenie w odwrotnej sytuacji - gdy tytuł mówi o innej liczbie miesięcy, niż starcza kwota. Przy tej samej okazji wyszedł ucięty po francusku napis w polu kwoty okna darowizny. Też poprawiony tego samego dnia.
 
 ### Tłumacz Google, który psuł wersję angielską
 
