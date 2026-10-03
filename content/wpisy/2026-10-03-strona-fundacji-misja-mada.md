@@ -12,13 +12,21 @@ typ: wpis
 ---
 Fundacja Misja MADA pomaga dzieciom i rodzinom na Madagaskarze. Wspiera Siostry Małe Misjonarki Miłosierdzia (Siostry Orionistki), które prowadzą tam między innymi Centrum Edukacyjne i Atelier Nadziei. Najważniejszy program fundacji to Adopcja Serca: darczyńca z Polski co miesiąc wspiera konkretne dziecko.
 
-W czerwcu 2026 zacząłem robić dla fundacji nowy serwis, [misjamada.pl](https://misjamada.pl), razem z panelem, w którym prowadzi się dziś cały ten program. Koncepcję, zakres funkcji i projekt graficzny ustaliliśmy wspólnie z fundacją. Kod, wdrożenie i bieżące utrzymanie są po mojej stronie. Ten tekst opisuje, jak to wygląda od środka - dla kogoś, kto chce zobaczyć, jak pracuję.
+W czerwcu 2026 zrobiłem dla fundacji pierwszą stronę internetową, [misjamada.pl](https://misjamada.pl). Zaczęła się jako wizytówka, a z czasem urosła w system, w którym fundacja prowadzi dziś cały ten program. Koncepcję, zakres funkcji i projekt graficzny ustalaliśmy wspólnie z fundacją. Kod, wdrożenie i bieżące utrzymanie są po mojej stronie. Ten tekst opisuje, jak to wygląda od środka - dla kogoś, kto chce zobaczyć, jak pracuję.
 
-## Punkt wyjścia
+## Punkt wyjścia: fanpage i arkusze
 
-Adopcja Serca żyła w arkuszach Google. W jednym lista darczyńców, w drugim wpłaty, po kolumnie na każdy miesiąc. Każdy przelew z wyciągu ktoś przepisywał ręcznie: kto zapłacił, za które dziecko, za jaki okres. Arkusz jest świetny na początek, ale z każdym nowym darczyńcą robi się trudniejszy. Nie pokaże sam, kto zalega z wpłatami, nie wyśle maila i nie zauważy, że ta sama wpłata została wpisana dwa razy.
+Fundacja nie miała strony internetowej, tylko fanpage na Facebooku. Program Adopcji Serca prowadziła w arkuszach Google: w jednym lista darczyńców, w drugim wpłaty, po kolumnie na każdy miesiąc. Każdy przelew z wyciągu ktoś przepisywał ręcznie.
 
-Cel był więc podwójny: strona, przez którą łatwo wesprzeć fundację, i narzędzie, które zdejmie z ludzi w fundacji ręczne przepisywanie.
+Na początku chodziło o jedno: porządną wizytówkę, która przedstawi fundację, jej działania i misję na Madagaskarze. Od tego zaczęliśmy, a kolejne części dobudowywaliśmy wtedy, gdy okazywało się, że są potrzebne:
+
+- **czerwiec 2026** - wizytówka w trzech językach, formularze, wpłaty jednorazowe przez PayU i newsletter w MailerLite. Zaraz potem panel, w którym fundacja sama dodaje i poprawia wydarzenia oraz sprawozdania.
+- **czerwiec i lipiec** - wpłaty co miesiąc kartą.
+- **sierpień** - moduł Adopcja Serca: dzieci, darczyńcy, przypisywanie adopcji, wpłaty i maile do darczyńców. Zastąpił arkusze.
+- **sierpień i wrzesień** - finanse i import wyciągu z banku.
+- **od września** - poprawki według uwag z codziennej pracy fundacji.
+
+Arkusz jest świetny na początek, ale z każdym nowym darczyńcą robi się trudniejszy. Nie pokaże sam, kto zalega z wpłatami, nie wyśle maila i nie zauważy, że ta sama wpłata została wpisana dwa razy. Dlatego największa część pracy to dziś nie sama strona, tylko narzędzia do prowadzenia fundacji, które stoją za nią.
 
 ## Co powstało
 
@@ -41,7 +49,7 @@ Pracownicy fundacji sami publikują wydarzenia i sprawozdania. Nie muszą przy t
 
 <figure>
 <a href="/media/2026/10/mada-wydarzenia.webp"><img src="/media/2026/10/mada-wydarzenia.webp" alt="Lista wydarzeń w panelu: tytuł, data, status nadchodzące albo archiwum, gwiazdka przy wyróżnionym" width="990" height="360" loading="lazy"></a>
-<figcaption>Lista wydarzeń w panelu. Status liczy się z daty, więc nikt nie musi przenosić wydarzeń do archiwum.</figcaption>
+<figcaption>Lista wydarzeń w panelu. Gwiazdka oznacza wydarzenie wyróżnione na stronie głównej, a status nadchodzące albo archiwum liczy się z daty - stąd strona wie, co pokazać.</figcaption>
 </figure>
 
 Logowanie jest na imienne konta, z ochroną przed zgadywaniem haseł, a każda zmiana danych trafia do dziennika: kto, co i kiedy.
@@ -53,8 +61,8 @@ To największa część pracy i ta, z której fundacja korzysta codziennie. W pa
 Najważniejszy widok celowo wygląda jak dawny arkusz: wiersz na darczyńcę i dziecko, kolumna na miesiąc. Ludzie w fundacji znali ten układ na pamięć, więc nie było sensu wymyślać go od nowa. Różnica jest taka, że kolory liczą się same, a kliknięcie w czerwone pole zapisuje wpłatę.
 
 <figure>
-<a href="/media/2026/10/mada-macierz-wplat.webp"><img src="/media/2026/10/mada-macierz-wplat.webp" alt="Macierz wpłat w panelu: wiersze z darczyńcami i dziećmi, kolumny z miesiącami, zielone pola opłacone, czerwone z kwotą 70 zł zaległe" width="990" height="830" loading="lazy"></a>
-<figcaption>Macierz wpłat. Zielone opłacone, czerwone zaległe, beżowe poza okresem adopcji. Wszystkie osoby, dzieci i kwoty na zrzutach są zmyślone.</figcaption>
+<a href="/media/2026/10/mada-macierz-wplat.webp"><img src="/media/2026/10/mada-macierz-wplat.webp" alt="Macierz wpłat w panelu: wiersze z darczyńcami i dziećmi, kolumny z miesiącami, zielone pola opłacone, czerwone z kwotą 70 zł zaległe" width="990" height="780" loading="lazy"></a>
+<figcaption>Macierz wpłat. Zielone opłacone, czerwone nieopłacone, beżowe poza okresem adopcji. Kolumna „Zaległe” nie liczy bieżącego miesiąca, bo na jego wpłatę jest jeszcze czas. Wszystkie osoby, dzieci i kwoty na zrzutach są zmyślone.</figcaption>
 </figure>
 
 Karta darczyńcy zbiera wszystko w jednym miejscu: kontakt, notatki fundacji, adopcje, historię wpłat. Stąd też jednym kliknięciem wysyła się darczyńcy maila z przedstawieniem dziecka, a panel zapamiętuje, komu i kiedy to poszło.
@@ -83,14 +91,14 @@ Ta metryka okazała się najcenniejsza. Plik, którego nie da się odczytać, to
 Potem trzeba przypisać każdy przelew do właściwej osoby i dziecka. Panel szuka po zapamiętanym numerze rachunku, po numerze i imieniu dziecka w tytule, a na końcu po nazwisku - i w nadawcy, i w tytule, także w przybliżeniu. To ważne, bo w kartotece często jest para („Ewa i Piotr Wiśniewscy”), a przelew przychodzi od „EWA WIŚNIEWSKA”. Okres wpłaty bierze z tytułu, jeśli darczyńca go wpisał, a jeśli nie - z kwoty, licząc od pierwszego nieopłaconego miesiąca. Jedna wpłata za dwoje dzieci dzieli się na dwie.
 
 <figure>
-<a href="/media/2026/10/mada-import-podzial.webp"><img src="/media/2026/10/mada-import-podzial.webp" alt="Operacja z wyciągu w panelu: przelew 280 zł z tytułem o dwóch miesiącach, rozdzielony na dwie adopcje po 140 zł, pod każdą pasek opłaconych miesięcy" width="944" height="905" loading="lazy"></a>
-<figcaption>Jeden przelew za dwoje dzieci i dwa miesiące. Pod każdą adopcją pasek miesięcy: zielone opłacone, czerwone zaległe, w ramce te, za które płaci ta wpłata.</figcaption>
+<a href="/media/2026/10/mada-import-podzial.webp"><img src="/media/2026/10/mada-import-podzial.webp" alt="Operacja z wyciągu w panelu: przelew 280 zł od darczyńcy z dwojgiem dzieci, rozdzielony na dwie adopcje po 140 zł za wrzesień i październik, pod każdą pasek opłaconych miesięcy" width="945" height="855" loading="lazy"></a>
+<figcaption>Jeden przelew za dwoje dzieci. Tytuł nie mówi, za jakie miesiące, więc panel dzieli kwotę po równo i liczy okres od pierwszego nieopłaconego miesiąca. Pod każdą adopcją pasek: zielone opłacone, czerwone zaległe, w ramce miesiące tej wpłaty.</figcaption>
 </figure>
 
 Panel tylko podpowiada. Nic nie zapisuje się samo - pracownik widzi propozycję, pasek miesięcy pod spodem i klika. Najbardziej przydatne okazało się ostrzeżenie o możliwym dublu: gdy ktoś wcześniej wpisał wpłatę ręcznie, a potem przychodzi wyciąg z tym samym przelewem, panel mówi, która to wpłata, kto i kiedy ją wpisał, i zostawia wiersz niezaznaczony.
 
 <figure>
-<a href="/media/2026/10/mada-import-dubel.webp"><img src="/media/2026/10/mada-import-dubel.webp" alt="Operacja z wyciągu z czerwonym ostrzeżeniem: miesiąc przelewu jest już opłacony wpłatą wpisaną ręcznie, z datą wpisu i loginem osoby, która ją wpisała" width="944" height="880" loading="lazy"></a>
+<a href="/media/2026/10/mada-import-dubel.webp"><img src="/media/2026/10/mada-import-dubel.webp" alt="Operacja z wyciągu z czerwonym ostrzeżeniem: miesiąc przelewu jest już opłacony wpłatą wpisaną ręcznie, z datą wpisu i loginem osoby, która ją wpisała" width="944" height="879" loading="lazy"></a>
 <figcaption>Ostrzeżenie o możliwym dublu. Zapis wymaga świadomej decyzji.</figcaption>
 </figure>
 
