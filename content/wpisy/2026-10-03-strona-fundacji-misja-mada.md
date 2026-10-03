@@ -7,6 +7,7 @@ kategorie:
 excerpt: Serwis w trzech językach, wpłaty kartą co miesiąc i panel, w którym
   fundacja prowadzi cały program Adopcji Serca zamiast arkuszy. Opisuję, co
   powstało, jakie problemy były najciekawsze i czego się przy tym nauczyłem.
+miniatura: /media/2026/10/strona-fundacji-misja-mada.jpg
 typ: wpis
 ---
 Fundacja Misja MADA pomaga dzieciom i rodzinom na Madagaskarze. Wspiera Siostry Małe Misjonarki Miłosierdzia (Siostry Orionistki), które prowadzą tam między innymi Centrum Edukacyjne i Atelier Nadziei. Najważniejszy program fundacji to Adopcja Serca: darczyńca z Polski co miesiąc wspiera konkretne dziecko.
