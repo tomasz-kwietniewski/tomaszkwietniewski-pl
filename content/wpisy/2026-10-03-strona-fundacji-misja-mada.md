@@ -1,7 +1,7 @@
 ---
 title: Jak powstała strona Fundacji Misja MADA
 slug: strona-fundacji-misja-mada
-date: "2026-10-03T12:00:00"
+date: "2026-10-03T09:10:00"
 kategorie:
   - Technologie i dom
 excerpt: Serwis w trzech językach, wpłaty kartą co miesiąc i panel, w którym
