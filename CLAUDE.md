@@ -1,6 +1,6 @@
 # CLAUDE.md - nowa strona tomaszkwietniewski.pl
 
-Stan na 2026-07-17. Ten plik to pełny kontekst projektu - utrzymuj go aktualnym po każdej większej zmianie.
+Ten plik to pełny kontekst projektu - utrzymuj go aktualnym po każdej większej zmianie.
 
 ## Czym jest ten projekt
 
@@ -33,7 +33,7 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   w nav (po Projektach) i w stopce; przekierowanie `/tematy/` -> `/polecam/` (przekierowania.js).
   Burger nav od 1080 px (pełne menu z Polecam potrzebuje ~1050 px); `.nav__link` ma nowrap.
   verify_build.mjs pilnuje 7 kafelków na hubie; sanity ksiazki sprawdza `polecana-okladka`.
-  Polecane telefony zaktualizowane merytorycznie (stan: lipiec 2026); polecane-komputery
+  Polecane telefony zaktualizowane merytorycznie (stan: październik 2026); polecane-komputery
   przeniesione 1:1 ze starego WP - jeszcze do aktualizacji merytorycznej.
 - **Polityka prywatności PRZEPISANA (2026-07-17):** zgodna z faktycznym stanem strony
   (newsletter MailerLite, kontakt e-mail, logi GitHub Pages, transfer do USA wg Data Privacy
@@ -109,7 +109,6 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   bez tego świeżo dodany wpis z datą sprzed lat może się nie zaindeksować. Na stronie wpisu
   `modified` nie jest wyświetlane, czytelnik widzi tylko starą datę - dlatego taki wpis
   musi mieć w treści notę wyjaśniającą, skąd ta data. Wzorzec: `pojednanie-kibicow-2005`.
-- Lokalny subagent do stress-testu: `.claude/agents/website-stress-tester.md` (poza gitem).
 
 ## Struktura
 
@@ -122,8 +121,7 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
 | `.pages.yml` | konfiguracja panelu Pages CMS |
 | `demo/momentum/` | plansza demo aplikacji Momentum Strategy (statyczny HTML + CSS + Chart.js), kopiowana passthrough pod `/projekty/momentum-demo/`. **Artefakt - nie edytować ręcznie.** Generuje repo `momentum-strategy`: `python scripts/build_demo.py --out <ten katalog>`. Dane fikcyjne, `noindex`, poza Pagefind; `verify_build.mjs` pilnuje banera i linku z /projekty/ |
 | `tools/sprawdz_wpis.mjs` | kontrola treści w `npm run check`: offset w datach (pułapka Pages CMS), interpunkcja nowych wpisów, bogate eseje (puste linie w `.esej`, `<pre><code>`, 1x h1) + ostrzeżenie o zmianie `<style>` |
-| `tools/export_wp.py` | ponowny eksport ze starego WP (historyczny; stary WP żyje pod 188.210.222.8) |
-| `tools/fix_entities.py` | dekodowanie encji HTML w title/excerpt |
+| `tools/migracja/` | archiwalne skrypty migracji z WP (`export_wp.py`, `fix_entities.py` i inne; opis w `tools/migracja/README.md`; stary WP żyje pod 188.210.222.8) |
 
 ## Frontmatter wpisu
 
