@@ -25,7 +25,7 @@ Szczegóły wdrożenia, DNS i rollback: `WDROZENIE.md`.
 | `media/` | obrazki i pliki (przeniesione z wp-content/uploads, struktura RRRR/MM) |
 | `.pages.yml` | konfiguracja panelu Pages CMS (https://pagescms.org) |
 | `eleventy.config.js`, `src/`, `lib/` | generator strony (szablony, dane, logika) |
-| `tools/export_wp.py` | skrypt eksportu ze starego WordPressa (do ewentualnego ponowienia) |
+| `tools/migracja/export_wp.py` | skrypt eksportu ze starego WordPressa (do ewentualnego ponowienia) |
 | `tools/verify_build.mjs` | asercje poprawności builda (odpalane też w CI) |
 
 `content/` i `media/` nie są ruszane przez build - Pages CMS działa na nich bez zmian.

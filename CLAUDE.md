@@ -1,6 +1,6 @@
 # CLAUDE.md - nowa strona tomaszkwietniewski.pl
 
-Stan na 2026-07-17. Ten plik to pełny kontekst projektu - utrzymuj go aktualnym po każdej większej zmianie.
+Ten plik to pełny kontekst projektu - utrzymuj go aktualnym po każdej większej zmianie.
 
 ## Czym jest ten projekt
 
@@ -109,7 +109,6 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   bez tego świeżo dodany wpis z datą sprzed lat może się nie zaindeksować. Na stronie wpisu
   `modified` nie jest wyświetlane, czytelnik widzi tylko starą datę - dlatego taki wpis
   musi mieć w treści notę wyjaśniającą, skąd ta data. Wzorzec: `pojednanie-kibicow-2005`.
-- Lokalny subagent do stress-testu: `.claude/agents/website-stress-tester.md` (poza gitem).
 
 ## Struktura
 
@@ -121,8 +120,7 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
 | `docs/` | **warsztat artykułów - POZA GITEM** (`.gitignore`): źródła, recenzje, notatki. Schemat: `docs/README.md` |
 | `.pages.yml` | konfiguracja panelu Pages CMS |
 | `tools/sprawdz_wpis.mjs` | kontrola treści w `npm run check`: offset w datach (pułapka Pages CMS), interpunkcja nowych wpisów, bogate eseje (puste linie w `.esej`, `<pre><code>`, 1x h1) + ostrzeżenie o zmianie `<style>` |
-| `tools/export_wp.py` | ponowny eksport ze starego WP (historyczny; stary WP żyje pod 188.210.222.8) |
-| `tools/fix_entities.py` | dekodowanie encji HTML w title/excerpt |
+| `tools/migracja/` | archiwalne skrypty migracji z WP (`export_wp.py`, `fix_entities.py` i inne; opis w `tools/migracja/README.md`; stary WP żyje pod 188.210.222.8) |
 
 ## Frontmatter wpisu
 
