@@ -29,6 +29,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      # Sekret nie moze stac wprost w `if:` - flaga mowi, czy klucz do repo Momentum jest ustawiony.
+      MOMENTUM_KEY_SET: ${{ secrets.MOMENTUM_DEPLOY_KEY != '' }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v7
@@ -55,6 +58,43 @@ jobs:
           restore-keys: img-opt-
       - name: Instalacja zależności
         run: npm ci
+      # Plansza demo Momentum Strategy (/projekty/momentum-demo/): sygnał GEM, momentum,
+      # historia sygnałów, krzywa kapitału i Larsson Line z prawdziwych notowań (yfinance),
+      # przeliczane przy każdym deployu (push + 3x cron). Kod z PRYWATNEGO repo
+      # momentum-strategy, klucz deploy tylko do odczytu w sekrecie MOMENTUM_DEPLOY_KEY.
+      # Generator nigdy nie czyta stanu aplikacji (pozycji, historii transakcji).
+      # Każda awaria = deploy idzie dalej z wersją zacommitowaną w demo/momentum
+      # (widoczna data "stan na"), a w podsumowaniu runu pojawia się ostrzeżenie.
+      - name: Kod Momentum (prywatne repo, tylko odczyt)
+        id: momentum
+        if: env.MOMENTUM_KEY_SET == 'true'
+        continue-on-error: true
+        uses: actions/checkout@v7
+        with:
+          repository: tomasz-kwietniewski/momentum-strategy
+          ref: master
+          ssh-key: ${{ secrets.MOMENTUM_DEPLOY_KEY }}
+          path: _momentum
+          persist-credentials: false
+      - name: Python dla planszy Momentum
+        id: momentum-python
+        if: steps.momentum.outcome == 'success'
+        continue-on-error: true
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: _momentum/requirements.lock
+      - name: Plansza demo Momentum (GEM na prawdziwych notowaniach)
+        id: momentum-demo
+        if: steps.momentum-python.outcome == 'success'
+        continue-on-error: true
+        run: |
+          pip install --quiet -r _momentum/requirements.lock
+          python -W ignore _momentum/scripts/build_demo.py --real-gem --out demo/momentum
+      - name: Ostrzeżenie - plansza Momentum z poprzedniej wersji
+        if: steps.momentum-demo.outcome != 'success'
+        run: echo "::warning title=Plansza Momentum::Nie przeliczono planszy demo (klucz, pip albo notowania). Publikuję wersję zacommitowaną w demo/momentum."
       - name: Build + indeks Pagefind
         run: npm run build
       - name: Weryfikacja builda
