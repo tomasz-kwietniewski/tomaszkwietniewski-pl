@@ -11,3 +11,6 @@ _img-cache/
 
 # Kontekst dla Codexa - lokalna kopia CLAUDE.md z importu, nie tresc repo
 /AGENTS.md
+
+# Kod momentum-strategy pobierany w CI do budowy planszy demo
+_momentum/

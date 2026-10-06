@@ -58,19 +58,23 @@ const polecamBraki = polecamCele.filter((c) => !polecamHtml.includes(`href="${c}
 if (polecamBraki.length) blad(`/polecam/ nie linkuje: ${polecamBraki.join(", ")}`);
 else ok(`/polecam/: ${polecamCele.length} kafelków z linkami`);
 
-// Plansza demo Momentum (passthrough z demo/momentum): komplet plików, baner danych
-// przykładowych, noindex i link z /projekty/. Prawdziwy panel jest za logowaniem.
+// Plansza demo Momentum (passthrough z demo/momentum, w CI przeliczana z prawdziwych
+// notowań): komplet plików, baner, noindex i link z /projekty/. Tryb i data tylko
+// raportowane - stara wersja to fallback po awarii pobrania, nie błąd builda.
 const demoDir = path.join(SITE, "projekty", "momentum-demo");
 const demoBraki = ["index.html", "momentum-demo.css", "chart.umd.min.js"].filter((p) => !existsSync(path.join(demoDir, p)));
 if (demoBraki.length) blad(`plansza demo Momentum: brak ${demoBraki.join(", ")}`);
 else {
   const demoHtml = readFileSync(path.join(demoDir, "index.html"), "utf8");
   const projektyHtml = readFileSync(path.join(SITE, "projekty", "index.html"), "utf8");
-  if (!demoHtml.includes("Dane przykładowe - demo.")) blad("plansza demo Momentum: brak banera „Dane przykładowe - demo.”");
+  if (!demoHtml.includes('id="demo-baner"') || !/dane przykładowe/i.test(demoHtml)) blad("plansza demo Momentum: brak banera z informacją o danych przykładowych");
   else if (!demoHtml.includes('name="robots" content="noindex"')) blad("plansza demo Momentum: brak noindex");
   else if (/<form|\/login/.test(demoHtml)) blad("plansza demo Momentum: formularz albo link logowania");
   else if (!projektyHtml.includes('href="/projekty/momentum-demo/"')) blad("/projekty/ nie linkuje planszy demo Momentum");
-  else ok("plansza demo Momentum: pliki, baner, noindex, link z /projekty/");
+  else {
+    const stan = (demoHtml.match(/stan na ([\d-]+ [\d:]+)/) || [])[1];
+    ok(`plansza demo Momentum: pliki, baner, noindex, link z /projekty/ (${stan ? `GEM z notowań, stan na ${stan}` : "dane w pełni przykładowe"})`);
+  }
 }
 
 // /blog/ musi listować wszystkie opublikowane wpisy. Łapie regresję typu
