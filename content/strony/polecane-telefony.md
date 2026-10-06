@@ -69,6 +69,26 @@ Poza rankingiem, jeśli liczy się wydajność i bateria, a nie aparat: **OnePlu
 
 Dla fanów Samsunga: **Galaxy S25 w wersji 12/256 GB** za ok. 2720 zł też mieści się w tym progu.
 
+### Małe, poręczne telefony - ok. 150 mm
+
+Poręczny to dla mnie telefon o wysokości ok. 150 mm. W Europie prawie takich nie ma: Galaxy S25 jest wyjątkiem, a reszta flagowców urosła do 160-163 mm (vivo X300 Pro, Pixel 10 Pro XL, Galaxy S25 Ultra). W Chinach mały flagowiec to osobna kategoria - prawie każdy producent ma model 6,3 cala z teleobiektywem peryskopowym.
+
+Uczciwie: żaden maluch nie ma aparatu na poziomie dużego modelu Pro czy Ultra. Mniejsze są matryce, zwłaszcza w teleobiektywie. Ale różnica w codziennych zdjęciach jest mniejsza niż w cenie i w ciężarze w kieszeni. Gdyby któryś miał komplet parametrów dużego brata, sam bym go kupił.
+
+| Telefon | Wysokość | Waga | Aparat | Cena |
+|---|---|---|---|---|
+| Samsung Galaxy S25 | 146,9 mm | 162 g | 50 Mpx + tele 3x | ok. 2400 zł w PL |
+| Honor Magic 8 Pro Air | 150,5 mm | 155 g | 50 Mpx 1/1,3" + peryskop 3,2x | ok. 3015 zł z Chin |
+| vivo X300 | 150,6 mm | 190 g | 200 Mpx 1/1,4" + peryskop 3x | ok. 3950 zł w PL, ok. 2795 zł z Chin |
+| OnePlus 15T | 150,6 mm | 194 g | 50 Mpx + tele 3,5x, bateria 7500 mAh | ok. 2620 zł z Chin |
+| Oppo Find X8s | 150,6 mm | 179 g | 50 Mpx + peryskop 3x | ok. 2090 zł z Chin |
+| vivo X200 Pro Mini | 150,8 mm | 187 g | 50 Mpx + peryskop 3x | ok. 2355 zł z Chin |
+| Xiaomi 17 | 151,1 mm | 191 g | 3x 50 Mpx Leica, w tym tele | ok. 3665 zł w PL, ok. 2445 zł z Chin |
+| vivo X300 FE | ok. 151 mm | 191 g | 50 Mpx + peryskop 3x | ok. 4000 zł w PL, ok. 3235 zł (wersja globalna, magazyn UE) |
+| Google Pixel 10 / 10 Pro | 152,8 mm | 204 g / 207 g | tele 5x | ok. 2520 zł / ok. 2900-3000 zł w PL |
+
+Najbliżej „pełnego wypasu” w małym formacie są **vivo X300** (ta sama duża matryca 200 Mpx co w wielu większych telefonach i prawdziwy peryskop) oraz **Honor Magic 8 Pro Air** (duża matryca główna, peryskop, a przy tym tylko 155 g i 6,1 mm grubości). Z polskich sklepów najrozsądniejszy maluch to **Galaxy S25** - jedyny, który bez importu mieści się poniżej 150 mm i kosztuje mniej niż 2500 zł.
+
 ### Nowości jesieni 2026
 
 We wrześniu Chińczycy pokazali nowe flagowce. Wszystkie są droższe od poprzedników na starcie, a europejskie wersje dopiero wchodzą, więc rzetelnych porównań aparatów jest jeszcze mało. Na nową generację poczekałbym do zimy - aż pojawią się testy i spadną ceny.
@@ -88,6 +108,35 @@ Ceną za tę oszczędność jest oprogramowanie. Chiński system OriginOS nie ma
 To mój drugi telefon z Chin - OnePlus 12 w chińskiej wersji służy mi bez problemów od 2024 roku, więc wiem, czego się spodziewać. Usunięcie chińskich dodatków i dostosowanie telefonu do używania w Polsce nie powinno być trudne. Jak przejdę cały proces, opiszę go tutaj. Z tego samego sklepu mam laptopy opisane na stronie [Polecane komputery](/tematy/polecane-komputery/).
 
 Dlaczego nie nowy X500 Pro? W Chinach startuje o 1200 juanów drożej, a porównań aparatów jeszcze nie ma. Wolałem sprawdzony model w dobrej cenie niż premierową dopłatę.
+
+### Telefon z Chin: kiedy warto, a kiedy nie
+
+Przejrzałem całą ofertę telefonów w Trading Shenzhen (październik 2026, 82 modele) i porównałem z najtańszymi polskimi sklepami w tej samej konfiguracji pamięci. Wersja chińska kosztuje zwykle **60-72% polskiej ceny**, czyli 30-40% taniej. „Dwa razy taniej” wychodzi tylko w porównaniu z ceną katalogową albo z pojedynczą, przestarzałą ofertą.
+
+| Telefon (ta sama pamięć) | Z Chin | W Polsce | Taniej o |
+|---|---|---|---|
+| vivo X300 Ultra 16/1TB | ok. 5515 zł | ok. 7680 zł | ok. 2170 zł |
+| Oppo Find X9 Pro 16/512 | ok. 3630 zł | ok. 5300 zł | ok. 1670 zł |
+| vivo X300 Pro 16/512 | ok. 3495 zł | ok. 5000 zł | ok. 1500 zł |
+| Xiaomi 15 Ultra 16/512 | ok. 3585 zł | ok. 5080 zł | ok. 1500 zł |
+| OnePlus 15 12/256 | ok. 2665 zł | ok. 3900 zł | ok. 1240 zł |
+| Xiaomi 17 12/256 | ok. 2445 zł | ok. 3665 zł | ok. 1220 zł |
+| Xiaomi 17 Ultra 16/512 | ok. 4240 zł | ok. 4965 zł | ok. 720 zł |
+
+Kiedy warto:
+
+- **Flagowce z najlepszym aparatem.** Tu różnica sięga 1500-2000 zł, a aparat jest identyczny.
+- **Modele, których w Europie nie ma albo już nie ma**: Oppo Find X8 Ultra (ok. 3450 zł), vivo X200 Ultra (ok. 3365 zł), Xiaomi 15 Ultra w wersji 12/256 (ok. 3145 zł) - poprzednia generacja, ale wciąż w czołówce aparatów. Do tego małe flagowce z tabeli wyżej.
+- **Honor Magic 7 Pro** 16/512 za ok. 2530 zł - w Polsce wersja 12/512 kosztuje ok. 3400 zł.
+
+Kiedy nie warto:
+
+- **Wersje globalne z magazynu w UE** (np. vivo X300 FE, OnePlus Nord 6) są tańsze tylko o 0-20%, a tracisz polską gwarancję.
+- **Gdy różnica jest mała** - Xiaomi 17 Ultra jest z Chin tańszy tylko o 15%.
+- **Gdy kupujesz na firmę z VAT.** Polska faktura daje 23% VAT do odliczenia, a VAT z importu jest w cenie i nie da się go odzyskać. Przykład: vivo X300 Pro 16/512 w Polsce to ok. 4065 zł netto, z Chin ok. 3495 zł - realna oszczędność spada z 1500 do ok. 570 zł.
+- **Gdy nie chcesz kombinować z systemem.** Chińskie oprogramowanie to brak polskiego w systemie, chińskie aplikacje do usunięcia, możliwe kaprysy Google Wallet i gwarancja przez sklep z odsyłaniem telefonu do Chin.
+
+Praktyczna uwaga: w pierwszym tygodniu października (chińskie święto narodowe) i w okolicach chińskiego Nowego Roku paczki z Chin nie wyjeżdżają, więc dostawa się wydłuża.
 
 ### Jak kupować opłacalnie
 
