@@ -119,6 +119,7 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
 | `media/` | obrazki z wp-content/uploads, struktura RRRR/MM; treści linkują względnie `media/...` |
 | `docs/` | **warsztat artykułów - POZA GITEM** (`.gitignore`): źródła, recenzje, notatki. Schemat: `docs/README.md` |
 | `.pages.yml` | konfiguracja panelu Pages CMS |
+| `demo/momentum/` | plansza demo aplikacji Momentum Strategy (statyczny HTML + CSS + Chart.js), kopiowana passthrough pod `/projekty/momentum-demo/`. **Artefakt - nie edytować ręcznie.** Generuje repo `momentum-strategy`: `python scripts/build_demo.py --out <ten katalog>`. Dane fikcyjne, `noindex`, poza Pagefind; `verify_build.mjs` pilnuje banera i linku z /projekty/ |
 | `tools/sprawdz_wpis.mjs` | kontrola treści w `npm run check`: offset w datach (pułapka Pages CMS), interpunkcja nowych wpisów, bogate eseje (puste linie w `.esej`, `<pre><code>`, 1x h1) + ostrzeżenie o zmianie `<style>` |
 | `tools/migracja/` | archiwalne skrypty migracji z WP (`export_wp.py`, `fix_entities.py` i inne; opis w `tools/migracja/README.md`; stary WP żyje pod 188.210.222.8) |
 
@@ -204,7 +205,7 @@ gh workflow run "Deploy na GitHub Pages" --ref main
 
 github.com/tomasz-kwietniewski | misjamada.pl | najlepsipilkarze.tomaszkwietniewski.pl |
 pedalowaniezsensem.tomaszkwietniewski.pl (archiwum 2014; domena pedalowaniezsensem.pl WYGASŁA) |
-przeglad.tomaszkwietniewski.pl | momentum.kwietniewscy.pl (NAS przez tunel Cloudflare; dawny adres momentum.tomaszkwietniewski.pl nie ma już DNS; kafelek na Projektach od 2026-07-18) |
+przeglad.tomaszkwietniewski.pl | momentum.kwietniewscy.pl (NAS przez tunel Cloudflare, za logowaniem Cloudflare Access; dawny adres momentum.tomaszkwietniewski.pl nie ma już DNS). Kafelek na Projektach prowadzi od 2026-10-06 do planszy demo `/projekty/momentum-demo/` (dane przykładowe), prawdziwy panel jako link drugorzędny |
 finansezsensem.pl (usługa konsultacji finansowych, live od 2026-07-20; kafelek na Projektach,
 wzmianka na /tematy/prywatna-emerytura/ i link w "Kim jestem" na stronie głównej) |
 Google Play: aplikacja "Hormon Wzrostu Dawkowanie" | kontakt@tomaszkwietniewski.pl

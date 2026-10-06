@@ -16,6 +16,10 @@ export default function (eleventyConfig) {
   eleventyConfig.on("eleventy.after", () => {
     if (existsSync("_img-cache")) cpSync("_img-cache", "_site/media/opt", { recursive: true });
   });
+  // Plansza demo aplikacji Momentum Strategy (statyczny HTML na danych przykładowych).
+  // Generowana w repo momentum-strategy: scripts/build_demo.py --out demo/momentum.
+  // Leży poza src/, żeby Eleventy nie przetwarzał jej jako szablonu - nie edytować ręcznie.
+  eleventyConfig.addPassthroughCopy({ "demo/momentum": "projekty/momentum-demo" });
   // Domena własna dla GitHub Pages - plik CNAME w katalogu opublikowanej strony.
   eleventyConfig.addPassthroughCopy({ "CNAME.gotowy": "CNAME" });
 

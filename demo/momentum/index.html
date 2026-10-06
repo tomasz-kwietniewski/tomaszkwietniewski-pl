@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Demo panelu Momentum Strategy na danych przykładowych.">
+  <title>Momentum Strategy - demo na danych przykładowych</title>
+  <link rel="stylesheet" href="momentum-demo.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <nav class="bg-slate-900 text-white p-4 shadow">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <h1 class="text-xl font-bold">Momentum Strategy</h1>
+      
+      <div class="flex items-center gap-4">
+        <span class="text-sm text-slate-400 hidden sm:inline">2026-10-06 08:15</span>
+        <a href="/projekty/" class="text-sm text-slate-300 hover:text-white transition">Wróć do projektów</a>
+      </div>
+      
+    </div>
+  </nav>
+  
+  <div id="demo-baner" class="bg-amber-300 text-amber-950 border-b border-amber-400">
+    <div class="max-w-6xl mx-auto px-6 py-3 text-sm">
+      <strong class="uppercase tracking-wide">Dane przykładowe - demo.</strong>
+      Tak wygląda panel aplikacji, ale wszystkie liczby, pozycje i transakcje poniżej są zmyślone
+      i nie są moim portfelem ani rekomendacją inwestycyjną. Prawdziwy panel działa na domowym serwerze
+      za logowaniem.
+    </div>
+  </div>
+  
+
+  <main class="max-w-6xl mx-auto p-6 space-y-6">
+    
+      
+    
+
+    
+
+
+
+  <div class="text-xs text-slate-500">
+    Ostatnie zadanie: <strong>exits</strong>
+    
+      ✓ zakończone 2026-10-06 08:02
+    
+  </div>
+
+
+
+<div class="flex items-center gap-3 mt-2" id="blok-realizacja">
+  <h2 class="text-xl font-bold text-slate-800 tracking-wide whitespace-nowrap">BLOK A: REALIZACJA</h2>
+  <div class="h-px flex-1 bg-slate-300"></div>
+  <span class="hidden sm:inline text-xs text-slate-500 whitespace-nowrap">sygnał GEM, pozycje, exits</span>
+</div>
+
+
+<section class="rounded-lg shadow-lg overflow-hidden">
+  
+    <div class="bg-emerald-500 text-white p-8">
+      <div class="text-sm uppercase tracking-wider opacity-80">Aktywny sygnał GEM</div>
+      <div class="text-6xl font-bold mt-2">STOCKS</div>
+      <div class="text-lg mt-3 opacity-90">od 2026-08-31</div>
+    </div>
+  
+</section>
+
+
+
+
+<section class="rounded-lg shadow overflow-hidden border border-slate-200" id="larsson-btc">
+  
+    <div class="bg-yellow-400 text-yellow-950 px-5 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2"
+         data-larsson-state="Y">
+      <div>
+        <div class="text-xs uppercase tracking-wider opacity-80">Larsson Line BTC/USD (1D), informacyjnie</div>
+        <div class="flex items-baseline gap-x-3 gap-y-1 mt-1 flex-wrap">
+          <span class="text-3xl font-bold uppercase">żółty</span>
+          <span class="text-lg font-medium">trend wzrostowy: kupuj / trzymaj</span>
+        </div>
+      </div>
+      <div class="text-sm md:text-right opacity-90">
+        <div>od <strong>13.09.2026</strong> (23 dni)</div>
+        <div>BTC 96 860 USD, wstęga 90 467 - 93 179</div>
+      </div>
+    </div>
+    <div class="bg-white px-5 py-3 text-xs text-slate-600 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+        <span class="text-slate-500">Ostatnie zmiany:</span>
+        
+          <span class="inline-flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-400"></span>13.09.2026 szary -&gt; żółty</span>
+        
+          <span class="inline-flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-full bg-slate-400"></span>30.08.2026 żółty -&gt; szary</span>
+        
+          <span class="inline-flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-400"></span>15.08.2026 szary -&gt; żółty</span>
+        
+          <span class="inline-flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-full bg-slate-400"></span>27.07.2026 niebieski -&gt; szary</span>
+        
+      </div>
+      <div class="whitespace-nowrap">
+        sprawdzono 06.10.2026 08:05
+        <a href="https://www.tradingview.com/chart/?symbol=COINBASE:BTCUSD" target="_blank" rel="noopener" class="ml-2 text-blue-700 hover:underline">TradingView</a>
+      </div>
+    </div>
+    
+    <div class="bg-slate-50 text-[11px] text-slate-500 px-5 py-2 border-t border-slate-100">
+      Nie zmienia sygnału GEM. Mail przychodzi przy każdej zmianie koloru (sprawdzenie codziennie rano, także w weekendy).
+    </div>
+  
+</section>
+
+
+<section>
+  <h2 class="text-lg font-semibold text-slate-700 mb-3">Live momentum (3m)</h2>
+  
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      
+        <div class="bg-white p-4 rounded-lg shadow border border-slate-200">
+          <div class="text-sm uppercase tracking-wider text-slate-500">BTC</div>
+          <div class="text-3xl font-bold mt-1 text-rose-600">-15.24%</div>
+          
+        </div>
+      
+        <div class="bg-white p-4 rounded-lg shadow border border-emerald-400 ring-2 ring-emerald-200">
+          <div class="text-sm uppercase tracking-wider text-slate-500">STOCKS</div>
+          <div class="text-3xl font-bold mt-1 text-emerald-600">+11.88%</div>
+          
+            <div class="text-xs text-emerald-700 font-semibold mt-2">⬆ winner</div>
+          
+        </div>
+      
+        <div class="bg-white p-4 rounded-lg shadow border border-slate-200">
+          <div class="text-sm uppercase tracking-wider text-slate-500">CASH</div>
+          <div class="text-3xl font-bold mt-1 text-slate-700">+0.00%</div>
+          
+        </div>
+      
+    </div>
+    <div class="text-sm text-slate-600 mt-3">
+      Sygnał gdyby koniec miesiąca dziś: <strong class="text-slate-900">STOCKS</strong>
+      (as_of 2026-10-06)
+    </div>
+    
+      <div class="text-xs text-slate-400 mt-2 border-t border-slate-100 pt-2">
+        Poglądowo, gdyby lookback był inny:
+        
+          <span class="ml-1">6M -&gt; <span class="font-mono">STOCKS</span>,</span>
+        
+          <span class="ml-1">12M -&gt; <span class="font-mono">BTC</span></span>
+        
+        <span class="block mt-1 italic">Nie jest to sygnał do wykonania. Strategia działa na 3M
+        i przeskakiwanie między wariantami wypada gorzej niż trzymanie się jednego.</span>
+      </div>
+    
+  
+</section>
+
+
+<section>
+  <h2 class="text-lg font-semibold text-slate-700 mb-3">Otwarte pozycje (5)</h2>
+  
+    <div class="bg-white rounded-lg shadow border border-slate-200 overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-100 text-slate-700">
+          <tr>
+            <th class="text-left p-3">Ticker</th>
+            <th class="text-left p-3">Entry</th>
+            <th class="text-right p-3">Entry price</th>
+            <th class="text-right p-3">Current</th>
+            <th class="text-right p-3">P&amp;L</th>
+            <th class="text-right p-3">Drawdown</th>
+            <th class="text-center p-3">Status</th>
+            <th class="text-left p-3">Source</th>
+            <th class="text-right p-3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=XETR:RHM" target="_blank" rel="noopener" class="text-blue-700 hover:underline">RHM.DE</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    Xetra, EUR,
+    <a href="https://finance.yahoo.com/quote/RHM.DE" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+  </td>
+              <td class="p-3 text-slate-600">2026-07-02</td>
+              <td class="p-3 text-right font-mono">1512.00</td>
+              <td class="p-3 text-right font-mono">1748.20</td>
+              <td class="p-3 text-right font-mono text-emerald-600">+15.62%</td>
+              <td class="p-3 text-right font-mono text-rose-600">-2.63%</td>
+              <td class="p-3 text-center">
+  
+  <span class="inline-block px-2 py-1 text-xs font-semibold border rounded bg-emerald-100 text-emerald-800 border-emerald-300">OK</span></td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=VRT" target="_blank" rel="noopener" class="text-blue-700 hover:underline">VRT</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/VRT" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+  </td>
+              <td class="p-3 text-slate-600">2026-07-16</td>
+              <td class="p-3 text-right font-mono">118.40</td>
+              <td class="p-3 text-right font-mono">147.35</td>
+              <td class="p-3 text-right font-mono text-emerald-600">+24.45%</td>
+              <td class="p-3 text-right font-mono text-rose-600">-3.00%</td>
+              <td class="p-3 text-center">
+  
+  <span class="inline-block px-2 py-1 text-xs font-semibold border rounded bg-emerald-100 text-emerald-800 border-emerald-300">OK</span></td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=XETR:SIE" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SIE.DE</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    Xetra, EUR,
+    <a href="https://finance.yahoo.com/quote/SIE.DE" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+  </td>
+              <td class="p-3 text-slate-600">2026-08-06</td>
+              <td class="p-3 text-right font-mono">214.80</td>
+              <td class="p-3 text-right font-mono">236.10</td>
+              <td class="p-3 text-right font-mono text-emerald-600">+9.92%</td>
+              <td class="p-3 text-right font-mono text-rose-600">-2.28%</td>
+              <td class="p-3 text-center">
+  
+  <span class="inline-block px-2 py-1 text-xs font-semibold border rounded bg-emerald-100 text-emerald-800 border-emerald-300">OK</span></td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=CAT" target="_blank" rel="noopener" class="text-blue-700 hover:underline">CAT</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/CAT" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+  </td>
+              <td class="p-3 text-slate-600">2026-08-20</td>
+              <td class="p-3 text-right font-mono">402.10</td>
+              <td class="p-3 text-right font-mono">409.90</td>
+              <td class="p-3 text-right font-mono text-emerald-600">+1.94%</td>
+              <td class="p-3 text-right font-mono text-rose-600">-8.65%</td>
+              <td class="p-3 text-center">
+  
+  <span class="inline-block px-2 py-1 text-xs font-semibold border rounded bg-amber-100 text-amber-800 border-amber-300">WARN</span></td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=XETR:SAP" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SAP.DE</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    Xetra, EUR,
+    <a href="https://finance.yahoo.com/quote/SAP.DE" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+  </td>
+              <td class="p-3 text-slate-600">2026-05-26</td>
+              <td class="p-3 text-right font-mono">251.30</td>
+              <td class="p-3 text-right font-mono">214.60</td>
+              <td class="p-3 text-right font-mono text-rose-600">-14.60%</td>
+              <td class="p-3 text-right font-mono text-rose-600">-18.34%</td>
+              <td class="p-3 text-center">
+  
+  <span class="inline-block px-2 py-1 text-xs font-semibold border rounded bg-rose-100 text-rose-800 border-rose-300">SELL</span></td>
+              <td class="p-3 text-xs text-slate-500">scanner</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  
+</section>
+
+
+<section>
+  <h2 class="text-lg font-semibold text-slate-700 mb-3">Equity curve (kapitał startowy 10 000 PLN)</h2>
+  <div class="bg-white p-4 rounded-lg shadow border border-slate-200">
+    <div class="flex items-center gap-2 mb-3 text-sm">
+      <span class="text-slate-500 mr-2">Okres:</span>
+      <div id="equity-period-buttons" class="inline-flex rounded border border-slate-300 overflow-hidden">
+        <button type="button" data-years="2" class="px-3 py-1 hover:bg-slate-100 border-r border-slate-300">2 lata</button>
+        <button type="button" data-years="5" class="px-3 py-1 hover:bg-slate-100 border-r border-slate-300">5 lat</button>
+        <button type="button" data-years="all" class="px-3 py-1 hover:bg-slate-100">Wszystko</button>
+      </div>
+      <span id="equity-loading" class="hidden text-xs text-slate-500 ml-2">Ładuję...</span>
+    </div>
+    <canvas id="equity-chart" height="120"></canvas>
+    <div id="equity-error" class="hidden text-sm text-rose-700 mt-2"></div>
+    <div class="text-xs text-slate-500 mt-2">
+      Symulacja od <code id="equity-start-label">-</code> do dziś.
+      GEM (strategia, ad-hoc compute_signal dla okresów przed signals_history.csv),
+      BTC buy-and-hold (BTC-EUR), FWRA/FWIA buy-and-hold (FWIA.DE).
+      Konwersja EUR/PLN po bieżącym kursie. Wynik cache'owany 1h per okres.
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <h2 class="text-lg font-semibold text-slate-700 mb-3">Historia zamkniętych pozycji</h2>
+  
+    <div class="bg-white p-4 rounded-lg shadow border border-slate-200 mb-3 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+      <div><div class="text-xs uppercase text-slate-500">Trades</div><div class="font-mono text-lg">6</div></div>
+      <div><div class="text-xs uppercase text-slate-500">Win rate</div><div class="font-mono text-lg">50% (3)</div></div>
+      <div><div class="text-xs uppercase text-slate-500">Średni P&L</div><div class="font-mono text-lg text-emerald-600">+7.73%</div></div>
+      <div><div class="text-xs uppercase text-slate-500">Compound P&L</div><div class="font-mono text-lg text-emerald-600">+49.40%</div></div>
+    </div>
+    <div class="bg-white rounded-lg shadow border border-slate-200 overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-100 text-slate-700">
+          <tr>
+            <th class="text-left p-3">Ticker</th>
+            <th class="text-left p-3">Entry</th>
+            <th class="text-left p-3">Close</th>
+            <th class="text-right p-3">Entry $</th>
+            <th class="text-right p-3">Exit $</th>
+            <th class="text-right p-3">P&L</th>
+            <th class="text-right p-3">Dni</th>
+            <th class="text-left p-3">Źródło</th>
+            <th class="text-left p-3">Powód</th>
+            <th class="text-right p-3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold">GE</td>
+              <td class="p-3 text-slate-600">2026-06-08</td>
+              <td class="p-3 text-slate-600">2026-09-03</td>
+              <td class="p-3 text-right font-mono">241.70</td>
+              <td class="p-3 text-right font-mono">228.40</td>
+              <td class="p-3 text-right font-mono text-rose-600">-5.50%</td>
+              <td class="p-3 text-right text-slate-600">87</td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-xs text-slate-500">Stage 4</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold">ETN</td>
+              <td class="p-3 text-slate-600">2026-05-09</td>
+              <td class="p-3 text-slate-600">2026-08-03</td>
+              <td class="p-3 text-right font-mono">318.90</td>
+              <td class="p-3 text-right font-mono">352.60</td>
+              <td class="p-3 text-right font-mono text-emerald-600">+10.57%</td>
+              <td class="p-3 text-right text-slate-600">86</td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-xs text-slate-500">take profit</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold">SAF.PA</td>
+              <td class="p-3 text-slate-600">2026-02-08</td>
+              <td class="p-3 text-slate-600">2026-06-07</td>
+              <td class="p-3 text-right font-mono">201.50</td>
+              <td class="p-3 text-right font-mono">247.80</td>
+              <td class="p-3 text-right font-mono text-emerald-600">+22.98%</td>
+              <td class="p-3 text-right text-slate-600">119</td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-xs text-slate-500">trailing stop 20%</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold">QQQ</td>
+              <td class="p-3 text-slate-600">2026-03-15</td>
+              <td class="p-3 text-slate-600">2026-04-29</td>
+              <td class="p-3 text-right font-mono">488.10</td>
+              <td class="p-3 text-right font-mono">471.30</td>
+              <td class="p-3 text-right font-mono text-rose-600">-3.44%</td>
+              <td class="p-3 text-right text-slate-600">45</td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-xs text-slate-500">rebalance</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold">PWR</td>
+              <td class="p-3 text-slate-600">2025-12-30</td>
+              <td class="p-3 text-slate-600">2026-03-30</td>
+              <td class="p-3 text-right font-mono">305.20</td>
+              <td class="p-3 text-right font-mono">289.70</td>
+              <td class="p-3 text-right font-mono text-rose-600">-5.08%</td>
+              <td class="p-3 text-right text-slate-600">90</td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-xs text-slate-500">Stage 4</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold">ANET</td>
+              <td class="p-3 text-slate-600">2025-11-30</td>
+              <td class="p-3 text-slate-600">2026-03-08</td>
+              <td class="p-3 text-right font-mono">88.60</td>
+              <td class="p-3 text-right font-mono">112.40</td>
+              <td class="p-3 text-right font-mono text-emerald-600">+26.86%</td>
+              <td class="p-3 text-right text-slate-600">98</td>
+              <td class="p-3 text-xs text-slate-500">trend_init</td>
+              <td class="p-3 text-xs text-slate-500">trailing stop 20%</td>
+              <td class="p-3 text-right">
+                
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  
+</section>
+
+
+
+
+
+<section>
+  <h2 class="text-lg font-semibold text-slate-700 mb-3">Historia sygnałów GEM (20 ostatnich)</h2>
+  
+    <div class="bg-white rounded-lg shadow border border-slate-200 overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-100 text-slate-700">
+          <tr>
+            <th class="text-left p-3">Data</th>
+            <th class="text-left p-3">Trigger</th>
+            <th class="text-left p-3">Sygnał</th>
+            <th class="text-right p-3">mom BTC</th>
+            <th class="text-right p-3">mom STOCKS</th>
+            <th class="text-right p-3">mom CASH</th>
+            <th class="text-left p-3">Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2026-09-30</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">STOCKS</td>
+              <td class="p-3 text-right font-mono">-0.055594</td>
+              <td class="p-3 text-right font-mono">0.158009</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2026-08-31</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">STOCKS</td>
+              <td class="p-3 text-right font-mono">0.118614</td>
+              <td class="p-3 text-right font-mono">0.173033</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2026-07-31</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">BTC</td>
+              <td class="p-3 text-right font-mono">0.576653</td>
+              <td class="p-3 text-right font-mono">0.040954</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2026-06-30</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">BTC</td>
+              <td class="p-3 text-right font-mono">0.460961</td>
+              <td class="p-3 text-right font-mono">0.098684</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2026-05-31</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">BTC</td>
+              <td class="p-3 text-right font-mono">0.400020</td>
+              <td class="p-3 text-right font-mono">0.033868</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2026-04-30</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">STOCKS</td>
+              <td class="p-3 text-right font-mono">0.028326</td>
+              <td class="p-3 text-right font-mono">0.059369</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2026-03-31</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">CASH</td>
+              <td class="p-3 text-right font-mono">-0.098516</td>
+              <td class="p-3 text-right font-mono">-0.024485</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2026-02-28</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">CASH</td>
+              <td class="p-3 text-right font-mono">-0.204247</td>
+              <td class="p-3 text-right font-mono">-0.035035</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2026-01-31</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">CASH</td>
+              <td class="p-3 text-right font-mono">-0.126019</td>
+              <td class="p-3 text-right font-mono">-0.050179</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2025-12-31</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">BTC</td>
+              <td class="p-3 text-right font-mono">0.275468</td>
+              <td class="p-3 text-right font-mono">-0.055383</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2025-11-30</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">BTC</td>
+              <td class="p-3 text-right font-mono">0.686551</td>
+              <td class="p-3 text-right font-mono">-0.015785</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2025-10-31</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">BTC</td>
+              <td class="p-3 text-right font-mono">1.163041</td>
+              <td class="p-3 text-right font-mono">0.063099</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2025-09-30</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">BTC</td>
+              <td class="p-3 text-right font-mono">0.647156</td>
+              <td class="p-3 text-right font-mono">0.019342</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100">
+              <td class="p-3 text-slate-600">2025-08-31</td>
+              <td class="p-3 text-xs text-slate-500">end-of-month</td>
+              <td class="p-3 font-mono font-semibold">BTC</td>
+              <td class="p-3 text-right font-mono">0.284077</td>
+              <td class="p-3 text-right font-mono">-0.024134</td>
+              <td class="p-3 text-right font-mono">0.000000</td>
+              <td class="p-3 text-xs text-slate-500">yfinance</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  
+</section>
+
+
+<div class="flex items-center gap-3 mt-8" id="blok-radar">
+  <h2 class="text-xl font-bold text-slate-800 tracking-wide whitespace-nowrap">BLOK B: RADAR</h2>
+  <div class="h-px flex-1 bg-slate-300"></div>
+  <span class="hidden sm:inline text-xs text-slate-500 whitespace-nowrap">skan trendów, scanner, watchlist</span>
+</div>
+
+
+<section>
+  <h2 class="text-lg font-semibold text-slate-700 mb-3">Ostatni skan Trend Init (Stage 2)</h2>
+  
+    <div class="bg-white rounded-lg shadow border border-slate-200 overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-100 text-slate-700">
+          <tr>
+            <th class="text-left p-3">Ticker</th>
+            <th class="text-left p-3">Nazwa</th>
+            <th class="text-left p-3">Breakout</th>
+            <th class="text-right p-3">Close</th>
+            <th class="text-right p-3">MA30w</th>
+            <th class="text-right p-3">High 26w</th>
+            <th class="text-right p-3">Vol ratio</th>
+            <th class="text-right p-3">RS slope 4w</th>
+            <th class="text-right p-3">Wiek</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=SMH" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SMH</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/SMH" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+      <div class="text-[11px] font-sans font-normal text-emerald-700 mt-1">
+        🛒 kup: <a href="https://www.tradingview.com/chart/?symbol=XETR:VVSM" target="_blank" rel="noopener" class="font-semibold hover:underline">VVSM.DE</a>
+        (Xetra, EUR)
+      </div>
+    
+  
+  </td>
+              <td class="p-3 text-slate-700">VanEck Semiconductors</td>
+              <td class="p-3 text-slate-600">2026-10-05</td>
+              <td class="p-3 text-right font-mono">312.40</td>
+              <td class="p-3 text-right font-mono">268.10</td>
+              <td class="p-3 text-right font-mono">309.80</td>
+              <td class="p-3 text-right font-mono">1.84x</td>
+              <td class="p-3 text-right font-mono">+0.021</td>
+              <td class="p-3 text-right text-slate-600">-0w</td>
+            </tr>
+          
+            
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=PWR" target="_blank" rel="noopener" class="text-blue-700 hover:underline">PWR</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/PWR" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+  
+  </td>
+              <td class="p-3 text-slate-700">Quanta Services</td>
+              <td class="p-3 text-slate-600">2026-09-28</td>
+              <td class="p-3 text-right font-mono">361.20</td>
+              <td class="p-3 text-right font-mono">318.70</td>
+              <td class="p-3 text-right font-mono">355.00</td>
+              <td class="p-3 text-right font-mono">1.62x</td>
+              <td class="p-3 text-right font-mono">+0.017</td>
+              <td class="p-3 text-right text-slate-600">-1w</td>
+            </tr>
+          
+            
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=ASML" target="_blank" rel="noopener" class="text-blue-700 hover:underline">ASML</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/ASML" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+  
+  
+    <div class="text-[11px] font-sans font-normal text-slate-500 mt-1">
+      EU: <a href="https://www.tradingview.com/chart/?symbol=EURONEXT:ASML" target="_blank" rel="noopener" class="hover:underline">ASML.AS</a>
+    </div>
+  </td>
+              <td class="p-3 text-slate-700">ASML Holding</td>
+              <td class="p-3 text-slate-600">2026-09-28</td>
+              <td class="p-3 text-right font-mono">1012.50</td>
+              <td class="p-3 text-right font-mono">884.30</td>
+              <td class="p-3 text-right font-mono">998.20</td>
+              <td class="p-3 text-right font-mono">1.71x</td>
+              <td class="p-3 text-right font-mono">+0.014</td>
+              <td class="p-3 text-right text-slate-600">-1w</td>
+            </tr>
+          
+            
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=EURONEXT:SAF" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SAF.PA</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    Euronext Paryż, EUR,
+    <a href="https://finance.yahoo.com/quote/SAF.PA" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+  
+  </td>
+              <td class="p-3 text-slate-700">Safran</td>
+              <td class="p-3 text-slate-600">2026-09-21</td>
+              <td class="p-3 text-right font-mono">268.90</td>
+              <td class="p-3 text-right font-mono">239.40</td>
+              <td class="p-3 text-right font-mono">264.10</td>
+              <td class="p-3 text-right font-mono">1.55x</td>
+              <td class="p-3 text-right font-mono">+0.011</td>
+              <td class="p-3 text-right text-slate-600">-2w</td>
+            </tr>
+          
+            
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=QQQ" target="_blank" rel="noopener" class="text-blue-700 hover:underline">QQQ</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/QQQ" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+      <div class="text-[11px] font-sans font-normal text-emerald-700 mt-1">
+        🛒 kup: <a href="https://www.tradingview.com/chart/?symbol=XETR:EQQQ" target="_blank" rel="noopener" class="font-semibold hover:underline">EQQQ.DE</a>
+        (Xetra, EUR)
+      </div>
+    
+  
+  </td>
+              <td class="p-3 text-slate-700">Invesco QQQ (NASDAQ-100)</td>
+              <td class="p-3 text-slate-600">2026-09-21</td>
+              <td class="p-3 text-right font-mono">552.80</td>
+              <td class="p-3 text-right font-mono">509.60</td>
+              <td class="p-3 text-right font-mono">548.30</td>
+              <td class="p-3 text-right font-mono">1.52x</td>
+              <td class="p-3 text-right font-mono">+0.008</td>
+              <td class="p-3 text-right text-slate-600">-2w</td>
+            </tr>
+          
+            
+            <tr class="border-t border-slate-100">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=VRT" target="_blank" rel="noopener" class="text-blue-700 hover:underline">VRT</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/VRT" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+  
+  </td>
+              <td class="p-3 text-slate-700">Vertiv</td>
+              <td class="p-3 text-slate-600">2026-09-14</td>
+              <td class="p-3 text-right font-mono">147.35</td>
+              <td class="p-3 text-right font-mono">121.80</td>
+              <td class="p-3 text-right font-mono">143.90</td>
+              <td class="p-3 text-right font-mono">2.05x</td>
+              <td class="p-3 text-right font-mono">+0.026</td>
+              <td class="p-3 text-right text-slate-600">-3w</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="text-xs text-slate-500 mt-2">Skan z: 2026-10-05</div>
+  
+</section>
+
+
+<section>
+  <h2 class="text-lg font-semibold text-slate-700 mb-3">Watchlist: dojrzewający kandydaci (4)</h2>
+  
+    <div class="bg-white rounded-lg shadow border border-slate-200 overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-100 text-slate-700">
+          <tr>
+            <th class="text-left p-3">Ticker</th>
+            <th class="text-center p-3">Status</th>
+            <th class="text-right p-3">Close</th>
+            <th class="text-right p-3">MA30w</th>
+            <th class="text-right p-3">Do 26w high</th>
+            <th class="text-center p-3" title="close > MA30W">MA</th>
+            <th class="text-center p-3" title="MA30W rośnie">MA↗</th>
+            <th class="text-center p-3" title="close > 26w high">BRK</th>
+            <th class="text-center p-3" title="volume ≥ 1.5x">VOL</th>
+            <th class="text-center p-3" title="RS vs SPY rośnie">RS</th>
+            <th class="text-left p-3">Od / check</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr class="border-t border-slate-100 bg-emerald-50">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=SMH" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SMH</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/SMH" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+      <div class="text-[11px] font-sans font-normal text-emerald-700 mt-1">
+        🛒 kup: <a href="https://www.tradingview.com/chart/?symbol=XETR:VVSM" target="_blank" rel="noopener" class="font-semibold hover:underline">VVSM.DE</a>
+        (Xetra, EUR)
+      </div>
+    
+  
+  </td>
+              <td class="p-3 text-center">
+                <span class="inline-block px-2 py-1 text-xs font-semibold border rounded bg-emerald-100 text-emerald-800 border-emerald-300">WYBIŁ</span>
+                
+              </td>
+              <td class="p-3 text-right font-mono">312.40</td>
+              <td class="p-3 text-right font-mono">268.10</td>
+              <td class="p-3 text-right font-mono text-emerald-600">+0.8%</td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+              <td class="p-3 text-xs text-slate-500">2026-09-21<br>2026-10-06</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100 ">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=ETN" target="_blank" rel="noopener" class="text-blue-700 hover:underline">ETN</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/ETN" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+  
+  </td>
+              <td class="p-3 text-center">
+                <span class="inline-block px-2 py-1 text-xs font-semibold border rounded bg-sky-100 text-sky-800 border-sky-300">OBSERWUJĘ</span>
+              </td>
+              <td class="p-3 text-right font-mono">341.80</td>
+              <td class="p-3 text-right font-mono">322.50</td>
+              <td class="p-3 text-right font-mono text-rose-600">-3.8%</td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
+              
+                <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+              <td class="p-3 text-xs text-slate-500">2026-09-28<br>2026-10-06</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100 ">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=XETR:SIE" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SIE.DE</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    Xetra, EUR,
+    <a href="https://finance.yahoo.com/quote/SIE.DE" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+  
+  </td>
+              <td class="p-3 text-center">
+                <span class="inline-block px-2 py-1 text-xs font-semibold border rounded bg-sky-100 text-sky-800 border-sky-300">OBSERWUJĘ</span>
+              </td>
+              <td class="p-3 text-right font-mono">236.10</td>
+              <td class="p-3 text-right font-mono">219.40</td>
+              <td class="p-3 text-right font-mono text-rose-600">-3.5%</td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
+              
+              <td class="p-3 text-xs text-slate-500">2026-10-02<br>2026-10-06</td>
+            </tr>
+          
+            <tr class="border-t border-slate-100 opacity-50">
+              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=CAT" target="_blank" rel="noopener" class="text-blue-700 hover:underline">CAT</a>
+  <div class="text-[11px] font-sans font-normal text-slate-500">
+    NYSE/NASDAQ, USD,
+    <a href="https://finance.yahoo.com/quote/CAT" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
+  </div>
+  
+    
+  
+  </td>
+              <td class="p-3 text-center">
+                <span class="inline-block px-2 py-1 text-xs font-semibold border rounded bg-slate-100 text-slate-500 border-slate-300">WYGASŁ</span>
+                
+              </td>
+              <td class="p-3 text-right font-mono">409.90</td>
+              <td class="p-3 text-right font-mono">398.20</td>
+              <td class="p-3 text-right font-mono text-rose-600">-8.6%</td>
+              
+                <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
+              
+                <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
+              
+                <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
+              
+                <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
+              
+                <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
+              
+              <td class="p-3 text-xs text-slate-500">2026-09-07<br>2026-10-06</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="text-xs text-slate-500 mt-2">
+      Kandydat = trend zdrowy (close &gt; MA30W, MA rośnie) w 5% od 26w high, bez pełnego sygnału.
+      Odbudowa przy skanie pon 10:30, re-check pon-pt 8:10. Mail przy zmianie statusu.
+    </div>
+  
+</section>
+
+
+
+<section>
+  <div class="bg-amber-50 p-3 rounded-lg border border-amber-200 text-sm text-amber-900">
+    W prawdziwym panelu w tym miejscu są przyciski ręcznego uruchomienia zadań (GEM, skan trendów, wyjścia,
+    watchlista, Larsson) i formularz dodawania pozycji. Zadania same chodzą według harmonogramu i wysyłają maile.
+  </div>
+</section>
+
+
+<script src="chart.umd.min.js"></script>
+<script>
+
+
+function promptCloseReason(form, ticker) {
+  if (!confirm('Zamknąć pozycję ' + ticker + '?')) return false;
+  var reason = prompt('Powód zamknięcia (opcjonalnie):\nnp. "stop loss Stage 4", "rebalance", "take profit"', '');
+  if (reason === null) return false;
+  form.elements['close_reason'].value = reason.trim();
+  return true;
+}
+
+// Plansza demo: dane wykresu wbudowane w strone zamiast /api/equity
+var DEMO_EQUITY = {"2": {"labels": ["2024-10-07", "2024-10-14", "2024-10-21", "2024-10-28", "2024-11-04", "2024-11-11", "2024-11-18", "2024-11-25", "2024-12-02", "2024-12-09", "2024-12-16", "2024-12-23", "2024-12-30", "2025-01-06", "2025-01-13", "2025-01-20", "2025-01-27", "2025-02-03", "2025-02-10", "2025-02-17", "2025-02-24", "2025-03-03", "2025-03-10", "2025-03-17", "2025-03-24", "2025-03-31", "2025-04-07", "2025-04-14", "2025-04-21", "2025-04-28", "2025-05-05", "2025-05-12", "2025-05-19", "2025-05-26", "2025-06-02", "2025-06-09", "2025-06-16", "2025-06-23", "2025-06-30", "2025-07-07", "2025-07-14", "2025-07-21", "2025-07-28", "2025-08-04", "2025-08-11", "2025-08-18", "2025-08-25", "2025-09-01", "2025-09-08", "2025-09-15", "2025-09-22", "2025-09-29", "2025-10-06", "2025-10-13", "2025-10-20", "2025-10-27", "2025-11-03", "2025-11-10", "2025-11-17", "2025-11-24", "2025-12-01", "2025-12-08", "2025-12-15", "2025-12-22", "2025-12-29", "2026-01-05", "2026-01-12", "2026-01-19", "2026-01-26", "2026-02-02", "2026-02-09", "2026-02-16", "2026-02-23", "2026-03-02", "2026-03-09", "2026-03-16", "2026-03-23", "2026-03-30", "2026-04-06", "2026-04-13", "2026-04-20", "2026-04-27", "2026-05-04", "2026-05-11", "2026-05-18", "2026-05-25", "2026-06-01", "2026-06-08", "2026-06-15", "2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-07-27", "2026-08-03", "2026-08-10", "2026-08-17", "2026-08-24", "2026-08-31", "2026-09-07", "2026-09-14", "2026-09-21", "2026-09-28", "2026-10-05", "2026-10-06"], "series": [{"color": "#2563eb", "data": [10000.0, 10000.0, 10000.0, 10000.0, 9877.77, 9883.31, 9298.19, 8554.47, 8003.94, 8020.38, 7752.77, 7658.99, 7531.79, 7537.72, 7537.72, 7537.72, 7537.72, 7537.72, 7537.72, 7537.72, 7537.72, 7522.65, 7130.81, 6602.31, 6952.94, 6660.7, 6608.96, 7102.71, 7996.93, 8570.51, 8480.47, 8092.16, 6991.91, 7343.87, 7646.98, 7821.15, 7801.79, 7510.46, 7453.67, 7526.83, 7372.5, 7298.27, 7099.7, 7132.94, 7132.94, 7132.94, 7132.94, 7127.37, 7799.49, 9003.89, 8802.74, 8819.06, 8951.09, 9132.27, 9623.97, 11573.93, 11648.69, 11406.63, 10699.17, 11211.86, 11447.84, 10950.06, 11020.28, 11346.16, 10409.97, 10699.33, 9371.35, 10355.21, 10381.3, 10550.39, 10550.39, 10550.39, 10550.39, 10550.39, 10550.39, 10550.39, 10550.39, 10550.39, 10550.39, 10550.39, 10550.39, 10550.39, 10660.48, 10769.58, 10231.37, 10115.99, 9101.64, 9911.18, 10034.95, 10795.08, 10535.86, 11552.73, 11451.69, 11877.31, 12250.83, 13266.19, 12874.14, 10823.53, 10712.41, 11283.35, 11352.55, 11240.64, 11355.07, 11749.93, 11901.89, 11743.31], "label": "GEM strategy (dane przyk\u0142adowe)"}, {"color": "#f59e0b", "data": [10000.0, 9814.02, 10059.52, 10440.12, 9826.63, 9832.14, 9250.05, 8510.18, 7389.21, 8220.53, 7791.46, 6868.52, 7029.25, 7280.7, 8102.06, 7165.11, 7294.26, 9144.13, 8718.84, 9426.41, 10308.77, 9656.2, 9153.23, 8474.84, 8924.91, 8549.78, 8483.37, 9117.16, 10265.0, 11001.25, 10885.67, 10387.23, 8974.93, 9426.71, 9267.14, 9286.45, 8894.52, 8695.26, 9147.6, 9489.01, 9412.86, 8810.02, 9876.5, 9746.06, 10747.37, 10628.23, 11346.68, 12538.66, 13721.08, 15839.89, 15486.02, 15514.73, 15747.0, 16065.74, 16930.76, 20361.18, 20492.69, 20066.86, 18822.28, 19724.22, 20139.35, 19263.65, 19387.18, 19960.47, 18313.5, 18822.55, 16486.34, 18217.18, 18263.07, 18193.33, 17090.78, 17967.11, 16154.17, 17256.75, 16779.91, 17387.8, 15945.05, 16907.62, 18811.4, 19136.93, 20162.3, 19429.24, 19113.73, 20968.85, 21688.06, 22741.07, 21274.72, 23167.0, 23456.31, 25233.07, 24627.17, 27004.06, 26767.88, 27762.75, 28635.84, 31009.21, 30092.8, 25299.58, 25039.85, 26374.4, 25378.78, 24317.43, 23474.91, 23693.58, 23002.51, 22887.83], "label": "BTC buy-and-hold (dane przyk\u0142adowe)"}, {"color": "#10b981", "data": [10000.0, 9880.82, 10137.06, 9958.63, 9918.28, 9954.88, 9996.25, 10158.0, 10113.56, 10134.33, 9796.2, 9677.7, 9516.97, 9553.75, 9441.21, 9586.95, 9327.82, 9229.41, 9438.32, 9316.92, 9404.43, 9347.57, 9181.22, 9423.5, 9379.06, 9418.22, 9239.28, 9631.9, 9827.7, 10065.55, 10373.55, 10454.59, 10613.78, 10812.48, 10891.14, 11139.2, 11111.62, 10696.7, 10615.83, 10720.03, 10500.22, 10394.49, 10111.69, 10456.81, 10822.35, 10513.16, 10721.73, 10453.06, 10882.96, 10493.92, 10776.72, 10749.82, 10906.46, 11137.33, 10865.26, 10983.76, 10601.36, 10387.0, 10216.74, 10033.71, 10314.13, 10174.0, 10243.47, 10237.0, 10367.25, 10581.95, 10598.46, 10293.53, 10274.12, 10132.97, 9780.03, 10186.77, 10369.8, 9912.32, 9783.26, 10104.71, 10103.86, 9958.46, 10201.76, 10277.18, 10720.54, 10946.98, 10980.52, 11092.89, 10538.53, 10419.69, 10328.6, 10506.69, 10873.26, 10926.55, 10907.14, 11337.9, 11343.51, 11861.1, 11437.16, 11272.18, 11371.27, 11205.95, 11780.06, 12187.49, 12262.23, 12141.35, 12264.96, 12691.46, 12855.59, 12684.31], "label": "STOCKS buy-and-hold (dane przyk\u0142adowe)"}], "start_date": "2024-10-07"}, "5": {"labels": ["2021-10-06", "2021-10-13", "2021-10-20", "2021-10-27", "2021-11-03", "2021-11-10", "2021-11-17", "2021-11-24", "2021-12-01", "2021-12-08", "2021-12-15", "2021-12-22", "2021-12-29", "2022-01-05", "2022-01-12", "2022-01-19", "2022-01-26", "2022-02-02", "2022-02-09", "2022-02-16", "2022-02-23", "2022-03-02", "2022-03-09", "2022-03-16", "2022-03-23", "2022-03-30", "2022-04-06", "2022-04-13", "2022-04-20", "2022-04-27", "2022-05-04", "2022-05-11", "2022-05-18", "2022-05-25", "2022-06-01", "2022-06-08", "2022-06-15", "2022-06-22", "2022-06-29", "2022-07-06", "2022-07-13", "2022-07-20", "2022-07-27", "2022-08-03", "2022-08-10", "2022-08-17", "2022-08-24", "2022-08-31", "2022-09-07", "2022-09-14", "2022-09-21", "2022-09-28", "2022-10-05", "2022-10-12", "2022-10-19", "2022-10-26", "2022-11-02", "2022-11-09", "2022-11-16", "2022-11-23", "2022-11-30", "2022-12-07", "2022-12-14", "2022-12-21", "2022-12-28", "2023-01-04", "2023-01-11", "2023-01-18", "2023-01-25", "2023-02-01", "2023-02-08", "2023-02-15", "2023-02-22", "2023-03-01", "2023-03-08", "2023-03-15", "2023-03-22", "2023-03-29", "2023-04-05", "2023-04-12", "2023-04-19", "2023-04-26", "2023-05-03", "2023-05-10", "2023-05-17", "2023-05-24", "2023-05-31", "2023-06-07", "2023-06-14", "2023-06-21", "2023-06-28", "2023-07-05", "2023-07-12", "2023-07-19", "2023-07-26", "2023-08-02", "2023-08-09", "2023-08-16", "2023-08-23", "2023-08-30", "2023-09-06", "2023-09-13", "2023-09-20", "2023-09-27", "2023-10-04", "2023-10-11", "2023-10-18", "2023-10-25", "2023-11-01", "2023-11-08", "2023-11-15", "2023-11-22", "2023-11-29", "2023-12-06", "2023-12-13", "2023-12-20", "2023-12-27", "2024-01-03", "2024-01-10", "2024-01-17", "2024-01-24", "2024-01-31", "2024-02-07", "2024-02-14", "2024-02-21", "2024-02-28", "2024-03-06", "2024-03-13", "2024-03-20", "2024-03-27", "2024-04-03", "2024-04-10", "2024-04-17", "2024-04-24", "2024-05-01", "2024-05-08", "2024-05-15", "2024-05-22", "2024-05-29", "2024-06-05", "2024-06-12", "2024-06-19", "2024-06-26", "2024-07-03", "2024-07-10", "2024-07-17", "2024-07-24", "2024-07-31", "2024-08-07", "2024-08-14", "2024-08-21", "2024-08-28", "2024-09-04", "2024-09-11", "2024-09-18", "2024-09-25", "2024-10-02", "2024-10-09", "2024-10-16", "2024-10-23", "2024-10-30", "2024-11-06", "2024-11-13", "2024-11-20", "2024-11-27", "2024-12-04", "2024-12-11", "2024-12-18", "2024-12-25", "2025-01-01", "2025-01-08", "2025-01-15", "2025-01-22", "2025-01-29", "2025-02-05", "2025-02-12", "2025-02-19", "2025-02-26", "2025-03-05", "2025-03-12", "2025-03-19", "2025-03-26", "2025-04-02", "2025-04-09", "2025-04-16", "2025-04-23", "2025-04-30", "2025-05-07", "2025-05-14", "2025-05-21", "2025-05-28", "2025-06-04", "2025-06-11", "2025-06-18", "2025-06-25", "2025-07-02", "2025-07-09", "2025-07-16", "2025-07-23", "2025-07-30", "2025-08-06", "2025-08-13", "2025-08-20", "2025-08-27", "2025-09-03", "2025-09-10", "2025-09-17", "2025-09-24", "2025-10-01", "2025-10-08", "2025-10-15", "2025-10-22", "2025-10-29", "2025-11-05", "2025-11-12", "2025-11-19", "2025-11-26", "2025-12-03", "2025-12-10", "2025-12-17", "2025-12-24", "2025-12-31", "2026-01-07", "2026-01-14", "2026-01-21", "2026-01-28", "2026-02-04", "2026-02-11", "2026-02-18", "2026-02-25", "2026-03-04", "2026-03-11", "2026-03-18", "2026-03-25", "2026-04-01", "2026-04-08", "2026-04-15", "2026-04-22", "2026-04-29", "2026-05-06", "2026-05-13", "2026-05-20", "2026-05-27", "2026-06-03", "2026-06-10", "2026-06-17", "2026-06-24", "2026-07-01", "2026-07-08", "2026-07-15", "2026-07-22", "2026-07-29", "2026-08-05", "2026-08-12", "2026-08-19", "2026-08-26", "2026-09-02", "2026-09-09", "2026-09-16", "2026-09-23", "2026-09-30", "2026-10-06"], "series": [{"color": "#2563eb", "data": [10000.0, 9749.35, 9861.14, 10033.88, 10843.23, 12853.74, 12685.92, 11087.22, 12126.85, 12721.27, 12481.52, 11531.0, 12181.11, 11006.54, 11477.92, 10569.47, 10332.71, 9144.25, 9070.28, 8937.74, 8748.97, 8660.36, 8660.36, 8660.36, 8660.36, 8660.36, 8660.36, 8660.36, 8660.36, 8660.36, 8660.36, 8660.36, 8660.36, 8660.36, 9231.39, 9189.33, 8649.9, 8236.26, 8299.19, 7623.13, 7867.11, 8029.33, 7951.04, 8006.2, 7702.39, 7515.2, 7681.76, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7411.29, 7318.67, 7129.91, 7106.75, 6936.88, 8123.58, 8348.53, 9383.52, 9335.86, 8235.54, 7421.0, 7816.8, 7510.13, 7471.62, 8116.33, 9091.49, 9974.71, 10025.06, 10146.38, 12072.55, 11425.12, 11029.38, 12045.41, 12139.27, 13741.11, 13784.32, 12998.38, 11850.83, 13631.4, 14391.22, 13324.12, 13321.18, 13295.6, 13240.26, 12207.74, 11945.59, 12081.35, 12422.28, 12460.32, 12548.6, 12469.9, 12470.06, 11852.51, 12220.81, 11803.84, 13372.02, 13591.49, 14527.14, 14789.6, 13680.92, 13335.21, 14420.59, 14348.53, 14599.94, 15507.24, 17303.67, 15601.91, 15502.53, 15463.97, 17021.13, 16650.21, 17051.13, 17312.09, 16955.86, 15758.94, 16907.53, 14867.9, 12569.61, 13401.47, 14358.66, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13965.29, 13748.84, 13923.35, 12210.7, 10960.15, 11130.31, 11193.73, 10691.49, 10299.71, 10526.65, 10526.65, 10526.65, 10526.65, 10526.65, 10526.65, 10526.65, 10526.65, 10526.65, 9451.43, 10282.01, 9181.04, 10081.47, 8453.05, 9314.5, 10286.54, 11705.47, 12047.3, 11781.37, 11008.24, 10104.84, 10498.44, 10895.92, 10726.81, 10617.29, 10525.47, 10408.77, 10402.76, 10184.9, 10021.29, 9839.32, 9961.36, 9961.36, 9961.36, 9961.36, 10125.81, 11468.87, 12904.29, 11627.02, 12282.67, 12943.05, 13291.08, 14726.75, 16954.71, 17799.67, 15616.45, 14168.13, 16204.76, 15281.49, 15827.53, 15870.0, 14505.96, 15255.95, 13623.04, 14020.32, 14256.62, 14849.62, 14733.94, 14733.94, 14733.94, 14733.94, 14733.94, 14733.94, 14733.94, 14733.94, 14733.94, 14733.94, 14733.94, 14733.94, 14733.94, 15083.66, 14736.47, 14381.9, 14032.64, 12247.51, 13849.31, 14931.85, 15242.86, 15186.5, 16137.07, 16763.97, 16620.23, 17012.02, 17811.74, 15830.04, 15478.54, 15392.28, 15716.37, 15915.15, 15714.17, 15907.88, 16381.39, 16399.88], "label": "GEM strategy (dane przyk\u0142adowe)"}, {"color": "#f59e0b", "data": [10000.0, 10453.98, 10559.68, 11431.2, 12322.0, 14606.7, 14415.99, 12599.26, 13780.68, 14456.17, 14183.72, 13103.57, 13842.34, 12507.58, 13043.25, 12010.91, 11741.85, 10340.74, 9787.98, 9884.36, 9683.55, 9871.17, 9251.48, 10077.99, 10133.92, 11941.01, 12240.21, 12027.45, 11744.99, 10756.11, 10519.55, 10097.92, 10312.26, 10830.53, 11229.48, 11178.31, 10522.13, 10018.96, 10095.51, 9532.27, 9510.37, 9688.7, 8945.8, 10429.63, 10605.97, 10889.41, 9976.37, 9260.18, 7402.31, 7230.57, 7312.43, 6821.82, 6978.13, 7420.83, 7608.18, 7281.37, 7433.22, 9056.82, 8457.64, 10184.01, 9195.47, 9908.71, 10475.53, 10924.6, 10796.1, 12551.05, 12898.6, 14497.66, 14424.03, 12724.02, 11465.54, 12077.06, 11603.26, 11543.75, 12539.84, 14046.48, 15411.06, 15488.85, 15676.3, 18652.26, 17651.96, 17040.54, 18610.32, 18755.33, 21230.2, 21296.97, 20082.68, 18309.69, 21060.7, 22234.63, 20585.94, 20581.4, 20541.89, 20456.38, 18861.13, 18992.84, 18293.88, 16475.17, 16647.81, 18275.91, 18526.32, 17634.68, 19026.8, 20819.35, 22108.07, 25045.19, 25456.25, 27208.69, 27700.27, 25623.76, 24976.26, 27009.11, 26874.16, 27345.03, 29044.37, 32408.99, 29221.67, 29035.54, 28963.33, 31879.81, 31185.11, 31936.0, 32424.77, 31757.57, 29515.79, 31667.05, 27846.91, 23542.32, 25100.35, 26893.12, 26555.51, 26044.62, 27006.02, 24688.55, 22938.92, 22509.98, 22381.57, 21969.81, 20487.83, 20506.02, 18856.03, 18252.11, 17079.62, 16167.13, 15727.89, 13536.59, 13288.59, 12542.43, 12543.17, 13492.01, 15320.82, 14335.56, 13470.95, 16068.42, 17140.62, 14936.92, 15329.92, 14704.29, 15046.53, 15373.31, 15551.04, 14720.73, 14907.58, 13073.86, 11734.92, 11182.56, 11212.26, 10926.45, 10539.41, 10251.13, 10922.34, 11656.6, 10825.8, 11786.72, 13626.95, 13826.43, 14973.57, 14691.35, 13057.22, 14204.67, 12683.67, 13927.62, 11677.95, 12868.05, 14210.92, 16171.18, 16643.42, 16276.04, 15207.95, 13959.91, 14503.66, 13245.42, 14502.25, 13929.77, 13281.85, 13598.63, 14542.77, 13248.38, 13733.81, 14696.2, 15080.09, 17751.44, 16893.24, 17717.75, 19172.1, 21715.01, 24432.83, 22014.45, 23255.85, 24506.21, 25165.17, 27883.45, 32101.85, 33701.68, 29568.0, 26825.76, 30681.9, 28933.78, 29967.65, 30048.08, 27465.42, 28885.43, 25793.69, 26545.91, 26993.32, 28116.09, 26585.42, 26573.88, 25448.91, 24453.69, 24692.48, 24744.55, 25801.37, 24196.98, 25787.34, 27767.18, 31177.49, 29796.68, 28906.51, 30919.51, 30494.33, 31857.37, 35547.43, 30811.28, 34840.98, 37564.34, 38346.75, 38204.95, 40596.32, 42173.42, 41811.83, 42797.45, 44809.32, 39823.92, 38939.64, 38722.65, 38570.34, 38443.48, 36818.47, 35373.19, 35062.9, 34401.1], "label": "BTC buy-and-hold (dane przyk\u0142adowe)"}, {"color": "#10b981", "data": [10000.0, 9749.35, 9861.14, 10033.88, 10199.13, 10342.44, 9992.08, 9887.24, 9903.35, 9880.44, 9907.52, 10149.28, 10334.94, 10572.54, 10609.47, 10542.26, 10290.92, 10231.76, 10149.0, 10000.69, 9789.48, 9624.93, 9692.42, 9716.44, 9747.41, 9583.41, 9705.47, 9609.24, 9634.65, 9550.22, 9451.21, 9376.08, 9652.29, 9613.68, 9742.55, 10004.03, 10346.19, 10397.84, 10160.8, 9749.21, 10061.24, 10268.7, 10168.58, 10239.12, 9850.58, 9611.18, 9824.2, 9478.29, 9566.05, 9635.2, 10007.92, 9986.39, 9811.7, 9616.32, 9652.84, 9497.87, 9683.11, 9808.78, 9904.88, 9905.29, 9911.82, 9787.95, 9535.5, 9504.53, 9277.35, 9388.58, 9248.89, 9181.81, 8980.18, 9181.26, 8944.91, 8915.47, 8760.78, 8692.04, 8694.12, 8988.65, 9234.17, 9443.16, 9941.95, 10233.85, 10293.97, 9998.33, 10135.11, 10320.5, 10450.61, 10728.9, 10764.72, 11213.67, 11011.62, 11398.78, 11061.2, 10809.99, 10916.92, 10964.83, 10876.51, 10728.48, 10850.4, 11156.6, 11190.76, 11270.05, 11199.37, 11199.51, 10644.88, 10975.66, 10982.32, 11197.42, 10924.56, 10855.4, 10431.31, 10021.94, 10160.8, 10078.18, 10096.37, 9923.49, 10321.89, 10077.9, 9958.62, 9842.67, 9889.74, 9825.03, 9700.47, 9927.1, 9445.38, 9400.39, 9408.72, 9452.88, 9476.9, 9485.65, 9503.15, 9344.84, 9367.2, 9310.26, 9138.07, 9373.86, 9300.4, 9268.88, 9302.49, 9533.28, 9253.61, 9379.14, 9273.19, 9191.53, 9209.73, 9032.81, 9217.36, 8892.28, 8904.23, 8946.86, 8682.18, 8648.72, 8688.43, 8253.09, 8492.49, 8555.12, 8391.68, 8178.52, 8177.97, 8111.45, 8048.96, 8094.93, 8046.19, 8215.88, 8087.85, 8337.52, 8133.95, 8213.66, 8260.45, 7889.83, 7600.71, 7732.49, 7737.21, 7878.99, 7556.41, 7515.17, 7613.49, 7728.19, 7706.39, 7572.66, 7537.53, 7786.93, 7640.7, 7677.36, 7507.12, 7538.08, 7859.14, 8088.68, 8348.35, 8527.63, 8573.73, 8676.35, 8945.47, 9063.09, 8922.42, 8831.32, 8754.95, 8657.88, 8652.88, 8471.66, 8335.58, 8184.22, 8691.76, 8744.12, 8669.82, 8746.89, 8508.05, 8848.68, 8592.34, 8772.58, 8822.43, 8983.66, 9048.78, 8796.75, 8925.75, 8558.73, 8301.14, 8219.07, 8314.89, 8407.23, 8471.8, 8296.7, 8529.43, 8336.97, 8632.47, 8454.17, 8509.44, 8546.37, 8058.41, 8080.76, 8199.91, 8335.72, 8063.54, 8089.37, 8193.94, 7946.9, 8237.26, 8309.89, 8569.01, 8830.07, 8950.75, 9073.64, 8864.79, 8651.49, 8441.39, 8408.76, 8640.8, 8868.54, 9188.9, 9151.82, 9218.34, 9497.87, 9591.18, 9270.55, 9335.81, 9285.13, 9168.34, 9824.89, 9914.18, 10039.58, 9912.79, 10034.99, 10333.69, 10345.35], "label": "STOCKS buy-and-hold (dane przyk\u0142adowe)"}], "start_date": "2021-10-06"}, "all": {"labels": ["2016-09-28", "2016-10-05", "2016-10-12", "2016-10-19", "2016-10-26", "2016-11-02", "2016-11-09", "2016-11-16", "2016-11-23", "2016-11-30", "2016-12-07", "2016-12-14", "2016-12-21", "2016-12-28", "2017-01-04", "2017-01-11", "2017-01-18", "2017-01-25", "2017-02-01", "2017-02-08", "2017-02-15", "2017-02-22", "2017-03-01", "2017-03-08", "2017-03-15", "2017-03-22", "2017-03-29", "2017-04-05", "2017-04-12", "2017-04-19", "2017-04-26", "2017-05-03", "2017-05-10", "2017-05-17", "2017-05-24", "2017-05-31", "2017-06-07", "2017-06-14", "2017-06-21", "2017-06-28", "2017-07-05", "2017-07-12", "2017-07-19", "2017-07-26", "2017-08-02", "2017-08-09", "2017-08-16", "2017-08-23", "2017-08-30", "2017-09-06", "2017-09-13", "2017-09-20", "2017-09-27", "2017-10-04", "2017-10-11", "2017-10-18", "2017-10-25", "2017-11-01", "2017-11-08", "2017-11-15", "2017-11-22", "2017-11-29", "2017-12-06", "2017-12-13", "2017-12-20", "2017-12-27", "2018-01-03", "2018-01-10", "2018-01-17", "2018-01-24", "2018-01-31", "2018-02-07", "2018-02-14", "2018-02-21", "2018-02-28", "2018-03-07", "2018-03-14", "2018-03-21", "2018-03-28", "2018-04-04", "2018-04-11", "2018-04-18", "2018-04-25", "2018-05-02", "2018-05-09", "2018-05-16", "2018-05-23", "2018-05-30", "2018-06-06", "2018-06-13", "2018-06-20", "2018-06-27", "2018-07-04", "2018-07-11", "2018-07-18", "2018-07-25", "2018-08-01", "2018-08-08", "2018-08-15", "2018-08-22", "2018-08-29", "2018-09-05", "2018-09-12", "2018-09-19", "2018-09-26", "2018-10-03", "2018-10-10", "2018-10-17", "2018-10-24", "2018-10-31", "2018-11-07", "2018-11-14", "2018-11-21", "2018-11-28", "2018-12-05", "2018-12-12", "2018-12-19", "2018-12-26", "2019-01-02", "2019-01-09", "2019-01-16", "2019-01-23", "2019-01-30", "2019-02-06", "2019-02-13", "2019-02-20", "2019-02-27", "2019-03-06", "2019-03-13", "2019-03-20", "2019-03-27", "2019-04-03", "2019-04-10", "2019-04-17", "2019-04-24", "2019-05-01", "2019-05-08", "2019-05-15", "2019-05-22", "2019-05-29", "2019-06-05", "2019-06-12", "2019-06-19", "2019-06-26", "2019-07-03", "2019-07-10", "2019-07-17", "2019-07-24", "2019-07-31", "2019-08-07", "2019-08-14", "2019-08-21", "2019-08-28", "2019-09-04", "2019-09-11", "2019-09-18", "2019-09-25", "2019-10-02", "2019-10-09", "2019-10-16", "2019-10-23", "2019-10-30", "2019-11-06", "2019-11-13", "2019-11-20", "2019-11-27", "2019-12-04", "2019-12-11", "2019-12-18", "2019-12-25", "2020-01-01", "2020-01-08", "2020-01-15", "2020-01-22", "2020-01-29", "2020-02-05", "2020-02-12", "2020-02-19", "2020-02-26", "2020-03-04", "2020-03-11", "2020-03-18", "2020-03-25", "2020-04-01", "2020-04-08", "2020-04-15", "2020-04-22", "2020-04-29", "2020-05-06", "2020-05-13", "2020-05-20", "2020-05-27", "2020-06-03", "2020-06-10", "2020-06-17", "2020-06-24", "2020-07-01", "2020-07-08", "2020-07-15", "2020-07-22", "2020-07-29", "2020-08-05", "2020-08-12", "2020-08-19", "2020-08-26", "2020-09-02", "2020-09-09", "2020-09-16", "2020-09-23", "2020-09-30", "2020-10-07", "2020-10-14", "2020-10-21", "2020-10-28", "2020-11-04", "2020-11-11", "2020-11-18", "2020-11-25", "2020-12-02", "2020-12-09", "2020-12-16", "2020-12-23", "2020-12-30", "2021-01-06", "2021-01-13", "2021-01-20", "2021-01-27", "2021-02-03", "2021-02-10", "2021-02-17", "2021-02-24", "2021-03-03", "2021-03-10", "2021-03-17", "2021-03-24", "2021-03-31", "2021-04-07", "2021-04-14", "2021-04-21", "2021-04-28", "2021-05-05", "2021-05-12", "2021-05-19", "2021-05-26", "2021-06-02", "2021-06-09", "2021-06-16", "2021-06-23", "2021-06-30", "2021-07-07", "2021-07-14", "2021-07-21", "2021-07-28", "2021-08-04", "2021-08-11", "2021-08-18", "2021-08-25", "2021-09-01", "2021-09-08", "2021-09-15", "2021-09-22", "2021-09-29", "2021-10-06", "2021-10-13", "2021-10-20", "2021-10-27", "2021-11-03", "2021-11-10", "2021-11-17", "2021-11-24", "2021-12-01", "2021-12-08", "2021-12-15", "2021-12-22", "2021-12-29", "2022-01-05", "2022-01-12", "2022-01-19", "2022-01-26", "2022-02-02", "2022-02-09", "2022-02-16", "2022-02-23", "2022-03-02", "2022-03-09", "2022-03-16", "2022-03-23", "2022-03-30", "2022-04-06", "2022-04-13", "2022-04-20", "2022-04-27", "2022-05-04", "2022-05-11", "2022-05-18", "2022-05-25", "2022-06-01", "2022-06-08", "2022-06-15", "2022-06-22", "2022-06-29", "2022-07-06", "2022-07-13", "2022-07-20", "2022-07-27", "2022-08-03", "2022-08-10", "2022-08-17", "2022-08-24", "2022-08-31", "2022-09-07", "2022-09-14", "2022-09-21", "2022-09-28", "2022-10-05", "2022-10-12", "2022-10-19", "2022-10-26", "2022-11-02", "2022-11-09", "2022-11-16", "2022-11-23", "2022-11-30", "2022-12-07", "2022-12-14", "2022-12-21", "2022-12-28", "2023-01-04", "2023-01-11", "2023-01-18", "2023-01-25", "2023-02-01", "2023-02-08", "2023-02-15", "2023-02-22", "2023-03-01", "2023-03-08", "2023-03-15", "2023-03-22", "2023-03-29", "2023-04-05", "2023-04-12", "2023-04-19", "2023-04-26", "2023-05-03", "2023-05-10", "2023-05-17", "2023-05-24", "2023-05-31", "2023-06-07", "2023-06-14", "2023-06-21", "2023-06-28", "2023-07-05", "2023-07-12", "2023-07-19", "2023-07-26", "2023-08-02", "2023-08-09", "2023-08-16", "2023-08-23", "2023-08-30", "2023-09-06", "2023-09-13", "2023-09-20", "2023-09-27", "2023-10-04", "2023-10-11", "2023-10-18", "2023-10-25", "2023-11-01", "2023-11-08", "2023-11-15", "2023-11-22", "2023-11-29", "2023-12-06", "2023-12-13", "2023-12-20", "2023-12-27", "2024-01-03", "2024-01-10", "2024-01-17", "2024-01-24", "2024-01-31", "2024-02-07", "2024-02-14", "2024-02-21", "2024-02-28", "2024-03-06", "2024-03-13", "2024-03-20", "2024-03-27", "2024-04-03", "2024-04-10", "2024-04-17", "2024-04-24", "2024-05-01", "2024-05-08", "2024-05-15", "2024-05-22", "2024-05-29", "2024-06-05", "2024-06-12", "2024-06-19", "2024-06-26", "2024-07-03", "2024-07-10", "2024-07-17", "2024-07-24", "2024-07-31", "2024-08-07", "2024-08-14", "2024-08-21", "2024-08-28", "2024-09-04", "2024-09-11", "2024-09-18", "2024-09-25", "2024-10-02", "2024-10-09", "2024-10-16", "2024-10-23", "2024-10-30", "2024-11-06", "2024-11-13", "2024-11-20", "2024-11-27", "2024-12-04", "2024-12-11", "2024-12-18", "2024-12-25", "2025-01-01", "2025-01-08", "2025-01-15", "2025-01-22", "2025-01-29", "2025-02-05", "2025-02-12", "2025-02-19", "2025-02-26", "2025-03-05", "2025-03-12", "2025-03-19", "2025-03-26", "2025-04-02", "2025-04-09", "2025-04-16", "2025-04-23", "2025-04-30", "2025-05-07", "2025-05-14", "2025-05-21", "2025-05-28", "2025-06-04", "2025-06-11", "2025-06-18", "2025-06-25", "2025-07-02", "2025-07-09", "2025-07-16", "2025-07-23", "2025-07-30", "2025-08-06", "2025-08-13", "2025-08-20", "2025-08-27", "2025-09-03", "2025-09-10", "2025-09-17", "2025-09-24", "2025-10-01", "2025-10-08", "2025-10-15", "2025-10-22", "2025-10-29", "2025-11-05", "2025-11-12", "2025-11-19", "2025-11-26", "2025-12-03", "2025-12-10", "2025-12-17", "2025-12-24", "2025-12-31", "2026-01-07", "2026-01-14", "2026-01-21", "2026-01-28", "2026-02-04", "2026-02-11", "2026-02-18", "2026-02-25", "2026-03-04", "2026-03-11", "2026-03-18", "2026-03-25", "2026-04-01", "2026-04-08", "2026-04-15", "2026-04-22", "2026-04-29", "2026-05-06", "2026-05-13", "2026-05-20", "2026-05-27", "2026-06-03", "2026-06-10", "2026-06-17", "2026-06-24", "2026-07-01", "2026-07-08", "2026-07-15", "2026-07-22", "2026-07-29", "2026-08-05", "2026-08-12", "2026-08-19", "2026-08-26", "2026-09-02", "2026-09-09", "2026-09-16", "2026-09-23", "2026-09-30", "2026-10-06"], "series": [{"color": "#2563eb", "data": [10000.0, 9930.08, 9930.08, 9930.08, 9930.08, 9930.08, 9930.08, 9930.08, 9930.08, 9930.08, 9969.6, 9948.88, 10168.95, 10298.04, 10380.06, 10906.44, 10739.59, 10643.87, 10676.48, 9917.36, 9889.4, 9942.06, 9495.26, 9476.42, 9463.11, 9128.92, 9079.27, 9401.3, 8746.44, 8419.35, 10080.08, 10212.56, 11384.98, 10460.3, 10133.87, 11195.3, 11053.99, 10238.59, 10661.7, 12087.91, 12075.38, 10903.33, 10780.58, 12168.76, 12541.98, 13271.55, 12868.27, 12565.79, 12605.67, 12973.2, 12819.02, 11330.54, 11422.65, 10785.21, 11100.98, 10823.73, 10848.21, 10695.07, 10695.07, 10695.07, 10695.07, 10695.07, 11979.73, 13650.73, 11433.05, 13585.43, 14452.88, 13384.07, 13259.08, 14592.23, 14854.5, 14388.55, 14938.73, 14804.6, 14068.51, 16119.03, 19388.51, 18305.28, 18029.62, 17238.84, 18611.69, 17716.32, 18161.28, 18732.27, 19091.11, 18310.44, 16202.51, 15687.76, 15449.71, 16240.69, 15453.41, 16607.08, 15432.8, 15432.8, 15432.8, 15432.8, 16365.48, 16980.7, 17185.75, 16408.8, 18768.67, 19072.86, 20288.39, 18809.56, 22569.68, 22952.37, 22979.66, 23163.93, 20417.42, 23493.87, 25163.23, 25717.49, 24143.04, 23800.48, 24423.73, 26297.36, 26782.54, 25983.35, 25274.93, 20784.75, 21146.01, 20451.18, 19587.24, 18531.32, 18490.72, 18328.01, 17745.46, 17867.58, 17867.58, 17867.58, 17867.58, 16541.57, 18741.86, 17566.35, 15004.61, 17168.86, 16259.55, 15791.04, 17828.84, 19252.32, 20094.2, 18922.63, 21638.66, 20145.27, 21829.14, 23532.3, 20112.5, 16415.86, 18020.84, 19182.63, 20082.33, 23162.11, 22058.17, 22616.78, 23512.77, 22834.33, 19026.2, 20220.44, 20220.44, 20220.44, 20220.44, 20220.44, 19064.05, 20540.44, 21039.83, 20668.9, 22129.88, 18461.8, 17190.48, 17382.13, 17924.22, 18637.89, 18514.37, 18229.96, 18304.42, 18757.62, 19154.75, 19748.7, 19925.96, 20950.91, 20345.28, 20115.47, 19970.34, 19889.45, 19741.4, 19265.72, 19414.35, 19605.62, 19460.2, 19782.29, 19561.82, 20128.9, 20158.4, 20158.4, 20158.4, 20158.4, 20103.77, 19666.76, 19853.05, 20522.01, 20658.15, 20736.03, 20918.12, 21024.57, 20692.05, 20147.47, 19848.01, 19591.97, 19391.11, 18994.72, 18994.72, 18994.72, 18994.72, 18994.72, 18994.72, 18994.72, 18994.72, 18994.72, 19057.78, 19095.46, 18828.66, 18184.78, 17699.67, 16924.08, 16615.11, 17927.96, 20886.33, 20583.69, 19019.81, 15782.33, 15609.44, 15251.6, 15251.6, 15251.6, 15251.6, 15251.6, 15307.08, 16193.28, 17890.9, 18832.48, 18385.84, 21566.99, 21027.33, 20000.18, 17277.57, 16161.59, 17111.77, 20422.03, 21820.48, 22309.47, 24748.82, 20680.85, 19275.92, 19911.32, 20041.98, 19657.04, 18917.66, 18732.21, 19008.09, 18718.98, 19314.21, 19241.32, 19439.46, 18952.21, 19169.52, 19505.33, 21078.65, 24986.98, 24660.74, 21552.96, 23573.94, 24729.47, 24263.41, 22415.65, 23679.42, 21396.12, 22312.47, 20546.49, 20086.22, 17775.92, 17632.13, 17374.48, 17007.53, 16835.28, 16835.28, 16835.28, 16835.28, 16835.28, 16835.28, 16835.28, 16835.28, 16835.28, 16835.28, 16835.28, 16835.28, 16835.28, 17945.33, 17863.57, 16814.94, 16010.85, 16133.18, 14818.95, 15293.24, 15608.59, 15456.4, 15563.63, 14973.04, 14609.15, 14932.94, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14407.15, 14227.1, 13860.15, 13815.14, 13484.93, 15791.81, 16229.1, 18241.05, 18148.4, 16009.45, 14426.02, 15195.43, 14599.29, 14524.42, 15777.7, 17673.38, 19390.29, 19488.18, 19724.02, 23468.39, 22209.81, 21440.52, 23415.63, 23598.08, 26711.97, 26795.98, 25268.16, 23037.37, 26498.7, 27975.75, 25901.37, 25895.65, 25845.94, 25738.34, 23731.19, 23221.59, 23485.49, 24148.24, 24222.18, 24393.81, 24240.82, 24241.12, 23040.65, 23756.6, 22946.03, 25994.48, 26421.12, 28239.98, 28750.19, 26594.98, 25922.93, 28032.84, 27892.78, 28381.49, 30145.24, 33637.39, 30329.27, 30136.07, 30061.13, 33088.16, 32367.12, 33146.47, 33653.77, 32961.28, 30634.53, 32867.33, 28902.4, 24434.65, 26051.73, 27912.46, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 27147.78, 26727.01, 27066.25, 23736.93, 21305.95, 21636.73, 21760.0, 20783.68, 20022.09, 20463.24, 20463.24, 20463.24, 20463.24, 20463.24, 20463.24, 20463.24, 20463.24, 20463.24, 18373.07, 19987.68, 17847.45, 19597.84, 16432.28, 18106.89, 19996.47, 22754.8, 23419.3, 22902.35, 21399.42, 19643.27, 20408.39, 21181.09, 20852.33, 20639.44, 20460.94, 20234.1, 20222.41, 19798.89, 19480.85, 19127.11, 19364.34, 19364.34, 19364.34, 19364.34, 19684.04, 22294.86, 25085.25, 22602.29, 23876.84, 25160.58, 25837.14, 28628.01, 32959.04, 34601.6, 30357.54, 27542.08, 31501.19, 29706.39, 30767.86, 30850.43, 28198.81, 29656.75, 26482.45, 27254.75, 27714.1, 28866.86, 28641.98, 28641.98, 28641.98, 28641.98, 28641.98, 28641.98, 28641.98, 28641.98, 28641.98, 28641.98, 28641.98, 28641.98, 28641.98, 29321.82, 28646.91, 27957.64, 27278.69, 23808.49, 26922.32, 29026.72, 29631.3, 29521.73, 31369.59, 32588.25, 32308.84, 33070.44, 34625.06, 30772.74, 30089.44, 29921.76, 30551.77, 30938.19, 30547.49, 30924.07, 31844.54, 31880.48], "label": "GEM strategy (dane przyk\u0142adowe)"}, {"color": "#f59e0b", "data": [10000.0, 10749.0, 10201.13, 10459.54, 10110.24, 9407.89, 9672.71, 10510.18, 10170.92, 9795.72, 10457.9, 10167.0, 10475.43, 9745.78, 11441.45, 10933.78, 10760.2, 11182.85, 11934.97, 11086.37, 11055.12, 11113.98, 10369.92, 10080.32, 10896.51, 13585.73, 15014.72, 16307.11, 15171.22, 14603.85, 17484.51, 17714.29, 19747.92, 18144.02, 17577.81, 19418.91, 19173.8, 17759.44, 18493.36, 20967.2, 20945.47, 18912.48, 18699.56, 21107.44, 21754.81, 23020.29, 22320.77, 21796.1, 21865.29, 22502.79, 22235.35, 19653.5, 19813.26, 18990.06, 20024.32, 19356.41, 19036.02, 19729.76, 20623.15, 19833.03, 19916.25, 22288.12, 25693.55, 29277.42, 24521.05, 29137.37, 30997.83, 28705.51, 28437.43, 31296.7, 31859.2, 30859.87, 32039.85, 31752.18, 30173.44, 34571.31, 41583.53, 39260.27, 38669.04, 36973.03, 39917.44, 37997.1, 38951.43, 40176.07, 40945.68, 39271.33, 34750.35, 33646.34, 33135.78, 34832.24, 33143.72, 35618.06, 36488.57, 37854.7, 38552.92, 40718.87, 43991.27, 45645.01, 46196.21, 44107.71, 50451.18, 51268.84, 54536.24, 50561.07, 60668.47, 61697.17, 61770.52, 62265.86, 54883.09, 63152.75, 67640.07, 69129.95, 64897.76, 63976.92, 65652.25, 70688.67, 71992.85, 69844.61, 67940.34, 55870.49, 56841.58, 54973.84, 52651.53, 49556.03, 46458.86, 50828.79, 50610.52, 61440.85, 67516.25, 67161.52, 82146.42, 77536.3, 87849.84, 82339.81, 70332.01, 80476.62, 76214.37, 74018.29, 83570.19, 90242.53, 94188.72, 88697.18, 101428.18, 94428.1, 102321.02, 110304.33, 94274.5, 76947.03, 84470.13, 89915.9, 94133.11, 108569.12, 103394.58, 106012.96, 110212.78, 107032.7, 89182.62, 94927.78, 97236.45, 92859.51, 99682.82, 96958.29, 94810.58, 102153.07, 104636.68, 102791.93, 110057.74, 91815.46, 85492.81, 86445.94, 87845.01, 93516.54, 89666.48, 89974.59, 81444.38, 81138.16, 73716.69, 68098.59, 65640.14, 61085.53, 54769.81, 51110.24, 54316.29, 56085.34, 54162.41, 51837.64, 49023.63, 48164.46, 46397.12, 42966.46, 42320.39, 47910.98, 43727.96, 42694.19, 42308.91, 46249.54, 48913.91, 46314.04, 44187.74, 47995.18, 50998.98, 51887.86, 49409.08, 46956.44, 47287.33, 42157.41, 38865.86, 37816.13, 36785.69, 37544.91, 44471.6, 43893.04, 42668.71, 41657.93, 40082.45, 40281.27, 41422.58, 48912.16, 46273.06, 41771.5, 38945.51, 41396.89, 46456.23, 47886.93, 47012.68, 50727.41, 59098.17, 58241.83, 53816.81, 44656.31, 44167.13, 43113.13, 48828.83, 52102.25, 56699.98, 56796.64, 57003.27, 60303.46, 66625.37, 70131.8, 68468.51, 80315.04, 78305.35, 74480.28, 64341.34, 60185.45, 63723.9, 76051.25, 81259.04, 83080.03, 92164.13, 77015.09, 71783.15, 71020.68, 69846.33, 59867.47, 59093.34, 60677.96, 74363.81, 84735.06, 75297.52, 83338.76, 84945.74, 88802.13, 89700.01, 97103.15, 104670.14, 124077.71, 122457.68, 107025.38, 117060.97, 122798.97, 120484.67, 111309.26, 117584.74, 106246.57, 110796.88, 102027.57, 99742.04, 87840.18, 83144.74, 83963.41, 82257.6, 83851.35, 78587.36, 85608.26, 86083.31, 101433.78, 103975.35, 102168.08, 99768.67, 91368.58, 89359.07, 85777.5, 87598.28, 92000.73, 95389.64, 94955.01, 89380.98, 85106.79, 85757.03, 80972.59, 80786.52, 82301.38, 75990.74, 88595.27, 90093.2, 92500.9, 84745.0, 78661.31, 62879.5, 61420.59, 62116.01, 57948.42, 59276.27, 63036.81, 64628.25, 61852.17, 63142.04, 76933.87, 71844.01, 86508.83, 78111.61, 84170.28, 88985.2, 92799.81, 91708.3, 106615.82, 109568.07, 123151.46, 122525.96, 108085.15, 97394.88, 102589.44, 98564.71, 98059.22, 106520.56, 119318.89, 130910.37, 131571.21, 133163.46, 158443.0, 149945.9, 144752.14, 158086.76, 159318.54, 180341.46, 180908.66, 170593.82, 155533.05, 178901.63, 188873.67, 174868.81, 174830.21, 174494.59, 173768.2, 160217.22, 161336.11, 155398.74, 139949.57, 141416.04, 155246.04, 157373.22, 149799.08, 161624.55, 176851.48, 187798.64, 212748.22, 216239.99, 231126.19, 235301.97, 217662.92, 212162.66, 229430.92, 228284.57, 232284.38, 246719.51, 275300.57, 248225.67, 246644.51, 246031.16, 270805.41, 264904.2, 271282.7, 275434.61, 269766.99, 250724.05, 268998.11, 236547.64, 199981.98, 213216.76, 228445.62, 225577.71, 221237.97, 229404.64, 209718.7, 194856.32, 191212.67, 190121.93, 186624.15, 174035.4, 174189.91, 160173.97, 155043.9, 145084.11, 137332.86, 133601.69, 114987.59, 112880.9, 106542.64, 106548.87, 114608.89, 130143.8, 121774.47, 114429.96, 136494.34, 145602.28, 126882.74, 130221.14, 124906.68, 127813.82, 130589.73, 132099.42, 125046.35, 126633.52, 111056.83, 99683.1, 94991.06, 95243.38, 92815.56, 89527.79, 87078.96, 92780.63, 99017.82, 91960.55, 100123.15, 115755.14, 117449.65, 127194.07, 124796.79, 110915.48, 120662.63, 107742.4, 118309.2, 99199.2, 109308.6, 120715.68, 137367.3, 141378.77, 138258.04, 129185.07, 118583.47, 123202.41, 112514.23, 123190.44, 118327.44, 112823.68, 115514.57, 123534.6, 112539.33, 116662.89, 124837.98, 128098.91, 150790.89, 143500.86, 150504.72, 162858.78, 184459.77, 207546.48, 187003.37, 197548.55, 208169.78, 213767.4, 236858.03, 272691.49, 286281.42, 251167.53, 227873.42, 260629.7, 245780.16, 254562.38, 255245.59, 233307.02, 245369.44, 219106.43, 225496.17, 229296.71, 238834.22, 225831.78, 225733.79, 216177.66, 207723.64, 209752.08, 210194.37, 219171.66, 205542.99, 219052.46, 235870.39, 264839.52, 253110.09, 245548.52, 262648.03, 259036.37, 270614.75, 301960.27, 261728.66, 295959.24, 319093.06, 325739.29, 324534.81, 344848.41, 358245.26, 355173.71, 363546.08, 380636.07, 338287.19, 330775.67, 328932.39, 327638.6, 326561.01, 312757.18, 300480.16, 297844.41, 292222.68], "label": "BTC buy-and-hold (dane przyk\u0142adowe)"}, {"color": "#10b981", "data": [10000.0, 9786.38, 10166.94, 10115.58, 10175.71, 10413.58, 10830.22, 11061.58, 11507.57, 11524.49, 11570.35, 11546.3, 11801.71, 11951.53, 12046.72, 12657.62, 12463.97, 12352.88, 12475.79, 12663.73, 12758.72, 13057.34, 12944.01, 12918.32, 12900.18, 12444.61, 12376.93, 12736.3, 13106.06, 12980.7, 12936.46, 12413.83, 12411.18, 12257.49, 11833.1, 12052.83, 11700.61, 11680.43, 11906.48, 11585.85, 11782.96, 12349.42, 12013.29, 11818.02, 11852.06, 11805.38, 11620.5, 11508.59, 11074.42, 11123.34, 11629.06, 11513.28, 11980.27, 11584.62, 11923.81, 11626.0, 11652.3, 11591.15, 11990.26, 11122.73, 10937.65, 10794.35, 11202.02, 11577.28, 11904.44, 11971.1, 11962.33, 12022.26, 12155.77, 12052.22, 11787.03, 11510.22, 11610.92, 12093.19, 12222.63, 12159.64, 12651.71, 12884.28, 12825.78, 12602.58, 12585.87, 12686.56, 12589.74, 12495.57, 12543.67, 12762.59, 12367.56, 12514.52, 12928.72, 12483.34, 12527.77, 12448.89, 12034.08, 11938.69, 11474.55, 11372.84, 11584.01, 11751.77, 12090.95, 12062.01, 11767.67, 11977.41, 12000.45, 12067.92, 11945.41, 11964.78, 11868.16, 11595.63, 11583.81, 11830.65, 12459.49, 12533.89, 12573.23, 12624.19, 13093.83, 12310.89, 12045.7, 11934.81, 12067.1, 11809.86, 12279.09, 11877.54, 11819.44, 11723.44, 11697.75, 11594.81, 11226.28, 11729.55, 12176.36, 12230.99, 12352.27, 12340.04, 12047.94, 11965.59, 12064.66, 12292.75, 12056.5, 11965.8, 12215.09, 12167.59, 12613.18, 12692.88, 12444.2, 12567.72, 12540.61, 12631.32, 12853.71, 13185.76, 13246.09, 13194.93, 12697.98, 12715.51, 12954.81, 12720.4, 12417.29, 12311.3, 11791.92, 12407.1, 12798.87, 12601.77, 12744.65, 12515.34, 12751.18, 12870.63, 13194.93, 13163.54, 12578.12, 12584.44, 12311.09, 12251.98, 12511.87, 13010.05, 12923.83, 12725.29, 12777.27, 13093.62, 13370.84, 13785.44, 13909.17, 14624.64, 14201.88, 14041.46, 13940.15, 13883.69, 13780.35, 13448.3, 13552.05, 13685.56, 13584.05, 13808.88, 13654.99, 14050.84, 14261.2, 14834.59, 14814.81, 14685.58, 14628.3, 14310.32, 14445.87, 14932.63, 15031.7, 15088.36, 15220.86, 15298.31, 15056.36, 14660.1, 14442.2, 14255.9, 14109.75, 13821.32, 13738.97, 13565.91, 14045.33, 14063.47, 14284.23, 14552.07, 15099.37, 15418.17, 15463.01, 15493.59, 15277.12, 14754.68, 14361.08, 14226.95, 13728.98, 13752.22, 13762.0, 13788.3, 13585.89, 13745.29, 13374.71, 12984.77, 13153.14, 12927.7, 13046.33, 13144.58, 13277.07, 13241.4, 13404.47, 13357.39, 13858.42, 14362.91, 13795.63, 13696.98, 13865.35, 13911.62, 14012.52, 14471.96, 14317.45, 14890.23, 15078.58, 15235.33, 15233.9, 15035.16, 15133.82, 14843.15, 14284.84, 14144.81, 14353.13, 14134.82, 14584.28, 14529.24, 14678.86, 14310.93, 14475.02, 14728.59, 14971.16, 15181.52, 14667.24, 14513.34, 14536.99, 14503.35, 14543.1, 14897.98, 15170.51, 15519.27, 15573.49, 15474.84, 15105.89, 15019.06, 14897.57, 14679.88, 14369.84, 14128.29, 14227.36, 14262.62, 14308.08, 14067.35, 14246.52, 14105.26, 14142.56, 14018.63, 13873.3, 13763.02, 14168.45, 14111.78, 14300.94, 14684.77, 15187.02, 15262.85, 14914.9, 14310.73, 14768.75, 15073.28, 14926.31, 15029.86, 14459.53, 14108.11, 14420.8, 13913.04, 14041.87, 14143.38, 14690.47, 14658.88, 14402.45, 14115.66, 14169.27, 13941.78, 14213.7, 14398.17, 14539.23, 14539.84, 14549.42, 14367.6, 13997.02, 13951.57, 13618.09, 13781.37, 13576.31, 13477.85, 13181.88, 13477.04, 13130.11, 13086.9, 12859.82, 12758.92, 12761.98, 13194.32, 13554.7, 13861.47, 14593.65, 15022.12, 15110.38, 14676.41, 14877.19, 15149.31, 15340.3, 15748.79, 15801.38, 16460.38, 16163.8, 16732.1, 16236.57, 15867.83, 16024.79, 16095.11, 15965.47, 15748.18, 15927.15, 16376.61, 16426.75, 16543.14, 16439.39, 16439.59, 15625.47, 16111.01, 16120.79, 16436.54, 16036.0, 15934.49, 15311.97, 14711.06, 14914.9, 14793.62, 14820.32, 14566.54, 15151.35, 14793.21, 14618.11, 14447.91, 14517.01, 14422.02, 14239.18, 14571.84, 13864.73, 13798.69, 13810.92, 13875.74, 13911.01, 13923.85, 13949.53, 13717.16, 13749.97, 13666.4, 13413.64, 13759.76, 13651.93, 13605.66, 13654.99, 13993.76, 13583.24, 13767.5, 13611.98, 13492.12, 13518.82, 13259.14, 13530.04, 13052.85, 13070.38, 13132.96, 12744.45, 12695.33, 12753.62, 12114.6, 12466.01, 12557.94, 12318.03, 12005.14, 12004.32, 11906.68, 11814.96, 11882.43, 11810.88, 12059.97, 11872.03, 12238.53, 11939.71, 12056.71, 12125.4, 11581.36, 11156.97, 11350.41, 11357.35, 11565.46, 11091.95, 11031.41, 11175.73, 11344.1, 11312.09, 11115.8, 11064.23, 11430.32, 11215.68, 11269.49, 11019.59, 11065.04, 11536.31, 11873.25, 12254.43, 12517.58, 12585.25, 12735.89, 13130.92, 13303.57, 13097.09, 12963.37, 12851.26, 12708.78, 12701.44, 12435.43, 12235.68, 12013.49, 12758.52, 12835.36, 12726.31, 12839.44, 12488.84, 12988.85, 12612.57, 12877.15, 12950.33, 13186.98, 13282.58, 12912.62, 13101.98, 12563.24, 12185.12, 12064.66, 12205.3, 12340.85, 12435.64, 12178.6, 12520.23, 12237.71, 12671.48, 12409.75, 12490.88, 12545.1, 11828.82, 11861.64, 12036.53, 12235.88, 11836.36, 11874.27, 12027.76, 11665.14, 12091.36, 12197.97, 12578.32, 12961.54, 13138.67, 13319.06, 13012.5, 12699.4, 12391.0, 12343.1, 12683.71, 13018.0, 13488.25, 13433.82, 13531.46, 13941.78, 14078.76, 13608.1, 13703.91, 13629.51, 13458.08, 14421.82, 14552.89, 14736.95, 14550.85, 14730.22, 15168.67, 15185.8], "label": "STOCKS buy-and-hold (dane przyk\u0142adowe)"}], "start_date": "2016-09-28"}};
+
+(function() {
+  var canvas = document.getElementById('equity-chart');
+  var errBox = document.getElementById('equity-error');
+  var loadingBox = document.getElementById('equity-loading');
+  var startLabel = document.getElementById('equity-start-label');
+  var btnContainer = document.getElementById('equity-period-buttons');
+  if (!canvas) return;
+
+  var chart = null;
+  var activeYears = '2';
+
+  function setActiveButton(years) {
+    if (!btnContainer) return;
+    btnContainer.querySelectorAll('button').forEach(function(b) {
+      var isActive = b.getAttribute('data-years') === years;
+      b.classList.toggle('bg-slate-800', isActive);
+      b.classList.toggle('text-white', isActive);
+    });
+  }
+
+  function loadEquity(years) {
+    activeYears = years;
+    setActiveButton(years);
+    errBox.classList.add('hidden');
+    loadingBox.classList.remove('hidden');
+
+    var request = DEMO_EQUITY
+      ? Promise.resolve(DEMO_EQUITY[years])
+      : fetch(new URL('/api/equity?years=' + encodeURIComponent(years), location.origin), { credentials: 'include' })
+          .then(function(r) {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+          });
+    request
+      .then(function(data) {
+        loadingBox.classList.add('hidden');
+        if (data.error || !data.labels || !data.labels.length) {
+          errBox.textContent = 'Brak danych do symulacji: ' + (data.error || 'pusty signals_history.csv');
+          errBox.classList.remove('hidden');
+          return;
+        }
+        if (startLabel && data.start_date) startLabel.textContent = data.start_date;
+
+        var datasets = data.series.map(function(s) {
+          return {
+            label: s.label,
+            data: s.data,
+            borderColor: s.color,
+            backgroundColor: s.color + '22',
+            spanGaps: true,
+            tension: 0.1,
+            pointRadius: 1,
+          };
+        });
+
+        if (chart) {
+          chart.data.labels = data.labels;
+          chart.data.datasets = datasets;
+          chart.update();
+          return;
+        }
+        chart = new Chart(canvas, {
+          type: 'line',
+          data: { labels: data.labels, datasets: datasets },
+          options: {
+            responsive: true,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+              legend: { position: 'top' },
+              tooltip: {
+                callbacks: {
+                  label: function(ctx) {
+                    var v = ctx.parsed.y;
+                    if (v == null) return ctx.dataset.label + ': —';
+                    return ctx.dataset.label + ': ' + v.toLocaleString('pl-PL', {maximumFractionDigits: 0}) + ' zł';
+                  }
+                }
+              }
+            },
+            scales: {
+              y: {
+                ticks: {
+                  callback: function(v) { return v.toLocaleString('pl-PL', {maximumFractionDigits: 0}) + ' zł'; }
+                }
+              }
+            }
+          }
+        });
+      })
+      .catch(function(ex) {
+        loadingBox.classList.add('hidden');
+        errBox.textContent = 'Błąd ładowania equity curve: ' + ex.message;
+        errBox.classList.remove('hidden');
+      });
+  }
+
+  if (btnContainer) {
+    btnContainer.addEventListener('click', function(e) {
+      var btn = e.target.closest('button[data-years]');
+      if (!btn) return;
+      loadEquity(btn.getAttribute('data-years'));
+    });
+  }
+
+  loadEquity('2');
+})();
+</script>
+
+
+  </main>
+
+  <footer class="max-w-6xl mx-auto p-4 text-sm text-slate-500 border-t mt-12">
+    
+    Momentum Strategy - plansza demo wygenerowana z szablonu aplikacji na danych przykładowych (2026-10-06).
+    Narzędzie do własnego użytku, nie porada inwestycyjna. <a href="/projekty/" class="text-blue-700 hover:underline">tomaszkwietniewski.pl/projekty</a>
+    
+  </footer>
+</body>
+</html>

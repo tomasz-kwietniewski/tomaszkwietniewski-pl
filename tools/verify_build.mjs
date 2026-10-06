@@ -58,6 +58,21 @@ const polecamBraki = polecamCele.filter((c) => !polecamHtml.includes(`href="${c}
 if (polecamBraki.length) blad(`/polecam/ nie linkuje: ${polecamBraki.join(", ")}`);
 else ok(`/polecam/: ${polecamCele.length} kafelków z linkami`);
 
+// Plansza demo Momentum (passthrough z demo/momentum): komplet plików, baner danych
+// przykładowych, noindex i link z /projekty/. Prawdziwy panel jest za logowaniem.
+const demoDir = path.join(SITE, "projekty", "momentum-demo");
+const demoBraki = ["index.html", "momentum-demo.css", "chart.umd.min.js"].filter((p) => !existsSync(path.join(demoDir, p)));
+if (demoBraki.length) blad(`plansza demo Momentum: brak ${demoBraki.join(", ")}`);
+else {
+  const demoHtml = readFileSync(path.join(demoDir, "index.html"), "utf8");
+  const projektyHtml = readFileSync(path.join(SITE, "projekty", "index.html"), "utf8");
+  if (!demoHtml.includes("Dane przykładowe - demo.")) blad("plansza demo Momentum: brak banera „Dane przykładowe - demo.”");
+  else if (!demoHtml.includes('name="robots" content="noindex"')) blad("plansza demo Momentum: brak noindex");
+  else if (/<form|\/login/.test(demoHtml)) blad("plansza demo Momentum: formularz albo link logowania");
+  else if (!projektyHtml.includes('href="/projekty/momentum-demo/"')) blad("/projekty/ nie linkuje planszy demo Momentum");
+  else ok("plansza demo Momentum: pliki, baner, noindex, link z /projekty/");
+}
+
 // /blog/ musi listować wszystkie opublikowane wpisy. Łapie regresję typu
 // "async w include+for renderuje pustą siatkę" - strona istnieje, kart brak.
 const blogHtml = readFileSync(path.join(SITE, "blog", "index.html"), "utf8");
