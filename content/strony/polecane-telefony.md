@@ -14,77 +14,60 @@ typ: strona
 4. Czy jesteś gotowy ponieść ryzyko tańszego zakupu telefonu z zagranicy, gdzie może być trudniej z gwarancją, czy w grę wchodzi tylko oficjalna polska dystrybucja?
 5. Co jest dla Ciebie najważniejsze w telefonie? Wybierz 5 cech i uszereguj od najważniejszej do najmniej ważnej: aparat, wydajność, stosunek jakość/cena, wygląd (jaki? szklana obudowa, brak notcha, wytrzymałość), bezprzewodowe ładowanie, złącze słuchawkowe mini jack 3,5 mm, slow motion, nieduże wymiary fizyczne, NFC do płatności zbliżeniowych, głośniki stereo, duża pamięć wewnętrzna/możliwość włożenia karty pamięci, szybkość aktualizacji oprogramowania, certyfikat wodoszczelności, Always on display, szybkie ładowanie, pojemna bateria.
 
-## Jaki telefon kupić do 1500 i 2500 zł? (stan: październik 2026)
+## Jaki telefon kupić? Ranking na progi cenowe (stan: październik 2026)
 
-W tym zestawieniu najważniejsze nie jest to, który model ma najdłuższą listę parametrów, ale ile realnie oferuje za każdą wydaną złotówkę. Królem cena/jakość nie zawsze jest telefon z najlepszym aparatem czy najdłuższym wsparciem - to model, który przy aktualnej cenie daje najlepszy zestaw wydajności, ekranu, baterii, pamięci i codziennego komfortu.
+Moja metoda jest prosta. Wydajność w każdym z poniższych progów wystarcza do codziennego użytku na lata, więc wyżej dopłaca się przede wszystkim za aparat: najpierw za dobry aparat główny, potem za teleobiektyw, na końcu za duże matryce i lepsze przetwarzanie zdjęć. Pierwszym sensownym progiem jest dla mnie 1500 zł - za mniej trudno dziś kupić coś naprawdę fajnego.
 
-Jesienią 2026 telefony wyraźnie podrożały. Pamięci RAM i flash zrobiły się drogie, producenci przerzucają to na ceny, więc modele, które latem mieściły się w progu, dziś bywają kilkaset złotych wyżej. Ceny poniżej to najtańsze oferty polskich sklepów na Ceneo z 6 października 2026, bez AliExpress.
+W każdym progu jest rekomendacja i dwie alternatywy - innego producenta, z innym systemem albo z innym nastawieniem aparatu. Ceny to najtańsze oferty polskich sklepów na Ceneo z 6 października 2026, bez AliExpress. Jesienią 2026 telefony wyraźnie podrożały przez drożejące pamięci RAM i flash, więc warto sprawdzić aktualną cenę przed zakupem.
 
-### Królowie opłacalności
+Oceny użytkowników na Ceneo prawie wszędzie wynoszą 4,8-4,9/5, więc słabo różnicują modele. Opinie właścicieli brałem z recenzji, forów i komentarzy - przy każdym telefonie piszę, co chwalą, a na co narzekają.
 
-- **Do 1500 zł: Redmi Note 15 Pro+** - wersja 8/256 GB od ok. 1435 zł (Empik, Kaufland). Aparat 200 Mpx ze stabilizacją optyczną, bateria 6500 mAh z ładowaniem 100 W i jasny ekran AMOLED. Najbardziej kompletny pakiet, jaki dziś da się kupić w polskim sklepie bez przekraczania progu.
-- **Do 2500 zł: OnePlus Nord 6** - wersja 12/512 GB od ok. 2100 zł (Allegro, Empik). Snapdragon 8s Gen 4, bateria 9000 mAh, ekran 165 Hz i odporność IP69K. Następca Norda 5, który latem był tu królem. Jedna gwiazdka: OnePlus nie wprowadził go oficjalnie do Polski, w sklepach jest z importu.
+| Próg | Rekomendacja | Alternatywy |
+|---|---|---|
+| do 1500&nbsp;zł | Redmi Note 15 Pro+ (ok. 1435 zł) | Honor 400, Samsung Galaxy A57 |
+| do 2000&nbsp;zł | Google Pixel 10a (ok. 1850 zł) | realme 16 Pro+, Honor 600 |
+| do 2500&nbsp;zł | Samsung Galaxy S25 (ok. 2400 zł) | Motorola Edge 70 Pro, Google Pixel 10 |
+| do 3000&nbsp;zł | Google Pixel 10 Pro (ok. 2900-3000 zł) | vivo X300 Pro z Chin, Honor 600 Pro |
 
-### Do 1500 zł
+Pixele polecam od lat i polecać będę. Sprzętowo coraz bardziej odstają od chińskich modeli, ale oprogramowanie aparatu i sam system działają najprzyjemniej: wyjmujesz telefon z kieszeni i zdjęcie zwykle po prostu wychodzi.
 
-**Redmi Note 15 Pro+ - najwięcej telefonu w polskim sklepie.** Mocną stroną jest aparat główny 200 Mpx, który przy dobrym świetle robi bardzo szczegółowe zdjęcia, i bateria na dwa dni. Procesor Snapdragon 7s Gen 4 to porządna średnia półka - na co dzień w zupełności wystarczy.
+### Do 1500 zł - dobry aparat główny
 
-Warto wybrać, jeśli:
+**1. Redmi Note 15 Pro+ - ok. 1435 zł (8/256 GB, Empik, Kaufland).** Aparat główny 200 Mpx ze stabilizacją optyczną, bateria 6500 mAh z ładowaniem 100 W, jasny ekran AMOLED. Najbardziej kompletny pakiet w polskim sklepie poniżej progu. Recenzenci chwalą zdjęcia w dzień i baterię na dwa dni; minusem jest rozbudowana nakładka HyperOS z dodatkami, które warto wyłączyć na starcie.
 
-- Chcesz dobry aparat główny i baterię na dwa dni za mniej niż 1500 zł.
-- Telefon służy do internetu, zdjęć, bankowości i social mediów.
-- Akceptujesz rozbudowaną nakładkę Xiaomi HyperOS.
+**2. Honor 400 - ok. 1500 zł (8/256 GB, honorstore.pl).** Duża matryca 200 Mpx (1/1,4 cala) - w tej cenie to jeden z największych sensorów. Wybór dla kogoś, komu zależy na zdjęciach w gorszym świetle. Zoom tylko cyfrowy, bateria 5300 mAh mniejsza niż u konkurencji, system MagicOS z dużą liczbą dodatków.
 
-Mniej opłacalny, jeśli: dużo grasz w wymagające gry albo zależy Ci na minimalistycznym systemie.
+**3. Samsung Galaxy A57 - ok. 1520 zł (8/128 GB), ok. 1735 zł (8/256 GB).** Aparat słabszy od dwóch poprzedników, ale za to 6 lat aktualizacji systemu i zabezpieczeń, przewidywalny system i serwis w każdym mieście. Najczęściej kupowany z tej trójki (ponad 400 opinii na Ceneo). Wybór dla kogoś, kto chce telefon na lata bez niespodzianek.
 
-**POCO X8 Pro - król wydajności, ale wyszedł ponad próg.** Następca POCO X7 Pro, który latem był tu pierwszym wyborem: Dimensity 8500 Ultra, bateria 6500 mAh, ładowanie 100 W. W polskich sklepach wersja 8/256 GB kosztuje dziś ok. 1680-1700 zł (sklep Xiaomi 1699 zł), na AliExpress ok. 1470 zł. Na starcie bywał po 1399 zł, więc opłaca się polować na promocję. Aparat jest przeciętny - to telefon do gier i intensywnej pracy, nie do zdjęć.
+Najtańsza sensowna opcja: **Motorola Edge 70 Fusion** za ok. 1265 zł - bateria 7000 mAh, odporność IP68/IP69, prosty Android, ale bez zoomu optycznego.
 
-**Samsung Galaxy A57 - bezpieczny wybór na lata.** Wersja 8/128 GB od ok. 1520 zł, 8/256 GB od ok. 1735 zł. Samsung nie wygrywa czystą wydajnością, ale daje 6 lat aktualizacji systemu i zabezpieczeń, przewidywalny system, łatwy serwis i akcesoria w każdym sklepie.
+### Do 2000 zł - lepsze przetwarzanie albo teleobiektyw
 
-Warto wybrać, jeśli:
+**1. Google Pixel 10a - ok. 1850 zł (8/128 GB).** Sprzętowo skromny: aparat taki sam jak w Pixelu 9a, bez teleobiektywu, procesor z poprzedniej generacji. Ale przetwarzanie zdjęć Google robi swoje - w trybie automatycznym zdjęcia są przewidywalne, a nocne czyste. Do tego czysty Android i 7 lat aktualizacji. Właściciele chwalą aparat i baterię na cały dzień; recenzenci narzekają na brak teleobiektywu i wolne ładowanie bezprzewodowe.
 
-- Wolisz przewidywalny telefon na lata.
-- Zależy Ci na aktualizacjach oraz łatwym serwisie.
-- Telefon służy głównie do rozmów, internetu, bankowości i zdjęć.
+**2. realme 16 Pro+ - ok. 1695 zł (8/256 GB), ok. 2150 zł (12/512 GB).** Jeden z najtańszych telefonów z prawdziwym teleobiektywem peryskopowym (50 Mpx, 3,5x) obok aparatu 200 Mpx. Portrety i zbliżenia jak we flagowcu - recenzenci piszą, że w tej cenie trudno się do czegoś przyczepić. Minusy: plastikowa, łatwo brudząca się obudowa i tania w odczuciu wibracja.
 
-**Motorola Edge 70 Fusion - bateria i wytrzymałość za małe pieniądze.** Wersja 8/256 GB od ok. 1265 zł. Bateria 7000 mAh, ekran AMOLED 144 Hz, odporność IP68/IP69 i wojskowa norma MIL-STD-810H. Brakuje zoomu optycznego i ładowania bezprzewodowego, ale za tę cenę to bardzo rozsądny, lekki w obsłudze Android.
+**3. Honor 600 - ok. 1890 zł (8/256 GB).** Duża matryca 200 Mpx jak w Honorze 400, ale bateria 7000 mAh i nowszy procesor. Wybór dla kogoś, kto chce aparat główny i dwa dni pracy, a zoomu nie potrzebuje. Właściciele zgłaszali błędy MagicOS (np. fałszywy komunikat o braku miejsca przy zrzutach ekranu) i agresywne usypianie aplikacji w tle.
 
-Warto wybrać, jeśli:
+### Do 2500 zł - flagowiec z teleobiektywem
 
-- Chcesz wydać jak najmniej, a telefon ma wytrzymać dwa dni i upadek.
-- Lubisz prosty interfejs Androida.
-- Nie zależy Ci na najlepszym wyniku w grach.
+**1. Samsung Galaxy S25 - ok. 2400 zł (12/128 GB), ok. 2720 zł (12/256 GB).** Prawdziwy flagowiec z zeszłego roku, który po premierze S26 mocno potaniał: flagowy procesor, teleobiektyw 3x, 7 lat aktualizacji i - rzadkość - poręczny rozmiar 6,2 cala. Ponad 800 opinii na Ceneo. Najczęstsze zastrzeżenie właścicieli to bateria 4000 mAh: wystarcza na dzień, ale nie więcej.
 
-### Do 2500 zł
+**2. Motorola Edge 70 Pro - ok. 2040 zł (8/256 GB).** Peryskop 50 Mpx 3,5x ze stabilizacją, szeroki kąt 50 Mpx, bateria 6500 mAh i prosty Android bez śmieci. Dla kogoś, kto chce zoom za mniej niż Galaxy S25 i nie lubi rozbudowanych nakładek.
 
-**OnePlus Nord 6 - król cena/jakość, z gwiazdką.** Procesor z flagowej rodziny Snapdragon 8, ogromna bateria 9000 mAh (recenzenci mówią o dwóch pełnych dniach), szybki ekran 165 Hz i najwyższa odporność na wodę i pył. Za ok. 2100 zł w wersji 12/512 GB trudno o więcej.
+**3. Google Pixel 10 - ok. 2520-2600 zł (12/128 GB).** Pierwszy podstawowy Pixel z teleobiektywem 5x - recenzenci nazywają go najbardziej praktycznym zoomem poza flagowcami. Kolory i odcienie skóry naturalne. Na granicy progu. Minusy z relacji właścicieli: procesor Tensor G5 grzeje się w grach, a po aktualizacjach z marca i kwietnia 2026 część osób zgłaszała grzanie i szybsze rozładowywanie.
 
-Warto wybrać, jeśli:
+Poza rankingiem, jeśli liczy się wydajność i bateria, a nie aparat: **OnePlus Nord 6** (ok. 2100 zł za 12/512 GB, bateria 9000 mAh, tylko z importu) i **POCO F8 Pro** (ok. 2350 zł, Snapdragon 8 Elite).
 
-- Oczekujesz bardzo szybkiego systemu i gier bez przycięć.
-- Bateria jest dla Ciebie ważniejsza niż wszystko inne.
-- Akceptujesz zakup z importu, z gwarancją realizowaną przez sprzedawcę.
+### Do 3000 zł - topowy aparat
 
-Mniej opłacalny, jeśli: zależy Ci na zoomie i dobrym ultraszerokim kącie - aparat to tu tylko porządny główny 50 Mpx.
+**1. Google Pixel 10 Pro - ok. 2900-3000 zł (16/128 GB).** Po premierze Pixela 11 poprzednik spadł z ponad 4000 zł do okolic 3000 zł i to dziś najlepszy aparat, jaki w tej kwocie kupisz w polskim sklepie: większe matryce we wszystkich aparatach, teleobiektyw 5x, świetne wideo. DXOMARK chwali szybki i pewny autofokus, a właściciel kilku flagowców na Reddicie pisał, że do zdjęć biegających dzieci Pixel jest najlepszy ze wszystkich, które miał. Majster Pirzu przy premierze Pixela 11 radził wręcz kupić poprzednika. Minusy: tylko 128 GB pamięci, słabszy procesor niż u konkurencji, wiosenne problemy z grzaniem po aktualizacjach.
 
-**POCO F8 Pro - flagowy procesor z oficjalnej dystrybucji.** Snapdragon 8 Elite, bateria 6210 mAh z ładowaniem 100 W, teleobiektyw 2,5x i poręczny ekran 6,59 cala. Wersja 12/512 GB od ok. 2350 zł (Empik), w sklepie Xiaomi 2399 zł. Dobry wybór dla kogoś, kto chce mocy Norda 6, ale z polskiej dystrybucji. Słabsze strony: ultraszeroki aparat 8 Mpx i brak ładowania bezprzewodowego.
+**2. vivo X300 Pro z Chin - ok. 3045 zł.** Najlepszy aparat w tej kwocie, zwłaszcza teleobiektyw i zdjęcia przy sztucznym świetle, ale z kompromisami chińskiego oprogramowania i gwarancji przez sklep. To mój wybór - szczegóły niżej.
 
-**Google Pixel 10a - opłacalność dla fotografa.** Wersja 8/128 GB od ok. 1770 zł. Pixel nie wygrywa wydajnością, ale może być najlepszą wartością dla osoby, dla której najważniejsze są zdjęcia, prosty Android i długie aktualizacje.
+**3. Honor 600 Pro - ok. 2900 zł (12/512 GB).** Matryca 200 Mpx 1/1,4 cala, peryskop 50 Mpx 3,5x i bateria 7000 mAh, z polskiej dystrybucji. Recenzenci chwalą zbliżenia w słabym świetle i główny aparat; słabszy jest szeroki kąt, a MagicOS ma sporo dodatków i agresywnie usypia aplikacje.
 
-Warto wybrać, jeśli:
-
-- Robisz dużo zdjęć rodzinnych, zwierząt i podczas wyjazdów.
-- Chcesz dobre fotografie bez ręcznego ustawiania aparatu.
-- Cenisz Androida bez nadmiaru dodatków.
-
-**Motorola Edge 70 - komfort zamiast pogoni za parametrami.** Wersja 12/512 GB od ok. 1750 zł. Smukły, lekki telefon z dobrym ekranem i dużą pamięcią - dla kogoś, kto dużo czyta, ogląda i przewija, a nie bije rekordów w benchmarkach.
-
-### Powyżej 2500 zł: okazje z poprzedniej generacji
-
-Najlepszy moment na flagowca to chwila po premierze następcy, kiedy poprzednia generacja tanieje. Teraz dobrze to widać na dwóch modelach:
-
-- **Google Pixel 10 Pro** (16/128 GB) - po premierze Pixela 11 kosztuje ok. 3000 zł (AB Foto, Deluxury). Najtańsza droga do flagowego aparatu z polskiej dystrybucji.
-- **vivo X300 Pro** - w polskiej dystrybucji (16/512 GB) od ok. 5000 zł, z Chin ok. 3050-3550 zł. To mój wybór, opisany niżej.
+Dla fanów Samsunga: **Galaxy S25 w wersji 12/256 GB** za ok. 2720 zł też mieści się w tym progu.
 
 ### Nowości jesieni 2026
 
