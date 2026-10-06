@@ -2,7 +2,7 @@
 title: Polecane telefony
 slug: polecane-telefony
 date: 2021-04-22T22:07:00
-modified: 2026-07-31T12:00:00
+modified: 2026-10-06T12:00:00
 url_stara: https://tomaszkwietniewski.pl/tematy/polecane-telefony/
 typ: strona
 ---
@@ -116,9 +116,7 @@ Ja osobiście celuję w **Vivo X200 Ultra** z chińskiej dystrybucji - to top ja
 
 ## Polecana sieć komórkowa: Vikings Mobile albo Orange Flex
 
-Jeśli zbliżasz się do końca umowy na abonament, to polecam Vikings Mobile:-) Poniżej masz link ode mnie - jeśli z niego założysz konto, to ja dostanę zniżkę:-) Najlepsza opcja to abonament za 25 zł miesięcznie (może być też na firmę). Polecam autodoładowania. Podpinasz kartę i nie martwisz się o doładowania, staje się to bezobsługowe. Oferta formalnie jest na kartę, czyli w każdej chwili możesz zrezygnować. Wolność i niskie opłaty:-)
-
-[mobilevikings.pl/referral/48507630636](https://mobilevikings.pl/referral/48507630636/)
+Jeśli zbliżasz się do końca umowy na abonament, to polecam Vikings Mobile:-) Najlepsza opcja to abonament za 25 zł miesięcznie (może być też na firmę). Polecam autodoładowania. Podpinasz kartę i nie martwisz się o doładowania, staje się to bezobsługowe. Oferta formalnie jest na kartę, czyli w każdej chwili możesz zrezygnować. Wolność i niskie opłaty:-)
 
 Ewentualnie fajną ofertą jest też Orange Flex (także dla jednoosobowej działalności gospodarczej). Sami już z niego nie korzystamy, ale oferta nadal jest w porządku i mogę ją polecić. Wszystko załatwiasz w aplikacji Orange Flex - rejestracja, wybór planu i przeniesienie numeru.
 
