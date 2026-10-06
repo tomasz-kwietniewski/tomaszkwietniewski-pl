@@ -84,7 +84,7 @@ Warto wybrać, jeśli:
 Najlepszy moment na flagowca to chwila po premierze następcy, kiedy poprzednia generacja tanieje. Teraz dobrze to widać na dwóch modelach:
 
 - **Google Pixel 10 Pro** (16/128 GB) - po premierze Pixela 11 kosztuje ok. 3000 zł (AB Foto, Deluxury). Najtańsza droga do flagowego aparatu z polskiej dystrybucji.
-- **vivo X300 Pro** - w polskiej dystrybucji (16/512 GB) od ok. 5000 zł, z Chin ok. 3050 zł. To mój wybór, opisany niżej.
+- **vivo X300 Pro** - w polskiej dystrybucji (16/512 GB) od ok. 5000 zł, z Chin ok. 3050-3550 zł. To mój wybór, opisany niżej.
 
 ### Nowości jesieni 2026
 
@@ -98,7 +98,7 @@ We wrześniu Chińczycy pokazali nowe flagowce. Wszystkie są droższe od poprze
 
 ### Mój wybór: vivo X300 Pro z chińskiej dystrybucji
 
-Po kilku rundach porównań (Honor Magic8 Pro, Oppo Find X9 Pro, Pixel 10 i 11 Pro, vivo X300 Ultra) wybrałem **vivo X300 Pro** z chińskiej dystrybucji. Najważniejszy był dla mnie aparat do rodzinnych zdjęć i filmów w trybie automatycznym, a tu X300 Pro jest w ścisłej czołówce. Zapłaciłem ok. 3050 zł w sprawdzonym przeze mnie sklepie [tradingshenzhen.com](https://tradingshenzhen.com/en/), z ładowarką 90 W i etui w zestawie. Ten sam telefon w polskiej dystrybucji kosztuje ok. 5000-5500 zł. Polska wersja ma więcej pamięci (16/512 GB zamiast 12/256 GB), ale aparat jest identyczny, a chińska ma nawet większą baterię (6510 mAh zamiast ok. 5440 mAh).
+Po kilku rundach porównań (Honor Magic8 Pro, Oppo Find X9 Pro, Pixel 10 i 11 Pro, vivo X300 Ultra) wybrałem **vivo X300 Pro** z chińskiej dystrybucji. Najważniejszy był dla mnie aparat do rodzinnych zdjęć i filmów w trybie automatycznym, a tu X300 Pro jest w ścisłej czołówce. Zapłaciłem 3045 zł w sprawdzonym przeze mnie sklepie [tradingshenzhen.com](https://tradingshenzhen.com/en/) - w promocji (cena regularna ok. 3525 zł), z darmową wysyłką, a cło i VAT importowy były już w cenie. Ten sam telefon w polskiej dystrybucji kosztuje ok. 5000-5500 zł. Polska wersja ma więcej pamięci (16/512 GB zamiast 12/256 GB), ale aparat jest identyczny, a chińska ma nawet większą baterię (6510 mAh zamiast ok. 5440 mAh).
 
 Ceną za tę oszczędność jest oprogramowanie. Chiński system OriginOS nie ma polskiego języka (aplikacje po polsku działają normalnie), ma sporo chińskich aplikacji do usunięcia i nie obsługuje eSIM ani zegarków z Wear OS. Sklep Google Play jest na miejscu. Google Wallet działa, ale bywa kapryśny: w sierpniu 2026 Google na jeden dzień zablokował płatności zbliżeniowe na telefonach z chińskim systemem, a po większych aktualizacjach zdarzają się kilkudniowe przerwy. Na taki wypadek mam BLIK zbliżeniowy w aplikacji banku. Gwarancja i ewentualny zwrot idą przez sklep, z odesłaniem telefonu do Chin.
 
