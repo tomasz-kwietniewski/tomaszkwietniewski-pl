@@ -24,9 +24,9 @@ Oceny użytkowników na Ceneo prawie wszędzie wynoszą 4,8-4,9/5, więc słabo 
 
 | Próg | Rekomendacja | Alternatywy |
 |---|---|---|
-| do 1500&nbsp;zł | Redmi Note 15 Pro+ (ok. 1435 zł) | Honor 400, Samsung Galaxy A57 |
-| do 2000&nbsp;zł | Google Pixel 10a (ok. 1850 zł) | realme 16 Pro+, Honor 600 |
-| do 2500&nbsp;zł | Samsung Galaxy S25 (ok. 2400 zł) | Motorola Edge 70 Pro, Google Pixel 10 |
+| do 1500&nbsp;zł | Redmi Note 15 Pro+ (ok. 1435 zł) | Nothing Phone (3a), Samsung Galaxy A57 |
+| do 2000&nbsp;zł | Google Pixel 10a (ok. 1850 zł) | Nothing Phone (4a), realme 16 Pro+ |
+| do 2500&nbsp;zł | Samsung Galaxy S25 (ok. 2400 zł) | Nothing Phone (3), Google Pixel 10 |
 | do 3000&nbsp;zł | Google Pixel 10 Pro (ok. 2900-3000 zł) | vivo X300 Pro z Chin, Honor 600 Pro |
 
 Pixele polecam od lat i polecać będę. Sprzętowo coraz bardziej odstają od chińskich modeli, ale oprogramowanie aparatu i sam system działają najprzyjemniej: wyjmujesz telefon z kieszeni i zdjęcie zwykle po prostu wychodzi.
@@ -35,27 +35,31 @@ Pixele polecam od lat i polecać będę. Sprzętowo coraz bardziej odstają od c
 
 **1. Redmi Note 15 Pro+ - ok. 1435 zł (8/256 GB, Empik, Kaufland).** Aparat główny 200 Mpx ze stabilizacją optyczną, bateria 6500 mAh z ładowaniem 100 W, jasny ekran AMOLED. Najbardziej kompletny pakiet w polskim sklepie poniżej progu. Recenzenci chwalą zdjęcia w dzień i baterię na dwa dni; minusem jest rozbudowana nakładka HyperOS z dodatkami, które warto wyłączyć na starcie.
 
-**2. Honor 400 - ok. 1500 zł (8/256 GB, honorstore.pl).** Duża matryca 200 Mpx (1/1,4 cala) - w tej cenie to jeden z największych sensorów. Wybór dla kogoś, komu zależy na zdjęciach w gorszym świetle. Zoom tylko cyfrowy, bateria 5300 mAh mniejsza niż u konkurencji, system MagicOS z dużą liczbą dodatków.
+**2. Nothing Phone (3a) - ok. 1300 zł (8/256 GB).** Najtańszy w zestawieniu telefon z prawdziwym teleobiektywem (50 Mpx, 2x), więc portrety i zbliżenia wychodzą lepiej niż z przycięcia zdjęcia z aparatu głównego. Do tego czysty, lekki Nothing OS bez śmieci i bateria 5000 mAh. To model z 2025 roku, więc część obiecanych aktualizacji już minęła, a w tej cenie kupisz go głównie w mniejszych sklepach.
 
-**3. Samsung Galaxy A57 - ok. 1520 zł (8/128 GB), ok. 1735 zł (8/256 GB).** Aparat słabszy od dwóch poprzedników, ale za to 6 lat aktualizacji systemu i zabezpieczeń, przewidywalny system i serwis w każdym mieście. Najczęściej kupowany z tej trójki (ponad 400 opinii na Ceneo). Wybór dla kogoś, kto chce telefon na lata bez niespodzianek.
+**3. Samsung Galaxy A57 - ok. 1520 zł (8/128 GB), ok. 1735 zł (8/256 GB).** Aparat słabszy od dwóch poprzedników i bez teleobiektywu, ale za to 6 lat aktualizacji systemu i zabezpieczeń, przewidywalny system i serwis w każdym mieście. Najczęściej kupowany z tej trójki (ponad 400 opinii na Ceneo). Wybór dla kogoś, kto chce telefon na lata bez niespodzianek.
 
-Najtańsza sensowna opcja: **Motorola Edge 70 Fusion** za ok. 1265 zł - bateria 7000 mAh, odporność IP68/IP69, prosty Android, ale bez zoomu optycznego.
+Warto też: **Honor 400** za ok. 1500 zł - duża matryca 200 Mpx (1/1,4 cala), dobra w gorszym świetle, ale bez zoomu optycznego i z rozbudowanym MagicOS. Najtańsza sensowna opcja to **Motorola Edge 70 Fusion** za ok. 1265 zł - bateria 7000 mAh, odporność IP68/IP69, prosty Android, ale bez zoomu optycznego.
 
 ### Do 2000 zł - lepsze przetwarzanie albo teleobiektyw
 
-**1. Google Pixel 10a - ok. 1850 zł (8/128 GB).** Sprzętowo skromny: aparat taki sam jak w Pixelu 9a, bez teleobiektywu, procesor z poprzedniej generacji. Ale przetwarzanie zdjęć Google robi swoje - w trybie automatycznym zdjęcia są przewidywalne, a nocne czyste. Do tego czysty Android i 7 lat aktualizacji. Właściciele chwalą aparat i baterię na cały dzień; recenzenci narzekają na brak teleobiektywu i wolne ładowanie bezprzewodowe.
+**1. Google Pixel 10a - ok. 1850 zł (8/128 GB).** Sprzętowo skromny: aparat taki sam jak w Pixelu 9a, bez teleobiektywu, procesor z poprzedniej generacji. Ale przetwarzanie zdjęć Google robi swoje - w trybie automatycznym zdjęcia są przewidywalne, a nocne czyste. Do tego czysty Android i 7 lat aktualizacji. Właściciele chwalą aparat i baterię na cały dzień; recenzenci narzekają na brak teleobiektywu i wolne ładowanie bezprzewodowe. W porównaniu aparatów PurePC z Nothingami (4a) i (4a) Pro Pixel wygrał zdjęcia nocne, selfie i wideo.
 
-**2. realme 16 Pro+ - ok. 1695 zł (8/256 GB), ok. 2150 zł (12/512 GB).** Jeden z najtańszych telefonów z prawdziwym teleobiektywem peryskopowym (50 Mpx, 3,5x) obok aparatu 200 Mpx. Portrety i zbliżenia jak we flagowcu - recenzenci piszą, że w tej cenie trudno się do czegoś przyczepić. Minusy: plastikowa, łatwo brudząca się obudowa i tania w odczuciu wibracja.
+**2. Nothing Phone (4a) - ok. 1650 zł (8/128 GB), ok. 1920 zł (12/256 GB).** Peryskop 50 Mpx 3,5x już w podstawowej wersji - to najtańszy telefon z peryskopem w całym zestawieniu. Świetny ekran, czysty Nothing OS i charakterystyczny wygląd. Recenzenci nazywają go jednym z najbardziej sensownych smartfonów dla świadomego użytkownika. Słabsze strony: aparat główny i szeroki kąt odstają od Pixela 10a i droższego (4a) Pro, bateria 5080 mAh starcza na ok. półtora dnia, a aktualizacji systemu są tylko 3 lata.
 
-**3. Honor 600 - ok. 1890 zł (8/256 GB).** Duża matryca 200 Mpx jak w Honorze 400, ale bateria 7000 mAh i nowszy procesor. Wybór dla kogoś, kto chce aparat główny i dwa dni pracy, a zoomu nie potrzebuje. Właściciele zgłaszali błędy MagicOS (np. fałszywy komunikat o braku miejsca przy zrzutach ekranu) i agresywne usypianie aplikacji w tle.
+**3. realme 16 Pro+ - ok. 1695 zł (8/256 GB), ok. 2150 zł (12/512 GB).** Jeden z najtańszych telefonów z prawdziwym teleobiektywem peryskopowym (50 Mpx, 3,5x) obok aparatu 200 Mpx. Portrety i zbliżenia jak we flagowcu - recenzenci piszą, że w tej cenie trudno się do czegoś przyczepić. Minusy: plastikowa, łatwo brudząca się obudowa i tania w odczuciu wibracja.
+
+Warto też: **Honor 600** za ok. 1890 zł - duża matryca 200 Mpx i bateria 7000 mAh, bez zoomu, z MagicOS, w którym właściciele zgłaszali błędy (np. fałszywy komunikat o braku miejsca przy zrzutach ekranu) i agresywne usypianie aplikacji. Dla fanów Nothinga: **Phone (3a) Pro** za ok. 1600-1780 zł ma peryskop 3x, ale to poprzednia generacja.
 
 ### Do 2500 zł - flagowiec z teleobiektywem
 
 **1. Samsung Galaxy S25 - ok. 2400 zł (12/128 GB), ok. 2720 zł (12/256 GB).** Prawdziwy flagowiec z zeszłego roku, który po premierze S26 mocno potaniał: flagowy procesor, teleobiektyw 3x, 7 lat aktualizacji i - rzadkość - poręczny rozmiar 6,2 cala. Ponad 800 opinii na Ceneo. Najczęstsze zastrzeżenie właścicieli to bateria 4000 mAh: wystarcza na dzień, ale nie więcej.
 
-**2. Motorola Edge 70 Pro - ok. 2040 zł (8/256 GB).** Peryskop 50 Mpx 3,5x ze stabilizacją, szeroki kąt 50 Mpx, bateria 6500 mAh i prosty Android bez śmieci. Dla kogoś, kto chce zoom za mniej niż Galaxy S25 i nie lubi rozbudowanych nakładek.
+**2. Nothing Phone (3) - ok. 2400-2600 zł (12/256 GB, 16/512 GB).** Flagowiec Nothinga z 2025 roku, dziś sporo tańszy: Snapdragon 8s Gen 4, trzy aparaty 50 Mpx z peryskopem 3x, 5 lat aktualizacji systemu i 7 lat zabezpieczeń. Recenzenci chwalą go jako kompletnego flagowca, który połatał największą dziurę poprzedników - brak teleobiektywu. Do tego czysty system i design, którego nie ma nikt inny. Cena mocno zależy od sklepu: najtańsze oferty są w pojedynczych sklepach, w dużych sieciach zwykle ok. 2700 zł i więcej.
 
 **3. Google Pixel 10 - ok. 2520-2600 zł (12/128 GB).** Pierwszy podstawowy Pixel z teleobiektywem 5x - recenzenci nazywają go najbardziej praktycznym zoomem poza flagowcami. Kolory i odcienie skóry naturalne. Na granicy progu. Minusy z relacji właścicieli: procesor Tensor G5 grzeje się w grach, a po aktualizacjach z marca i kwietnia 2026 część osób zgłaszała grzanie i szybsze rozładowywanie.
+
+Warto też: **Motorola Edge 70 Pro** za ok. 2040 zł - peryskop 50 Mpx 3,5x, szeroki kąt 50 Mpx, bateria 6500 mAh i prosty Android bez śmieci. I **Nothing Phone (4a) Pro** za ok. 2190-2300 zł (8/128 GB) - w porównaniu PurePC miał najlepszy aparat główny z trójki z Pixelem 10a, ale recenzenci zgodnie piszą, że za mało różni się od tańszego (4a).
 
 Poza rankingiem, jeśli liczy się wydajność i bateria, a nie aparat: **OnePlus Nord 6** (ok. 2100 zł za 12/512 GB, bateria 9000 mAh, tylko z importu) i **POCO F8 Pro** (ok. 2350 zł, Snapdragon 8 Elite).
 
