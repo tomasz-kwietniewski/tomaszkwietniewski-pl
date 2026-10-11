@@ -47,6 +47,7 @@ Poniżej modele z poradnika PurePC z 6 października 2026 (ceny z x-kom), z moim
 | do 3500&nbsp;zł | ASUS Vivobook S16 z Core Ultra 5 325 (ok. 3400 zł) | HP OmniBook 5, Acer Aspire 17 |
 | do 4500&nbsp;zł | Acer Aspire 16 z Ryzen 7 445 (ok. 4000 zł) | HP OmniBook 7 17, Acer Aspire 18 |
 | macOS | MacBook Air 13 cali z M5, 16/512 GB (katalogowo 6499 zł, w promocjach ok. 4700 zł) | - |
+| import z Chin | RedmiBook Pro 16 (2025), 32 GB, 1 TB (ok. 4990 zł) | RedmiBook Pro 14 (2025) |
 
 ### Do 2500 zł
 
@@ -84,14 +85,34 @@ Jeśli pasuje Ci macOS, **MacBook Air 13 cali z M5 (16 GB, 512 GB)** to dalej na
 
 Najlepiej utrzymywane zestawienia, aktualizowane co miesiąc: [TechLipton - polecane zestawy komputerowe](https://techlipton.pl/polecane-zestawy-komputerowe/) (październik 2026: od ok. 3000 zł za zestaw z grafiką zintegrowaną w procesorze, od ok. 4800 zł z kartą graficzną do gier). Druga opinia: [PurePC - polecane zestawy komputerowe](https://www.purepc.pl/zestawy-komputerowe).
 
-## Laptop z Chin - moje doświadczenie z 2023 roku
+### Mac mini - dalej dobra opcja, ale już nie hit cenowy
 
-W 2023 roku kupiłem dwa komputery dla Taty i Siostry z Chin. Bardzo spoko za tę cenę.
+Mac mini z M4 wszedł do Polski w 2024 roku za 2999 zł i za te pieniądze był hitem: mały, cichy, zużywający mniej prądu niż żarówka, a szybszy niż większość zwykłych komputerów biurowych. W czerwcu 2026 Apple podniosło ceny, a w sierpniu pojawił się nowy **Mac mini z M6 (16 GB RAM, 256 GB SSD) za 4499 zł** (dla uczniów, studentów i nauczycieli 3999 zł). Ostatnie M4 w sklepach kosztują dziś więcej niż na premierze (od ok. 4290 zł), więc nie ma sensu ich szukać.
 
-RedmiBook 15 Pro (2023 Edition) - Ryzen 7 7840HS (16 GB RAM, 512 GB SSD, ekran 15,6" 3.2K IPS 120 Hz ze 100% pokryciem sRGB, grafika AMD Radeon 780M, aluminiowa obudowa, Bluetooth 5.2 i bateria 72 Wh z ładowaniem 100 W).
+Do domu i biura - internet, dokumenty, zdjęcia, wideorozmowy, nawet amatorski montaż - to dalej jeden z najrozsądniejszych komputerów stacjonarnych: kompletny, bezgłośny, na lata. Dwa haczyki: do ceny trzeba doliczyć monitor, klawiaturę i mysz, a dysk 256 GB jest mały, a dopłata do 512 GB to aż 1000 zł - taniej podłączyć zewnętrzny dysk. Do gier się nie nadaje; do tego lepszy zestaw z kartą graficzną z TechLiptona.
 
-Przy dzisiejszych cenach pamięci import też podrożał, a aktualnych cen chińskich laptopów nie sprawdzałem. Pamiętaj, że przy zakupie z Chin gwarancję załatwia się przez sprzedawcę, a klawiatura nie ma polskiego układu (polskie znaki wpisuje się normalnie, brakuje tylko nadruków).
+## Laptop z Chin - RedmiBook (stan: październik 2026)
+
+Chińskie laptopy Xiaomi (RedmiBook) dalej dają najwięcej sprzętu za złotówkę - szczególnie pamięci i dysku, czyli tego, co w Polsce najbardziej podrożało. Za cenę polskiego laptopa z 16 GB i 512 GB dostaje się 32 GB i 1 TB. Ceny z [Trading Shenzhen](https://tradingshenzhen.com/en/redmibook) z 11 października 2026, w złotych, z wliczonym cłem i VAT-em importowym (bez dopłat przy odbiorze - sprawdzone przy moim zakupie telefonu w tym sklepie).
+
+| Model | Procesor | Pamięć i dysk | Ekran | Cena |
+|---|---|---|---|---|
+| RedmiBook Pro 16 (2025) | Core Ultra 7 255H | 32 GB, 1 TB | 16", 3072x1920, 165 Hz | ok. 4990 zł |
+| RedmiBook Pro 16 (2025) | Core Ultra 5 225H | 32 GB, 1 TB | 16", 3072x1920, 165 Hz | ok. 4420 zł |
+| RedmiBook Pro 14 (2025) | Core Ultra 5 225H | 16 GB, 1 TB | 14", 2880x1800, 120 Hz | ok. 4070 zł |
+| RedmiBook 14 (2025) | Core 5 220H | 16 GB, 512 GB | 14", 2880x1800, 120 Hz | ok. 3500 zł |
+
+**Najciekawszy jest RedmiBook Pro 16 z Core Ultra 7 za ok. 4990 zł:** 32 GB RAM, dysk 1 TB, jasny ekran 16 cali 165 Hz, bateria 99 Wh (największa, jaka może być w laptopie zabieranym do samolotu), ładowarka 140 W, Thunderbolt 4 i HDMI 2.1, waga 1,88 kg. W polskich sklepach za podobne pieniądze dostaje się 16 GB i 512 GB. Lżejszą alternatywą jest **RedmiBook Pro 14** (1,45 kg, bateria 80 Wh). Za to zwykły RedmiBook 14 za ok. 3500 zł nie wygrywa z polskimi laptopami z tego progu - tu import się nie opłaca. Parametry podaję za danymi producenta z premiery; niezależnych testów tych modeli nie znalazłem.
+
+Na co się przygotować:
+
+- **Pamięć jest wlutowana** - kupuj od razu wersję z 32 GB, później się jej nie rozbuduje.
+- **Klawiatura bez polskich nadruków** (polskie znaki wpisuje się normalnie przez prawy Alt).
+- **System bywa w chińskiej wersji** - licz się z przeinstalowaniem Windowsa na wersję międzynarodową.
+- **Gwarancję załatwia się przez sklep**, nie w polskim serwisie producenta.
+
+W 2023 roku kupiłem w ten sposób dwa komputery dla Taty i Siostry: RedmiBooki 15 Pro (2023 Edition) z Ryzenem 7 7840HS, 16 GB RAM, dyskiem 512 GB i ekranem 3.2K 120 Hz. Bardzo spoko za tę cenę.
 
 ## Źródła
 
-[PC Games Hardware - ceny pamięci, SSD i HDD, sierpień 2026](https://www.pcgameshardware.de/RAM-Hardware-154108/Specials/Speicherpreise-RAM-SSD-HDD-Rekord-August-2026-1551263/), [TrendForce - prognoza cen pamięci na III kwartał 2026](https://www.trendforce.com/presscenter/news/20260703-13134.html), [TrendForce - pamięć a ceny laptopów](https://www.trendforce.com/presscenter/news/20260310-12959.html), [TechLipton - zestawy na październik 2026](https://techlipton.pl/2026/polecane-zestawy-komputerowe-pazdziernik-2026/), [Benchmark.pl - kiedy spadną ceny RAM i SSD](https://www.benchmark.pl/aktualnosci/kiedy-spadna-ceny-pamieci-ram-i-dyskow-ssd.html), [Telepolis - ceny pamięci DDR5](https://www.telepolis.pl/tech/sprzet/ceny-pamieci-ram-ddr5-kryzys), [Microsoft - Windows 10 Extended Security Updates](https://www.microsoft.com/pl-pl/windows/extended-security-updates), [Wikipedia - globalny niedobór pamięci (ang.)](https://en.wikipedia.org/wiki/2024%E2%80%93present_global_memory_supply_shortage).
+[PC Games Hardware - ceny pamięci, SSD i HDD, sierpień 2026](https://www.pcgameshardware.de/RAM-Hardware-154108/Specials/Speicherpreise-RAM-SSD-HDD-Rekord-August-2026-1551263/), [TrendForce - prognoza cen pamięci na III kwartał 2026](https://www.trendforce.com/presscenter/news/20260703-13134.html), [TrendForce - pamięć a ceny laptopów](https://www.trendforce.com/presscenter/news/20260310-12959.html), [TechLipton - zestawy na październik 2026](https://techlipton.pl/2026/polecane-zestawy-komputerowe-pazdziernik-2026/), [Benchmark.pl - kiedy spadną ceny RAM i SSD](https://www.benchmark.pl/aktualnosci/kiedy-spadna-ceny-pamieci-ram-i-dyskow-ssd.html), [Telepolis - ceny pamięci DDR5](https://www.telepolis.pl/tech/sprzet/ceny-pamieci-ram-ddr5-kryzys), [Apple Mac mini z M6 - polskie ceny (iMagazine)](https://imagazine.pl/2026/08/26/nowe-mac-mini-mac-studio-polskie-ceny/), [Xiaomi RedmiBook Pro 2025 - specyfikacja (Notebookcheck)](https://www.notebookcheck.net/Redmi-Book-Pro-14-Xiaomi-releases-new-MacBook-Pro-14-contender-with-Intel-Arrow-Lake-processors.969365.0.html), [Microsoft - Windows 10 Extended Security Updates](https://www.microsoft.com/pl-pl/windows/extended-security-updates), [Wikipedia - globalny niedobór pamięci (ang.)](https://en.wikipedia.org/wiki/2024%E2%80%93present_global_memory_supply_shortage).
