@@ -2,11 +2,13 @@
 title: Jak powstała strona Fundacji Misja MADA
 slug: strona-fundacji-misja-mada
 date: "2026-10-03T09:10:00"
+modified: "2026-10-12T22:30:00"
 kategorie:
   - Technologie i dom
-excerpt: Serwis w trzech językach, wpłaty kartą co miesiąc i panel, w którym
-  fundacja prowadzi cały program Adopcji Serca zamiast arkuszy. Opisuję, co
-  powstało, jakie problemy były najciekawsze i czego się przy tym nauczyłem.
+excerpt: Serwis w trzech językach, wpłaty kartą, panel, w którym fundacja
+  prowadzi cały program Adopcji Serca zamiast arkuszy, i strefa, w której
+  darczyńca sam sprawdza swoje adopcje i wpłaty. Opisuję, co powstało, jakie
+  problemy były najciekawsze i czego się przy tym nauczyłem.
 miniatura: /media/2026/10/strona-fundacji-misja-mada.jpg
 typ: wpis
 ---
@@ -25,12 +27,13 @@ Na początku chodziło o jedno: porządną wizytówkę, która przedstawi fundac
 - **sierpień** - moduł Adopcja Serca: dzieci, darczyńcy, przypisywanie adopcji, wpłaty i maile do darczyńców. Zastąpił arkusze.
 - **sierpień i wrzesień** - finanse i import wyciągu z banku.
 - **od września** - poprawki według uwag z codziennej pracy fundacji.
+- **październik** - strefa darczyńcy: osobiste miejsce, w którym darczyńca widzi swoje adopcje i wpłaty, poprawia dane i przechodzi z przelewu na kartę.
 
 Arkusz jest świetny na początek, ale z każdym nowym darczyńcą robi się trudniejszy. Nie pokaże sam, kto zalega z wpłatami, nie wyśle maila i nie zauważy, że ta sama wpłata została wpisana dwa razy. Dlatego największa część pracy to dziś nie sama strona, tylko narzędzia do prowadzenia fundacji, które stoją za nią.
 
 ## Co powstało
 
-Serwis ma trzy warstwy.
+Serwis ma cztery warstwy.
 
 ### Strona publiczna
 
@@ -73,6 +76,20 @@ Karta darczyńcy zbiera wszystko w jednym miejscu: kontakt, notatki fundacji, ad
 </figure>
 
 Do tego kilka rzeczy mniej widocznych, ale ważnych: archiwum dzieci i darczyńców, które chowa wpis z listy bez kasowania historii, eksport do Excela w układzie dawnego arkusza na wypadek, gdyby panel kiedyś przestał działać, i filtr danych do przeglądu zgodnie z polityką prywatności. Ten ostatni niczego nie usuwa sam. Wypisuje zgłoszenia, które według polityki należy już skasować, a decyzję podejmuje człowiek.
+
+### Strefa darczyńcy
+
+Najnowsza część, z października 2026. Do tej pory darczyńca płacący przelewem nie miał na stronie żadnego swojego miejsca. Pytania „czy moja wpłata doszła”, „jaki tytuł przelewu wpisać” albo „jak przejść na kartę” szły mailem do fundacji, a ktoś w fundacji szukał odpowiedzi w panelu.
+
+Teraz darczyńca ma własną strefę. Widzi w niej swoje adopcje (dziecko, od kiedy, kwota, sposób płatności), zaksięgowane wpłaty i dane do przelewu z gotowym, osobistym tytułem. Telefon i adres poprawia sam. Zmiana imienia i nazwiska albo adresu e-mail trafia do fundacji jako zgłoszenie, które pracownik zatwierdza albo odrzuca w panelu, a nowy adres e-mail trzeba najpierw potwierdzić linkiem wysłanym właśnie na niego.
+
+Nie ma tu hasła do zapamiętania. Darczyńca wpisuje e-mail, a strona wysyła link ważny godzinę i działający tylko raz. Na każdy adres odpowiada tym samym komunikatem, więc nie da się nią sprawdzić, kto wspiera fundację, a liczba linków na godzinę jest ograniczona. W bazie zostaje tylko skrót linku, nie sam link. Pracownik może też wysłać link z karty darczyńcy albo jednym przyciskiem odciąć dostęp. O strefie darczyńca dowiaduje się z maili, które i tak dostaje: powitalnego i tego z przedstawieniem dziecka.
+
+Jedną decyzję podjęliśmy świadomie wbrew pokusie. Panel fundacji pokazuje zaległości, ale strefa pokazuje tylko wpłaty już zaksięgowane i nigdzie nie używa słowa „zaległość”. Przelew bywa wpisany do ewidencji z opóźnieniem, zwłaszcza z zagranicy, a darczyńca, który zapłacił i widzi u siebie czerwone pole, ma prawo poczuć się oskarżony. Pełny pasek z zaległościami jest w kodzie gotowy i włączy się go jednym przełącznikiem, gdy ewidencja będzie na bieżąco.
+
+Najciekawsze technicznie okazało się przejście z przelewu na kartę. Zaczęło się od zgłoszenia darczyńcy, który chciał płacić kartą za swoją dotychczasową adopcję. Zwykły formularz kartowy tego nie umiał: zakładał nową adopcję z pierwszą wpłatą, a subskrypcji nie dało się potem przepiąć na starą. W strefie płatność kartą podpina się pod adopcje, które już trwają, bez tworzenia drugiej. Darczyńca wybiera rytm - co miesiąc, co kwartał, co pół roku albo co rok - i widzi, za które miesiące zapłaci pierwszą płatnością. Jeśli bieżący miesiąc ma już opłacony przelewem, okres zaczyna się od pierwszego nieopłaconego. Kwotę, okres i listę adopcji serwer liczy sam z kartoteki, a z przeglądarki bierze tylko token karty z okienka PayU, wybrany rytm i zgodę. Całą ścieżkę płatności sprawdziłem lokalnie na atrapie API PayU, więc żadna próba nie dotknęła prawdziwych pieniędzy.
+
+Przy okazji wyszła rzecz, której nikt by nie zauważył jeszcze przez długie miesiące. Przy pierwszej płatności cyklicznej strona deklarowała bankowi, że obciążenia skończą się po roku, choć adopcja trwa do odwołania. Bank mógłby po tej dacie odrzucać kolejne raty, a pierwsze takie daty wypadłyby latem 2027. Dziś strona deklaruje „do odwołania”, tak jak zaleca dokumentacja PayU.
 
 ## Cztery ciekawe problemy
 
@@ -125,7 +142,7 @@ Jedna pułapka była szczególnie zdradliwa: eksport arkusza Google do HTML pomi
 - **Bez frameworków.** Strona to zwykły HTML, CSS i JavaScript, bez kroku budowania. Ładuje się szybko, a za kilka lat nikt nie będzie musiał aktualizować dziesiątek zależności, żeby poprawić literówkę.
 - **Zwykły hosting.** Backend to PHP 8 i MySQL na hostingu współdzielonym. Utrzymanie kosztuje tyle, co zwykła strona, i nie ma serwera do administrowania.
 - **Maile, które dochodzą.** Potwierdzenia i powiadomienia wychodzą z uwierzytelnionej skrzynki Gmail fundacji, a gdy ta droga zawiedzie, zapasowo z serwera z poprawnie ustawionymi zabezpieczeniami domeny (SPF, DKIM, DMARC). Wysyłane wprost z serwera bywały łapane jako spam.
-- **Lekkie testy.** Zamiast dużego frameworka testowego - własne, minimalne skrypty w PHP i Node, razem kilkaset sprawdzeń: płatności cykliczne, moduł adopcji, odczyt wyciągu, skrypty Google na atrapach API, kompletność tłumaczeń. Uruchamiają się automatycznie przy każdej zmianie, zanim trafi do głównej gałęzi.
+- **Lekkie testy.** Zamiast dużego frameworka testowego - własne, minimalne skrypty w PHP i Node, razem kilkaset sprawdzeń: płatności cykliczne, moduł adopcji, strefa darczyńcy, odczyt wyciągu, skrypty Google na atrapach API, kompletność tłumaczeń. Uruchamiają się automatycznie przy każdej zmianie, zanim trafi do głównej gałęzi.
 - **Automatyczne wdrożenie.** Zmiana w głównej gałęzi sama trafia na serwer przez GitHub Actions. Hasła i klucze żyją tylko na serwerze, poza repozytorium.
 - **Kopia bazy co noc.** Zapisana poza katalogiem strony, sprawdzana po zapisie, przechowywana 30 dni. Raz odtworzyłem ją na próbę do osobnej bazy i zgadzała się z produkcją co do rekordu - kopia, której nikt nie próbował odtworzyć, to tylko nadzieja.
 - **Z pomocą agentów AI.** Kod piszę razem z agentami AI (Claude Code i Codex). To, co ma powstać, ustalam z fundacją, decyzje projektowe podejmuję sam i każdą zmianę sprawdzam, zanim trafi na produkcję. Agent przyspiesza pisanie, ale za to, co działa u fundacji, odpowiadam ja.
