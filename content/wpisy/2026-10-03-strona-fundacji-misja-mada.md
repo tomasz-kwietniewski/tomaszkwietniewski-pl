@@ -83,11 +83,21 @@ Najnowsza część, z października 2026. Do tej pory darczyńca płacący przel
 
 Teraz darczyńca ma własną strefę. Widzi w niej swoje adopcje (dziecko, od kiedy, kwota, sposób płatności), zaksięgowane wpłaty i dane do przelewu z gotowym, osobistym tytułem. Telefon i adres poprawia sam. Zmiana imienia i nazwiska albo adresu e-mail trafia do fundacji jako zgłoszenie, które pracownik zatwierdza albo odrzuca w panelu, a nowy adres e-mail trzeba najpierw potwierdzić linkiem wysłanym właśnie na niego.
 
+<figure>
+<a href="/media/2026/10/mada-strefa-adopcje.webp"><img src="/media/2026/10/mada-strefa-adopcje.webp" alt="Strefa darczyńcy po zalogowaniu: powitanie, zamaskowany adres e-mail i dwie adopcje z dzieckiem, datą początku, kwotą, sposobem płatności i zakresem zaksięgowanych wpłat" width="688" height="815" loading="lazy"></a>
+<figcaption>Strefa darczyńcy po zalogowaniu (dane fikcyjne). Zamiast zaległości zakres zaksięgowanych wpłat i uprzedzenie, że świeże przelewy mogą jeszcze nie być widoczne.</figcaption>
+</figure>
+
 Nie ma tu hasła do zapamiętania. Darczyńca wpisuje e-mail, a strona wysyła link ważny godzinę i działający tylko raz. Na każdy adres odpowiada tym samym komunikatem, więc nie da się nią sprawdzić, kto wspiera fundację, a liczba linków na godzinę jest ograniczona. W bazie zostaje tylko skrót linku, nie sam link. Pracownik może też wysłać link z karty darczyńcy albo jednym przyciskiem odciąć dostęp. O strefie darczyńca dowiaduje się z maili, które i tak dostaje: powitalnego i tego z przedstawieniem dziecka.
 
 Jedną decyzję podjęliśmy świadomie wbrew pokusie. Panel fundacji pokazuje zaległości, ale strefa pokazuje tylko wpłaty już zaksięgowane i nigdzie nie używa słowa „zaległość”. Przelew bywa wpisany do ewidencji z opóźnieniem, zwłaszcza z zagranicy, a darczyńca, który zapłacił i widzi u siebie czerwone pole, ma prawo poczuć się oskarżony. Pełny pasek z zaległościami jest w kodzie gotowy i włączy się go jednym przełącznikiem, gdy ewidencja będzie na bieżąco.
 
 Najciekawsze technicznie okazało się przejście z przelewu na kartę. Zaczęło się od zgłoszenia darczyńcy, który chciał płacić kartą za swoją dotychczasową adopcję. Zwykły formularz kartowy tego nie umiał: zakładał nową adopcję z pierwszą wpłatą, a subskrypcji nie dało się potem przepiąć na starą. W strefie płatność kartą podpina się pod adopcje, które już trwają, bez tworzenia drugiej. Darczyńca wybiera rytm - co miesiąc, co kwartał, co pół roku albo co rok - i widzi, za które miesiące zapłaci pierwszą płatnością. Jeśli bieżący miesiąc ma już opłacony przelewem, okres zaczyna się od pierwszego nieopłaconego. Kwotę, okres i listę adopcji serwer liczy sam z kartoteki, a z przeglądarki bierze tylko token karty z okienka PayU, wybrany rytm i zgodę. Całą ścieżkę płatności sprawdziłem lokalnie na atrapie API PayU, więc żadna próba nie dotknęła prawdziwych pieniędzy.
+
+<figure>
+<a href="/media/2026/10/mada-strefa-karta.webp"><img src="/media/2026/10/mada-strefa-karta.webp" alt="Sekcja „Płać kartą zamiast przelewu” w strefie darczyńcy: cztery rytmy płatności za dwoje dzieci, 140 zł co miesiąc, 420 zł co kwartał, 840 zł co pół roku i 1680 zł co rok, przy każdym okres, który obejmie pierwsza płatność" width="688" height="642" loading="lazy"></a>
+<figcaption>Przejście na kartę dla darczyńcy z dwojgiem dzieci (dane fikcyjne). Przy każdym rytmie widać, za które miesiące zapłaci pierwsza płatność.</figcaption>
+</figure>
 
 Przy okazji wyszła rzecz, której nikt by nie zauważył jeszcze przez długie miesiące. Przy pierwszej płatności cyklicznej strona deklarowała bankowi, że obciążenia skończą się po roku, choć adopcja trwa do odwołania. Bank mógłby po tej dacie odrzucać kolejne raty, a pierwsze takie daty wypadłyby latem 2027. Dziś strona deklaruje „do odwołania”, tak jak zaleca dokumentacja PayU.
 
