@@ -417,6 +417,8 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
   display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center;
   animation: fadeUp .7s .05s both;
 }
+/* min-width: 0 - obrazki z atrybutem width wyznaczają minimum kolumny i rozpychają kartę na wąskim ekranie */
+.projekty-siatka > *, .projekt-featured > *, .projekt-grupa__siatka > * { min-width: 0; }
 .projekt-featured__obrazek { height: 300px; width: 100%; object-fit: cover; border-radius: 18px; }
 .projekt-featured h2 { font-weight: 700; font-size: 26px; margin: 0 0 10px; }
 .projekt-featured p { font-size: 15px; line-height: 1.65; color: var(--grafit); margin: 0 0 12px; }
@@ -444,10 +446,12 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .projekt-grupa__element h3 { font-weight: 700; font-size: 20px; margin: 0 0 10px; }
 .projekt-featured .projekt-grupa__element p { font-size: 14.5px; color: var(--grafit); margin: 0 0 12px; }
 .projekt-grupa__element .projekt__linki { margin-top: auto; padding-top: 4px; }
-.projekt__naglowek { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.projekt__naglowek { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; margin-bottom: 12px; }
 .projekt__naglowek h2 { font-weight: 700; font-size: 20px; margin: 0; }
 .projekt p { font-size: 14.5px; line-height: 1.65; color: var(--grafit); margin: 0 0 14px; }
 .projekt__linki { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-between; }
+/* Długie adresy jako tekst linku (pedalowaniezsensem.tomaszkwietniewski.pl) łamią się zamiast wychodzić poza kartę */
+.projekt a, .projekt-featured a { overflow-wrap: anywhere; }
 .projekt__linki a, .projekt > a { font-weight: 600; font-size: 14px; }
 .projekty-github {
   margin-top: 20px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
@@ -521,6 +525,8 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .portfel__karta > h2 { font-weight: 700; font-size: 28px; margin: 0 0 12px; }
 .portfel__wstep { font-size: 15.5px; line-height: 1.7; color: var(--tekst-tresc); margin: 0 0 28px; max-width: 720px; }
 .portfel__uklad { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+/* min-width: 0 - inaczej minimalna szerokość karty z wykresem rozpycha siatkę poza kartę na wąskim ekranie */
+.portfel__uklad > * { min-width: 0; }
 .portfel__konta { display: flex; flex-direction: column; gap: 10px; }
 .portfel__konto {
   display: flex; align-items: center; gap: 16px; background: #fff; border: 1px solid var(--border);
@@ -534,8 +540,8 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
 .portfel__wykres-karta { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 34px 38px; }
 .portfel__wykres-karta h3 { font-family: var(--naglowki); font-weight: 700; font-size: 17px; margin: 0 0 22px; text-align: center; }
 .portfel__wykres-uklad { display: flex; align-items: center; gap: 34px; justify-content: center; flex-wrap: wrap; }
-.donut { position: relative; width: 190px; height: 190px; animation: donutIn .9s cubic-bezier(.2, .7, .3, 1) both; }
-.donut svg { transform: rotate(-90deg); overflow: visible; display: block; }
+.donut { position: relative; width: min(190px, 100%); aspect-ratio: 1; animation: donutIn .9s cubic-bezier(.2, .7, .3, 1) both; }
+.donut svg { transform: rotate(-90deg); overflow: visible; display: block; width: 100%; height: auto; }
 .donut circle { transition: stroke-width .2s, stroke-opacity .2s; }
 .donut__seg--akcje { animation: arc67 1.2s .2s cubic-bezier(.2, .7, .3, 1) both; }
 .donut__seg--obligacje { animation: arc32 1.2s .5s cubic-bezier(.2, .7, .3, 1) both; }
@@ -640,13 +646,13 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
   .czytaj-dalej__siatka { grid-template-columns: repeat(2, 1fr); }
   .tematy { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
   .dolne-karty { grid-template-columns: 1fr; }
-  .projekty-siatka { grid-template-columns: 1fr; }
-  .projekt-featured { grid-template-columns: 1fr; }
-  .projekt-grupa__siatka { grid-template-columns: 1fr; }
+  .projekty-siatka { grid-template-columns: minmax(0, 1fr); }
+  .projekt-featured { grid-template-columns: minmax(0, 1fr); }
+  .projekt-grupa__siatka { grid-template-columns: minmax(0, 1fr); }
   .polecam-siatka { grid-template-columns: repeat(2, 1fr); }
   .omnie-intro { grid-template-columns: 1fr; gap: 44px; }
   .kontakt { grid-template-columns: 1fr; gap: 44px; }
-  .portfel__uklad { grid-template-columns: 1fr; }
+  .portfel__uklad { grid-template-columns: minmax(0, 1fr); }
   .wartosci { grid-template-columns: 1fr; }
 }
 
@@ -707,6 +713,9 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
   .wpis-cta__przyciski { width: 100%; }
   .projekt { padding: 26px 22px; }
   .polecam-karta { padding: 26px 22px; }
+  .portfel__karta { padding: 28px 18px; }
+  .portfel__wykres-karta { padding: 26px 18px; }
+  .portfel__konto { padding: 14px 16px; gap: 12px; }
 }
 
 /* Bardzo wąskie ekrany (np. okładka Galaxy Fold ~280 px) - nagłówek i stopka muszą się zmieścić */
