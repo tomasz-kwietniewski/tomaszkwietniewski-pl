@@ -58,6 +58,23 @@ const polecamBraki = polecamCele.filter((c) => !polecamHtml.includes(`href="${c}
 if (polecamBraki.length) blad(`/polecam/ nie linkuje: ${polecamBraki.join(", ")}`);
 else ok(`/polecam/: ${polecamCele.length} kafelków z linkami`);
 
+// Dawne listy wpisów /tematy/... przekierowują na strony kategorii (przekierowania.js)
+const tematyPrzek = {
+  ciekawostki: "ciekawostki-swiat",
+  geopolityka: "ciekawostki-swiat",
+  cyberbezpieczenstwo: "technologie-i-dom",
+  tipy: "tipy-ulatwiajace-zycie",
+};
+let tematyZle = 0;
+for (const [stary, kat] of Object.entries(tematyPrzek)) {
+  const p = path.join(SITE, "tematy", stary, "index.html");
+  const cel = `/blog/temat/${kat}/`;
+  const tresc = existsSync(p) ? readFileSync(p, "utf8") : "";
+  if (!tresc.includes(`url=${cel}"`)) { blad(`/tematy/${stary}/ nie przekierowuje na ${cel}`); tematyZle++; }
+  if (!existsSync(path.join(SITE, "blog", "temat", kat, "index.html"))) { blad(`brak celu ${cel}`); tematyZle++; }
+}
+if (!tematyZle) ok(`/tematy/: ${Object.keys(tematyPrzek).length} dawne listy wpisów przekierowane na kategorie`);
+
 // Plansza demo Momentum (passthrough z demo/momentum, w CI przeliczana z prawdziwych
 // notowań): komplet plików, baner, noindex i link z /projekty/. Tryb i data tylko
 // raportowane - stara wersja to fallback po awarii pobrania, nie błąd builda.
@@ -138,7 +155,8 @@ for (const s of sanity) {
 let zCodeBlokiem = 0;
 for (const plik of html) {
   const tresc = readFileSync(plik, "utf8");
-  const m = tresc.match(/<pre><code>\s*&lt;(p|div|figure|style)/);
+  // article/ul/li: pętle wpisów Kadence z wcięciami (tak rozjechały się dawne /tematy/tipy/ i inne)
+  const m = tresc.match(/<pre><code>\s*&lt;(p|div|figure|style|article|ul|li)[\s&]/);
   if (m) { blad(`markdown-it zamienił HTML w code block: ${plik}`); zCodeBlokiem++; }
 }
 if (!zCodeBlokiem) ok("sanity 1:1 treści przeszło");

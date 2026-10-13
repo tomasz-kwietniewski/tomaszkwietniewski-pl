@@ -33,6 +33,12 @@ na ten adres (szczegóły DNS i pułapka certyfikatu: pamięć projektu, `WDROZE
   w nav (po Projektach) i w stopce; przekierowanie `/tematy/` -> `/polecam/` (przekierowania.js).
   Burger nav od 1080 px (pełne menu z Polecam potrzebuje ~1050 px); `.nav__link` ma nowrap.
   verify_build.mjs pilnuje 7 kafelków na hubie; sanity ksiazki sprawdza `polecana-okladka`.
+  **Dawne listy wpisów `/tematy/` (2026-10-13):** ciekawostki, geopolityka, cyberbezpieczenstwo
+  i tipy były pętlą wpisów Kadence z wcięciami, którą markdown-it renderował jako `<pre><code>`
+  (surowy HTML, poziomy scroll na telefonie). Pliki są w `ZASTEPOWANE` (`lib/zrodla.js`),
+  adresy przekierowują na `/blog/temat/<kategoria>/`. `/tematy/prywatna-emerytura/` przepisana
+  na czysty HTML (wstęp, finansezsensem.pl, lista 15 wpisów, źródła). `verify_build.mjs` łapie
+  teraz też code block zaczynający się od `<article|ul|li>` i pilnuje tych przekierowań.
   Polecane telefony i polecane komputery zaktualizowane merytorycznie (stan: październik 2026;
   komputery: sekcja o drożyźnie pamięci i dysków przez AI, laptopy w progach wg PurePC, rady).
 - **Polityka prywatności PRZEPISANA (2026-07-17):** zgodna z faktycznym stanem strony

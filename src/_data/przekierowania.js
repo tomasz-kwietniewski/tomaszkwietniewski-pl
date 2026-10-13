@@ -13,6 +13,11 @@ export default function () {
     { od: "/wszystkie-wpisy/", do: "/blog/" },
     { od: "/tematy/", do: "/polecam/" },
     { od: "/zapis-na-newsletter/", do: "/newsletter/" },
+    // Dawne podstrony-listy wpisów z WP (pliki w ZASTEPOWANE, lib/zrodla.js).
+    { od: "/tematy/ciekawostki/", do: "/blog/temat/ciekawostki-swiat/" },
+    { od: "/tematy/geopolityka/", do: "/blog/temat/ciekawostki-swiat/" },
+    { od: "/tematy/cyberbezpieczenstwo/", do: "/blog/temat/technologie-i-dom/" },
+    { od: "/tematy/tipy/", do: "/blog/temat/tipy-ulatwiajace-zycie/" },
   ];
 
   // Stare adresy kategorii WordPressa (linkowane w treściach) -> realne strony
