@@ -74,6 +74,10 @@ for (const [stary, kat] of Object.entries(tematyPrzek)) {
   if (!existsSync(path.join(SITE, "blog", "temat", kat, "index.html"))) { blad(`brak celu ${cel}`); tematyZle++; }
 }
 if (!tematyZle) ok(`/tematy/: ${Object.keys(tematyPrzek).length} dawne listy wpisów przekierowane na kategorie`);
+// /tematy/prywatna-emerytura/ nie ma kafelka ani pozycji w menu - jedyne wejście to link z O mnie
+const oMnieHtml = readFileSync(path.join(SITE, "o-mnie", "index.html"), "utf8");
+if (!oMnieHtml.includes('href="/tematy/prywatna-emerytura/"')) blad("/o-mnie/ nie linkuje do /tematy/prywatna-emerytura/ - strona zostanie bez wejścia");
+else ok("/o-mnie/ linkuje do /tematy/prywatna-emerytura/");
 
 // Plansza demo Momentum (passthrough z demo/momentum, w CI przeliczana z prawdziwych
 // notowań): komplet plików, baner, noindex i link z /projekty/. Tryb i data tylko
