@@ -20,6 +20,11 @@ export default function (eleventyConfig) {
   // Generowana w repo momentum-strategy: scripts/build_demo.py --out demo/momentum.
   // Leży poza src/, żeby Eleventy nie przetwarzał jej jako szablonu - nie edytować ręcznie.
   eleventyConfig.addPassthroughCopy({ "demo/momentum": "projekty/momentum-demo" });
+  // Materiały tylko dla czytelników newslettera (/newsletter/RRRR-MM/<temat>/): samodzielne
+  // strony noindex z PDF-em obok. Bez data-pagefind-body i poza sitemapą, więc nie ma ich
+  // w wyszukiwarce ani na blogu - wejście wyłącznie z linku w mailu. PDF generowany lokalnie
+  // z tego samego HTML (skill dokument-html-pdf) i commitowany razem z nim.
+  eleventyConfig.addPassthroughCopy({ "materialy/newsletter": "newsletter" });
   // Domena własna dla GitHub Pages - plik CNAME w katalogu opublikowanej strony.
   eleventyConfig.addPassthroughCopy({ "CNAME.gotowy": "CNAME" });
 

@@ -1,0 +1,217 @@
+/* Wspólny arkusz materiałów dla czytelników newslettera (październik 2026).
+   Te same pliki HTML służą jako strona i jako źródło PDF (Chrome headless,
+   skill dokument-html-pdf) - reguły @page i @media print pilnują układu A4. */
+
+:root {
+  --tekst: #1F2937;
+  --tekst-jasny: #5B6577;
+  --akcent: #1E56D6;
+  --akcent-tlo: #E8EFFE;
+  --akcent-linia: #C9D8FB;
+  --tlo: #F7F9FD;
+  --linia: #E1E6F0;
+  --uwaga: #A35F0B;
+  --uwaga-tlo: #FFF6E6;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  margin: 0;
+  padding: 32px 20px 60px;
+  background: var(--tlo);
+  color: var(--tekst);
+  font-family: "Segoe UI", Candara, Calibri, system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.strona { max-width: 760px; margin: 0 auto; }
+
+header {
+  text-align: center;
+  padding-bottom: 26px;
+  border-bottom: 2px solid var(--akcent-linia);
+  margin-bottom: 34px;
+}
+.nadtytul {
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--akcent); font-weight: 600; margin-bottom: 14px;
+}
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px; line-height: 1.2; font-weight: 400; margin: 0 0 14px;
+}
+.podtytul { font-size: 14px; color: var(--tekst-jasny); margin: 0; }
+
+section { margin-bottom: 38px; }
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px; font-weight: 400; color: var(--akcent); margin: 0 0 6px;
+}
+h2 + .wprowadzenie { color: var(--tekst-jasny); font-size: 14px; margin: 0 0 18px; }
+h3 { font-size: 15px; font-weight: 600; margin: 24px 0 6px; }
+p { margin: 0 0 14px; }
+a { color: var(--akcent); }
+
+.teza {
+  background: var(--akcent-tlo);
+  border-left: 4px solid var(--akcent);
+  border-radius: 3px; padding: 24px 28px; margin-bottom: 38px;
+}
+.teza p { margin: 0 0 12px; }
+.teza p:last-child { margin-bottom: 0; }
+.teza .mocne {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px; line-height: 1.5; color: var(--akcent);
+}
+
+.kafelki { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.kafelek {
+  background: #fff; border: 1px solid var(--linia);
+  border-radius: 4px; padding: 16px 18px;
+}
+.kafelek .etykieta {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--tekst-jasny); font-weight: 600; margin-bottom: 6px;
+}
+.kafelek .wartosc {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px; line-height: 1.1; color: var(--akcent); margin-bottom: 4px;
+}
+.kafelek .wartosc.slowna { font-size: 20px; }
+.kafelek .opis { font-size: 12.5px; color: var(--tekst-jasny); line-height: 1.5; }
+
+ol.kroki { padding-left: 0; list-style: none; counter-reset: krok; margin: 0; }
+ol.kroki li {
+  counter-increment: krok; position: relative;
+  padding: 0 0 0 44px; margin-bottom: 16px;
+}
+ol.kroki li::before {
+  content: counter(krok); position: absolute; left: 0; top: 0;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--akcent); color: #fff; font-weight: 700; font-size: 14px;
+  text-align: center; line-height: 28px;
+}
+ol.kroki li b { display: block; font-weight: 600; margin-bottom: 1px; }
+ol.kroki li span { color: var(--tekst-jasny); font-size: 14px; }
+
+ul.plusy { list-style: none; padding: 0; margin: 0; }
+ul.plusy li { position: relative; padding: 0 0 0 30px; margin-bottom: 16px; }
+ul.plusy li::before {
+  content: ""; position: absolute; left: 4px; top: 8px;
+  width: 7px; height: 12px;
+  border: solid var(--akcent); border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+ul.plusy li b { display: block; font-weight: 600; margin-bottom: 1px; }
+ul.plusy li span { color: var(--tekst-jasny); font-size: 14px; }
+
+ul.ryzyka { list-style: none; padding: 0; margin: 0; }
+ul.ryzyka li { position: relative; padding: 0 0 0 30px; margin-bottom: 16px; }
+ul.ryzyka li::before {
+  content: "!"; position: absolute; left: 2px; top: 1px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--uwaga); color: #fff; font-weight: 700; font-size: 13px;
+  text-align: center; line-height: 20px;
+}
+ul.ryzyka li b { display: block; font-weight: 600; margin-bottom: 1px; }
+ul.ryzyka li span { color: var(--tekst-jasny); font-size: 14px; }
+
+.tabela-oprawa {
+  border: 1px solid var(--linia); border-radius: 4px;
+  overflow: hidden; background: #fff;
+}
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+thead th {
+  background: var(--akcent-tlo); color: var(--akcent);
+  font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+  font-weight: 600; text-align: left; padding: 11px 14px;
+}
+tbody td { padding: 10px 14px; text-align: left; vertical-align: top; border-top: 1px solid #edf0f5; }
+tbody td:first-child { font-weight: 500; }
+tbody tr:nth-child(even) { background: #fafbfe; }
+.podpis-tabeli {
+  font-size: 12.5px; color: var(--tekst-jasny); margin-top: 10px; line-height: 1.55;
+}
+
+.praktyka {
+  background: var(--uwaga-tlo); border: 1px solid #f0dcbc;
+  border-radius: 4px; padding: 22px 26px;
+}
+.praktyka h3 { margin-top: 0; }
+.praktyka p:last-child { margin-bottom: 0; }
+.znacznik {
+  display: inline-block; font-size: 11px; letter-spacing: 0.08em;
+  text-transform: uppercase; font-weight: 600; color: var(--uwaga); margin-bottom: 8px;
+}
+
+.kartka {
+  background: #fff; border: 2px dashed var(--akcent-linia);
+  border-radius: 6px; padding: 24px 28px;
+  font-family: Georgia, "Times New Roman", serif; font-size: 15px; line-height: 1.6;
+}
+.kartka p { margin: 0 0 10px; }
+.kartka p:last-child { margin-bottom: 0; }
+.kartka .tytul-kartki { font-size: 18px; color: var(--akcent); margin-bottom: 14px; }
+
+.domkniecie {
+  text-align: center; font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px; line-height: 1.6; color: var(--akcent);
+  background: var(--akcent-tlo); border-radius: 4px; padding: 28px 32px;
+}
+
+footer {
+  margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--linia);
+  font-size: 12px; color: var(--tekst-jasny); line-height: 1.6;
+}
+footer ol { padding-left: 18px; margin: 6px 0 12px; }
+footer li { margin-bottom: 4px; overflow-wrap: anywhere; }
+
+@page {
+  size: A4;
+  margin: 14mm 15mm 16mm;
+  @bottom-center {
+    content: counter(page) " / " counter(pages);
+    font-family: "Segoe UI", Calibri, sans-serif;
+    font-size: 9pt;
+    color: #5B6577;
+  }
+}
+
+@media print {
+  body { background: #fff; padding: 0; font-size: 11pt; line-height: 1.55; }
+  .strona { max-width: none; }
+  h1 { font-size: 26pt; }
+  h2 { font-size: 16pt; break-after: avoid; page-break-after: avoid; }
+  h3 { break-after: avoid; page-break-after: avoid; }
+  section { margin-bottom: 24px; }
+  .nowa-strona { break-before: page; page-break-before: always; }
+  .calosc { break-inside: avoid; page-break-inside: avoid; }
+  .teza, .praktyka, .domkniecie, .kafelek, .tabela-oprawa, .kartka,
+  ul.plusy li, ul.ryzyka li, ol.kroki li, tr {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+}
+
+@media (max-width: 560px) {
+  .kafelki { grid-template-columns: 1fr; }
+  h1 { font-size: 27px; }
+  body { padding: 22px 14px 40px; }
+  .teza, .praktyka, .domkniecie, .kartka { padding: 18px 20px; }
+  table { font-size: 13px; }
+  thead th, tbody td { padding: 8px 9px; }
+}
+
+/* ---------- pasek strony (tylko ekran) ---------- */
+.pasek {
+  display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center;
+  justify-content: space-between; margin: 0 0 28px; font-size: 14px;
+}
+.pasek a.dom { color: var(--tekst-jasny); text-decoration: none; font-weight: 600; }
+.pasek a.pdf {
+  display: inline-block; background: var(--akcent); color: #fff; text-decoration: none;
+  font-weight: 600; padding: 9px 16px; border-radius: 8px;
+}
+@media print { .pasek { display: none; } }

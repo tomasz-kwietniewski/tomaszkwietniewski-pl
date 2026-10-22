@@ -79,6 +79,27 @@ const oMnieHtml = readFileSync(path.join(SITE, "o-mnie", "index.html"), "utf8");
 if (!oMnieHtml.includes('href="/tematy/prywatna-emerytura/"')) blad("/o-mnie/ nie linkuje do /tematy/prywatna-emerytura/ - strona zostanie bez wejścia");
 else ok("/o-mnie/ linkuje do /tematy/prywatna-emerytura/");
 
+// Materiały dla czytelników newslettera (passthrough z materialy/newsletter): każdy ma
+// index.html z noindex i bez data-pagefind-body, a PDF, do którego linkuje, istnieje.
+const matDir = path.join(SITE, "newsletter");
+let materialow = 0;
+for (const miesiac of existsSync(matDir) ? readdirSync(matDir).filter((d) => /^\d{4}-\d{2}$/.test(d)) : []) {
+  for (const temat of readdirSync(path.join(matDir, miesiac)).filter((d) => statSync(path.join(matDir, miesiac, d)).isDirectory())) {
+    const adres = `/newsletter/${miesiac}/${temat}/`;
+    const plik = path.join(matDir, miesiac, temat, "index.html");
+    if (!existsSync(plik)) { blad(`${adres}: brak index.html`); continue; }
+    const html = readFileSync(plik, "utf8");
+    const pdf = (html.match(/href="([^"]+\.pdf)"/) || [])[1];
+    if (!html.includes('name="robots" content="noindex"')) blad(`${adres}: brak noindex`);
+    else if (html.includes("data-pagefind-body")) blad(`${adres}: trafi do wyszukiwarki (data-pagefind-body)`);
+    else if (!pdf || !existsSync(path.join(matDir, miesiac, temat, pdf))) blad(`${adres}: brak linku do PDF albo pliku PDF`);
+    else materialow++;
+  }
+}
+const sitemapXml = readFileSync(path.join(SITE, "sitemap.xml"), "utf8");
+if (/\/newsletter\/\d{4}-\d{2}\//.test(sitemapXml)) blad("materiały newslettera wyciekły do sitemap.xml");
+if (materialow) ok(`materiały newslettera: ${materialow} (noindex, PDF obok, poza wyszukiwarką i sitemapą)`);
+
 // Plansza demo Momentum (passthrough z demo/momentum, w CI przeliczana z prawdziwych
 // notowań): komplet plików, baner, noindex i link z /projekty/. Tryb i data tylko
 // raportowane - stara wersja to fallback po awarii pobrania, nie błąd builda.
