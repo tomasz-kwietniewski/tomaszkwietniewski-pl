@@ -230,4 +230,5 @@ figure.zrzut figcaption { font-size: 12.5px; color: var(--tekst-jasny); line-hei
   figure.zrzut { float: right; width: 52mm; max-width: 52mm; margin: 1mm 0 3mm 6mm; break-inside: avoid; page-break-inside: avoid; }
   figure.zrzut figcaption { font-size: 8.5pt; }
   figure.zrzut ~ .praktyka { clear: both; }
+  .domkniecie { padding: 14px 22px; font-size: 13pt; line-height: 1.45; }
 }
