@@ -215,3 +215,9 @@ footer li { margin-bottom: 4px; overflow-wrap: anywhere; }
   font-weight: 600; padding: 9px 16px; border-radius: 8px;
 }
 @media print { .pasek { display: none; } }
+
+/* ---------- zrzut ekranu z podpisem ---------- */
+figure.zrzut { margin: 18px auto 0; max-width: 300px; text-align: center; }
+figure.zrzut img { display: block; width: 100%; height: auto; border-radius: 14px; }
+figure.zrzut figcaption { font-size: 12.5px; color: var(--tekst-jasny); line-height: 1.5; margin-top: 8px; }
+@media print { figure.zrzut { max-width: 46mm; break-inside: avoid; page-break-inside: avoid; } }
