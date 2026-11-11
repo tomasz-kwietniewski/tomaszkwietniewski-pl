@@ -8,6 +8,7 @@ excerpt: Pensja podzielona przez godziny etatu to ładna liczba, tylko nieprawdz
   Doliczam dojazdy, przygotowanie, nadgodziny i koszty, które istnieją wyłącznie
   dlatego, że chodzisz do pracy, a potem jeszcze godziny regeneracji. Na przykładowych
   liczbach stawka spada o dwie piąte, a cena telefonu zamienia się w 163 godziny życia.
+miniatura: /media/2026/11/ile-naprawde-zarabiasz-na-godzine.jpg
 typ: wpis
 ---
 Zapytaj kogokolwiek, ile zarabia na godzinę, a usłyszysz pensję podzieloną przez godziny etatu. Liczba wychodzi ładna i łatwo się ją powtarza. Kłopot w tym, że opisuje tylko tę część doby, za którą ktoś Ci płaci, a nie tę, którą faktycznie oddajesz.
