@@ -2,7 +2,7 @@
 title: "Prywatna emerytura"
 slug: "prywatna-emerytura"
 date: "2021-04-22T13:14:10"
-modified: "2026-10-13T12:00:00"
+modified: "2026-11-11T12:00:00"
 url_stara: "https://tomaszkwietniewski.pl/tematy/prywatna-emerytura/"
 typ: "strona"
 ---
@@ -14,6 +14,7 @@ typ: "strona"
 <h2>Wpisy o prywatnej emeryturze</h2>
 
 <ul>
+<li><a href="/ile-naprawde-zarabiasz-na-godzine/">Ile naprawdę zarabiasz na godzinę</a> (listopad 2026)</li>
 <li><a href="/znowu-to-samo/">Znowu to samo</a> (grudzień 2024)</li>
 <li><a href="/pigula-wiedzy-o-inwestowaniu/">Piguła wiedzy o inwestowaniu</a> (maj 2024)</li>
 <li><a href="/tldr-po-prostu-kupuj/">#TL;DR Po Prostu Kupuj</a> (grudzień 2023)</li>
