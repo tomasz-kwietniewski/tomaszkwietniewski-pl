@@ -2,7 +2,7 @@
 title: Polecane telefony
 slug: polecane-telefony
 date: 2021-04-22T22:07:00
-modified: 2026-10-06T12:00:00
+modified: 2026-11-12T12:00:00
 url_stara: https://tomaszkwietniewski.pl/tematy/polecane-telefony/
 typ: strona
 ---
@@ -40,6 +40,12 @@ Pixele polecam od lat i polecać będę. Sprzętowo coraz bardziej odstają od c
 **3. Samsung Galaxy A57 - ok. 1520 zł (8/128 GB), ok. 1735 zł (8/256 GB).** Aparat słabszy od dwóch poprzedników, ale za to 6 lat aktualizacji systemu i zabezpieczeń, przewidywalny system i serwis w każdym mieście. Najczęściej kupowany z tej trójki (ponad 400 opinii na Ceneo). Wybór dla kogoś, kto chce telefon na lata bez niespodzianek.
 
 Warto też: **Nothing Phone (3a)** za ok. 1300 zł (8/256 GB) - najtańszy telefon z osobnym teleobiektywem (2x, bez stabilizacji optycznej) i czysty Nothing OS. To jednak model z 2025 roku, a w tej cenie jest tylko w pojedynczych sklepach. Najtańsza sensowna opcja to **Motorola Edge 70 Fusion** za ok. 1265 zł - bateria 7000 mAh, odporność IP68/IP69, prosty Android, ale bez zoomu optycznego.
+
+Taniej, gdy aparat nie jest najważniejszy (ceny z 12 listopada 2026):
+
+- **POCO M8 Pro - ok. 1210 zł na Allegro, ok. 1500 zł w Media Markt (8/256 GB).** Bliźniak Redmi Note 15 Pro+: ten sam ekran AMOLED 6,83 cala, Snapdragon 7s Gen 4, bateria 6500 mAh z ładowaniem 100 W i odporność IP66/IP68. Różnica jest w aparacie: zamiast 200 Mpx ma prostszy aparat główny 50 Mpx, też ze stabilizacją optyczną. Recenzenci piszą, że w zwykłych zdjęciach różnica jest niewielka. Minusy jak u Redmi: HyperOS z reklamami do wyłączenia na starcie, brak eSIM i karty microSD. Dobry wybór, jeśli chcesz właściwie tego samego telefonu co Redmi, tylko taniej.
+- **OnePlus Nord CE5 - ok. 1070 zł na Allegro, 1220-1400 zł w innych sklepach (8/128 GB).** Wydajny MediaTek Dimensity 8350, szybka pamięć UFS 3.1, ładowanie 80 W i OxygenOS bez śmieci. Uwaga na baterię: wersja europejska ma 5200 mAh, a nie 7100 mAh z wersji indyjskiej, o której pisały zapowiedzi. Aparat główny 50 Mpx i słaby szeroki kąt 8 Mpx, odporność tylko IP54, bez ładowania indukcyjnego. Powoli znika ze sklepów - wersja 8/256 GB jest już tylko w pojedynczych ofertach.
+- **Nothing Phone (3a) Lite - ok. 1240 zł (8/128 GB, 2 sklepy).** Najtańszy Nothing: ekran AMOLED 120 Hz, bateria 5000 mAh, czysty Nothing OS i przezroczysta obudowa. Wersja globalna 8/256 GB z magazynu w Niemczech kosztuje na AliExpress podobnie, ok. 1220 zł. To jednak nie jest tańszy Phone (3a): nie ma teleobiektywu (trzeci aparat to makro 2 Mpx), recenzenci oceniają zdjęcia jako wyraźnie słabsze, odporność to tylko IP54, a aktualizacje systemu 3 lata. Przy podobnej cenie lepiej wziąć zwykły Phone (3a) z teleobiektywem 2x, póki jest w sklepach.
 
 ### Do 2000 zł - lepsze przetwarzanie albo teleobiektyw
 
