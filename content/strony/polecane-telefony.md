@@ -22,7 +22,7 @@ W każdym progu jest rekomendacja i dwie alternatywy - innego producenta, z inny
 
 Oceny użytkowników na Ceneo prawie wszędzie wynoszą 4,8-4,9/5, więc słabo różnicują modele. Opinie właścicieli brałem z recenzji, forów i komentarzy - przy każdym telefonie piszę, co chwalą, a na co narzekają.
 
-Podaję też wymiary (wysokość × szerokość × grubość) i wagę, bo mało kto na nie patrzy, a to one decydują o wygodzie na co dzień. Najwięcej mówi wysokość: telefon ok. 150 mm leży w dłoni wygodnie i łatwo go obsłużyć jedną ręką, a powyżej 170 mm robi się już niewygodny. Większość modeli z rankingu ma 160-164 mm i ok. 200 g. Wyraźnie mniejsze są Galaxy S25 (147 mm), Pixele 10, 10 Pro i 10a (153-154 mm) oraz Honory 400 i 600 (156 mm). Więcej małych telefonów jest w osobnej sekcji niżej.
+Podaję też wymiary (wysokość × szerokość × grubość) i wagę, bo mało kto na nie patrzy, a to one decydują o wygodzie na co dzień. Najwięcej mówi wysokość. Do ok. 150 mm telefon jest jeszcze wygodny i da się go obsłużyć jedną ręką, a powyżej ok. 160 mm robi się już niezbyt wygodny. Dla porównania: mój dawny OnePlus 12 miał 163,3 mm i 220 g i był dla mnie po prostu za duży. Kłopot w tym, że dziś prawie wszystkie telefony to takie cegły. Większość modeli z rankingu ma 160-164 mm i ok. 200 g, a nawet największe flagowce mają ok. 163 mm i różnią się głównie wagą. Poniżej 160 mm zostają Galaxy S25 (147 mm), Pixele 10, 10 Pro i 10a (153-154 mm), Honory 400, 600 i 600 Pro (156 mm) oraz POCO F8 Pro (157,5 mm). Więcej małych telefonów jest w osobnej sekcji niżej.
 
 | Próg | Rekomendacja | Alternatywy |
 |---|---|---|
