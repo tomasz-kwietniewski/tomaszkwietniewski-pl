@@ -7,7 +7,7 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
 <div class="widok kontener" style="padding-block:64px" data-pagefind-body>
   <div class="projekty-intro">
     <h1>Projekty</h1>
-    <p>Rzeczy, które buduję po godzinach - samodzielnie, z pomocą narzędzi AI. Nie jestem programistą; jestem człowiekiem, który lubi zgłębić temat i doprowadzić projekt do końca.</p>
+    <p>Rzeczy, które buduję po godzinach z agentami AI: pomysł i decyzje są moje, kod piszą oni. Nie jestem programistą; jestem człowiekiem, który lubi zgłębić temat i doprowadzić projekt do końca.</p>
   </div>
 
   <div class="projekty-siatka">
@@ -58,7 +58,7 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
         </div>
         <h2>Bezpieczeństwo cyfrowe z sensem</h2>
         <p>Domowy przegląd bezpieczeństwa cyfrowego dla osób prywatnych. Filozofia: rozsądny kompromis między paranoją a frywolnością, czyli sensowny poziom ochrony bez utrudniania życia.</p>
-        <p>Dwa etapy: przegląd, czyli diagnoza z raportem i krótką listą priorytetów, oraz wdrożenie, po którym menedżer haseł, 2FA i kopie zapasowe są realnie ustawione. Wejściem jest bezpłatny rekonesans OSINT: za pisemną zgodą sprawdzam wyłącznie publiczne źródła i pokazuję, co internet wie o kliencie - łącznie z danymi, o które nigdy nie pytam, bo w tym cała pointa.</p>
+        <p>Trzy kroki, a na każdym można się zatrzymać. Wejściem jest bezpłatny wstępny przegląd, czyli rekonesans OSINT: za pisemną zgodą sprawdzam wyłącznie publiczne źródła i pokazuję w raporcie, co internet wie o kliencie - łącznie z danymi, o które nigdy nie pytam, bo w tym cała pointa. Potem pełny przegląd na żywo: telefon, konta, komputer, sieć domowa i plan awaryjny, z listą priorytetów na koniec. Sednem jest wdrożenie: zamiast kilkudziesięciu haseł klient pamięta dwa, resztę trzyma menedżer haseł, a do tego 2FA, klucz sprzętowy i kopie zapasowe są realnie ustawione.</p>
         <p>Do rekonesansu zbudowałem z agentami AI lokalne narzędzie webowe (Node + Express) - bezstanowe, nie zapisuje danych klienta i działa tylko w sieci lokalnej. Zaczęło się od rodziny i znajomych, bo każdemu warto to raz porządnie ustawić.</p>
         <div class="projekt__linki">
           <a href="https://przeglad.tomaszkwietniewski.pl" rel="noopener">przeglad.tomaszkwietniewski.pl</a>
@@ -76,7 +76,7 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
         </div>
         <h2>Własne archiwum notatek w Markdown</h2>
         <p>Przeczytane artykuły zapisuję od 1999 roku: najpierw w Wordzie, potem w Evernote i w Joplinie. Teraz to zwykłe pliki Markdown w folderach tematycznych na własnym dysku - bez abonamentu, bez firmy pośrodku i w formacie, który przeżyje każdy program. Na co dzień przeglądam je w Obsidianie, a synchronizację i kopie zapasowe robi domowy NAS.</p>
-        <p>Brakujące elementy zbudowałem z pomocą agentów AI: wtyczkę do Brave, która jednym kliknięciem wyciąga ze strony sam artykuł i zapisuje go razem z obrazkami, mały program w Windows, który odbiera notatki i zapisuje je na dysku, oraz aplikację na Androida, do której artykuł trafia przez „Udostępnij”. Do tego przeprowadzka całego dorobku: około 18 tysięcy notatek, 136 tysięcy plików i 220 tematów, z automatyczną kontrolą każdego etapu. Kod narzędzi jest otwarty na licencji MIT.</p>
+        <p>Brakujące elementy zbudowałem z pomocą agentów AI: wtyczkę do przeglądarki (Brave i inne oparte na Chromium), która jednym kliknięciem wyciąga ze strony sam artykuł i zapisuje go razem z obrazkami, mały program w Windows, który odbiera notatki i zapisuje je na dysku, oraz aplikację na Androida, do której artykuł trafia przez „Udostępnij”. Do tego przeprowadzka całego dorobku: około 18 tysięcy notatek, 136 tysięcy plików i 220 tematów, z automatyczną kontrolą każdego etapu. Kod narzędzi jest otwarty na licencji MIT.</p>
         <div class="projekt__linki">
           <a href="/wlasne-archiwum-notatek-markdown/">Przeczytaj wpis</a>
           <a href="https://github.com/tomasz-kwietniewski/moje-archiwum" rel="noopener">Kod na GitHubie</a>
@@ -113,7 +113,7 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
           </a>
           <h3>Ładowanie z nadwyżek PV za ok. 1150 zł</h3>
           <p>Zwykła ładowarka za około 1150 zł plus Home Assistant i AppDaemon: auto ładuje się tylko z nadwyżek słońca. Skrypt rozmawia z ładowarką lokalnie po sieci domowej (TinyTuya, bez chmury) i co 30 sekund decyduje, co robić.</p>
-          <p>Sześć trybów według priorytetu, od ręcznego trybu awaryjnego, przez ładowanie na maksimum przy ujemnych cenach prądu i nocne ładowanie zimą, po ładowanie proporcjonalne do nadwyżki PV (6-16 A), gdy domowy magazyn energii jest już pełny. Kod jest otwarty (MIT), razem z listą pułapek protokołu Tuya, na które sam się nadziałem.</p>
+          <p>Dziewięć stanów sprawdzanych według priorytetu: od wyłącznika automatyki, przy którym skrypt tylko mierzy, przez ręczny tryb awaryjny i ładowanie na maksimum przy ujemnych cenach prądu, po ładowanie proporcjonalne do nadwyżki PV (6-16 A), gdy domowy magazyn energii jest już pełny. Zimą auto ładuje się z sieci w tańszych godzinach taryfy G12W, a skrypt pilnuje, żeby razem z domem nie przekroczyć 11 kW przyłącza. Gdy ładowarka się zawiesi, na telefon przychodzi powiadomienie. Kod jest otwarty (MIT), razem z listą pułapek protokołu Tuya, na które sam się nadziałem.</p>
           <div class="projekt__linki">
             <a href="/jak-za-1150-zl-zrobilem-inteligentne-ladowanie-auta-elektrycznego-z-nadwyzek-slonca/">Przeczytaj wpis</a>
             <a href="https://github.com/tomasz-kwietniewski/ha-ev-charger" rel="noopener">Kod na GitHubie</a>
@@ -131,7 +131,8 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
         <span class="badge">Python + Docker</span>
       </div>
       <p>Automatyzacja mojej strategii inwestowania opartej na momentum. Serce aplikacji to GEM (Global Equities Momentum): na koniec każdego miesiąca porównuje 3-miesięczne momentum globalnych akcji, Bitcoina i gotówki, a sygnał dostaję e-mailem; w połowie miesiąca dochodzi wczesne ostrzeżenie, gdy szykuje się zmiana. Silnik zreplikował historyczne sygnały strategii z dokładnością 96,3%.</p>
-      <p>Obok tego część satelitarna: codziennie rano aplikacja sprawdza kryteria wyjścia dla otwartych pozycji (m.in. trailing stop i analiza etapów trendu wg Weinsteina), a raz w tygodniu skanuje prawie 600 spółek i ETF-ów (m.in. pełny S&P 500 i Euro Stoxx 50) w poszukiwaniu świeżych trendów i prowadzi watchlistę dojrzewających kandydatów. Każdy sygnał jest od razu wykonalny u europejskiego brokera - z giełdą, walutą i odpowiednikiem UCITS dla amerykańskich ETF-ów.</p>
+      <p>Obok tego część satelitarna: codziennie rano aplikacja sprawdza kryteria wyjścia dla otwartych pozycji (m.in. trailing stop, stop czasowy dla pozycji, które po kilku miesiącach wciąż są pod ceną wejścia, i analiza etapów trendu wg Weinsteina), a raz w tygodniu skanuje prawie 600 spółek i ETF-ów (m.in. pełny S&P 500 i Euro Stoxx 50) w poszukiwaniu świeżych trendów i prowadzi watchlistę dojrzewających kandydatów. Każdy sygnał jest od razu wykonalny u europejskiego brokera - z giełdą, walutą i odpowiednikiem UCITS dla amerykańskich ETF-ów.</p>
+      <p>Do samej obserwacji dochodzi Larsson Line, wskaźnik trendu z kanału CTO Larsson odtworzony od zera: kolor dla Bitcoina i Etheru z mailem przy zmianie oraz kropki tygodniowe i dzienne dla 44 spółek związanych z AI i indeksu Nasdaq-100. Reguły sprawdzam własnym silnikiem backtestu na notowaniach od 2015 roku - wyszło z niego na przykład, że ciaśniejsze stopy straty pogarszają wynik, więc ich nie wdrożyłem.</p>
       <p>Python, Flask i APScheduler w kontenerze Docker na moim Synology NAS. Prawdziwy panel jest za logowaniem, a tutaj pokazuję jego kopię wygenerowaną z tego samego szablonu: sygnał GEM, momentum, krzywa kapitału i Larsson Line są liczone na bieżąco z prawdziwych notowań, a pozycje i transakcje są przykładowe. Narzędzie do własnego użytku - nie jest to porada inwestycyjna.</p>
       <div class="projekt__linki">
         <a href="/projekty/momentum-demo/">Zobacz demo panelu</a>
@@ -148,7 +149,7 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
         <span class="badge badge--ciemny">Google Play</span>
       </div>
       <p>Aplikacja na Androida (Kotlin, Jetpack Compose), która powstała z własnej potrzeby - syn jest w programie lekowym. Codziennie o ustalonej porze przypomina o dawce alarmem o priorytecie budzika, odpornym na usypianie aplikacji, a podanie odznacza się jednym tapnięciem.</p>
-      <p>Cykl ampułki prowadzi według faktycznie podanych dawek - pominięty dzień nie przesuwa rozpiski, a ostatni dzień dostaje resztę z ampułki. Do tego kalendarz historii z komentarzami, korekta podanej dawki, eksport do Excela i kopie zapasowe z przenosinami na nowy telefon. Dane zostają wyłącznie na urządzeniu: bez konta i bez sieci. Interfejs po polsku i angielsku.</p>
+      <p>Cykl ampułki prowadzi według faktycznie podanych dawek - pominięty dzień nie przesuwa rozpiski. Nową ampułkę oznacza rodzic, bo dozownik bywa niedokładny i z ampułki wychodzi zwykle dawka czy dwie więcej, niż wynika z pojemności; aplikacja zawsze proponuje dawkę dzienną i osobno podpowiada, ile w ampułce zostało. Do tego kalendarz historii z komentarzami, korekta podanej dawki, podpowiedź rotacji miejsc wkłucia, eksport do Excela i kopie zapasowe z przenosinami na nowy telefon. Dane zostają wyłącznie na urządzeniu: bez konta i bez sieci. Interfejs po polsku i angielsku.</p>
       <p>Opublikowana w Google Play z konta organizacji (aplikacje zdrowotne tego wymagają), dostępna w 177 krajach. Aplikacja tylko przypomina o dawce wpisanej przez rodzica - dawkowanie zawsze ustala lekarz.</p>
       <div class="projekt__linki">
         <a href="https://play.google.com/store/apps/details?id=pl.hormonwzrostu" rel="noopener">Zobacz w Google Play</a>
@@ -163,8 +164,8 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
         <h2>Kalkulator fotowoltaiki i magazynu</h2>
         <span class="badge">open source</span>
       </div>
-      <p>Typowy kalkulator pyta użytkownika o autokonsumpcję - czyli o liczbę, której ten nie zna, a która najmocniej decyduje o wyniku. Ten ją liczy: symuluje 8 760 godzin roku na zmierzonym profilu realnego domu, z pracą magazynu, taryfami strefowymi i net-billingiem. Silnik odtwarza rzeczywisty pobór z sieci z odchyłką 0,7% wobec faktur.</p>
-      <p>Dzięki temu odpowiada na pytanie, które generyczne kalkulatory obchodzą bokiem: czy magazyn się zwraca. Na profilu domu odniesienia podnosi autokonsumpcję z 45% do 70%, ale wydłuża zwrot całej inwestycji z 2,9 do 4,7 roku - i kalkulator mówi to wprost, zamiast chować za jedną sumaryczną liczbą.</p>
+      <p>Typowy kalkulator pyta użytkownika o autokonsumpcję - czyli o liczbę, której ten nie zna, a która najmocniej decyduje o wyniku. Ten ją liczy: symuluje 8 760 godzin roku na zmierzonym profilu realnego domu, z pracą magazynu, taryfami strefowymi i net-billingiem. Profil to pełny rok pomiarów z licznika falownika co 5 minut, sprawdzony z fakturami.</p>
+      <p>Dzięki temu odpowiada na pytanie, które generyczne kalkulatory obchodzą bokiem: czy magazyn się zwraca. Na profilu domu odniesienia podnosi autokonsumpcję z 45% do 70%, ale wydłuża zwrot całej inwestycji z 2,9 do 4,8 roku - i kalkulator mówi to wprost, zamiast chować za jedną sumaryczną liczbą.</p>
       <p>Liczy dla pięciu operatorów sieci (stawki i godziny stref wprost z ich taryf), dziesięciu lokalizacji nasłonecznienia z PVGIS i czterech sposobów ogrzewania. Można też wgrać własny plik godzinowy z licznika - zostaje w przeglądarce, bo strona po załadowaniu nie wykonuje żadnego zapytania sieciowego.</p>
       <div class="projekt__linki">
         <a href="https://kalkulatorpv.tomaszkwietniewski.pl" rel="noopener">kalkulatorpv.tomaszkwietniewski.pl</a>
