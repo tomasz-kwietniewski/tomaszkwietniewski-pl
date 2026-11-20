@@ -33,9 +33,10 @@ Mój wniosek: **nie ma co czekać na powrót cen z 2025 roku.** Tamte ceny były
 1. **Jeśli komputer działa, nie wymieniaj go teraz.** Szczególnie gdy chodzi tylko o koniec wsparcia Windows 10: Microsoft po cichu przedłużył bezpłatne aktualizacje bezpieczeństwa dla użytkowników domowych **do 12 października 2027 roku**. W Unii Europejskiej zapis do programu Extended Security Updates jest bezpłatny: Ustawienia, Aktualizacja i zabezpieczenia, Windows Update, „Zarejestruj się teraz”, i dalej logujesz się do Windowsa kontem Microsoft. Kto nie chce konta Microsoft, może zostać przy koncie lokalnym i zapłacić jednorazowo 30 dolarów. To rok zapasu, żeby nie kupować w szczycie cen. **Uwaga dla firm:** Microsoft pisze wprost, że z programu dla konsumentów nie można korzystać do celów komercyjnych - komputery w biurze, gabinecie czy sklepie formalnie wymagają płatnego programu ESU dla firm, więc tam z wymianą sprzętu lepiej nie zwlekać.
 2. **Stary komputer z dyskiem talerzowym? Wymień dysk na SSD.** Mimo podwyżek to dalej najtańszy sposób, żeby kilkuletni laptop zaczął działać jak nowy. Do zwykłego użytku wystarczy 500 GB.
 3. **Kupujesz laptopa - minimum 16 GB RAM.** W większości nowych laptopów pamięć jest wlutowana na stałe, więc tego, co kupisz, nie rozbudujesz. Producenci, żeby utrzymać ceny, wracają w tańszych modelach do 8 GB - to dziś pułapka. Jeśli laptop ma wolne gniazdo na pamięć, to duży plus na przyszłość.
-4. **Patrz na cenę, nie na markę, i sprawdzaj historię cen.** Ceneo pokazuje wykres ceny produktu - w czasie takich wahań łatwo trafić na „promocję” droższą niż cena sprzed miesiąca.
-5. **Rozważ laptop używany lub poleasingowy.** Biznesowe serie (Lenovo ThinkPad, Dell Latitude, HP EliteBook) są solidne i łatwe w naprawie. Kupuj ze sklepu z gwarancją i licz się z wymianą baterii. Przy cenach nowych laptopów to często najrozsądniejsza opcja do internetu, dokumentów i nauki.
-6. **Składasz komputer stacjonarny?** Przy tak drogim DDR5 wraca sens platform na tańszej pamięci DDR4 (procesory Intel 12-14 generacji, AMD AM4) albo kupienie jednego modułu 16 GB i dołożenie drugiego, gdy ceny spadną.
+4. **Omijaj laptopy ze Snapdragonem (Windows na ARM).** Sklepy wrzucają je między zwykłe laptopy z Intelem i AMD, często bez wyraźnej informacji. Procesor Snapdragon pochodzi z telefonów: bateria wytrzymuje długo, ale zwykłe programy na Windowsa działają przez tłumaczenie w locie, a sterowniki drukarek, skanerów, czytników kart czy tokenów do podpisu elektronicznego muszą być napisane specjalnie pod ARM - i często ich nie ma. Do przeglądarki i Office'a się sprawdzi, do biura z programem branżowym i urządzeniami raczej nie. Na dziś to moim zdaniem za wczesny etap.
+5. **Patrz na cenę, nie na markę, i sprawdzaj historię cen.** Ceneo pokazuje wykres ceny produktu - w czasie takich wahań łatwo trafić na „promocję” droższą niż cena sprzed miesiąca.
+6. **Rozważ laptop używany lub poleasingowy.** Biznesowe serie (Lenovo ThinkPad, Dell Latitude, HP EliteBook) są solidne i łatwe w naprawie. Kupuj ze sklepu z gwarancją i licz się z wymianą baterii. Przy cenach nowych laptopów to często najrozsądniejsza opcja do internetu, dokumentów i nauki.
+7. **Składasz komputer stacjonarny?** Przy tak drogim DDR5 wraca sens platform na tańszej pamięci DDR4 (procesory Intel 12-14 generacji, AMD AM4) albo kupienie jednego modułu 16 GB i dołożenie drugiego, gdy ceny spadną.
 
 ## Konkretne modele do kupienia (stan: 20 listopada 2026)
 
@@ -66,8 +67,19 @@ Na co uważać przy sprzęcie odnowionym:
 
 - **Bateria w laptopie jest używana.** Po kilku latach trzyma zwykle wyraźnie krócej niż nowa. Przy pracy przy biurku to bez znaczenia, przy pracy w terenie licz się z wymianą baterii (w laptopach biznesowych to zwykle prosta operacja).
 - **Sprawdź wersję Windowsa.** Część ofert ma Windows 11 Home, część Pro. Do firmy lepszy jest Pro (pełne szyfrowanie dysku BitLocker, łatwiejsze zarządzanie), ale dla jednego-dwóch komputerów Home też da się sensownie używać.
-- **Allegro i sklepy poleasingowe** mają dużo większy wybór i często niższe ceny niż x-kom. Kupuj tylko od sprzedawców, którzy dają fakturę VAT, co najmniej 12 miesięcy gwarancji na piśmie, opisują stan baterii i klasę obudowy (A to praktycznie bez śladów użycia), pokazują zdjęcia konkretnej sztuki, a nie zdjęcia katalogowe, i mają wiele tysięcy opinii z ostatniego roku. Specjalistycznych sklepów poleasingowych jest sporo, ale żadnego nie sprawdziłem na tyle, żeby go tu polecić z nazwy.
+- **Nie kupuj komputera, który nie dostanie Windows 11.** Sklepy poleasingowe dalej sprzedają tanio sprzęt z Windows 10 i procesorami Intel 6. i 7. generacji (np. i5-6300U, i5-7300U). Microsoft nie wspiera na nich Windows 11, więc za rok będzie ten sam problem co dziś. Bezpieczna granica to Intel 8. generacji albo AMD Ryzen 2000 i nowsze, a najlepiej od razu Windows 11 w opisie oferty.
 
+### Większy wybór: AMSO
+
+Jeśli w x-komie nie ma tego, czego szukasz, sprawdzonym miejscem jest [AMSO](https://amso.pl/) - sklep ze sprzętem poleasingowym z salonami w 11 miastach (w tym w Warszawie, Krakowie, Łodzi, Poznaniu i Gdańsku), na Opineo od 2015 roku. Ma tam ocenę 4,9 z ponad 9 tysięcy opinii z ostatniego roku (stan na 20 listopada 2026). Atuty, których nie ma x-kom:
+
+- **Ogromny wybór** [laptopów](https://amso.pl/pol_m_Produkty_Laptopy-poleasingowe-188.html) i [komputerów stacjonarnych](https://amso.pl/pol_m_Produkty_Komputery-poleasingowe-131.html) w różnych konfiguracjach i klasach obudowy (A to praktycznie bez śladów użycia, B z widocznymi rysami, ale taniej).
+- **Gwarancja zwykle 12 miesięcy** (przy części tańszych ofert 6 - sprawdź w opisie), z możliwością przedłużenia o kolejne 12, 24 lub 36 miesięcy. To gwarancja sklepu, więc reklamację załatwia się z nimi, bez producenta.
+- **Dodatki przy zamówieniu:** nowa bateria zamiast używanej, nowy dysk i pamięć zamiast poleasingowych, przedruk klawiatury na polski układ.
+
+Przykład: ten sam [Dell Latitude 5430 z i5-1245U, 16 GB, 512 GB](https://amso.pl/product-pol-239966-Dell-Latitude-5430-i5-1245U-16GB-512GB-SSD-1920x1080-Klasa-A-Windows-11-Professional.html), w klasie A i z **Windows 11 Pro**, kosztuje w AMSO 1699 zł, a [nowa bateria](https://amso.pl/product-pol-310012-Nowa-bateria-Encore-Energy-do-Dell-Latitude-5330-5430-5530-7430-7530-58Wh-15-2V-3625mAh-FK0VR.html) do niego 139 zł. Za to komputer stacjonarny HP EliteDesk 805 G6 Mini jest tam droższy niż w x-komie (1709 zł z Windows 11 Home wobec 999 zł z wersją Pro), więc warto porównać oba sklepy.
+
+**Allegro** też ma dużo ofert poleasingowych, ale tam wybieraj tylko sprzedawców z fakturą VAT, co najmniej 12-miesięczną gwarancją na piśmie, opisem stanu baterii, zdjęciami konkretnej sztuki (nie katalogowymi) i tysiącami opinii z ostatniego roku.
 ### Nowy laptop do pracy (Windows 11 Pro)
 
 | Model | Sklep | Procesor | Pamięć i dysk | Cena |
