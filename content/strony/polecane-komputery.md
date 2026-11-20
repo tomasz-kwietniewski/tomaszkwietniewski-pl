@@ -59,14 +59,15 @@ x-kom ma osobny dział sprzętu odnowionego: [laptopy odnowione](https://www.x-k
 | [Dell Latitude 5430](https://www.x-kom.pl/p/1624732-laptop-odnowiony-dell-latitude-5430-i5-1245u-16gb-512-win11-odnowiony.html), 14" | Core i5-1245U | 16 GB, 512 GB | Win 11 Home | 1799&nbsp;zł |
 | [Dell Latitude 5530](https://www.x-kom.pl/p/1633936-laptop-odnowiony-dell-latitude-5530-i5-1235u-16gb-512-win11p-odnowiony.html), 15,6" | Core i5-1235U | 16 GB, 512 GB | Win 11 Pro | 2299&nbsp;zł |
 | [HP EliteDesk 805 G6 Mini](https://www.x-kom.pl/p/1580250-komputer-odnowiony-hp-elitedesk-805-g6-mini-r5-pro-4650ge-16gb-256-w11p-odnowiony.html) (stacjonarny) | Ryzen 5 PRO 4650GE | 16 GB, 256 GB | Win 11 Pro | 999&nbsp;zł |
-| [HP EliteDesk 805 G6 SFF](https://www.x-kom.pl/p/1613522-komputer-odnowiony-hp-elitedesk-805-g6-sff-r5-pro-4650g-16gb-512-win11p-odnowiony.html) (stacjonarny) | Ryzen 5 PRO 4650G | 16 GB, 512 GB | Win 11 Pro | 1499&nbsp;zł |
+| [HP EliteDesk 805 G6 SFF](https://www.x-kom.pl/p/1613522-komputer-odnowiony-hp-elitedesk-805-g6-sff-r5-pro-4650g-16gb-512-win11p-odnowiony.html) (stacjonarny) | Ryzen 5 PRO 4650G | 16 GB, 512 GB | Win 11 Pro (w specyfikacji Win 10 Pro, patrz niżej) | 1499&nbsp;zł |
 
 Mój wybór: **Dell Latitude 5430 z i5-1245U za 1799 zł** jako laptop (najnowszy procesor w tej grupie, z 2022 roku) i **HP EliteDesk 805 G6 Mini za 999 zł** jako komputer stacjonarny - to pudełko wielkości książki, które można przykręcić z tyłu monitora. Do biura wystarczy z nawiązką, a dysk 256 GB łatwo w nim wymienić na większy. Za te pieniądze nowego komputera z 16 GB RAM w ogóle się dziś nie kupi.
 
 Na co uważać przy sprzęcie odnowionym:
 
 - **Bateria w laptopie jest używana.** Po kilku latach trzyma zwykle wyraźnie krócej niż nowa. Przy pracy przy biurku to bez znaczenia, przy pracy w terenie licz się z wymianą baterii (w laptopach biznesowych to zwykle prosta operacja).
-- **Sprawdź wersję Windowsa.** Część ofert ma Windows 11 Home, część Pro. Do firmy lepszy jest Pro (pełne szyfrowanie dysku BitLocker, łatwiejsze zarządzanie), ale dla jednego-dwóch komputerów Home też da się sensownie używać.
+- **Sprawdź wersję Windowsa.** Część ofert ma Windows 11 Home, część Pro. Do firmy lepszy jest Pro (pełne szyfrowanie dysku BitLocker, łatwiejsze zarządzanie), ale dla jednego-dwóch komputerów Home też da się sensownie używać. Czytaj też specyfikację, nie tylko nazwę: przy HP EliteDesk 805 G6 SFF w x-komie nazwa mówi o Windows 11 Pro, a specyfikacja o Windows 10 Pro. Najpewniej to błąd w opisie, a sprzęt obsługuje Windows 11 i aktualizacja jest bezpłatna, ale przed zakupem warto dopytać sklep na czacie (stan na 20 listopada 2026).
+- **Sprawdź złącza monitora.** Oba komputery HP EliteDesk z tabeli mają do monitora tylko złącza DisplayPort, bez HDMI i VGA. Do starszego monitora trzeba wtedy dokupić przejściówkę za kilkadziesiąt złotych (DisplayPort na HDMI albo na VGA). Komputery stacjonarne z odnowienia przychodzą też zwykle bez klawiatury i myszy, tylko z zasilaczem.
 - **Nie kupuj komputera, który nie dostanie Windows 11.** Sklepy poleasingowe dalej sprzedają tanio sprzęt z Windows 10 i procesorami Intel 6. i 7. generacji (np. i5-6300U, i5-7300U). Microsoft nie wspiera na nich Windows 11, więc za rok będzie ten sam problem co dziś. Bezpieczna granica to Intel 8. generacji albo AMD Ryzen 2000 i nowsze, a najlepiej od razu Windows 11 w opisie oferty.
 
 ### Większy wybór: AMSO
