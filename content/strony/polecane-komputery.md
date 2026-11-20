@@ -2,7 +2,7 @@
 title: "Polecane komputery"
 slug: "polecane-komputery"
 date: "2021-04-22T22:21:14"
-modified: "2026-10-11T12:00:00"
+modified: "2026-11-20T12:00:00"
 url_stara: "https://tomaszkwietniewski.pl/tematy/polecane-komputery/"
 typ: "strona"
 ---
@@ -30,14 +30,68 @@ Mój wniosek: **nie ma co czekać na powrót cen z 2025 roku.** Tamte ceny były
 
 ## Co robić w czasie drożyzny - moje rady
 
-1. **Jeśli komputer działa, nie wymieniaj go teraz.** Szczególnie gdy chodzi tylko o koniec wsparcia Windows 10: Microsoft po cichu przedłużył bezpłatne aktualizacje bezpieczeństwa dla użytkowników domowych **do 12 października 2027 roku**. W Unii Europejskiej zapis do programu Extended Security Updates jest bezpłatny: Ustawienia, Aktualizacja i zabezpieczenia, Windows Update, „Zarejestruj się teraz”, i dalej logujesz się do Windowsa kontem Microsoft. To rok zapasu, żeby nie kupować w szczycie cen.
+1. **Jeśli komputer działa, nie wymieniaj go teraz.** Szczególnie gdy chodzi tylko o koniec wsparcia Windows 10: Microsoft po cichu przedłużył bezpłatne aktualizacje bezpieczeństwa dla użytkowników domowych **do 12 października 2027 roku**. W Unii Europejskiej zapis do programu Extended Security Updates jest bezpłatny: Ustawienia, Aktualizacja i zabezpieczenia, Windows Update, „Zarejestruj się teraz”, i dalej logujesz się do Windowsa kontem Microsoft. Kto nie chce konta Microsoft, może zostać przy koncie lokalnym i zapłacić jednorazowo 30 dolarów. To rok zapasu, żeby nie kupować w szczycie cen. **Uwaga dla firm:** Microsoft pisze wprost, że z programu dla konsumentów nie można korzystać do celów komercyjnych - komputery w biurze, gabinecie czy sklepie formalnie wymagają płatnego programu ESU dla firm, więc tam z wymianą sprzętu lepiej nie zwlekać.
 2. **Stary komputer z dyskiem talerzowym? Wymień dysk na SSD.** Mimo podwyżek to dalej najtańszy sposób, żeby kilkuletni laptop zaczął działać jak nowy. Do zwykłego użytku wystarczy 500 GB.
 3. **Kupujesz laptopa - minimum 16 GB RAM.** W większości nowych laptopów pamięć jest wlutowana na stałe, więc tego, co kupisz, nie rozbudujesz. Producenci, żeby utrzymać ceny, wracają w tańszych modelach do 8 GB - to dziś pułapka. Jeśli laptop ma wolne gniazdo na pamięć, to duży plus na przyszłość.
 4. **Patrz na cenę, nie na markę, i sprawdzaj historię cen.** Ceneo pokazuje wykres ceny produktu - w czasie takich wahań łatwo trafić na „promocję” droższą niż cena sprzed miesiąca.
 5. **Rozważ laptop używany lub poleasingowy.** Biznesowe serie (Lenovo ThinkPad, Dell Latitude, HP EliteBook) są solidne i łatwe w naprawie. Kupuj ze sklepu z gwarancją i licz się z wymianą baterii. Przy cenach nowych laptopów to często najrozsądniejsza opcja do internetu, dokumentów i nauki.
 6. **Składasz komputer stacjonarny?** Przy tak drogim DDR5 wraca sens platform na tańszej pamięci DDR4 (procesory Intel 12-14 generacji, AMD AM4) albo kupienie jednego modułu 16 GB i dołożenie drugiego, gdy ceny spadną.
 
-## Laptopy - konkretne propozycje (stan: październik 2026)
+## Konkretne modele do kupienia (stan: 20 listopada 2026)
+
+Wybrałem tylko sprzęt z dwóch sklepów, w których sam kupuję od lat: **x-kom** i **Komputronik**. Mają gwarancję, fakturę VAT, salony stacjonarne i normalny zwrot - przy dzisiejszych cenach nie warto oszczędzać 100 zł na nieznanym sklepie. Ceny sprawdziłem 20 listopada 2026, w trakcie Black Weeks, więc część z nich za tydzień-dwa może być wyższa. Linki prowadzą do kart produktów; jeśli któryś przestanie działać, wpisz w wyszukiwarkę sklepu pełną nazwę modelu z tabeli.
+
+### 16 czy 32 GB RAM?
+
+**Do domu i biura 16 GB w zupełności wystarczy.** Windows 11, przeglądarka z kilkunastoma kartami, Office, program do faktur czy kartoteki i wideorozmowa zajmują razem zwykle 8-12 GB. 32 GB ma sens dopiero przy cięższej pracy: dziesiątki kart i kilka dużych programów naraz, obróbka zdjęć i wideo, programowanie, maszyny wirtualne, sztuczna inteligencja uruchamiana na własnym komputerze. **8 GB to dziś za mało nawet do biura** - takich ofert unikaj. Przy obecnych cenach pamięci dopłata do 32 GB jest duża, więc jeśli nie masz pewności, że ich potrzebujesz, lepiej wziąć 16 GB w modelu, w którym da się pamięć dołożyć później.
+
+### Taniej: komputery odnowione (poleasingowe) z gwarancją
+
+To moim zdaniem najrozsądniejsza ścieżka do biura, nauki i internetu. Firmy po 3-4 latach leasingu oddają komputery z serii biznesowych (Lenovo ThinkPad, Dell Latitude, HP EliteBook i EliteDesk) - solidniejszych niż tanie modele konsumenckie, z lepszymi klawiaturami i łatwych w naprawie. Po przeglądzie i czyszczeniu wracają do sprzedaży za ułamek ceny nowych.
+
+x-kom ma osobny dział sprzętu odnowionego: [laptopy odnowione](https://www.x-kom.pl/g-2/c/4583-laptopy-odnowione.html) i [komputery odnowione](https://www.x-kom.pl/g-2/c/4584-komputery-odnowione.html), z **12 miesiącami gwarancji** i Windowsem 11. Wybór jest niewielki (kilkadziesiąt pozycji), ale kupuje się w sklepie, któremu się ufa.
+
+| Model (odnowiony, x-kom) | Procesor | Pamięć i dysk | System | Cena |
+|---|---|---|---|---|
+| [Lenovo ThinkPad T14 G1](https://www.x-kom.pl/p/1593051-laptop-odnowiony-lenovo-thinkpad-t14-g1-ryzen-5-pro-4650u-16gb-512-win11-odnowiony.html), 14" | Ryzen 5 PRO 4650U | 16 GB, 512 GB | Win 11 Home | 1499&nbsp;zł |
+| [HP EliteBook 840 G8](https://www.x-kom.pl/p/1607697-laptop-odnowiony-hp-elitebook-840-g8-i5-1135g7-16gb-512-win11-odnowiony.html), 14" | Core i5-1135G7 | 16 GB, 512 GB | Win 11 Home | 1799&nbsp;zł |
+| [Dell Latitude 5430](https://www.x-kom.pl/p/1624732-laptop-odnowiony-dell-latitude-5430-i5-1245u-16gb-512-win11-odnowiony.html), 14" | Core i5-1245U | 16 GB, 512 GB | Win 11 Home | 1799&nbsp;zł |
+| [Dell Latitude 5530](https://www.x-kom.pl/p/1633936-laptop-odnowiony-dell-latitude-5530-i5-1235u-16gb-512-win11p-odnowiony.html), 15,6" | Core i5-1235U | 16 GB, 512 GB | Win 11 Pro | 2299&nbsp;zł |
+| [HP EliteDesk 805 G6 Mini](https://www.x-kom.pl/p/1580250-komputer-odnowiony-hp-elitedesk-805-g6-mini-r5-pro-4650ge-16gb-256-w11p-odnowiony.html) (stacjonarny) | Ryzen 5 PRO 4650GE | 16 GB, 256 GB | Win 11 Pro | 999&nbsp;zł |
+| [HP EliteDesk 805 G6 SFF](https://www.x-kom.pl/p/1613522-komputer-odnowiony-hp-elitedesk-805-g6-sff-r5-pro-4650g-16gb-512-win11p-odnowiony.html) (stacjonarny) | Ryzen 5 PRO 4650G | 16 GB, 512 GB | Win 11 Pro | 1499&nbsp;zł |
+
+Mój wybór: **Dell Latitude 5430 z i5-1245U za 1799 zł** jako laptop (najnowszy procesor w tej grupie, z 2022 roku) i **HP EliteDesk 805 G6 Mini za 999 zł** jako komputer stacjonarny - to pudełko wielkości książki, które można przykręcić z tyłu monitora. Do biura wystarczy z nawiązką, a dysk 256 GB łatwo w nim wymienić na większy. Za te pieniądze nowego komputera z 16 GB RAM w ogóle się dziś nie kupi.
+
+Na co uważać przy sprzęcie odnowionym:
+
+- **Bateria w laptopie jest używana.** Po kilku latach trzyma zwykle wyraźnie krócej niż nowa. Przy pracy przy biurku to bez znaczenia, przy pracy w terenie licz się z wymianą baterii (w laptopach biznesowych to zwykle prosta operacja).
+- **Sprawdź wersję Windowsa.** Część ofert ma Windows 11 Home, część Pro. Do firmy lepszy jest Pro (pełne szyfrowanie dysku BitLocker, łatwiejsze zarządzanie), ale dla jednego-dwóch komputerów Home też da się sensownie używać.
+- **Allegro i sklepy poleasingowe** mają dużo większy wybór i często niższe ceny niż x-kom. Kupuj tylko od sprzedawców, którzy dają fakturę VAT, co najmniej 12 miesięcy gwarancji na piśmie, opisują stan baterii i klasę obudowy (A to praktycznie bez śladów użycia), pokazują zdjęcia konkretnej sztuki, a nie zdjęcia katalogowe, i mają wiele tysięcy opinii z ostatniego roku. Specjalistycznych sklepów poleasingowych jest sporo, ale żadnego nie sprawdziłem na tyle, żeby go tu polecić z nazwy.
+
+### Nowy laptop do pracy (Windows 11 Pro)
+
+| Model | Sklep | Procesor | Pamięć i dysk | Cena |
+|---|---|---|---|---|
+| [Acer TravelMate P2 14](https://www.x-kom.pl/p/1551270-laptop-14-acer-travelmate-p2-14-core-5-120u-16gb-512-win11p.html) | x-kom | Core 5 120U | 16 GB, 512 GB | 3399&nbsp;zł |
+| [HP 250 G9](https://www.x-kom.pl/p/1570372-laptop-15-16-hp-250-g9-core-5-120u-16gb-512-win11p.html), 15,6" | x-kom | Core 5 120U | 16 GB, 512 GB | 3299&nbsp;zł |
+| [Lenovo ThinkBook 14 G9](https://www.komputronik.pl/product/1007310/lenovo-thinkbook-14-g9-i5-210h-14-wuxga-16gb-512gb-win11pro.html) | Komputronik | Core 5 210H | 16 GB, 512 GB | 3949&nbsp;zł |
+| [Lenovo V15 G5](https://www.komputronik.pl/product/1035428/laptop-lenovo-v15-g5-core-i7-13620h-15-6-16gb-512gb-win11pro.html), 15,6" | Komputronik | Core i7-13620H | 16 GB, 512 GB | 3999&nbsp;zł |
+
+To proste laptopy biznesowe: bez ozdobników, ale z Windowsem 11 Pro w cenie i z serii, do których części i serwis są dostępne latami. **ThinkBook 14 G9** ma ekran 14 cali 1920x1200 i jest najporęczniejszy do noszenia; **TravelMate P2** i **HP 250 G9** to tańsza, czysto biurowa klasa. Jeśli nie potrzebujesz wersji Pro, za mniej więcej 2600 zł dostaniesz [Acer Aspire Lite 15 z Ryzenem 5 7430U](https://www.x-kom.pl/p/1546945-laptop-15-16-acer-aspire-lite-15-ryzen-5-7430u-16gb-512-win11.html) (16 GB, 512 GB, Windows 11 Home) - opisany niżej w zestawieniu z PurePC.
+
+### Nowy komputer stacjonarny do biura
+
+| Model | Sklep | Procesor | Pamięć i dysk | Cena |
+|---|---|---|---|---|
+| [Lenovo ThinkCentre neo 50q G6](https://www.x-kom.pl/p/1614815-desktop-lenovo-thinkcentre-neo-50q-g6-ultra-5-226v-16gb-512-win11p.html) | x-kom | Core Ultra 5 226V | 16 GB, 512 GB | 4049&nbsp;zł |
+| [Komputronik Nano X515](https://www.komputronik.pl/product/972862/komputer-mini-pc-komputronik-nano-x515-a15-.html) | Komputronik | Core Ultra 5 125H | 16 GB, 1 TB | 3549&nbsp;zł |
+| [GMKtec M8](https://www.x-kom.pl/p/1505719-nettop-mini-pc-gmktec-m8-ryzen-5-pro-6650h-16gb-512-win11p.html) | x-kom | Ryzen 5 PRO 6650H | 16 GB, 512 GB | 2099&nbsp;zł |
+
+Wszystkie trzy to małe komputery (mini PC) z Windowsem 11 Pro, do podłączenia do monitora, który już masz. **ThinkCentre neo 50q** to markowy sprzęt biurowy Lenovo z serwisem w Polsce, ale pamięć jest w nim wbudowana w procesor, więc 16 GB zostanie na zawsze. **Nano X515** to komputer marki własnej Komputronika, z dyskiem 1 TB. **GMKtec** to chińska marka, mniej znana, ale sprzedawana z gwarancją x-komu - za połowę ceny markowego. Przy takich cenach nowych mini PC widać, dlaczego odnowiony EliteDesk za 999 zł jest tak dobrą ofertą.
+
+Jeśli wystarczy Ci macOS (do biura nie zawsze - wiele programów branżowych, np. do kartoteki pacjentów czy księgowości, działa tylko na Windowsie), w Black Weeks [Mac mini z M6, 16/256 GB](https://www.x-kom.pl/p/1585374-nettop-mini-pc-apple-mac-mini-m6-16gb-256-macos.html) kosztuje w x-komie 3949 zł zamiast 4499 zł.
+
+## Laptopy z poradnika PurePC (stan: październik 2026)
 
 Poniżej modele z poradnika PurePC z 6 października 2026 (ceny z x-kom), z moim komentarzem, na co zwrócić uwagę. Wszystkie mają 16 GB RAM, dysk SSD 512 GB i Windows 11. Ceny zmieniają się teraz co tydzień, więc traktuj je orientacyjnie.
 
@@ -123,4 +177,4 @@ W 2023 roku kupiłem w ten sposób dwa komputery dla Taty i Siostry: RedmiBooki 
 
 ## Źródła
 
-[PC Games Hardware - ceny pamięci, SSD i HDD, sierpień 2026](https://www.pcgameshardware.de/RAM-Hardware-154108/Specials/Speicherpreise-RAM-SSD-HDD-Rekord-August-2026-1551263/), [TrendForce - prognoza cen pamięci na III kwartał 2026](https://www.trendforce.com/presscenter/news/20260703-13134.html), [TrendForce - pamięć a ceny laptopów](https://www.trendforce.com/presscenter/news/20260310-12959.html), [TechLipton - zestawy na październik 2026](https://techlipton.pl/2026/polecane-zestawy-komputerowe-pazdziernik-2026/), [Benchmark.pl - kiedy spadną ceny RAM i SSD](https://www.benchmark.pl/aktualnosci/kiedy-spadna-ceny-pamieci-ram-i-dyskow-ssd.html), [Telepolis - ceny pamięci DDR5](https://www.telepolis.pl/tech/sprzet/ceny-pamieci-ram-ddr5-kryzys), [Apple Mac mini z M6 - polskie ceny (iMagazine)](https://imagazine.pl/2026/08/26/nowe-mac-mini-mac-studio-polskie-ceny/), [Xiaomi RedmiBook Pro 2025 - specyfikacja (Notebookcheck)](https://www.notebookcheck.net/Redmi-Book-Pro-14-Xiaomi-releases-new-MacBook-Pro-14-contender-with-Intel-Arrow-Lake-processors.969365.0.html), [Expand Mac mini - Mac mini z M6 ma wlutowany dysk](https://expandmacmini.com/blogs/news/mac-mini-m6-m5-pro-soldered-storage), [Microsoft - Windows 10 Extended Security Updates](https://www.microsoft.com/pl-pl/windows/extended-security-updates), [Wikipedia - globalny niedobór pamięci (ang.)](https://en.wikipedia.org/wiki/2024%E2%80%93present_global_memory_supply_shortage).
+Ceny konkretnych modeli: karty produktów w [x-kom](https://www.x-kom.pl/) i [Komputronik](https://www.komputronik.pl/) z 20 listopada 2026 (Black Weeks). Pozostałe: [PC Games Hardware - ceny pamięci, SSD i HDD, sierpień 2026](https://www.pcgameshardware.de/RAM-Hardware-154108/Specials/Speicherpreise-RAM-SSD-HDD-Rekord-August-2026-1551263/), [TrendForce - prognoza cen pamięci na III kwartał 2026](https://www.trendforce.com/presscenter/news/20260703-13134.html), [TrendForce - pamięć a ceny laptopów](https://www.trendforce.com/presscenter/news/20260310-12959.html), [TechLipton - zestawy na październik 2026](https://techlipton.pl/2026/polecane-zestawy-komputerowe-pazdziernik-2026/), [Benchmark.pl - kiedy spadną ceny RAM i SSD](https://www.benchmark.pl/aktualnosci/kiedy-spadna-ceny-pamieci-ram-i-dyskow-ssd.html), [Telepolis - ceny pamięci DDR5](https://www.telepolis.pl/tech/sprzet/ceny-pamieci-ram-ddr5-kryzys), [Apple Mac mini z M6 - polskie ceny (iMagazine)](https://imagazine.pl/2026/08/26/nowe-mac-mini-mac-studio-polskie-ceny/), [Xiaomi RedmiBook Pro 2025 - specyfikacja (Notebookcheck)](https://www.notebookcheck.net/Redmi-Book-Pro-14-Xiaomi-releases-new-MacBook-Pro-14-contender-with-Intel-Arrow-Lake-processors.969365.0.html), [Expand Mac mini - Mac mini z M6 ma wlutowany dysk](https://expandmacmini.com/blogs/news/mac-mini-m6-m5-pro-soldered-storage), [Microsoft - Windows 10 Extended Security Updates](https://www.microsoft.com/pl-pl/windows/extended-security-updates), [Wikipedia - globalny niedobór pamięci (ang.)](https://en.wikipedia.org/wiki/2024%E2%80%93present_global_memory_supply_shortage).
