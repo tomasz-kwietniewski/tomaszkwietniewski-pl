@@ -20,6 +20,10 @@ export default function (eleventyConfig) {
   // Generowana w repo momentum-strategy: scripts/build_demo.py --out demo/momentum.
   // Leży poza src/, żeby Eleventy nie przetwarzał jej jako szablonu - nie edytować ręcznie.
   eleventyConfig.addPassthroughCopy({ "demo/momentum": "projekty/momentum-demo" });
+  // Demo Panelu energii domu na danych SYNTETYCZNYCH (prawdziwy panel jest prywatny).
+  // Build z prywatnego repo zuzycie-pradu: python panel/demo/generuj_dane.py, potem
+  // panel/web: npm run build:demo i kopia panel/demo/dist do demo/energia - nie edytować ręcznie.
+  eleventyConfig.addPassthroughCopy({ "demo/energia": "projekty/energia-demo" });
   // Materiały tylko dla czytelników newslettera (/newsletter/RRRR-MM/<temat>/): samodzielne
   // strony noindex z PDF-em obok. Bez data-pagefind-body i poza sitemapą, więc nie ma ich
   // w wyszukiwarce ani na blogu - wejście wyłącznie z linku w mailu. PDF generowany lokalnie
