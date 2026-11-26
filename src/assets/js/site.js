@@ -287,7 +287,114 @@
     });
   }
 
-  [initMenu, initPasekPostepu, initFiltrBloga, initEmail, initDonut, initFormularze, initSzukaj]
+  /* ---------- Galeria zrzutów w oknie (data-galeria na /projekty/) ----------
+     Kontener [data-galeria="Nazwa"] zawiera linki <a href=pełny_zrzut data-podpis data-szer data-wys>;
+     pierwszy jest widoczną miniaturą, reszta ukryta. [data-galeria-otworz="Nazwa"] otwiera od pierwszego.
+     Bez JS link prowadzi po prostu do pełnego zrzutu. */
+  function initGaleria() {
+    var galerie = document.querySelectorAll("[data-galeria]");
+    if (!galerie.length || typeof HTMLDialogElement !== "function") return;
+
+    var dlg = document.createElement("dialog");
+    dlg.className = "galeria-modal";
+    dlg.innerHTML =
+      '<div class="galeria-modal__wnetrze">' +
+      '<img class="galeria-modal__obraz" alt="">' +
+      '<p class="galeria-modal__podpis"></p>' +
+      '<p class="galeria-modal__licznik" aria-live="polite"></p>' +
+      '<button type="button" class="galeria-modal__btn galeria-modal__zamknij" aria-label="Zamknij podgląd">&times;</button>' +
+      '<button type="button" class="galeria-modal__btn galeria-modal__poprz" aria-label="Poprzedni zrzut">&lsaquo;</button>' +
+      '<button type="button" class="galeria-modal__btn galeria-modal__nast" aria-label="Następny zrzut">&rsaquo;</button>' +
+      "</div>";
+    document.body.appendChild(dlg);
+    var obraz = dlg.querySelector(".galeria-modal__obraz");
+    var podpis = dlg.querySelector(".galeria-modal__podpis");
+    var licznik = dlg.querySelector(".galeria-modal__licznik");
+    var zamknij = dlg.querySelector(".galeria-modal__zamknij");
+    var poprz = dlg.querySelector(".galeria-modal__poprz");
+    var nast = dlg.querySelector(".galeria-modal__nast");
+    var elementy = [], nr = 0, nazwa = "", powrot = null;
+
+    function pokaz(i) {
+      nr = (i + elementy.length) % elementy.length;
+      var a = elementy[nr];
+      if (a.dataset.szer) { obraz.width = +a.dataset.szer; obraz.height = +a.dataset.wys; }
+      obraz.src = a.getAttribute("href");
+      obraz.alt = a.dataset.podpis || "";
+      podpis.textContent = (a.dataset.podpis || "") + " ";
+      var pelny = document.createElement("a");
+      pelny.href = a.getAttribute("href");
+      pelny.target = "_blank";
+      pelny.rel = "noopener";
+      pelny.textContent = "Pełny rozmiar";
+      podpis.appendChild(pelny);
+      licznik.textContent = nazwa + ": zrzut " + (nr + 1) + " z " + elementy.length;
+      poprz.hidden = nast.hidden = elementy.length < 2;
+    }
+
+    function otworz(kontener, i) {
+      elementy = Array.prototype.slice.call(kontener.querySelectorAll("a[href]"));
+      if (!elementy.length) return;
+      nazwa = kontener.getAttribute("data-galeria") || "Zrzuty";
+      dlg.setAttribute("aria-label", nazwa + " - zrzuty ekranu");
+      powrot = document.activeElement;
+      pokaz(i > 0 ? i : 0);
+      document.documentElement.style.overflow = "hidden";
+      dlg.showModal();
+      (nast.hidden ? zamknij : nast).focus();
+    }
+
+    dlg.addEventListener("close", function () {
+      document.documentElement.style.overflow = "";
+      obraz.removeAttribute("src");
+      if (powrot && powrot.focus) powrot.focus({ preventScroll: true });
+    });
+    zamknij.addEventListener("click", function () { dlg.close(); });
+    poprz.addEventListener("click", function () { pokaz(nr - 1); });
+    nast.addEventListener("click", function () { pokaz(nr + 1); });
+    // klik w tło (poza obrazem, podpisem i przyciskami) zamyka
+    dlg.addEventListener("click", function (e) {
+      if (e.target === dlg || e.target.classList.contains("galeria-modal__wnetrze")) dlg.close();
+    });
+    dlg.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); pokaz(nr - 1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); pokaz(nr + 1); }
+    });
+    // przesunięcie palcem; nie przy powiększeniu dwoma palcami
+    var startX = null, startY = 0;
+    dlg.addEventListener("touchstart", function (e) {
+      var zoom = window.visualViewport ? window.visualViewport.scale : 1;
+      startX = e.touches.length === 1 && zoom <= 1.05 ? e.touches[0].clientX : null;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+    dlg.addEventListener("touchend", function (e) {
+      if (startX === null || elementy.length < 2) return;
+      var dx = e.changedTouches[0].clientX - startX, dy = e.changedTouches[0].clientY - startY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) pokaz(nr + (dx < 0 ? 1 : -1));
+      startX = null;
+    }, { passive: true });
+
+    function zModyfikatorem(e) { return e.ctrlKey || e.metaKey || e.shiftKey || e.button > 0; }
+    Array.prototype.forEach.call(galerie, function (kontener) {
+      kontener.addEventListener("click", function (e) {
+        var a = e.target.closest("a[href]");
+        if (!a || zModyfikatorem(e)) return;
+        e.preventDefault();
+        otworz(kontener, Array.prototype.indexOf.call(kontener.querySelectorAll("a[href]"), a));
+      });
+    });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-galeria-otworz]"), function (link) {
+      link.addEventListener("click", function (e) {
+        var cel = link.getAttribute("data-galeria-otworz");
+        var kontener = Array.prototype.find.call(galerie, function (g) { return g.getAttribute("data-galeria") === cel; });
+        if (!kontener || zModyfikatorem(e)) return;
+        e.preventDefault();
+        otworz(kontener, 0);
+      });
+    });
+  }
+
+  [initMenu, initPasekPostepu, initFiltrBloga, initEmail, initDonut, initFormularze, initSzukaj, initGaleria]
     .forEach(function (init) {
       try { init(); } catch (err) {
         if (window.console && console.error) console.error("site.js: " + init.name, err);
