@@ -119,6 +119,25 @@ else {
   }
 }
 
+// Demo Panelu energii (passthrough z demo/energia): build Vite z danymi syntetycznymi.
+// Pilnujemy noindex, znacznika demo w danych i linku z /projekty/.
+{
+  const dir = path.join(SITE, "projekty", "energia-demo");
+  const braki = ["index.html", "data/meta.json", "data/dni.json"].filter((p) => !existsSync(path.join(dir, p)));
+  if (braki.length) blad(`demo Panelu energii: brak ${braki.join(", ")}`);
+  else {
+    const html = readFileSync(path.join(dir, "index.html"), "utf8");
+    const meta = JSON.parse(readFileSync(path.join(dir, "data", "meta.json"), "utf8"));
+    const projektyHtml = readFileSync(path.join(SITE, "projekty", "index.html"), "utf8");
+    if (!html.includes('name="robots" content="noindex"')) blad("demo Panelu energii: brak noindex");
+    else if (meta.demo !== true) blad("demo Panelu energii: meta.json bez znacznika demo (czy to nie prawdziwe dane?)");
+    else if (/Musuł/.test(html)) blad("demo Panelu energii: nazwa miejscowości w HTML");
+    else if (/src="\/|href="\/assets/.test(html)) blad("demo Panelu energii: ścieżki bezwzględne (build bez --mode demo?)");
+    else if (!projektyHtml.includes('href="/projekty/energia-demo/"')) blad("/projekty/ nie linkuje demo Panelu energii");
+    else ok(`demo Panelu energii: noindex, dane syntetyczne ${meta.od.slice(0, 10)} - ${meta.do.slice(0, 10)}, link z /projekty/`);
+  }
+}
+
 // /blog/ musi listować wszystkie opublikowane wpisy. Łapie regresję typu
 // "async w include+for renderuje pustą siatkę" - strona istnieje, kart brak.
 const blogHtml = readFileSync(path.join(SITE, "blog", "index.html"), "utf8");
