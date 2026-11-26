@@ -729,3 +729,28 @@ h1, h2, h3, h4 { font-family: var(--naglowki); text-wrap: pretty; }
   .stopka__wnetrze { padding-inline: 14px; }
   .stopka__linki { flex-wrap: wrap; gap: 8px 16px; }
 }
+
+/* ---------- Galeria zrzutów w oknie (projekty: Panel energii) ---------- */
+.projekt-foto--galeria { position: relative; cursor: zoom-in; }
+.projekt-foto__znaczek { position: absolute; right: 12px; bottom: 12px; padding: 5px 11px; border-radius: 999px; background: rgba(19, 26, 38, .78); color: #fff; font-size: 12.5px; font-weight: 600; pointer-events: none; }
+.galeria-modal { border: 0; padding: 0; margin: auto; background: rgba(8, 11, 17, .94); width: 100vw; height: 100dvh; max-width: 100vw; max-height: 100dvh; overscroll-behavior: contain; }
+.galeria-modal::backdrop { background: rgba(8, 11, 17, .6); }
+.galeria-modal__wnetrze { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: max(56px, env(safe-area-inset-top)) clamp(12px, 6vw, 84px) max(20px, env(safe-area-inset-bottom)); }
+.galeria-modal__obraz { display: block; max-width: 100%; max-height: calc(100dvh - 170px); width: auto; height: auto; border-radius: 10px; box-shadow: 0 30px 80px rgba(0, 0, 0, .5); background: #0f1115; }
+.galeria-modal__podpis { color: #E6EAF2; font-size: 15px; line-height: 1.45; text-align: center; max-width: 760px; margin: 0; }
+.galeria-modal__podpis a { color: var(--akcent-jasny); white-space: nowrap; }
+.galeria-modal__licznik { color: #9AA6BC; font-size: 13px; margin: 0; }
+.galeria-modal__btn { position: absolute; width: 48px; height: 48px; border: 0; border-radius: 999px; background: rgba(255, 255, 255, .14); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; display: grid; place-items: center; }
+.galeria-modal__btn:hover { background: rgba(255, 255, 255, .26); }
+.galeria-modal__btn:focus-visible { outline: 3px solid var(--akcent-jasny); outline-offset: 2px; }
+.galeria-modal__btn[hidden] { display: none; }
+.galeria-modal__zamknij { top: max(10px, env(safe-area-inset-top)); right: 12px; }
+.galeria-modal__poprz { left: 12px; top: 50%; transform: translateY(-50%); }
+.galeria-modal__nast { right: 12px; top: 50%; transform: translateY(-50%); }
+@media (max-width: 700px) {
+  .galeria-modal__wnetrze { padding-inline: 8px; padding-bottom: max(76px, env(safe-area-inset-bottom)); }
+  .galeria-modal__poprz, .galeria-modal__nast { top: auto; bottom: max(14px, env(safe-area-inset-bottom)); transform: none; }
+  .galeria-modal__poprz { left: calc(50% - 60px); }
+  .galeria-modal__nast { right: calc(50% - 60px); }
+  .galeria-modal__podpis { font-size: 14px; }
+}

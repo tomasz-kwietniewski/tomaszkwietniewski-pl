@@ -123,15 +123,25 @@ opisSEO: "Rzeczy, które buduję po godzinach - serwis fundacji Misja MADA, kons
     </div>
 
     <div class="projekt" id="panel-energii">
-      <img src="/assets/img/projekty/proj-energia.webp" alt="Panel energii domu: zużycie miesiąc po miesiącu i przepływy energii między panelami, magazynem, siecią i domem" class="projekt__obrazek" style="object-position:0 0;background:#0f1115" loading="lazy">
+      {# Galeria zrzutów: klik otwiera okno podglądu (site.js, initGaleria); bez JS link prowadzi do pełnego zrzutu #}
+      <div data-galeria="Panel energii domu">
+        <a href="/assets/img/projekty/proj-energia-teraz.webp" class="projekt-foto projekt-foto--galeria" data-szer="1385" data-wys="1135" data-podpis="Teraz: przepływ energii na żywo z Home Assistanta, strefa taryfy G12w z podpowiedzią i pogoda z prognozą produkcji." aria-label="Powiększ zrzuty panelu energii (4)">
+          <img src="/assets/img/projekty/proj-energia.webp" alt="Panel energii domu: zużycie miesiąc po miesiącu i przepływy energii między panelami, magazynem, siecią i domem" class="projekt__obrazek" style="object-position:0 0;background:#0f1115" loading="lazy">
+          <span class="projekt-foto__znaczek" aria-hidden="true">4 zrzuty</span>
+        </a>
+        <a href="/assets/img/projekty/proj-energia-dzien.webp" hidden data-szer="1385" data-wys="1000" data-podpis="Dzień: doba co 5 minut, zużycie domu rozbite na źródła, stan magazynu i ładowanie auta ze słońca (czerwiec 2026)."></a>
+        <a href="/assets/img/projekty/proj-energia-rok.webp" hidden data-szer="1385" data-wys="1000" data-podpis="Historia: zużycie miesiąc po miesiącu z temperaturą i produkcją oraz przepływy energii między panelami, magazynem, siecią i domem."></a>
+        <a href="/assets/img/projekty/proj-energia-koszty.webp" hidden data-szer="1385" data-wys="1000" data-podpis="Koszty: faktury za prąd miesiąc po miesiącu, rabat Tarczy i cena 1 kWh kupionej z sieci."></a>
+      </div>
       <div class="projekt__naglowek">
         <h2>Panel energii domu</h2>
         <span class="badge">TypeScript + Python</span>
       </div>
       <p>Mamy w domu fotowoltaikę, magazyn energii, pompy ciepła i auto elektryczne, a dane o tym były rozsiane po aplikacji falownika, Home Assistancie i fakturach. Panel zbiera je w jedno miejsce: co się dzieje teraz i jak wyglądała cała historia od startu instalacji w sierpniu 2025.</p>
       <p>Widok „Teraz” pokazuje na żywo, skąd płynie prąd i dokąd idzie: panele, magazyn, sieć, dom i auto, z kropkami płynącymi w kierunku przepływu, a obok aktualną strefę taryfy z podpowiedzią, czy to dobry moment na pranie albo ładowanie. Dalej doba co 5 minut z podziałem zużycia na źródła, podsumowania tygodnia, miesiąca i roku z kosztem w złotówkach, wykres przepływów, kalendarz zużycia, mapa godzin, porównanie rok do roku, zużycie a temperatura, faktury miesiąc po miesiącu, ładowanie auta w tańszych godzinach i spadki napięcia w sieci.</p>
-      <p>Historię daje eksport z aplikacji falownika, a od listopada panel sam zapisuje co 5 minut stan z Home Assistanta do własnej bazy, więc kolejne miesiące przybywają bez ręcznego pobierania. Strona w TypeScripcie z wykresami ECharts, serwer w Pythonie w kontenerze na domowym NAS, pogoda z Open-Meteo. Zbudowany z agentami AI, a wygląd i nawigację przeszedł audyt UX zrobiony z Gemini. Panel jest prywatny i za hasłem, bo profil zużycia zdradza, kiedy nikogo nie ma w domu - tutaj tylko zrzut.</p>
+      <p>Historię daje eksport z aplikacji falownika, a od listopada panel sam zapisuje co 5 minut stan z Home Assistanta do własnej bazy, więc kolejne miesiące przybywają bez ręcznego pobierania. Strona w TypeScripcie z wykresami ECharts, serwer w Pythonie w kontenerze na domowym NAS, pogoda z Open-Meteo. Zbudowany z agentami AI, a wygląd i nawigację przeszedł audyt UX zrobiony z Gemini. Panel jest prywatny i za hasłem, bo profil zużycia zdradza, kiedy nikogo nie ma w domu - tutaj tylko zrzuty ekranu.</p>
       <div class="projekt__linki">
+        <a href="/assets/img/projekty/proj-energia-teraz.webp" data-galeria-otworz="Panel energii domu">Zobacz zrzuty panelu</a>
         <a href="/pstryk-czy-taryfa-strefowa/">Wpis o taryfach, od którego się zaczęło</a>
       </div>
     </div>
