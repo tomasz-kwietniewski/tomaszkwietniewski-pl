@@ -2,7 +2,7 @@
 title: "Polityka prywatności - aplikacja Hormon Wzrostu Dawkowanie"
 slug: "hormon-wzrostu-dawkowanie-prywatnosc"
 date: "2026-10-06T12:00:00"
-modified: "2026-10-06T12:00:00"
+modified: "2026-11-27T13:30:00"
 url_stara: "https://tomaszkwietniewski.pl/hormon-wzrostu-dawkowanie/polityka-prywatnosci/"
 typ: "strona"
 ---
@@ -22,7 +22,7 @@ z internetu, nie zawiera reklam ani narzędzi analitycznych, nie wymaga konta.</
 <p>Dane wpisane przez użytkownika i przechowywane lokalnie (w pamięci aplikacji):</p>
 <ul>
 <li>imię dziecka, nazwa leku, parametry dawkowania (pojemność ampułki, dawka dzienna, data startu),</li>
-<li>godzina przypomnienia, oznaczenia podania leku w poszczególnych dniach, opcjonalne komentarze,</li>
+<li>godzina przypomnienia, oznaczenia podania lub pominięcia leku w poszczególnych dniach, faktycznie podane dawki (korekty), daty otwarcia nowej ampułki, miejsca wkłucia i opcjonalne komentarze,</li>
 <li>wybrany język interfejsu.</li>
 </ul>
 
@@ -64,8 +64,9 @@ i kontroluje wyłącznie rodzic lub opiekun, lokalnie na swoim urządzeniu.</p>
 <p>The app stores all data <strong>only locally on the device</strong>. It <strong>does not send any data</strong>
 to the developer or third parties, has no internet access, no ads, no analytics, and requires no account.</p>
 
-<p>Data entered by the user (child's name, medicine and dosing parameters, reminder time, intake marks,
-optional comments, language) stays on the device unless the user <strong>manually</strong> exports a backup
+<p>Data entered by the user (child's name, medicine and dosing parameters, reminder time, intake and
+skipped marks, actual dose corrections, new-ampoule dates, injection sites, optional comments,
+language) stays on the device unless the user <strong>manually</strong> exports a backup
 (JSON) or a spreadsheet (.xlsx) and shares it with an app of their choice. If Android Auto Backup is
 enabled, the system may back up app data to the user's Google account under Google's privacy policy;
 the developer has no access to it.</p>
