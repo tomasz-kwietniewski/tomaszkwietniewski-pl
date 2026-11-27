@@ -4,12 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230f172a'/><path d='M6 23L13 16l5 3 8-10' fill='none' stroke='%23fbbf24' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/><path d='M19.5 9H26v6.5' fill='none' stroke='%23fbbf24' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  
+  
   
   <meta name="robots" content="noindex">
   <meta name="description" content="Demo panelu Momentum Strategy: sygnał GEM na prawdziwych notowaniach, pozycje przykładowe.">
   <title>Momentum Strategy - demo (GEM na prawdziwych notowaniach)</title>
   <link rel="stylesheet" href="momentum-demo.css">
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
@@ -18,7 +20,7 @@
       <h1 class="text-xl font-bold">Momentum Strategy</h1>
       
       <div class="flex items-center gap-4">
-        <span class="text-sm text-slate-400 hidden sm:inline">2026-11-26 10:38</span>
+        <span class="text-sm text-slate-400 hidden sm:inline">2026-11-27 21:49</span>
         <a href="/projekty/" class="text-sm text-slate-300 hover:text-white transition">Wróć do projektów</a>
       </div>
       
@@ -30,7 +32,7 @@
       
       <strong class="uppercase tracking-wide">Demo panelu.</strong>
       Sygnał GEM, momentum, historia sygnałów, krzywa kapitału i Larsson Line (Bitcoin, Ether, spółki AI) są liczone automatycznie
-      z prawdziwych notowań (stan na 2026-11-26 10:38). Pozycje, transakcje, skan trendów i watchlista to
+      z prawdziwych notowań (stan na 2026-11-27 21:49). Pozycje, transakcje, skan trendów i watchlista to
       dane przykładowe - nie mój portfel. Nic tu nie jest rekomendacją inwestycyjną.
       Prawdziwy panel działa na domowym serwerze za logowaniem.
       
@@ -49,23 +51,112 @@
 
 
 
-<div class="flex items-center gap-3 mt-2" id="blok-realizacja">
-  <h2 class="text-xl font-bold text-slate-800 tracking-wide whitespace-nowrap">BLOK A: REALIZACJA</h2>
+
+
+
+<nav id="dashboard-tabs" aria-label="Sekcje panelu"
+     class="sticky top-0 z-20 -mx-2 px-2 py-2 bg-slate-50/95 backdrop-blur border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
+  <div class="flex flex-wrap items-center gap-1.5" role="tablist">
+    <button type="button" role="tab" data-tab="przeglad" aria-selected="true"
+            class="px-3.5 py-2 text-sm font-semibold rounded-lg border border-slate-300 bg-slate-900 text-white transition">
+      Przegląd (GEM / Krypto)
+    </button>
+    <button type="button" role="tab" data-tab="pozycje" aria-selected="false"
+            class="px-3.5 py-2 text-sm font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition inline-flex items-center gap-1.5">
+      Pozycje
+      <span class="px-1.5 py-0.5 text-xs rounded bg-slate-200 text-slate-700">5</span>
+      
+        <span class="w-2 h-2 rounded-full bg-rose-600" title="SELL: 1"></span>
+      
+    </button>
+    <button type="button" role="tab" data-tab="radar" aria-selected="false"
+            class="px-3.5 py-2 text-sm font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition inline-flex items-center gap-1.5">
+      Radar
+      <span class="px-1.5 py-0.5 text-xs rounded bg-slate-200 text-slate-700">6 / 4</span>
+    </button>
+    
+    <button type="button" role="tab" data-tab="ai" aria-selected="false"
+            class="px-3.5 py-2 text-sm font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition inline-flex items-center gap-1.5">
+      Spółki AI
+      <span class="px-1.5 py-0.5 text-xs rounded bg-slate-200 text-slate-700">44</span>
+    </button>
+    
+  </div>
+
+  
+</nav>
+
+
+<div data-tab-panel="przeglad" class="space-y-6">
+
+<div class="flex items-center gap-3" id="blok-realizacja">
+  <h2 class="text-lg font-bold text-slate-800 tracking-wide whitespace-nowrap">BLOK A: REALIZACJA</h2>
   <div class="h-px flex-1 bg-slate-300"></div>
-  <span class="hidden sm:inline text-xs text-slate-500 whitespace-nowrap">sygnał GEM, pozycje, exits</span>
+  <span class="hidden sm:inline text-xs text-slate-500 whitespace-nowrap">sygnał GEM, momentum, Larsson Line</span>
 </div>
 
 
-<section class="rounded-lg shadow-lg overflow-hidden">
-  
-    <div class="bg-emerald-500 text-white p-8">
-      <div class="text-sm uppercase tracking-wider opacity-80">Aktywny sygnał GEM</div>
-      <div class="text-6xl font-bold mt-2">BTC</div>
-      <div class="text-lg mt-3 opacity-90">od 2026-08-31</div>
-      <div class="text-sm mt-2 opacity-80">Sygnał według reguły z ostatniego końca miesiąca, liczony z prawdziwych notowań.</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
+  <section class="lg:col-span-5 rounded-lg shadow overflow-hidden flex flex-col">
+    
+      <div class="bg-emerald-500 text-white p-6 flex-1 flex flex-col justify-center">
+        <div class="text-xs uppercase tracking-wider opacity-80">Aktywny sygnał GEM</div>
+        <div class="text-5xl font-bold mt-1">BTC</div>
+        <div class="text-base mt-2 opacity-90">od 2026-08-31</div>
+        <div class="text-xs mt-2 opacity-80">Sygnał według reguły z ostatniego końca miesiąca, liczony z prawdziwych notowań.</div>
+      </div>
+    
+  </section>
+
+  <section class="lg:col-span-7 bg-white p-5 rounded-lg shadow border border-slate-200 flex flex-col justify-between">
+    <div>
+      <h2 class="text-base font-semibold text-slate-700 mb-3">Live momentum (3m)
+    <span class="ml-2 align-middle inline-block px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide rounded bg-emerald-100 text-emerald-800 border border-emerald-300">prawdziwe notowania</span>
+    
+  </h2>
+      
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          
+            <div class="p-3 rounded-lg border border-slate-200 bg-slate-50/50">
+              <div class="text-xs uppercase tracking-wider text-slate-500">BTC</div>
+              <div class="text-2xl font-bold mt-1 text-rose-600">-20.71%</div>
+              
+            </div>
+          
+            <div class="p-3 rounded-lg border border-slate-200 bg-slate-50/50">
+              <div class="text-xs uppercase tracking-wider text-slate-500">STOCKS</div>
+              <div class="text-2xl font-bold mt-1 text-rose-600">-0.66%</div>
+              
+            </div>
+          
+            <div class="p-3 rounded-lg border border-emerald-400 ring-2 ring-emerald-200 bg-emerald-50/30">
+              <div class="text-xs uppercase tracking-wider text-slate-500">CASH</div>
+              <div class="text-2xl font-bold mt-1 text-slate-700">+0.00%</div>
+              
+                <div class="text-[11px] text-emerald-700 font-semibold mt-1">⬆ winner</div>
+              
+            </div>
+          
+        </div>
+        <div class="text-xs text-slate-600 mt-3">
+          Sygnał gdyby koniec miesiąca dziś: <strong class="text-slate-900">CASH</strong>
+          (as_of 2026-11-27)
+        </div>
+        
+          <div class="text-[11px] text-slate-400 mt-2 border-t border-slate-100 pt-2">
+            Poglądowo, gdyby lookback był inny:
+            
+              <span class="ml-1">6M -&gt; <span class="font-mono">STOCKS</span>,</span>
+            
+              <span class="ml-1">12M -&gt; <span class="font-mono">STOCKS</span></span>
+            
+            <span class="block mt-0.5 italic">Nie jest to sygnał do wykonania (strategia działa na 3M).</span>
+          </div>
+        
+      
     </div>
-  
-</section>
+  </section>
+</div>
 
 
 
@@ -79,11 +170,19 @@
         <div class="flex items-baseline gap-x-3 gap-y-1 mt-1 flex-wrap">
           <span class="text-3xl font-bold uppercase">niebieski</span>
           <span class="text-lg font-medium">trend spadkowy: sprzedaż / nie kupuj</span>
+          
+            <span class="px-2 py-0.5 text-xs font-semibold rounded bg-white/80 text-slate-800" title="6 zmian koloru w ostatnich 180 dniach">konsolidacja (kolor mniej wiarygodny)</span>
+          
+          
+            <span class="px-2 py-0.5 text-xs font-semibold rounded bg-white/80 text-slate-800" title="Ostatnia zamknieta swieca 2026-11-26">
+              dlugi gorny knot (podaz)
+            </span>
+          
         </div>
       </div>
       <div class="text-sm md:text-right opacity-90">
-        <div>od <strong>14.11.2026</strong> (12 dni)</div>
-        <div>BTC 60 384 USD, wstęga 68 476 - 72 585</div>
+        <div>od <strong>14.11.2026</strong> (13 dni)</div>
+        <div>BTC 60 496 USD, wstęga 67 956 - 72 174</div>
       </div>
     </div>
     <div class="bg-white px-5 py-3 text-xs text-slate-600 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
@@ -100,7 +199,7 @@
         
       </div>
       <div class="whitespace-nowrap">
-        sprawdzono 26.11.2026 10:38
+        sprawdzono 27.11.2026 21:49
         <a href="https://www.tradingview.com/chart/?symbol=COINBASE:BTCUSD" target="_blank" rel="noopener" class="ml-2 text-blue-700 hover:underline">TradingView</a>
       </div>
     </div>
@@ -118,10 +217,10 @@
     <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
       <span class="text-xs uppercase tracking-wider opacity-80">Larsson Line ETH/USD (1D), prawdziwe notowania</span>
       <span class="text-lg font-bold uppercase">niebieski</span>
-      <span class="text-sm">od 08.11.2026 (18 dni)</span>
+      <span class="text-sm">od 08.11.2026 (19 dni)</span>
     </div>
     <div class="text-sm opacity-90 flex flex-wrap items-baseline gap-x-3">
-      <span>ETH 1 690 USD, wstęga 1 959 - 2 123</span>
+      <span>ETH 1 688 USD, wstęga 1 942 - 2 108</span>
       <a href="https://www.tradingview.com/chart/?symbol=COINBASE:ETHUSD" target="_blank" rel="noopener" class="underline">TradingView</a>
     </div>
   </div>
@@ -131,52 +230,212 @@
 
 
 <section>
-  <h2 class="text-lg font-semibold text-slate-700 mb-3">Live momentum (3m)
+  <h2 class="text-lg font-semibold text-slate-700 mb-3">Equity curve (kapitał startowy 10 000 PLN)
     <span class="ml-2 align-middle inline-block px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide rounded bg-emerald-100 text-emerald-800 border border-emerald-300">prawdziwe notowania</span>
     
   </h2>
-  
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      
-        <div class="bg-white p-4 rounded-lg shadow border border-slate-200">
-          <div class="text-sm uppercase tracking-wider text-slate-500">BTC</div>
-          <div class="text-3xl font-bold mt-1 text-rose-600">-18.21%</div>
-          
-        </div>
-      
-        <div class="bg-white p-4 rounded-lg shadow border border-slate-200">
-          <div class="text-sm uppercase tracking-wider text-slate-500">STOCKS</div>
-          <div class="text-3xl font-bold mt-1 text-rose-600">-1.67%</div>
-          
-        </div>
-      
-        <div class="bg-white p-4 rounded-lg shadow border border-emerald-400 ring-2 ring-emerald-200">
-          <div class="text-sm uppercase tracking-wider text-slate-500">CASH</div>
-          <div class="text-3xl font-bold mt-1 text-slate-700">+0.00%</div>
-          
-            <div class="text-xs text-emerald-700 font-semibold mt-2">⬆ winner</div>
-          
-        </div>
-      
-    </div>
-    <div class="text-sm text-slate-600 mt-3">
-      Sygnał gdyby koniec miesiąca dziś: <strong class="text-slate-900">CASH</strong>
-      (as_of 2026-11-26)
-    </div>
-    
-      <div class="text-xs text-slate-400 mt-2 border-t border-slate-100 pt-2">
-        Poglądowo, gdyby lookback był inny:
-        
-          <span class="ml-1">6M -&gt; <span class="font-mono">STOCKS</span>,</span>
-        
-          <span class="ml-1">12M -&gt; <span class="font-mono">STOCKS</span></span>
-        
-        <span class="block mt-1 italic">Nie jest to sygnał do wykonania. Strategia działa na 3M
-        i przeskakiwanie między wariantami wypada gorzej niż trzymanie się jednego.</span>
+  <div class="bg-white p-4 rounded-lg shadow border border-slate-200">
+    <div class="flex items-center gap-2 mb-3 text-sm">
+      <span class="text-slate-500 mr-2">Okres:</span>
+      <div id="equity-period-buttons" class="inline-flex rounded border border-slate-300 overflow-hidden">
+        <button type="button" data-years="2" class="px-3 py-1 hover:bg-slate-100 border-r border-slate-300">2 lata</button>
+        <button type="button" data-years="5" class="px-3 py-1 hover:bg-slate-100 border-r border-slate-300">5 lat</button>
+        <button type="button" data-years="all" class="px-3 py-1 hover:bg-slate-100">Wszystko</button>
       </div>
-    
-  
+      <span id="equity-loading" class="hidden text-xs text-slate-500 ml-2">Ładuję...</span>
+    </div>
+    <canvas id="equity-chart" height="95"></canvas>
+    <div id="equity-error" class="hidden text-sm text-rose-700 mt-2"></div>
+    <div class="text-xs text-slate-500 mt-2">
+      Symulacja od <code id="equity-start-label">-</code> do dziś.
+      
+      GEM: na koniec każdego miesiąca wybór aktywa z najwyższym momentum 3M (sygnał liczony regułą,
+      bez ręcznych decyzji), obok BTC i akcje kupione i trzymane. Bez kosztów transakcji i podatku,
+      wartości w PLN.
+      
+    </div>
+  </div>
 </section>
+
+
+<section>
+  <details id="gem-history-details" class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden">
+    <summary class="cursor-pointer select-none px-4 py-3 flex items-center justify-between gap-2 hover:bg-slate-50">
+      <h2 class="text-base font-semibold text-slate-700">Historia sygnałów GEM (20 ostatnich)
+    <span class="ml-2 align-middle inline-block px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide rounded bg-emerald-100 text-emerald-800 border border-emerald-300">prawdziwe notowania</span>
+    
+  </h2>
+      <span class="text-xs text-slate-500">14 wpisów (kliknij aby rozwinąć)</span>
+    </summary>
+    <div class="border-t border-slate-200">
+      
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="bg-slate-100 text-slate-700">
+              <tr>
+                <th class="text-left p-3">Data</th>
+                <th class="text-left p-3">Trigger</th>
+                <th class="text-left p-3">Sygnał</th>
+                <th class="text-right p-3">mom BTC</th>
+                <th class="text-right p-3">mom STOCKS</th>
+                <th class="text-right p-3">mom CASH</th>
+                <th class="text-left p-3">Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-10-31</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">BTC</td>
+                  <td class="p-3 text-right font-mono">0.269862</td>
+                  <td class="p-3 text-right font-mono">0.037891</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-09-30</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">BTC</td>
+                  <td class="p-3 text-right font-mono">0.437687</td>
+                  <td class="p-3 text-right font-mono">0.027030</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-08-31</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">BTC</td>
+                  <td class="p-3 text-right font-mono">0.070396</td>
+                  <td class="p-3 text-right font-mono">0.020281</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-07-31</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">STOCKS</td>
+                  <td class="p-3 text-right font-mono">-0.163075</td>
+                  <td class="p-3 text-right font-mono">0.057746</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-06-30</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">STOCKS</td>
+                  <td class="p-3 text-right font-mono">-0.118595</td>
+                  <td class="p-3 text-right font-mono">0.164544</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-05-31</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">BTC</td>
+                  <td class="p-3 text-right font-mono">0.114174</td>
+                  <td class="p-3 text-right font-mono">0.089172</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-04-30</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">STOCKS</td>
+                  <td class="p-3 text-right font-mono">-0.083347</td>
+                  <td class="p-3 text-right font-mono">0.047073</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-03-31</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">CASH</td>
+                  <td class="p-3 text-right font-mono">-0.209566</td>
+                  <td class="p-3 text-right font-mono">-0.026092</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-02-28</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">STOCKS</td>
+                  <td class="p-3 text-right font-mono">-0.276937</td>
+                  <td class="p-3 text-right font-mono">0.035068</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2026-01-31</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">STOCKS</td>
+                  <td class="p-3 text-right font-mono">-0.297786</td>
+                  <td class="p-3 text-right font-mono">0.011308</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2025-12-31</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">STOCKS</td>
+                  <td class="p-3 text-right font-mono">-0.232627</td>
+                  <td class="p-3 text-right font-mono">0.043687</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2025-11-30</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">STOCKS</td>
+                  <td class="p-3 text-right font-mono">-0.163079</td>
+                  <td class="p-3 text-right font-mono">0.068976</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2025-10-31</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">STOCKS</td>
+                  <td class="p-3 text-right font-mono">-0.068045</td>
+                  <td class="p-3 text-right font-mono">0.069743</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 text-slate-600">2025-09-30</td>
+                  <td class="p-3 text-xs text-slate-500">end-of-month</td>
+                  <td class="p-3 font-mono font-semibold">STOCKS</td>
+                  <td class="p-3 text-right font-mono">0.069307</td>
+                  <td class="p-3 text-right font-mono">0.074312</td>
+                  <td class="p-3 text-right font-mono">0.000000</td>
+                  <td class="p-3 text-xs text-slate-500">yfinance</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </div>
+  </details>
+</section>
+
+</div>
+
+
+<div data-tab-panel="pozycje" class="hidden space-y-6">
 
 
 <section>
@@ -209,7 +468,7 @@
   </div>
   
   </td>
-              <td class="p-3 text-slate-600">2026-08-22</td>
+              <td class="p-3 text-slate-600">2026-08-23</td>
               <td class="p-3 text-right font-mono">1512.00</td>
               <td class="p-3 text-right font-mono">1748.20</td>
               <td class="p-3 text-right font-mono text-emerald-600">+15.62%</td>
@@ -231,7 +490,7 @@
   </div>
   
   </td>
-              <td class="p-3 text-slate-600">2026-09-05</td>
+              <td class="p-3 text-slate-600">2026-09-06</td>
               <td class="p-3 text-right font-mono">118.40</td>
               <td class="p-3 text-right font-mono">147.35</td>
               <td class="p-3 text-right font-mono text-emerald-600">+24.45%</td>
@@ -253,7 +512,7 @@
   </div>
   
   </td>
-              <td class="p-3 text-slate-600">2026-09-26</td>
+              <td class="p-3 text-slate-600">2026-09-27</td>
               <td class="p-3 text-right font-mono">214.80</td>
               <td class="p-3 text-right font-mono">236.10</td>
               <td class="p-3 text-right font-mono text-emerald-600">+9.92%</td>
@@ -275,7 +534,7 @@
   </div>
   
   </td>
-              <td class="p-3 text-slate-600">2026-10-10</td>
+              <td class="p-3 text-slate-600">2026-10-11</td>
               <td class="p-3 text-right font-mono">402.10</td>
               <td class="p-3 text-right font-mono">409.90</td>
               <td class="p-3 text-right font-mono text-emerald-600">+1.94%</td>
@@ -297,7 +556,7 @@
   </div>
   
   </td>
-              <td class="p-3 text-slate-600">2026-07-16</td>
+              <td class="p-3 text-slate-600">2026-07-17</td>
               <td class="p-3 text-right font-mono">251.30</td>
               <td class="p-3 text-right font-mono">214.60</td>
               <td class="p-3 text-right font-mono text-rose-600">-14.60%</td>
@@ -318,336 +577,154 @@
 </section>
 
 
-<section>
-  <h2 class="text-lg font-semibold text-slate-700 mb-3">Equity curve (kapitał startowy 10 000 PLN)
-    <span class="ml-2 align-middle inline-block px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide rounded bg-emerald-100 text-emerald-800 border border-emerald-300">prawdziwe notowania</span>
-    
-  </h2>
-  <div class="bg-white p-4 rounded-lg shadow border border-slate-200">
-    <div class="flex items-center gap-2 mb-3 text-sm">
-      <span class="text-slate-500 mr-2">Okres:</span>
-      <div id="equity-period-buttons" class="inline-flex rounded border border-slate-300 overflow-hidden">
-        <button type="button" data-years="2" class="px-3 py-1 hover:bg-slate-100 border-r border-slate-300">2 lata</button>
-        <button type="button" data-years="5" class="px-3 py-1 hover:bg-slate-100 border-r border-slate-300">5 lat</button>
-        <button type="button" data-years="all" class="px-3 py-1 hover:bg-slate-100">Wszystko</button>
-      </div>
-      <span id="equity-loading" class="hidden text-xs text-slate-500 ml-2">Ładuję...</span>
-    </div>
-    <canvas id="equity-chart" height="120"></canvas>
-    <div id="equity-error" class="hidden text-sm text-rose-700 mt-2"></div>
-    <div class="text-xs text-slate-500 mt-2">
-      Symulacja od <code id="equity-start-label">-</code> do dziś.
-      
-      GEM: na koniec każdego miesiąca wybór aktywa z najwyższym momentum 3M (sygnał liczony regułą,
-      bez ręcznych decyzji), obok BTC i akcje kupione i trzymane. Bez kosztów transakcji i podatku,
-      wartości w PLN.
-      
-    </div>
-  </div>
-</section>
+
 
 
 <section>
-  <h2 class="text-lg font-semibold text-slate-700 mb-3">Historia zamkniętych pozycji
+  <details id="closed-positions-details" class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden">
+    <summary class="cursor-pointer select-none px-4 py-3 flex flex-wrap items-center justify-between gap-2 hover:bg-slate-50">
+      <h2 class="text-base font-semibold text-slate-700">Historia zamkniętych pozycji
     <span class="ml-2 align-middle inline-block px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide rounded bg-amber-100 text-amber-900 border border-amber-300">dane przykładowe</span>
   </h2>
-  
-    <div class="bg-white p-4 rounded-lg shadow border border-slate-200 mb-3 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-      <div><div class="text-xs uppercase text-slate-500">Trades</div><div class="font-mono text-lg">6</div></div>
-      <div><div class="text-xs uppercase text-slate-500">Win rate</div><div class="font-mono text-lg">50% (3)</div></div>
-      <div><div class="text-xs uppercase text-slate-500">Średni P&L</div><div class="font-mono text-lg text-emerald-600">+7.73%</div></div>
-      <div><div class="text-xs uppercase text-slate-500">Compound P&L</div><div class="font-mono text-lg text-emerald-600">+49.40%</div></div>
+      <span class="text-xs text-slate-500">
+        
+          6 trans. | win rate 50% | śr. +7.73% (kliknij aby rozwinąć)
+        
+      </span>
+    </summary>
+    <div class="border-t border-slate-200 p-4 space-y-3">
+      
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm bg-slate-50 p-3 rounded border border-slate-200">
+          <div><div class="text-xs uppercase text-slate-500">Trades</div><div class="font-mono text-lg">6</div></div>
+          <div><div class="text-xs uppercase text-slate-500">Win rate</div><div class="font-mono text-lg">50% (3)</div></div>
+          <div><div class="text-xs uppercase text-slate-500">Średni P&amp;L</div><div class="font-mono text-lg text-emerald-600">+7.73%</div></div>
+          <div><div class="text-xs uppercase text-slate-500">Compound P&amp;L</div><div class="font-mono text-lg text-emerald-600">+49.40%</div></div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="bg-slate-100 text-slate-700">
+              <tr>
+                <th class="text-left p-3">Ticker</th>
+                <th class="text-left p-3">Entry</th>
+                <th class="text-left p-3">Close</th>
+                <th class="text-right p-3">Entry $</th>
+                <th class="text-right p-3">Exit $</th>
+                <th class="text-right p-3">P&amp;L</th>
+                <th class="text-right p-3">Dni</th>
+                <th class="text-left p-3">Źródło</th>
+                <th class="text-left p-3">Powód</th>
+                <th class="text-right p-3"></th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 font-mono font-semibold">GE</td>
+                  <td class="p-3 text-slate-600">2026-07-30</td>
+                  <td class="p-3 text-slate-600">2026-10-25</td>
+                  <td class="p-3 text-right font-mono">241.70</td>
+                  <td class="p-3 text-right font-mono">228.40</td>
+                  <td class="p-3 text-right font-mono text-rose-600">-5.50%</td>
+                  <td class="p-3 text-right text-slate-600">87</td>
+                  <td class="p-3 text-xs text-slate-500">trend_init</td>
+                  <td class="p-3 text-xs text-slate-500">Stage 4</td>
+                  <td class="p-3 text-right">
+                    
+                  </td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 font-mono font-semibold">ETN</td>
+                  <td class="p-3 text-slate-600">2026-06-30</td>
+                  <td class="p-3 text-slate-600">2026-09-24</td>
+                  <td class="p-3 text-right font-mono">318.90</td>
+                  <td class="p-3 text-right font-mono">352.60</td>
+                  <td class="p-3 text-right font-mono text-emerald-600">+10.57%</td>
+                  <td class="p-3 text-right text-slate-600">86</td>
+                  <td class="p-3 text-xs text-slate-500">trend_init</td>
+                  <td class="p-3 text-xs text-slate-500">take profit</td>
+                  <td class="p-3 text-right">
+                    
+                  </td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 font-mono font-semibold">SAF.PA</td>
+                  <td class="p-3 text-slate-600">2026-04-01</td>
+                  <td class="p-3 text-slate-600">2026-07-29</td>
+                  <td class="p-3 text-right font-mono">201.50</td>
+                  <td class="p-3 text-right font-mono">247.80</td>
+                  <td class="p-3 text-right font-mono text-emerald-600">+22.98%</td>
+                  <td class="p-3 text-right text-slate-600">119</td>
+                  <td class="p-3 text-xs text-slate-500">trend_init</td>
+                  <td class="p-3 text-xs text-slate-500">trailing stop 20%</td>
+                  <td class="p-3 text-right">
+                    
+                  </td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 font-mono font-semibold">QQQ</td>
+                  <td class="p-3 text-slate-600">2026-05-06</td>
+                  <td class="p-3 text-slate-600">2026-06-20</td>
+                  <td class="p-3 text-right font-mono">488.10</td>
+                  <td class="p-3 text-right font-mono">471.30</td>
+                  <td class="p-3 text-right font-mono text-rose-600">-3.44%</td>
+                  <td class="p-3 text-right text-slate-600">45</td>
+                  <td class="p-3 text-xs text-slate-500">trend_init</td>
+                  <td class="p-3 text-xs text-slate-500">rebalance</td>
+                  <td class="p-3 text-right">
+                    
+                  </td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 font-mono font-semibold">PWR</td>
+                  <td class="p-3 text-slate-600">2026-02-20</td>
+                  <td class="p-3 text-slate-600">2026-05-21</td>
+                  <td class="p-3 text-right font-mono">305.20</td>
+                  <td class="p-3 text-right font-mono">289.70</td>
+                  <td class="p-3 text-right font-mono text-rose-600">-5.08%</td>
+                  <td class="p-3 text-right text-slate-600">90</td>
+                  <td class="p-3 text-xs text-slate-500">trend_init</td>
+                  <td class="p-3 text-xs text-slate-500">Stage 4</td>
+                  <td class="p-3 text-right">
+                    
+                  </td>
+                </tr>
+              
+                <tr class="border-t border-slate-100">
+                  <td class="p-3 font-mono font-semibold">ANET</td>
+                  <td class="p-3 text-slate-600">2026-01-21</td>
+                  <td class="p-3 text-slate-600">2026-04-29</td>
+                  <td class="p-3 text-right font-mono">88.60</td>
+                  <td class="p-3 text-right font-mono">112.40</td>
+                  <td class="p-3 text-right font-mono text-emerald-600">+26.86%</td>
+                  <td class="p-3 text-right text-slate-600">98</td>
+                  <td class="p-3 text-xs text-slate-500">trend_init</td>
+                  <td class="p-3 text-xs text-slate-500">trailing stop 20%</td>
+                  <td class="p-3 text-right">
+                    
+                  </td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
     </div>
-    <div class="bg-white rounded-lg shadow border border-slate-200 overflow-x-auto">
-      <table class="w-full text-sm">
-        <thead class="bg-slate-100 text-slate-700">
-          <tr>
-            <th class="text-left p-3">Ticker</th>
-            <th class="text-left p-3">Entry</th>
-            <th class="text-left p-3">Close</th>
-            <th class="text-right p-3">Entry $</th>
-            <th class="text-right p-3">Exit $</th>
-            <th class="text-right p-3">P&L</th>
-            <th class="text-right p-3">Dni</th>
-            <th class="text-left p-3">Źródło</th>
-            <th class="text-left p-3">Powód</th>
-            <th class="text-right p-3"></th>
-          </tr>
-        </thead>
-        <tbody>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold">GE</td>
-              <td class="p-3 text-slate-600">2026-07-29</td>
-              <td class="p-3 text-slate-600">2026-10-24</td>
-              <td class="p-3 text-right font-mono">241.70</td>
-              <td class="p-3 text-right font-mono">228.40</td>
-              <td class="p-3 text-right font-mono text-rose-600">-5.50%</td>
-              <td class="p-3 text-right text-slate-600">87</td>
-              <td class="p-3 text-xs text-slate-500">trend_init</td>
-              <td class="p-3 text-xs text-slate-500">Stage 4</td>
-              <td class="p-3 text-right">
-                
-              </td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold">ETN</td>
-              <td class="p-3 text-slate-600">2026-06-29</td>
-              <td class="p-3 text-slate-600">2026-09-23</td>
-              <td class="p-3 text-right font-mono">318.90</td>
-              <td class="p-3 text-right font-mono">352.60</td>
-              <td class="p-3 text-right font-mono text-emerald-600">+10.57%</td>
-              <td class="p-3 text-right text-slate-600">86</td>
-              <td class="p-3 text-xs text-slate-500">trend_init</td>
-              <td class="p-3 text-xs text-slate-500">take profit</td>
-              <td class="p-3 text-right">
-                
-              </td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold">SAF.PA</td>
-              <td class="p-3 text-slate-600">2026-03-31</td>
-              <td class="p-3 text-slate-600">2026-07-28</td>
-              <td class="p-3 text-right font-mono">201.50</td>
-              <td class="p-3 text-right font-mono">247.80</td>
-              <td class="p-3 text-right font-mono text-emerald-600">+22.98%</td>
-              <td class="p-3 text-right text-slate-600">119</td>
-              <td class="p-3 text-xs text-slate-500">trend_init</td>
-              <td class="p-3 text-xs text-slate-500">trailing stop 20%</td>
-              <td class="p-3 text-right">
-                
-              </td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold">QQQ</td>
-              <td class="p-3 text-slate-600">2026-05-05</td>
-              <td class="p-3 text-slate-600">2026-06-19</td>
-              <td class="p-3 text-right font-mono">488.10</td>
-              <td class="p-3 text-right font-mono">471.30</td>
-              <td class="p-3 text-right font-mono text-rose-600">-3.44%</td>
-              <td class="p-3 text-right text-slate-600">45</td>
-              <td class="p-3 text-xs text-slate-500">trend_init</td>
-              <td class="p-3 text-xs text-slate-500">rebalance</td>
-              <td class="p-3 text-right">
-                
-              </td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold">PWR</td>
-              <td class="p-3 text-slate-600">2026-02-19</td>
-              <td class="p-3 text-slate-600">2026-05-20</td>
-              <td class="p-3 text-right font-mono">305.20</td>
-              <td class="p-3 text-right font-mono">289.70</td>
-              <td class="p-3 text-right font-mono text-rose-600">-5.08%</td>
-              <td class="p-3 text-right text-slate-600">90</td>
-              <td class="p-3 text-xs text-slate-500">trend_init</td>
-              <td class="p-3 text-xs text-slate-500">Stage 4</td>
-              <td class="p-3 text-right">
-                
-              </td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold">ANET</td>
-              <td class="p-3 text-slate-600">2026-01-20</td>
-              <td class="p-3 text-slate-600">2026-04-28</td>
-              <td class="p-3 text-right font-mono">88.60</td>
-              <td class="p-3 text-right font-mono">112.40</td>
-              <td class="p-3 text-right font-mono text-emerald-600">+26.86%</td>
-              <td class="p-3 text-right text-slate-600">98</td>
-              <td class="p-3 text-xs text-slate-500">trend_init</td>
-              <td class="p-3 text-xs text-slate-500">trailing stop 20%</td>
-              <td class="p-3 text-right">
-                
-              </td>
-            </tr>
-          
-        </tbody>
-      </table>
-    </div>
-  
+  </details>
 </section>
 
+</div>
 
 
+<div data-tab-panel="radar" class="hidden space-y-6">
 
-
-<section>
-  <h2 class="text-lg font-semibold text-slate-700 mb-3">Historia sygnałów GEM (20 ostatnich)
-    <span class="ml-2 align-middle inline-block px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide rounded bg-emerald-100 text-emerald-800 border border-emerald-300">prawdziwe notowania</span>
-    
-  </h2>
-  
-    <div class="bg-white rounded-lg shadow border border-slate-200 overflow-x-auto">
-      <table class="w-full text-sm">
-        <thead class="bg-slate-100 text-slate-700">
-          <tr>
-            <th class="text-left p-3">Data</th>
-            <th class="text-left p-3">Trigger</th>
-            <th class="text-left p-3">Sygnał</th>
-            <th class="text-right p-3">mom BTC</th>
-            <th class="text-right p-3">mom STOCKS</th>
-            <th class="text-right p-3">mom CASH</th>
-            <th class="text-left p-3">Source</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-10-31</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">BTC</td>
-              <td class="p-3 text-right font-mono">0.269862</td>
-              <td class="p-3 text-right font-mono">0.037891</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-09-30</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">BTC</td>
-              <td class="p-3 text-right font-mono">0.437687</td>
-              <td class="p-3 text-right font-mono">0.027030</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-08-31</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">BTC</td>
-              <td class="p-3 text-right font-mono">0.070396</td>
-              <td class="p-3 text-right font-mono">0.020281</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-07-31</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">STOCKS</td>
-              <td class="p-3 text-right font-mono">-0.163075</td>
-              <td class="p-3 text-right font-mono">0.057746</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-06-30</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">STOCKS</td>
-              <td class="p-3 text-right font-mono">-0.118595</td>
-              <td class="p-3 text-right font-mono">0.164544</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-05-31</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">BTC</td>
-              <td class="p-3 text-right font-mono">0.114174</td>
-              <td class="p-3 text-right font-mono">0.089172</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-04-30</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">STOCKS</td>
-              <td class="p-3 text-right font-mono">-0.083347</td>
-              <td class="p-3 text-right font-mono">0.047073</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-03-31</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">CASH</td>
-              <td class="p-3 text-right font-mono">-0.209566</td>
-              <td class="p-3 text-right font-mono">-0.026092</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-02-28</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">STOCKS</td>
-              <td class="p-3 text-right font-mono">-0.276937</td>
-              <td class="p-3 text-right font-mono">0.035068</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2026-01-31</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">STOCKS</td>
-              <td class="p-3 text-right font-mono">-0.297786</td>
-              <td class="p-3 text-right font-mono">0.011308</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2025-12-31</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">STOCKS</td>
-              <td class="p-3 text-right font-mono">-0.232627</td>
-              <td class="p-3 text-right font-mono">0.043687</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2025-11-30</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">STOCKS</td>
-              <td class="p-3 text-right font-mono">-0.163079</td>
-              <td class="p-3 text-right font-mono">0.068976</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2025-10-31</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">STOCKS</td>
-              <td class="p-3 text-right font-mono">-0.068045</td>
-              <td class="p-3 text-right font-mono">0.069743</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-            <tr class="border-t border-slate-100">
-              <td class="p-3 text-slate-600">2025-09-30</td>
-              <td class="p-3 text-xs text-slate-500">end-of-month</td>
-              <td class="p-3 font-mono font-semibold">STOCKS</td>
-              <td class="p-3 text-right font-mono">0.069307</td>
-              <td class="p-3 text-right font-mono">0.074312</td>
-              <td class="p-3 text-right font-mono">0.000000</td>
-              <td class="p-3 text-xs text-slate-500">yfinance</td>
-            </tr>
-          
-        </tbody>
-      </table>
-    </div>
-  
-</section>
-
-
-<div class="flex items-center gap-3 mt-8" id="blok-radar">
-  <h2 class="text-xl font-bold text-slate-800 tracking-wide whitespace-nowrap">BLOK B: RADAR</h2>
+<div class="flex items-center gap-3" id="blok-radar">
+  <h2 class="text-lg font-bold text-slate-800 tracking-wide whitespace-nowrap">BLOK B: RADAR</h2>
   <div class="h-px flex-1 bg-slate-300"></div>
-  <span class="hidden sm:inline text-xs text-slate-500 whitespace-nowrap">skan trendów, scanner, watchlist</span>
+  <span class="hidden sm:inline text-xs text-slate-500 whitespace-nowrap">skan trendów, watchlist</span>
 </div>
 
 
@@ -668,14 +745,17 @@
             <th class="text-right p-3">High 26w</th>
             <th class="text-right p-3">Vol ratio</th>
             <th class="text-right p-3">RS slope 4w</th>
+            <th class="text-right p-3">Score</th>
             <th class="text-right p-3">Wiek</th>
           </tr>
         </thead>
         <tbody>
           
             
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=SMH" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SMH</a>
+            <tr class="border-t border-slate-100 ">
+              <td class="p-3 font-mono font-semibold">
+                
+                <a href="https://www.tradingview.com/chart/?symbol=SMH" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SMH</a>
   <div class="text-[11px] font-sans font-normal text-slate-500">
     NYSE/NASDAQ, USD,
     <a href="https://finance.yahoo.com/quote/SMH" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
@@ -688,7 +768,8 @@
       </div>
     
   
-  </td>
+  
+              </td>
               <td class="p-3 text-slate-700">VanEck Semiconductors</td>
               <td class="p-3 text-slate-600">2026-11-23</td>
               <td class="p-3 text-right font-mono">312.40</td>
@@ -696,12 +777,15 @@
               <td class="p-3 text-right font-mono">309.80</td>
               <td class="p-3 text-right font-mono">1.84x</td>
               <td class="p-3 text-right font-mono">+0.021</td>
+              <td class="p-3 text-right font-mono">-</td>
               <td class="p-3 text-right text-slate-600">-0w</td>
             </tr>
           
             
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=PWR" target="_blank" rel="noopener" class="text-blue-700 hover:underline">PWR</a>
+            <tr class="border-t border-slate-100 ">
+              <td class="p-3 font-mono font-semibold">
+                
+                <a href="https://www.tradingview.com/chart/?symbol=PWR" target="_blank" rel="noopener" class="text-blue-700 hover:underline">PWR</a>
   <div class="text-[11px] font-sans font-normal text-slate-500">
     NYSE/NASDAQ, USD,
     <a href="https://finance.yahoo.com/quote/PWR" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
@@ -709,7 +793,8 @@
   
     
   
-  </td>
+  
+              </td>
               <td class="p-3 text-slate-700">Quanta Services</td>
               <td class="p-3 text-slate-600">2026-11-16</td>
               <td class="p-3 text-right font-mono">361.20</td>
@@ -717,12 +802,15 @@
               <td class="p-3 text-right font-mono">355.00</td>
               <td class="p-3 text-right font-mono">1.62x</td>
               <td class="p-3 text-right font-mono">+0.017</td>
+              <td class="p-3 text-right font-mono">-</td>
               <td class="p-3 text-right text-slate-600">-1w</td>
             </tr>
           
             
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=ASML" target="_blank" rel="noopener" class="text-blue-700 hover:underline">ASML</a>
+            <tr class="border-t border-slate-100 ">
+              <td class="p-3 font-mono font-semibold">
+                
+                <a href="https://www.tradingview.com/chart/?symbol=ASML" target="_blank" rel="noopener" class="text-blue-700 hover:underline">ASML</a>
   <div class="text-[11px] font-sans font-normal text-slate-500">
     NYSE/NASDAQ, USD,
     <a href="https://finance.yahoo.com/quote/ASML" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
@@ -734,7 +822,8 @@
     <div class="text-[11px] font-sans font-normal text-slate-500 mt-1">
       EU: <a href="https://www.tradingview.com/chart/?symbol=EURONEXT:ASML" target="_blank" rel="noopener" class="hover:underline">ASML.AS</a>
     </div>
-  </td>
+  
+              </td>
               <td class="p-3 text-slate-700">ASML Holding</td>
               <td class="p-3 text-slate-600">2026-11-16</td>
               <td class="p-3 text-right font-mono">1012.50</td>
@@ -742,12 +831,15 @@
               <td class="p-3 text-right font-mono">998.20</td>
               <td class="p-3 text-right font-mono">1.71x</td>
               <td class="p-3 text-right font-mono">+0.014</td>
+              <td class="p-3 text-right font-mono">-</td>
               <td class="p-3 text-right text-slate-600">-1w</td>
             </tr>
           
             
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=EURONEXT:SAF" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SAF.PA</a>
+            <tr class="border-t border-slate-100 ">
+              <td class="p-3 font-mono font-semibold">
+                
+                <a href="https://www.tradingview.com/chart/?symbol=EURONEXT:SAF" target="_blank" rel="noopener" class="text-blue-700 hover:underline">SAF.PA</a>
   <div class="text-[11px] font-sans font-normal text-slate-500">
     Euronext Paryż, EUR,
     <a href="https://finance.yahoo.com/quote/SAF.PA" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
@@ -755,7 +847,8 @@
   
     
   
-  </td>
+  
+              </td>
               <td class="p-3 text-slate-700">Safran</td>
               <td class="p-3 text-slate-600">2026-11-09</td>
               <td class="p-3 text-right font-mono">268.90</td>
@@ -763,12 +856,15 @@
               <td class="p-3 text-right font-mono">264.10</td>
               <td class="p-3 text-right font-mono">1.55x</td>
               <td class="p-3 text-right font-mono">+0.011</td>
+              <td class="p-3 text-right font-mono">-</td>
               <td class="p-3 text-right text-slate-600">-2w</td>
             </tr>
           
             
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=QQQ" target="_blank" rel="noopener" class="text-blue-700 hover:underline">QQQ</a>
+            <tr class="border-t border-slate-100 ">
+              <td class="p-3 font-mono font-semibold">
+                
+                <a href="https://www.tradingview.com/chart/?symbol=QQQ" target="_blank" rel="noopener" class="text-blue-700 hover:underline">QQQ</a>
   <div class="text-[11px] font-sans font-normal text-slate-500">
     NYSE/NASDAQ, USD,
     <a href="https://finance.yahoo.com/quote/QQQ" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
@@ -781,7 +877,8 @@
       </div>
     
   
-  </td>
+  
+              </td>
               <td class="p-3 text-slate-700">Invesco QQQ (NASDAQ-100)</td>
               <td class="p-3 text-slate-600">2026-11-09</td>
               <td class="p-3 text-right font-mono">552.80</td>
@@ -789,12 +886,15 @@
               <td class="p-3 text-right font-mono">548.30</td>
               <td class="p-3 text-right font-mono">1.52x</td>
               <td class="p-3 text-right font-mono">+0.008</td>
+              <td class="p-3 text-right font-mono">-</td>
               <td class="p-3 text-right text-slate-600">-2w</td>
             </tr>
           
             
-            <tr class="border-t border-slate-100">
-              <td class="p-3 font-mono font-semibold"><a href="https://www.tradingview.com/chart/?symbol=VRT" target="_blank" rel="noopener" class="text-blue-700 hover:underline">VRT</a>
+            <tr class="border-t border-slate-100 ">
+              <td class="p-3 font-mono font-semibold">
+                
+                <a href="https://www.tradingview.com/chart/?symbol=VRT" target="_blank" rel="noopener" class="text-blue-700 hover:underline">VRT</a>
   <div class="text-[11px] font-sans font-normal text-slate-500">
     NYSE/NASDAQ, USD,
     <a href="https://finance.yahoo.com/quote/VRT" target="_blank" rel="noopener" class="hover:underline">Yahoo</a>
@@ -802,7 +902,8 @@
   
     
   
-  </td>
+  
+              </td>
               <td class="p-3 text-slate-700">Vertiv</td>
               <td class="p-3 text-slate-600">2026-11-02</td>
               <td class="p-3 text-right font-mono">147.35</td>
@@ -810,6 +911,7 @@
               <td class="p-3 text-right font-mono">143.90</td>
               <td class="p-3 text-right font-mono">2.05x</td>
               <td class="p-3 text-right font-mono">+0.026</td>
+              <td class="p-3 text-right font-mono">-</td>
               <td class="p-3 text-right text-slate-600">-3w</td>
             </tr>
           
@@ -838,7 +940,7 @@
             <th class="text-center p-3" title="close > MA30W">MA</th>
             <th class="text-center p-3" title="MA30W rośnie">MA↗</th>
             <th class="text-center p-3" title="close > 26w high">BRK</th>
-            <th class="text-center p-3" title="volume ≥ 1.5x">VOL</th>
+            <th class="text-center p-3" title="volume >= 1.5x">VOL</th>
             <th class="text-center p-3" title="RS vs SPY rośnie">RS</th>
             <th class="text-left p-3">Od / check</th>
           </tr>
@@ -878,7 +980,7 @@
               
                 <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
               
-              <td class="p-3 text-xs text-slate-500">2026-11-11<br>2026-11-26</td>
+              <td class="p-3 text-xs text-slate-500">2026-11-12<br>2026-11-27</td>
             </tr>
           
             <tr class="border-t border-slate-100 ">
@@ -908,7 +1010,7 @@
               
                 <td class="p-3 text-center"><span class="text-emerald-600">✓</span></td>
               
-              <td class="p-3 text-xs text-slate-500">2026-11-18<br>2026-11-26</td>
+              <td class="p-3 text-xs text-slate-500">2026-11-19<br>2026-11-27</td>
             </tr>
           
             <tr class="border-t border-slate-100 ">
@@ -938,7 +1040,7 @@
               
                 <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
               
-              <td class="p-3 text-xs text-slate-500">2026-11-22<br>2026-11-26</td>
+              <td class="p-3 text-xs text-slate-500">2026-11-23<br>2026-11-27</td>
             </tr>
           
             <tr class="border-t border-slate-100 opacity-50">
@@ -969,7 +1071,7 @@
               
                 <td class="p-3 text-center"><span class="text-slate-300">✗</span></td>
               
-              <td class="p-3 text-xs text-slate-500">2026-10-28<br>2026-11-26</td>
+              <td class="p-3 text-xs text-slate-500">2026-10-29<br>2026-11-27</td>
             </tr>
           
         </tbody>
@@ -982,12 +1084,15 @@
   
 </section>
 
+</div>
 
 
 
 
-<div class="flex items-center gap-3 mt-8" id="blok-larsson-ai">
-  <h2 class="text-xl font-bold text-slate-800 tracking-wide sm:whitespace-nowrap">BLOK C: SPÓŁKI AI
+
+<div data-tab-panel="ai" class="hidden space-y-4">
+<div class="flex items-center gap-3" id="blok-larsson-ai">
+  <h2 class="text-lg font-bold text-slate-800 tracking-wide sm:whitespace-nowrap">BLOK C: SPÓŁKI AI
     <span class="ml-2 align-middle inline-block px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide rounded bg-emerald-100 text-emerald-800 border border-emerald-300">prawdziwe notowania</span>
     
   </h2>
@@ -1019,6 +1124,7 @@
           
           <span class="opacity-90">3M -11%</span>
           <span class="opacity-90">12M +4%</span>
+          <span class="opacity-90" title="Korelacja dziennych zwrotow BTC-USD i Nasdaq-100 z ostatnich 60 sesji">kor. BTC 60d +0.66</span>
           <a href="https://www.tradingview.com/chart/?symbol=NASDAQ:NDX" target="_blank" rel="noopener" class="underline">TradingView</a>
         </div>
       </div>
@@ -1043,10 +1149,10 @@
           
             <span class="inline-flex items-center gap-1.5" data-count="wB">
               <span class="inline-block w-3 h-3 rounded-full ring-1 ring-inset bg-indigo-700 ring-indigo-900"></span>
-              <strong>10</strong> niebieskie
+              <strong>11</strong> niebieskie
             </span>
           
-          <span class="text-slate-400">3 bez koloru</span>
+          <span class="text-slate-400">2 bez koloru</span>
         </div>
       
         <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
@@ -1064,24 +1170,29 @@
           
             <span class="inline-flex items-center gap-1.5" data-count="dB">
               <span class="inline-block w-3 h-3 rounded-full ring-1 ring-inset bg-indigo-700 ring-indigo-900"></span>
-              <strong>35</strong> niebieskie
+              <strong>36</strong> niebieskie
             </span>
           
-          <span class="text-slate-400">1 bez koloru</span>
+          
         </div>
       
     </div>
     <div class="text-xs text-slate-500 md:text-right">
-      <div>zamknięcie 25.11.2026, sprawdzono 26.11.2026 10:38</div>
+      <div>zamknięcie 26.11.2026, sprawdzono 27.11.2026 21:49</div>
       <div>żółty: trend w górę, szary: przestawia się, niebieski: trend w dół</div>
     </div>
   </div>
 
-  <div class="bg-sky-50 text-sky-950 text-sm rounded-lg border border-sky-200 px-4 py-3 mb-3" id="larsson-ai-howto">
-    <strong>Jak czytać:</strong> 1W mówi, w jakim trendzie jest spółka, a 1D, co się dzieje w tej chwili w tym trendzie.
-    Ważniejsza jest kropka 1W, a 1D daje kontekst. Na przykład 1W żółta i 1D niebieska to korekta w trendzie wzrostowym,
-    a 1W niebieska i 1D żółta to odbicie w trendzie spadkowym. Kolor 1W zmienia się tylko po zamknięciu tygodnia.
-  </div>
+  <details class="bg-sky-50 text-sky-950 text-sm rounded-lg border border-sky-200 px-4 py-2.5 mb-3" id="larsson-ai-howto">
+    <summary class="cursor-pointer select-none font-semibold text-xs uppercase tracking-wide text-sky-800">
+      Jak czytać 1W vs 1D (rozwiń)
+    </summary>
+    <p class="mt-2 text-sm">
+      1W mówi, w jakim trendzie jest spółka, a 1D, co się dzieje w tej chwili w tym trendzie.
+      Ważniejsza jest kropka 1W, a 1D daje kontekst. Na przykład 1W żółta i 1D niebieska to korekta w trendzie wzrostowym,
+      a 1W niebieska i 1D żółta to odbicie w trendzie spadkowym. Kolor 1W zmienia się tylko po zamknięciu tygodnia.
+    </p>
+  </details>
 
   
   
@@ -1501,7 +1612,7 @@
                 
               </td>
               <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-24%</td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-46%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-45%</td>
             </tr>
           
         
@@ -1733,7 +1844,7 @@
                 
               </td>
               <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-39%</td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+98%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+101%</td>
             </tr>
           
             <tr class="border-t border-slate-100 " data-ticker="MU">
@@ -1806,8 +1917,8 @@
                         >+12.6%</span>
                 
               </td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-35%</td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+72%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-36%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+67%</td>
             </tr>
           
         
@@ -2112,8 +2223,8 @@
                         >+18.1%</span>
                 
               </td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-47%</td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+66%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-45%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+73%</td>
             </tr>
           
         
@@ -2191,8 +2302,8 @@
                         title="kolor tygodniowy blisko zmiany">+2.0%</span>
                 
               </td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-28%</td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-3%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-26%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-4%</td>
             </tr>
           
             <tr class="border-t border-slate-100 " data-ticker="ETN">
@@ -2344,7 +2455,7 @@
                         >-9.4%</span>
                 
               </td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-7%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-3%</td>
               <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-34%</td>
             </tr>
           
@@ -2443,7 +2554,7 @@
     <span class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2" data-ll="B">
       <span class="inline-flex items-center gap-1.5">
         <span class="inline-block w-3.5 h-3.5 rounded-full ring-1 ring-inset bg-indigo-700 ring-indigo-900" title="niebieski"></span>
-        <span class="px-1.5 py-0.5 text-[10px] font-semibold uppercase rounded bg-amber-100 text-amber-900 border border-amber-300" title="poprzednio szary">nowe</span>
+        
       </span>
       <span class="text-[11px] sm:text-xs text-slate-600">od 12.11.2026</span>
     </span>
@@ -2455,8 +2566,8 @@
                         >+19.4%</span>
                 
               </td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-8%</td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+208%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-4%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+185%</td>
             </tr>
           
             <tr class="border-t border-slate-100 " data-ticker="IBM">
@@ -2538,29 +2649,40 @@
               <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-9%</td>
             </tr>
           
-            <tr class="border-t border-slate-100 " data-ticker="CCXI">
+            <tr class="border-t border-slate-100 " data-ticker="AGLT">
               <td class="p-2 sm:p-3">
-                <a href="https://www.tradingview.com/chart/?symbol=CCXI" target="_blank" rel="noopener" class="font-medium text-slate-800 hover:text-blue-700 hover:underline">Agility Robotics (SPAC CCXI)</a>
-                <span class="block text-[11px] font-mono text-slate-400">CCXI</span>
+                <a href="https://www.tradingview.com/chart/?symbol=AGLT" target="_blank" rel="noopener" class="font-medium text-slate-800 hover:text-blue-700 hover:underline">Agility Robotics</a>
+                <span class="block text-[11px] font-mono text-slate-400">AGLT</span>
               </td>
               <td class="p-2 sm:p-3">
   
-    <span class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-[11px] sm:text-xs text-slate-400" data-ll="none">
-      <span class="inline-block w-3.5 h-3.5 rounded-full border border-dashed border-slate-300"></span>za krótko notowana
+    <span class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2" data-ll="B">
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block w-3.5 h-3.5 rounded-full ring-1 ring-inset bg-indigo-700 ring-indigo-900" title="niebieski"></span>
+        <span class="px-1.5 py-0.5 text-[10px] font-semibold uppercase rounded bg-amber-100 text-amber-900 border border-amber-300" title="poprzednio szary">nowe</span>
+      </span>
+      <span class="text-[11px] sm:text-xs text-slate-600">od 22.11.2026 <span class="text-[10px] text-slate-400" title="krótka historia notowań, kolor mało wiarygodny">(krótka hist.)</span></span>
     </span>
   
 </td>
               <td class="p-2 sm:p-3">
   
-    <span class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-[11px] sm:text-xs text-slate-400" data-ll="none">
-      <span class="inline-block w-3.5 h-3.5 rounded-full border border-dashed border-slate-300"></span>za krótko notowana
+    <span class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2" data-ll="B">
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block w-3.5 h-3.5 rounded-full ring-1 ring-inset bg-indigo-700 ring-indigo-900" title="niebieski"></span>
+        
+      </span>
+      <span class="text-[11px] sm:text-xs text-slate-600">od 30.09.2026</span>
     </span>
   
 </td>
               <td class="p-3 text-right font-mono hidden md:table-cell">
-                <span class="text-slate-300">-</span>
+                
+                  <span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-900"
+                        title="kolor tygodniowy blisko zmiany">-0.6%</span>
+                
               </td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-slate-500">-</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-56%</td>
               <td class="p-3 text-right font-mono hidden sm:table-cell text-slate-500">-</td>
             </tr>
           
@@ -2590,7 +2712,7 @@
               <td class="p-3 text-right font-mono hidden md:table-cell">
                 <span class="text-slate-300">-</span>
               </td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+16%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+8%</td>
               <td class="p-3 text-right font-mono hidden sm:table-cell text-slate-500">-</td>
             </tr>
           
@@ -2627,8 +2749,8 @@
                         >-10.2%</span>
                 
               </td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-32%</td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-50%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-35%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-52%</td>
             </tr>
           
             <tr class="border-t border-slate-100 " data-ticker="6954.T">
@@ -2665,7 +2787,7 @@
                 
               </td>
               <td class="p-3 text-right font-mono hidden sm:table-cell text-rose-600">-15%</td>
-              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+6%</td>
+              <td class="p-3 text-right font-mono hidden sm:table-cell text-emerald-600">+3%</td>
             </tr>
           
             <tr class="border-t border-slate-100 " data-ticker="TER">
@@ -2753,14 +2875,14 @@
     Przeliczenie wt-sb rano, bez maila. Opis: docs/LARSSON_AI_SPOLKI.md.
   </div>
 </section>
-
+</div>
 
 
 
 <section>
   <div class="bg-amber-50 p-3 rounded-lg border border-amber-200 text-sm text-amber-900">
-    W prawdziwym panelu w tym miejscu są przyciski ręcznego uruchomienia zadań (GEM, skan trendów, wyjścia,
-    watchlista, Larsson) i formularz dodawania pozycji. Zadania same chodzą według harmonogramu i wysyłają maile.
+    W prawdziwym panelu w górnym pasku jest menu ręcznego uruchomienia zadań (GEM, skan trendów, wyjścia,
+    watchlista, Larsson), a w zakładce Pozycje formularz dodawania i zamykania pozycji.
   </div>
 </section>
 
@@ -2769,16 +2891,70 @@
 <script>
 
 
-function promptCloseReason(form, ticker) {
+function promptCloseReason(form) {
+  var ticker = form.dataset.ticker || '';
   if (!confirm('Zamknąć pozycję ' + ticker + '?')) return false;
+  var exitPrice = prompt('Cena sprzedaży (opcjonalnie, zostaw puste dla ostatniej znanej ceny):', '');
+  if (exitPrice === null) return false;
   var reason = prompt('Powód zamknięcia (opcjonalnie):\nnp. "stop loss Stage 4", "rebalance", "take profit"', '');
   if (reason === null) return false;
+  form.elements['exit_price'].value = exitPrice.trim();
   form.elements['close_reason'].value = reason.trim();
   return true;
 }
 
+var _equityChart = null;
+
+// Zakladki panelu (URL hash + sessionStorage, zeby POST-redirect wracal na aktywna zakladke)
+(function() {
+  var nav = document.getElementById('dashboard-tabs');
+  if (!nav) return;
+  var buttons = Array.prototype.slice.call(nav.querySelectorAll('button[data-tab]'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('[data-tab-panel]'));
+  var valid = buttons.map(function(b) { return b.getAttribute('data-tab'); });
+
+  function activate(tab, updateHash) {
+    if (valid.indexOf(tab) === -1) tab = valid[0] || 'przeglad';
+    buttons.forEach(function(b) {
+      var on = b.getAttribute('data-tab') === tab;
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+      b.classList.toggle('bg-slate-900', on);
+      b.classList.toggle('text-white', on);
+      b.classList.toggle('bg-white', !on);
+      b.classList.toggle('text-slate-700', !on);
+      b.classList.toggle('hover:bg-slate-100', !on);
+    });
+    panels.forEach(function(p) {
+      p.classList.toggle('hidden', p.getAttribute('data-tab-panel') !== tab);
+    });
+    try { sessionStorage.setItem('momentum_tab', tab); } catch (e) {}
+    if (updateHash && history.replaceState) {
+      history.replaceState(null, '', '#' + tab);
+    }
+    if (tab === 'przeglad' && _equityChart) {
+      setTimeout(function() { _equityChart.resize(); }, 0);
+    }
+  }
+
+  nav.addEventListener('click', function(e) {
+    var btn = e.target.closest('button[data-tab]');
+    if (!btn) return;
+    activate(btn.getAttribute('data-tab'), true);
+  });
+
+  window.addEventListener('hashchange', function() {
+    var h = (location.hash || '').replace(/^#/, '');
+    if (h) activate(h, false);
+  });
+
+  var hashTab = (location.hash || '').replace(/^#/, '');
+  var savedTab = '';
+  try { savedTab = sessionStorage.getItem('momentum_tab') || ''; } catch (e) {}
+  activate(hashTab || savedTab || 'przeglad', false);
+})();
+
 // Plansza demo: dane wykresu wbudowane w strone zamiast /api/equity
-var DEMO_EQUITY = {"2": {"gem_meta": {"btc_ticker": "BTC-EUR", "stocks_ticker": "FWIA.DE"}, "labels": ["2024-11-30", "2024-12-31", "2025-01-31", "2025-02-28", "2025-03-31", "2025-04-30", "2025-05-31", "2025-06-30", "2025-07-31", "2025-08-31", "2025-09-30", "2025-10-31", "2025-11-30", "2025-12-31", "2026-01-31", "2026-02-28", "2026-03-31", "2026-04-30", "2026-05-31", "2026-06-30", "2026-07-31", "2026-08-31", "2026-09-30", "2026-10-31", "2026-11-26"], "series": [{"color": "#2563eb", "data": [10000.0, 9833.762334294652, 10574.85338261015, 8623.688840356363, 8025.3844035086295, 8201.357513370102, 8146.5759222614715, 8027.370344450281, 9023.82253953531, 8222.209208978675, 8475.405261991704, 8790.030968415713, 8715.008556530169, 8750.470172948228, 8813.497838267489, 9015.651486880419, 8656.888401474343, 8599.439763337594, 9040.274136030166, 7452.765222729808, 7378.527017082439, 7597.5217134416125, 8345.689121838233, 7860.94467060292, 6432.349116077008], "label": "GEM strategy (BTC=BTC-EUR, STOCKS=FWIA.DE)"}, {"color": "#f59e0b", "data": [10384.398595386081, 10211.770777160995, 10981.349261279061, 8955.182228084324, 8433.201753439314, 9397.412120978228, 10344.909300988102, 10193.53639261578, 11458.878749857764, 10440.952043201678, 10972.57781297963, 10601.600414024771, 8712.511665300095, 8329.443942311504, 7381.000777622572, 6335.268610735622, 6687.966426063785, 7331.1151309388915, 7061.654381418029, 5821.599145872874, 6204.702930707568, 7761.883798501833, 8526.236794759378, 8031.005554314175, 6571.504271195975], "label": "BTC buy-and-hold (BTC-EUR)"}, {"color": "#10b981", "data": [10003.454380867877, 9835.971900876606, 10110.556273653345, 9752.405482155087, 9075.791613319065, 8904.342731628662, 9387.932489874187, 9480.686794180632, 10013.06845663045, 9946.707470256237, 10253.008004326073, 10633.622238880567, 10542.864880879544, 10585.764096402752, 10662.010970391231, 10906.56363935057, 10472.55480170582, 11304.754748080939, 11884.272089322187, 12213.900111801286, 12092.235467718454, 12451.1330401507, 12778.747691328168, 12792.359139579748, 12626.313990453751], "label": "STOCKS buy-and-hold (FWIA.DE)"}], "start_date": "2024-11-26", "years": "2"}, "5": {"gem_meta": {"btc_ticker": "BTC-EUR", "stocks_ticker": "IWDA.AS"}, "labels": ["2021-11-30", "2021-12-31", "2022-01-31", "2022-02-28", "2022-03-31", "2022-04-30", "2022-05-31", "2022-06-30", "2022-07-31", "2022-08-31", "2022-09-30", "2022-10-31", "2022-11-30", "2022-12-31", "2023-01-31", "2023-02-28", "2023-03-31", "2023-04-30", "2023-05-31", "2023-06-30", "2023-07-31", "2023-08-31", "2023-09-30", "2023-10-31", "2023-11-30", "2023-12-31", "2024-01-31", "2024-02-29", "2024-03-31", "2024-04-30", "2024-05-31", "2024-06-30", "2024-07-31", "2024-08-31", "2024-09-30", "2024-10-31", "2024-11-30", "2024-12-31", "2025-01-31", "2025-02-28", "2025-03-31", "2025-04-30", "2025-05-31", "2025-06-30", "2025-07-31", "2025-08-31", "2025-09-30", "2025-10-31", "2025-11-30", "2025-12-31", "2026-01-31", "2026-02-28", "2026-03-31", "2026-04-30", "2026-05-31", "2026-06-30", "2026-07-31", "2026-08-31", "2026-09-30", "2026-10-31", "2026-11-26"], "series": [{"color": "#2563eb", "data": [10000.0, 7937.602915290498, 7521.6873418528085, 7716.384787187381, 7618.905316275882, 6693.89387424111, 5419.787628780496, 5516.701125437689, 5624.445311327025, 5583.7218296007195, 5422.880367887194, 5513.7310571648195, 5463.184788772986, 5463.290138788161, 5504.2155539423475, 5657.1076525985645, 6715.7964378142515, 6671.283900637303, 6334.008473742914, 6804.602426269648, 6434.5169452279015, 6478.04376185294, 6617.710310826101, 6127.4546519476, 6319.93721713436, 6980.735025296739, 7208.882586170445, 10281.400181228444, 11962.14453863468, 10315.103315601626, 11187.796443186946, 10580.682354174147, 10550.486762045568, 10507.416734192722, 10620.530258353916, 10955.819744114571, 15306.530423390423, 15052.07823462719, 16186.43150238154, 13199.875559676713, 12198.647164828466, 12466.127670405145, 12382.859222756717, 12201.665810617793, 13716.280953432244, 12497.822411084007, 12825.83454718191, 13295.21603176623, 13198.992866295757, 13197.81688778724, 13229.408481611681, 13449.270645115914, 12988.759325367773, 12902.563627823456, 13492.855573356159, 11123.45524696479, 11091.525222374255, 11403.567371322291, 12526.535856109109, 11798.954387305055, 9654.69126218816], "label": "GEM strategy (BTC=BTC-EUR, STOCKS=IWDA.AS)"}, {"color": "#f59e0b", "data": [10638.343315874137, 8444.294491794373, 7093.546126392305, 8178.692976590795, 8622.338355453518, 7575.500088694701, 6133.590169471846, 3980.2371660417225, 4912.15079889232, 4261.682941864861, 4345.651402870718, 4418.455041993759, 3478.2066902906404, 3257.646997380393, 4532.77114849766, 4658.679170600061, 5530.518933021176, 5493.862457219172, 5216.113101449641, 5603.651465411939, 5298.88273415424, 4827.912536888165, 5340.83458921654, 6581.228559625862, 6787.965586204184, 7497.699342590963, 7742.742566689532, 11042.798086500108, 12848.011408295337, 11078.997135384985, 12016.31830074493, 11364.24385735557, 11562.750288669098, 10317.475920254383, 10974.645328609271, 12687.363172846828, 17725.69419117237, 17431.026388637634, 18744.661717663224, 15286.087118398276, 14395.090284799127, 16040.95335081689, 17658.287768942508, 17399.90112690545, 19559.782747933958, 17822.228344039064, 18729.689255970694, 18096.44777690881, 14871.859549454211, 14217.980439380235, 12599.031268606548, 10814.014213854238, 11416.053278415891, 12513.878747782022, 12053.92155347198, 9937.203894425074, 10591.144560423556, 13249.181191945916, 14553.896851819314, 13708.55973947591, 11217.257698385964], "label": "BTC buy-and-hold (BTC-EUR)"}, {"color": "#10b981", "data": [10017.228272234013, 10168.121774260659, 9635.331176940748, 9693.62158192487, 10033.812704524526, 9867.119430365321, 9318.531050220035, 8885.22238903411, 9984.575344085308, 9708.990583641189, 9429.31901602168, 9569.510017616723, 9512.585142786209, 8950.457659409463, 9480.364433719602, 9547.01927841499, 9479.762531098244, 9307.96331165284, 9457.020952799956, 9617.354908510015, 9774.236065056624, 9840.354685067265, 10052.512618860243, 9307.798667075223, 9609.529485179422, 9950.318031281986, 10366.578484388263, 10672.435631769084, 11034.411255387604, 10835.518661116874, 10879.73748985227, 11500.459657292358, 11467.639166375175, 11420.825066756666, 11543.771534457475, 11908.207690409505, 12649.836270080043, 12484.505808671971, 12735.510710298438, 12306.507726670094, 11373.042488936955, 11168.293141443655, 11800.347532681863, 11899.125847340265, 12570.567154231763, 12496.590772163025, 12824.570583228608, 13293.905811074255, 13197.69212823138, 13196.516265613524, 13228.104746140683, 13447.945242606538, 12987.479305457564, 13975.852544655774, 14615.247429814324, 15042.760309028821, 14999.579867707958, 15421.568822463758, 15816.527150832793, 15961.909496589133, 15741.044908202735], "label": "STOCKS buy-and-hold (IWDA.AS)"}], "start_date": "2021-11-26", "years": "5"}, "all": {"gem_meta": {"btc_ticker": "BTC-EUR", "stocks_ticker": "IWDA.AS"}, "labels": ["2014-12-31", "2015-01-31", "2015-02-28", "2015-03-31", "2015-04-30", "2015-05-31", "2015-06-30", "2015-07-31", "2015-08-31", "2015-09-30", "2015-10-31", "2015-11-30", "2015-12-31", "2016-01-31", "2016-02-29", "2016-03-31", "2016-04-30", "2016-05-31", "2016-06-30", "2016-07-31", "2016-08-31", "2016-09-30", "2016-10-31", "2016-11-30", "2016-12-31", "2017-01-31", "2017-02-28", "2017-03-31", "2017-04-30", "2017-05-31", "2017-06-30", "2017-07-31", "2017-08-31", "2017-09-30", "2017-10-31", "2017-11-30", "2017-12-31", "2018-01-31", "2018-02-28", "2018-03-31", "2018-04-30", "2018-05-31", "2018-06-30", "2018-07-31", "2018-08-31", "2018-09-30", "2018-10-31", "2018-11-30", "2018-12-31", "2019-01-31", "2019-02-28", "2019-03-31", "2019-04-30", "2019-05-31", "2019-06-30", "2019-07-31", "2019-08-31", "2019-09-30", "2019-10-31", "2019-11-30", "2019-12-31", "2020-01-31", "2020-02-29", "2020-03-31", "2020-04-30", "2020-05-31", "2020-06-30", "2020-07-31", "2020-08-31", "2020-09-30", "2020-10-31", "2020-11-30", "2020-12-31", "2021-01-31", "2021-02-28", "2021-03-31", "2021-04-30", "2021-05-31", "2021-06-30", "2021-07-31", "2021-08-31", "2021-09-30", "2021-10-31", "2021-11-30", "2021-12-31", "2022-01-31", "2022-02-28", "2022-03-31", "2022-04-30", "2022-05-31", "2022-06-30", "2022-07-31", "2022-08-31", "2022-09-30", "2022-10-31", "2022-11-30", "2022-12-31", "2023-01-31", "2023-02-28", "2023-03-31", "2023-04-30", "2023-05-31", "2023-06-30", "2023-07-31", "2023-08-31", "2023-09-30", "2023-10-31", "2023-11-30", "2023-12-31", "2024-01-31", "2024-02-29", "2024-03-31", "2024-04-30", "2024-05-31", "2024-06-30", "2024-07-31", "2024-08-31", "2024-09-30", "2024-10-31", "2024-11-30", "2024-12-31", "2025-01-31", "2025-02-28", "2025-03-31", "2025-04-30", "2025-05-31", "2025-06-30", "2025-07-31", "2025-08-31", "2025-09-30", "2025-10-31", "2025-11-30", "2025-12-31", "2026-01-31", "2026-02-28", "2026-03-31", "2026-04-30", "2026-05-31", "2026-06-30", "2026-07-31", "2026-08-31", "2026-09-30", "2026-10-31", "2026-11-26"], "series": [{"color": "#2563eb", "data": [10000.0, 10345.994567264343, 10838.372460912913, 11009.699836271577, 10598.62528219054, 11145.83525860948, 10868.430241308715, 11776.122258469428, 9483.635850196137, 9528.584738444424, 9625.978289428247, 12004.324218867843, 13312.529157061888, 11969.67093200332, 13825.509470415254, 12331.201012422827, 12687.151988380236, 15479.898361827069, 19762.980293276483, 17994.889361814945, 16593.012739138772, 17217.44331240123, 17432.689143865406, 19650.61667017785, 25458.258769288157, 24515.446653522464, 30312.005171740217, 26680.444730393683, 32828.376611693806, 53439.29102709633, 57985.413640361636, 65167.56880874996, 105773.47558441595, 99784.15756316105, 148508.03846437973, 227413.2633713919, 310319.81145468174, 215448.93871004865, 224052.18592610507, 217774.54905100007, 217915.94847389706, 223046.93217875445, 226335.97494582454, 227019.89651412633, 233092.40508917446, 233017.63327326148, 224857.84533524144, 222599.1444972223, 223151.60094383534, 222443.35836527726, 223938.7764830801, 228498.86726542324, 236707.01063065385, 379698.1460687138, 467883.3983351874, 452519.50691214827, 443390.45386837854, 385386.88666455064, 373944.3736737853, 395998.8560181955, 392631.57032483816, 400389.209290003, 368209.4065737919, 289717.53566036193, 290042.89598620933, 284249.96109998337, 271552.68380189873, 317440.26587931754, 321485.1666176531, 312239.9316228851, 408910.75138910237, 552881.2976887895, 814988.912092876, 928961.2543795033, 1264184.6275760338, 1752526.637874504, 1644472.1344896255, 1025316.0730437009, 1082582.2811052378, 1116557.3447756348, 1146036.0100932512, 1103372.624652455, 1543876.6499269158, 1482937.334288786, 1177096.7707843785, 1115419.0976080906, 1144291.5086658194, 1129835.9139916813, 992662.5137879144, 803720.5418635088, 818092.2061024512, 834069.9936832357, 828030.9565398192, 804179.1756921625, 817651.7635897284, 810156.0687390055, 810171.6914860725, 816240.6740914135, 838913.6142129204, 995910.5267118387, 989309.5963894773, 939293.7641414896, 1009079.8982907312, 954198.5406192282, 960653.2947608292, 981364.9687431864, 908663.1267534588, 937207.0849649709, 1035199.2589789899, 1069032.1125536442, 1524667.2177507137, 1773911.0734500063, 1529665.1813751685, 1659080.1034025205, 1569048.88852554, 1564571.0714356974, 1558184.0562065134, 1574958.0830056746, 1624679.412628571, 2269862.542327279, 2232128.87727643, 2400346.3583789705, 1957458.827541068, 1808982.9308540176, 1848648.6136454276, 1836300.424666815, 1809430.5771080167, 2034038.5113438854, 1853348.745070756, 1901990.8893426952, 1971597.2220940932, 1957327.9296441323, 1957153.5394006718, 1961838.3747938666, 1994442.5558596603, 1926151.6129679482, 1913369.331173595, 2000905.9275896358, 1649538.7072014564, 1644803.6846464502, 1691077.5799011248, 1857606.7690331326, 1749710.996650512, 1431730.2123730537], "label": "GEM strategy (BTC=BTC-EUR, STOCKS=IWDA.AS)"}, {"color": "#f59e0b", "data": [10356.936452649787, 7422.834014687993, 8621.143864420972, 8509.046455957727, 7720.016953528248, 7961.194072175155, 9058.45224189887, 9814.981437490698, 7904.275090440039, 8189.130033216531, 11173.154288476482, 13933.769908208675, 15452.241608008979, 13893.54682551532, 16047.672847901023, 14313.185354400093, 15734.761568865524, 19198.3598885472, 24510.29065385969, 22317.482585973336, 20578.85799733607, 21353.284456134184, 25344.30081232839, 28568.80748154684, 37012.17655418303, 35641.48074963573, 44068.73609444139, 38789.036589444055, 47727.13177874571, 77692.0563322785, 84301.38080823692, 94743.06880979853, 153777.46720851, 145069.9708298001, 215906.5861169546, 330621.97736865235, 451154.64313204575, 313227.7910368121, 325735.5162424377, 217798.66761196931, 294575.93305334623, 252687.5501671669, 218780.9696526655, 260152.30425731366, 238711.4823744016, 223048.99346853688, 221291.25957878464, 139264.1359151636, 128109.57799958417, 118424.98959693604, 133787.13523665565, 143773.81342104543, 187424.38236511505, 300644.625279603, 370469.62283975247, 358304.508452072, 351076.13307042065, 305148.964588225, 321273.9146589391, 271519.4582765257, 249580.185867226, 331122.8968340915, 308449.2827284717, 242696.58643386673, 329204.0970235726, 347029.7817622508, 331528.1670824191, 387550.54095469805, 392488.8037957642, 381201.65402744274, 499223.3183275059, 674991.3890397428, 994988.4362614306, 1134132.8601255685, 1543394.1088934378, 2139591.9785550875, 2007672.4152841785, 1251768.7309041615, 1221979.0348588217, 1466551.1824066471, 1665385.9814840348, 1603388.7986642988, 2243516.3531376375, 2154961.1235539583, 1710522.5696659582, 1436907.5782412963, 1656720.871165903, 1746588.1104255128, 1534534.8141056157, 1242453.63874483, 806258.6533136066, 995032.1859656653, 863269.852076326, 880278.9637114309, 895026.4678391932, 704564.6088594693, 659886.828726602, 918182.9648610905, 943687.5838339886, 1120292.2240680158, 1112866.8874404656, 1056604.4557813578, 1135106.3506185275, 1073370.7261858012, 977968.4219617496, 1081868.7238566724, 1333129.7242545702, 1375007.5093426537, 1518775.0686021147, 1568412.3669899933, 2236889.6984321866, 2602563.6020357357, 2244222.3761565587, 2434091.288228702, 2302003.5154012935, 2342214.0660062716, 2089964.4654422747, 2223084.302295122, 2570021.815060079, 3590613.7577817, 3530924.232827387, 3797021.404212436, 3096433.5793012073, 2915948.3777425406, 3249343.4202459385, 3576959.5434862785, 3524619.329234624, 3962136.7872254667, 3610168.2448241077, 3793988.5003181654, 3665715.635955541, 3012525.372837635, 2880072.0368364463, 2552128.820450358, 2190545.9833809617, 2312498.315663308, 2534879.8591693607, 2441708.409178827, 2012934.4798791576, 2145400.2849857607, 2683826.7519494602, 2948117.1062684297, 2776880.9880770594, 2272229.193509709], "label": "BTC buy-and-hold (BTC-EUR)"}, {"color": "#10b981", "data": [10758.109315842827, 11130.334053574581, 11660.039574032156, 11844.35543732265, 11402.116938346138, 11990.811412849613, 11692.37606276112, 11903.98667779328, 11138.882656717367, 10801.053677578855, 11948.104520185017, 12380.892852376403, 11862.893452222794, 11572.528023293635, 11351.31330573074, 11250.974447933226, 11598.261407315278, 12075.531302435047, 11998.511489978166, 12308.276973758131, 12342.875256103247, 12192.003063052332, 12344.422780016368, 13312.148934792387, 13577.748353108222, 13261.909864403828, 13857.260542681426, 13595.854188430467, 13527.582342703212, 13234.169590780459, 13315.367450313675, 13254.33678646257, 13141.25648948344, 13721.084845782101, 13991.528155416972, 13781.944966746447, 13827.089141183436, 13966.215766403064, 13754.306482441129, 13368.929561395844, 13887.512720225184, 14730.10437525063, 14947.314012614206, 14992.480453538385, 15393.511233277499, 15388.573274068796, 14849.69777000842, 14763.321791036646, 13627.609251844633, 14588.282775140477, 15267.49285092974, 15578.386544788407, 16137.993827261587, 15354.33817347058, 15816.028517705889, 16568.865693641117, 16623.257108102105, 17153.92201401844, 16644.605318822138, 17626.27045400578, 17476.38949494489, 17821.68908459382, 16389.33669970101, 15344.064609833431, 16817.85626788263, 16891.43842598717, 17186.695678533586, 16953.665982649127, 17852.28172595702, 18221.69218157455, 18113.310976020137, 19243.93766948997, 19981.921478687273, 19922.214385486404, 20449.232990874723, 22376.99739707442, 22393.89241798195, 21904.153232592478, 23127.54944124234, 23853.369527641924, 24483.131626555067, 24413.247353602717, 25625.333203037902, 26156.581819102514, 26550.588836260235, 25159.387550583753, 25311.59310144076, 26199.88641877232, 25764.623674852948, 24332.171856813366, 23200.733784202905, 26071.319812133752, 25351.724017892477, 24621.45691784117, 24987.517998198768, 24838.878064518347, 23371.073487032067, 24754.7446505573, 24928.791088507307, 24753.172986746227, 24304.577804749893, 24693.79109613847, 25112.448644607743, 25522.09038337703, 25694.736653090997, 26248.71487970379, 24304.14789147963, 25092.01521531442, 25981.86850076388, 27068.79098109814, 27867.43280925721, 28812.608935665576, 28293.26862776065, 28408.731047137495, 30029.535696721112, 29943.83615661999, 29821.597070748976, 30142.629920793894, 31094.23088983846, 33030.741479030716, 32599.037256716358, 33254.451116514945, 32134.255855215255, 29696.829133720606, 29162.195908384118, 30812.590802984858, 31070.516748076585, 32823.75716579903, 32630.5930252128, 33487.0006591418, 34712.50984732306, 34461.280565229885, 34458.21020026103, 34540.692764598716, 35114.731388526256, 33912.38133393767, 36493.18161085238, 38162.74370665909, 39279.048067506024, 39166.29704340042, 40268.177555839415, 41299.47678855788, 41679.093297085405, 41102.380605703074], "label": "STOCKS buy-and-hold (IWDA.AS)"}], "start_date": "2014-12-17", "years": "all"}};
+var DEMO_EQUITY = {"2": {"gem_meta": {"btc_ticker": "BTC-EUR", "stocks_ticker": "FWIA.DE"}, "labels": ["2024-11-30", "2024-12-31", "2025-01-31", "2025-02-28", "2025-03-31", "2025-04-30", "2025-05-31", "2025-06-30", "2025-07-31", "2025-08-31", "2025-09-30", "2025-10-31", "2025-11-30", "2025-12-31", "2026-01-31", "2026-02-28", "2026-03-31", "2026-04-30", "2026-05-31", "2026-06-30", "2026-07-31", "2026-08-31", "2026-09-30", "2026-10-31", "2026-11-27"], "series": [{"color": "#2563eb", "data": [10000.0, 9833.762334294652, 10574.85338261015, 8623.688840356363, 8025.3844035086295, 8201.357513370102, 8146.5759222614715, 8027.370344450281, 9023.82253953531, 8222.209208978675, 8475.405261991704, 8790.030968415713, 8715.008556530169, 8750.470172948228, 8813.497838267489, 9015.651486880419, 8656.888401474343, 8599.439763337594, 9040.274136030166, 7452.765222729808, 7378.527017082439, 7597.5217134416125, 8345.689121838233, 7860.94467060292, 6319.721470206867], "label": "GEM strategy (BTC=BTC-EUR, STOCKS=FWIA.DE)"}, {"color": "#f59e0b", "data": [10029.830811885962, 9863.097245727213, 10606.39902880798, 8649.414004312339, 8145.256175651609, 9076.544277186787, 9991.689850899695, 9845.485461061262, 11067.623618189486, 10084.453283106519, 10597.927075270143, 10239.616431435268, 8415.029252475828, 8045.041099981656, 7128.981841552737, 6118.95544357884, 6459.610646956244, 7080.799504214382, 6820.539297201618, 5622.8248512791115, 5992.847834313719, 7496.859887011853, 8235.11460273776, 7756.7926750112265, 6235.989599511072], "label": "BTC buy-and-hold (BTC-EUR)"}, {"color": "#10b981", "data": [10083.802634885047, 9914.974927102116, 10191.764775516871, 9830.737298658125, 9148.68883283841, 8975.862865016303, 9463.336840778724, 9556.836152371636, 10093.493931392784, 10026.599930203189, 10335.360685730537, 10719.03203316186, 10627.545707448591, 10670.789491651252, 10747.648784406889, 10994.165712832806, 10556.670894145404, 11395.55511278674, 11979.727166767063, 12312.002778276206, 12189.360917588441, 12551.141173563594, 12881.387242270479, 12895.108018366225, 12875.450679058074], "label": "STOCKS buy-and-hold (FWIA.DE)"}], "start_date": "2024-11-27", "years": "2"}, "5": {"gem_meta": {"btc_ticker": "BTC-EUR", "stocks_ticker": "IWDA.AS"}, "labels": ["2021-11-30", "2021-12-31", "2022-01-31", "2022-02-28", "2022-03-31", "2022-04-30", "2022-05-31", "2022-06-30", "2022-07-31", "2022-08-31", "2022-09-30", "2022-10-31", "2022-11-30", "2022-12-31", "2023-01-31", "2023-02-28", "2023-03-31", "2023-04-30", "2023-05-31", "2023-06-30", "2023-07-31", "2023-08-31", "2023-09-30", "2023-10-31", "2023-11-30", "2023-12-31", "2024-01-31", "2024-02-29", "2024-03-31", "2024-04-30", "2024-05-31", "2024-06-30", "2024-07-31", "2024-08-31", "2024-09-30", "2024-10-31", "2024-11-30", "2024-12-31", "2025-01-31", "2025-02-28", "2025-03-31", "2025-04-30", "2025-05-31", "2025-06-30", "2025-07-31", "2025-08-31", "2025-09-30", "2025-10-31", "2025-11-30", "2025-12-31", "2026-01-31", "2026-02-28", "2026-03-31", "2026-04-30", "2026-05-31", "2026-06-30", "2026-07-31", "2026-08-31", "2026-09-30", "2026-10-31", "2026-11-27"], "series": [{"color": "#2563eb", "data": [10000.0, 7937.602915290498, 7521.6873418528085, 7716.384787187381, 7618.905316275882, 6693.89387424111, 5419.787628780496, 5516.701125437689, 5624.445311327025, 5583.7218296007195, 5422.880367887194, 5513.7310571648195, 5463.184788772986, 5463.290138788161, 5504.2155539423475, 5657.1076525985645, 6715.7964378142515, 6671.283900637303, 6334.008473742914, 6804.602426269648, 6434.5169452279015, 6478.04376185294, 6617.710310826101, 6127.4546519476, 6319.93721713436, 6980.735025296739, 7208.882586170445, 10281.400181228444, 11962.14453863468, 10315.103315601626, 11187.796443186946, 10580.682354174147, 10550.486762045568, 10507.416734192722, 10620.530258353916, 10955.819744114571, 15306.530423390423, 15052.07823462719, 16186.43150238154, 13199.875559676713, 12198.647164828466, 12466.127670405145, 12382.859222756717, 12201.665810617793, 13716.280953432244, 12497.822411084007, 12825.83454718191, 13295.21603176623, 13198.992866295757, 13197.81688778724, 13229.408481611681, 13449.270645115914, 12988.759325367773, 12902.563627823456, 13492.855573356159, 11123.45524696479, 11091.525222374255, 11403.567371322291, 12526.535856109109, 11798.954387305055, 9485.641801588226], "label": "GEM strategy (BTC=BTC-EUR, STOCKS=IWDA.AS)"}, {"color": "#f59e0b", "data": [10396.65632804738, 8252.452957878228, 6932.391541943078, 7992.885505335138, 8426.45193561565, 7403.396242883863, 5994.244325047793, 3889.8122283485272, 4800.55420014714, 4164.863983996199, 4246.924809216069, 4318.074460333645, 3399.1871218244814, 3183.6382098443746, 4429.793478680052, 4552.841061924484, 5404.873950306035, 5369.0502539094205, 5097.610941271004, 5476.345022736271, 5178.500173746175, 4718.2297033975, 5219.498946436276, 6431.713051473198, 6633.753327087353, 7327.363011459636, 7566.839226019102, 10791.922501133084, 12556.124120525514, 10827.29916265675, 11743.325816046576, 11106.06551273356, 11300.062179695262, 10083.078551876495, 10725.318070296342, 12399.125568770454, 17322.99336558328, 17035.019967570897, 18318.811498897154, 14938.810456834783, 14068.055716809964, 15676.527275993425, 17257.118314795865, 17004.60182446894, 19115.414218499493, 17417.334409247156, 18304.17918877328, 17685.32399346792, 14533.993508552256, 13894.969537838258, 12312.800431113179, 10568.336250278624, 11156.697902507587, 12229.58244611372, 11780.074780035782, 9711.445728388055, 10350.52985656953, 12948.179936546103, 14223.254440043707, 13397.122101819179, 10770.47145522726], "label": "BTC buy-and-hold (BTC-EUR)"}, {"color": "#10b981", "data": [10017.228272234013, 10168.121774260659, 9635.331176940748, 9693.62158192487, 10033.812704524526, 9867.119430365321, 9318.531050220035, 8885.22238903411, 9984.575344085308, 9708.990583641189, 9429.31901602168, 9569.510017616723, 9512.585142786209, 8950.457659409463, 9480.364433719602, 9547.01927841499, 9479.762531098244, 9307.96331165284, 9457.020952799956, 9617.354908510015, 9774.236065056624, 9840.354685067265, 10052.512618860243, 9307.798667075223, 9609.529485179422, 9950.318031281986, 10366.578484388263, 10672.435631769084, 11034.411255387604, 10835.518661116874, 10879.73748985227, 11500.459657292358, 11467.639166375175, 11420.825066756666, 11543.771534457475, 11908.207690409505, 12649.836270080043, 12484.505808671971, 12735.510710298438, 12306.507726670094, 11373.042488936955, 11168.293141443655, 11800.347532681863, 11899.125847340265, 12570.567154231763, 12496.590772163025, 12824.570583228608, 13293.905811074255, 13197.69212823138, 13196.516265613524, 13228.104746140683, 13447.945242606538, 12987.479305457564, 13975.852544655774, 14615.247429814324, 15042.760309028821, 14999.579867707958, 15421.568822463758, 15816.527150832793, 15961.909496589133, 15938.398396695251], "label": "STOCKS buy-and-hold (IWDA.AS)"}], "start_date": "2021-11-27", "years": "5"}, "all": {"gem_meta": {"btc_ticker": "BTC-EUR", "stocks_ticker": "IWDA.AS"}, "labels": ["2014-12-31", "2015-01-31", "2015-02-28", "2015-03-31", "2015-04-30", "2015-05-31", "2015-06-30", "2015-07-31", "2015-08-31", "2015-09-30", "2015-10-31", "2015-11-30", "2015-12-31", "2016-01-31", "2016-02-29", "2016-03-31", "2016-04-30", "2016-05-31", "2016-06-30", "2016-07-31", "2016-08-31", "2016-09-30", "2016-10-31", "2016-11-30", "2016-12-31", "2017-01-31", "2017-02-28", "2017-03-31", "2017-04-30", "2017-05-31", "2017-06-30", "2017-07-31", "2017-08-31", "2017-09-30", "2017-10-31", "2017-11-30", "2017-12-31", "2018-01-31", "2018-02-28", "2018-03-31", "2018-04-30", "2018-05-31", "2018-06-30", "2018-07-31", "2018-08-31", "2018-09-30", "2018-10-31", "2018-11-30", "2018-12-31", "2019-01-31", "2019-02-28", "2019-03-31", "2019-04-30", "2019-05-31", "2019-06-30", "2019-07-31", "2019-08-31", "2019-09-30", "2019-10-31", "2019-11-30", "2019-12-31", "2020-01-31", "2020-02-29", "2020-03-31", "2020-04-30", "2020-05-31", "2020-06-30", "2020-07-31", "2020-08-31", "2020-09-30", "2020-10-31", "2020-11-30", "2020-12-31", "2021-01-31", "2021-02-28", "2021-03-31", "2021-04-30", "2021-05-31", "2021-06-30", "2021-07-31", "2021-08-31", "2021-09-30", "2021-10-31", "2021-11-30", "2021-12-31", "2022-01-31", "2022-02-28", "2022-03-31", "2022-04-30", "2022-05-31", "2022-06-30", "2022-07-31", "2022-08-31", "2022-09-30", "2022-10-31", "2022-11-30", "2022-12-31", "2023-01-31", "2023-02-28", "2023-03-31", "2023-04-30", "2023-05-31", "2023-06-30", "2023-07-31", "2023-08-31", "2023-09-30", "2023-10-31", "2023-11-30", "2023-12-31", "2024-01-31", "2024-02-29", "2024-03-31", "2024-04-30", "2024-05-31", "2024-06-30", "2024-07-31", "2024-08-31", "2024-09-30", "2024-10-31", "2024-11-30", "2024-12-31", "2025-01-31", "2025-02-28", "2025-03-31", "2025-04-30", "2025-05-31", "2025-06-30", "2025-07-31", "2025-08-31", "2025-09-30", "2025-10-31", "2025-11-30", "2025-12-31", "2026-01-31", "2026-02-28", "2026-03-31", "2026-04-30", "2026-05-31", "2026-06-30", "2026-07-31", "2026-08-31", "2026-09-30", "2026-10-31", "2026-11-27"], "series": [{"color": "#2563eb", "data": [10000.0, 10345.994567264343, 10838.372460912913, 11009.699836271577, 10598.62528219054, 11145.83525860948, 10868.430241308715, 11776.122258469428, 9483.635850196137, 9528.584738444424, 9625.978289428247, 12004.324218867843, 13312.529157061888, 11969.67093200332, 13825.509470415254, 12331.201012422827, 12687.151988380236, 15479.898361827069, 19762.980293276483, 17994.889361814945, 16593.012739138772, 17217.44331240123, 17432.689143865406, 19650.61667017785, 25458.258769288157, 24515.446653522464, 30312.005171740217, 26680.444730393683, 32828.376611693806, 53439.29102709633, 57985.413640361636, 65167.56880874996, 105773.47558441595, 99784.15756316105, 148508.03846437973, 227413.2633713919, 310319.81145468174, 215448.93871004865, 224052.18592610507, 217774.54905100007, 217915.94847389706, 223046.93217875445, 226335.97494582454, 227019.89651412633, 233092.40508917446, 233017.63327326148, 224857.84533524144, 222599.1444972223, 223151.60094383534, 222443.35836527726, 223938.7764830801, 228498.86726542324, 236707.01063065385, 379698.1460687138, 467883.3983351874, 452519.50691214827, 443390.45386837854, 385386.88666455064, 373944.3736737853, 395998.8560181955, 392631.57032483816, 400389.209290003, 368209.4065737919, 289717.53566036193, 290042.89598620933, 284249.96109998337, 271552.68380189873, 317440.26587931754, 321485.1666176531, 312239.9316228851, 408910.75138910237, 552881.2976887895, 814988.912092876, 928961.2543795033, 1264184.6275760338, 1752526.637874504, 1644472.1344896255, 1025316.0730437009, 1082582.2811052378, 1116557.3447756348, 1146036.0100932512, 1103372.624652455, 1543876.6499269158, 1482937.334288786, 1177096.7707843785, 1115419.0976080906, 1144291.5086658194, 1129835.9139916813, 992662.5137879144, 803720.5418635088, 818092.2061024512, 834069.9936832357, 828030.9565398192, 804179.1756921625, 817651.7635897284, 810156.0687390055, 810171.6914860725, 816240.6740914135, 838913.6142129204, 995910.5267118387, 989309.5963894773, 939293.7641414896, 1009079.8982907312, 954198.5406192282, 960653.2947608292, 981364.9687431864, 908663.1267534588, 937207.0849649709, 1035199.2589789899, 1069032.1125536442, 1524667.2177507137, 1773911.0734500063, 1529665.1813751685, 1659080.1034025205, 1569048.88852554, 1564571.0714356974, 1558184.0562065134, 1574958.0830056746, 1624679.412628571, 2269862.542327279, 2232128.87727643, 2400346.3583789705, 1957458.827541068, 1808982.9308540176, 1848648.6136454276, 1836300.424666815, 1809430.5771080167, 2034038.5113438854, 1853348.745070756, 1901990.8893426952, 1971597.2220940932, 1957327.9296441323, 1957153.5394006718, 1961838.3747938666, 1994442.5558596603, 1926151.6129679482, 1913369.331173595, 2000905.9275896358, 1649538.7072014564, 1644803.6846464502, 1691077.5799011248, 1857606.7690331326, 1749710.996650512, 1406661.2367265513], "label": "GEM strategy (BTC=BTC-EUR, STOCKS=IWDA.AS)"}, {"color": "#f59e0b", "data": [10356.936452649787, 7422.834014687993, 8621.143864420972, 8509.046455957727, 7720.016953528248, 7961.194072175155, 9058.45224189887, 9814.981437490698, 7904.275090440039, 8189.130033216531, 11173.154288476482, 13933.769908208675, 15452.241608008979, 13893.54682551532, 16047.672847901023, 14313.185354400093, 15734.761568865524, 19198.3598885472, 24510.29065385969, 22317.482585973336, 20578.85799733607, 21353.284456134184, 25344.30081232839, 28568.80748154684, 37012.17655418303, 35641.48074963573, 44068.73609444139, 38789.036589444055, 47727.13177874571, 77692.0563322785, 84301.38080823692, 94743.06880979853, 153777.46720851, 145069.9708298001, 215906.5861169546, 330621.97736865235, 451154.64313204575, 313227.7910368121, 325735.5162424377, 217798.66761196931, 294575.93305334623, 252687.5501671669, 218780.9696526655, 260152.30425731366, 238711.4823744016, 223048.99346853688, 221291.25957878464, 139264.1359151636, 128109.57799958417, 118424.98959693604, 133787.13523665565, 143773.81342104543, 187424.38236511505, 300644.625279603, 370469.62283975247, 358304.508452072, 351076.13307042065, 305148.964588225, 321273.9146589391, 271519.4582765257, 249580.185867226, 331122.8968340915, 308449.2827284717, 242696.58643386673, 329204.0970235726, 347029.7817622508, 331528.1670824191, 387550.54095469805, 392488.8037957642, 381201.65402744274, 499223.3183275059, 674991.3890397428, 994988.4362614306, 1134132.8601255685, 1543394.1088934378, 2139591.9785550875, 2007672.4152841785, 1251768.7309041615, 1221979.0348588217, 1466551.1824066471, 1665385.9814840348, 1603388.7986642988, 2243516.3531376375, 2154961.1235539583, 1710522.5696659582, 1436907.5782412963, 1656720.871165903, 1746588.1104255128, 1534534.8141056157, 1242453.63874483, 806258.6533136066, 995032.1859656653, 863269.852076326, 880278.9637114309, 895026.4678391932, 704564.6088594693, 659886.828726602, 918182.9648610905, 943687.5838339886, 1120292.2240680158, 1112866.8874404656, 1056604.4557813578, 1135106.3506185275, 1073370.7261858012, 977968.4219617496, 1081868.7238566724, 1333129.7242545702, 1375007.5093426537, 1518775.0686021147, 1568412.3669899933, 2236889.6984321866, 2602563.6020357357, 2244222.3761565587, 2434091.288228702, 2302003.5154012935, 2342214.0660062716, 2089964.4654422747, 2223084.302295122, 2570021.815060079, 3590613.7577817, 3530924.232827387, 3797021.404212436, 3096433.5793012073, 2915948.3777425406, 3249343.4202459385, 3576959.5434862785, 3524619.329234624, 3962136.7872254667, 3610168.2448241077, 3793988.5003181654, 3665715.635955541, 3012525.372837635, 2880072.0368364463, 2552128.820450358, 2190545.9833809617, 2312498.315663308, 2534879.8591693607, 2441708.409178827, 2012934.4798791576, 2145400.2849857607, 2683826.7519494602, 2948117.1062684297, 2776880.9880770594, 2232443.4448937373], "label": "BTC buy-and-hold (BTC-EUR)"}, {"color": "#10b981", "data": [10758.109315842827, 11130.334053574581, 11660.039574032156, 11844.35543732265, 11402.116938346138, 11990.811412849613, 11692.37606276112, 11903.98667779328, 11138.882656717367, 10801.053677578855, 11948.104520185017, 12380.892852376403, 11862.893452222794, 11572.528023293635, 11351.31330573074, 11250.974447933226, 11598.261407315278, 12075.531302435047, 11998.511489978166, 12308.276973758131, 12342.875256103247, 12192.003063052332, 12344.422780016368, 13312.148934792387, 13577.748353108222, 13261.909864403828, 13857.260542681426, 13595.854188430467, 13527.582342703212, 13234.169590780459, 13315.367450313675, 13254.33678646257, 13141.25648948344, 13721.084845782101, 13991.528155416972, 13781.944966746447, 13827.089141183436, 13966.215766403064, 13754.306482441129, 13368.929561395844, 13887.512720225184, 14730.10437525063, 14947.314012614206, 14992.480453538385, 15393.511233277499, 15388.573274068796, 14849.69777000842, 14763.321791036646, 13627.609251844633, 14588.282775140477, 15267.49285092974, 15578.386544788407, 16137.993827261587, 15354.33817347058, 15816.028517705889, 16568.865693641117, 16623.257108102105, 17153.92201401844, 16644.605318822138, 17626.27045400578, 17476.38949494489, 17821.68908459382, 16389.33669970101, 15344.064609833431, 16817.85626788263, 16891.43842598717, 17186.695678533586, 16953.665982649127, 17852.28172595702, 18221.69218157455, 18113.310976020137, 19243.93766948997, 19981.921478687273, 19922.214385486404, 20449.232990874723, 22376.99739707442, 22393.89241798195, 21904.153232592478, 23127.54944124234, 23853.369527641924, 24483.131626555067, 24413.247353602717, 25625.333203037902, 26156.581819102514, 26550.588836260235, 25159.387550583753, 25311.59310144076, 26199.88641877232, 25764.623674852948, 24332.171856813366, 23200.733784202905, 26071.319812133752, 25351.724017892477, 24621.45691784117, 24987.517998198768, 24838.878064518347, 23371.073487032067, 24754.7446505573, 24928.791088507307, 24753.172986746227, 24304.577804749893, 24693.79109613847, 25112.448644607743, 25522.09038337703, 25694.736653090997, 26248.71487970379, 24304.14789147963, 25092.01521531442, 25981.86850076388, 27068.79098109814, 27867.43280925721, 28812.608935665576, 28293.26862776065, 28408.731047137495, 30029.535696721112, 29943.83615661999, 29821.597070748976, 30142.629920793894, 31094.23088983846, 33030.741479030716, 32599.037256716358, 33254.451116514945, 32134.255855215255, 29696.829133720606, 29162.195908384118, 30812.590802984858, 31070.516748076585, 32823.75716579903, 32630.5930252128, 33487.0006591418, 34712.50984732306, 34461.280565229885, 34458.21020026103, 34540.692764598716, 35114.731388526256, 33912.38133393767, 36493.18161085238, 38162.74370665909, 39279.048067506024, 39166.29704340042, 40268.177555839415, 41299.47678855788, 41679.093297085405, 41617.70206277201], "label": "STOCKS buy-and-hold (IWDA.AS)"}], "start_date": "2014-12-17", "years": "all"}};
 
 (function() {
   var canvas = document.getElementById('equity-chart');
@@ -2853,7 +3029,7 @@ var DEMO_EQUITY = {"2": {"gem_meta": {"btc_ticker": "BTC-EUR", "stocks_ticker": 
                 callbacks: {
                   label: function(ctx) {
                     var v = ctx.parsed.y;
-                    if (v == null) return ctx.dataset.label + ': —';
+                    if (v == null) return ctx.dataset.label + ': -';
                     return ctx.dataset.label + ': ' + v.toLocaleString('pl-PL', {maximumFractionDigits: 0}) + ' zł';
                   }
                 }
@@ -2868,6 +3044,7 @@ var DEMO_EQUITY = {"2": {"gem_meta": {"btc_ticker": "BTC-EUR", "stocks_ticker": 
             }
           }
         });
+        _equityChart = chart;
       })
       .catch(function(ex) {
         loadingBox.classList.add('hidden');
@@ -2893,7 +3070,7 @@ var DEMO_EQUITY = {"2": {"gem_meta": {"btc_ticker": "BTC-EUR", "stocks_ticker": 
 
   <footer class="max-w-6xl mx-auto p-4 text-sm text-slate-500 border-t mt-12">
     
-    Momentum Strategy - plansza demo wygenerowana z szablonu aplikacji 2026-11-26 10:38
+    Momentum Strategy - plansza demo wygenerowana z szablonu aplikacji 2026-11-27 21:49
     (GEM i Larsson z notowań yfinance, reszta przykładowa).
     Narzędzie do własnego użytku, nie porada inwestycyjna. <a href="/projekty/" class="text-blue-700 hover:underline">tomaszkwietniewski.pl/projekty</a>
     
